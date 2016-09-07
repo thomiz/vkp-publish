@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Device xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/fhir-base.xsd">
+	<type>
+		<coding>
+			<!-- SNOMED CT? 11073? Global Medical Device Nomenclature (GMDN) SNOMED+GMDN -->
+			<system value="xxx"/>
+			<code value="47017"/>
+			<display value="General-purpose syringe"/>
+		</coding>
+	</type>
+</Device>

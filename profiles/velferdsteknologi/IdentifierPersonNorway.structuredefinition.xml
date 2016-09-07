@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2016-09-06T09:27:31.528+02:00" />
+  </meta>
+  <url value="https://www.simplifier.net/Velferdsteknologipro/IdentifierPersonNorway" />
+  <name value="IdentifierPersonNorway" />
+  <status value="draft" />
+  <description value="ID-type for personer med kodevek 8116 (Volven.no)" />
+  <fhirVersion value="1.0.2" />
+  <kind value="datatype" />
+  <constrainedType value="Identifier" />
+  <abstract value="false" />
+  <base value="http://hl7.org/fhir/StructureDefinition/Identifier" />
+  <differential>
+    <element>
+      <path value="Identifier" />
+      <type>
+        <code value="Identifier" />
+      </type>
+    </element>
+    <element>
+      <path value="Identifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="oid:2.16.578.1.12.4.1.1.8116" />
+    </element>
+    <element>
+      <path value="Identifier.type.coding.code" />
+      <min value="1" />
+      <exampleCode value="FNR" />
+    </element>
+    <element>
+      <path value="Identifier.type.coding.display" />
+      <exampleString value="Fødselsnummer" />
+    </element>
+    <element>
+      <path value="Identifier.value" />
+      <min value="1" />
+      <exampleString value="11079500412" />
+    </element>
+  </differential>
+</StructureDefinition>

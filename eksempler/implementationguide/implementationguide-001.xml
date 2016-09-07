@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+https://www.hl7.org/fhir/implementationguide.html
+-->
+<!--
+A set of rules or how FHIR is used to solve a particular problem. This resource is used to gather all the parts of an implementation guide into a logical whole, and to publish a computable definition of all the parts. 
+-->
+<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/fhir-base.xsd">
+	<url value="http://git.sarepta.nhn.no/fhir/implementationguide/001"/>
+	<name value="En testimplementasjonsguide fra Direktoratet for e-helse"/>
+	<status value="draft"/>
+	<package>
+		<name value="Eksempel testaktør"/>
+		<resource>
+			<purpose value="example"/>
+			<name value="Testpasient 1 - mann"/>
+			<sourceUri value="http://git.sarepta.nhn/fhir/testaktorer-1"/>
+			<exampleFor>
+				<reference value="Patient"/>
+			</exampleFor>
+		</resource>
+	</package>
+	<page>
+		<source value="http://ehelse.no/implementasjonsguide/123-side-2.html"/>
+		<name value="En side i implementasjonsguiden!"/>
+		<kind value="page"/>
+	</page>
+</ImplementationGuide>

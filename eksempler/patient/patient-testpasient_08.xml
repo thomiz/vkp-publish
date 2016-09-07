@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Testaktører versjon 3.7 -->
+<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/fhir-single.xsd">
+	<id value="c2fccc68-4cd7-45b5-ae22-d8cab6866ae4"/>
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2016-01-08T12:07:40+02:00"/>
+	</meta>
+	<language value="nb-NO"/>
+	<text>
+		<status value="generated"/>
+		<xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml">
+Testpasient 8 -  uten offisiell id. 
+Navn	Fred	Påjord
+Fødselsdato	25.03.1960
+Gateadresse	Ragnhilds gate 19
+Postadresse	7030	Trondheim
+Kommunenummer	1601
+Lokalt hjelpenummer	250360 00305
+Telefonnummer	73908998
+Mobilnummer	94017997
+E-postadresse	frejo@offline.no
+	</xhtml:div>
+	</text>
+	<identifier>
+		<type>
+			<coding>
+				<system value="2.16.578.1.12.4.1.1.8116"/>
+				<code value="HNR"/>
+				<display value="H-nummer"/>
+			</coding>
+			<text value="250360 00305"/>
+		</type>
+		<value value="25036000305"/>
+	</identifier>
+	<name>
+		<text value="Fred Påjord"/>
+		<family value="Påjord"/>
+		<given value="Fred"/>
+	</name>
+	<birthDate value="1960-03-25"/>
+	<address>
+		<extension url="http://ehelse.no/fhir/extension/kommunenummer">
+			<valueString value="1601"/>
+		</extension>
+		<text value="Ragnhilds gate 19, 7030 Trondheim"/>
+		<line value="Ragnhilds gate 19"/>
+		<city value="Trondheim"/>
+		<postalCode value="7030"/>
+	</address>
+	<contact>
+		<telecom>
+			<system value="email"/>
+			<value value="frejo@offline.no"/>
+		</telecom>
+		<telecom>
+			<system value="phone"/>
+			<value value="94017997"/>
+			<use value="mobile"/>
+		</telecom>
+		<telecom>
+			<system value="phone"/>
+			<value value="73908998"/>
+			<use value="home"/>
+		</telecom>
+	</contact>
+</Patient>

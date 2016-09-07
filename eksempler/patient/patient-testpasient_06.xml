@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Testaktører versjon 3.7 -->
+<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/fhir-single.xsd">
+	<id value="209ca350-eb36-4356-a91a-1eb00803ce35"/>
+	<meta>
+		<versionId value="3"/>
+		<lastUpdated value="2016-01-08T12:07:40+02:00"/>
+	</meta>
+	<language value="nb-NO"/>
+	<text>
+		<status value="generated"/>
+		<xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml">
+Testpasient 6 - D-nummer
+Navn	Andine 	And
+D-nummer	700199 50032
+Fødselsdato	30.01.1899
+Gateadresse	Numedalsveien 52
+Postadresse	3602	Kongsberg
+Kommunenummer	0604
+		</xhtml:div>
+	</text>
+	<identifier>
+		<type>
+			<coding>
+				<system value="2.16.578.1.12.4.1.1.8116"/>
+				<code value="DNR"/>
+				<display value="D-nummer"/>
+			</coding>
+			<text value="700199 50032"/>
+		</type>
+		<value value="70019950032"/>
+	</identifier>
+	<name>
+		<text value="Andine And"/>
+		<family value="And"/>
+		<given value="Andine"/>
+	</name>
+	<birthDate value="1899-01-30" />
+	<address>
+		<extension url="http://ehelse.no/fhir/extension/kommunenummer">
+			<valueString value="0604"/>
+		</extension>
+		<text value="Numedalsveien 52, 3602 Kongsberg"/>
+		<line value="Numedalsveien 52"/>
+		<city value="Kongsberg"/>
+		<postalCode value="3602"/>
+	</address>
+</Patient>

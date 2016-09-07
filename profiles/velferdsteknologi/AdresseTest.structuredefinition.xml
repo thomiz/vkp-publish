@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2016-09-06T10:15:14.456+02:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/profile/adressenorsktest" />
+  <version value="0.1" />
+  <name value="AdresseTest" />
+  <status value="draft" />
+  <experimental value="true" />
+  <fhirVersion value="1.0.2" />
+  <kind value="datatype" />
+  <constrainedType value="Address" />
+  <abstract value="false" />
+  <base value="http://hl7.org/fhir/StructureDefinition/Address" />
+  <differential>
+    <element>
+      <path value="Address" />
+      <type>
+        <code value="Address" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

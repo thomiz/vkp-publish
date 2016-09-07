@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Testaktører versjon 3.7 -->
+<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/fhir-single.xsd">
+	<id value="32eb7369-89f4-4d58-a18a-2d3b5baaec43"/>
+	<meta>
+		<versionId value="2"/>
+		<lastUpdated value="2016-01-08T12:07:40+02:00"/>
+	</meta>
+	<language value="nb-NO"/>
+	<text>
+		<status value="generated"/>
+		<xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml">
+			<xhtml:h1>Testpasient 1 - mann</xhtml:h1>
+			<xhtml:table>
+				<xhtml:tbody>
+					<xhtml:tr>
+						<xhtml:td>Navn</xhtml:td>
+						<xhtml:td>Roland Gundersen</xhtml:td>
+					</xhtml:tr>
+					<xhtml:tr>
+						<xhtml:td>Fødselsnummer</xhtml:td>
+						<xhtml:td>150765 00565</xhtml:td>
+					</xhtml:tr>
+					<xhtml:tr>
+						<xhtml:td>Gateadresse</xhtml:td>
+						<xhtml:td>Flåklypa 32</xhtml:td>
+					</xhtml:tr>
+					<xhtml:tr>
+						<xhtml:td>Postadresse</xhtml:td>
+						<xhtml:td>2560 Alvdal</xhtml:td>
+					</xhtml:tr>
+					<xhtml:tr>
+						<xhtml:td>Kommunenummer</xhtml:td>
+						<xhtml:td>0438</xhtml:td>
+					</xhtml:tr>
+				</xhtml:tbody>
+			</xhtml:table>
+		</xhtml:div>
+	</text>
+	<identifier>
+		<type>
+			<coding>
+				<system value="2.16.578.1.12.4.1.1.8116"/>
+				<code value="FNR"/>
+				<display value="Fødselsnummer"/>
+			</coding>
+			<text value="150765 00565"/>
+		</type>
+		<value value="15076500565"/>
+	</identifier>
+	<name>
+		<text value="Roland Gundersen"/>
+		<family value="Gundersen"/>
+		<given value="Roland"/>
+	</name>
+	<address>
+		<extension url="http://ehelse.no/fhir/extension/kommunenummer">
+			<valueString value="0438"/>
+		</extension>
+		<text value="Flåklypa 31, 2560 Alvdal"/>
+		<line value="Flåklypa 31"/>
+		<city value="Alvdal"/>
+		<postalCode value="0438"/>
+	</address>
+</Patient>

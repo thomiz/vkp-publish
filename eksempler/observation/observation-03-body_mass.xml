@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Dette eksempelet er et forsøk på parallellkoding -->
+<Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/observation.xsd">
+	<id value="9b481d01-58f8-470a-ac00-136e14df5f92"/>
+	<language value="nb-NO"/>
+	<status value="final"/>
+	<category>
+		<coding>
+			<system value="http://hl7.org/fhir/ValueSet/observation-category" />
+			<code value="vital-signs" />
+			<display value="Vital Signs" />
+		</coding>
+	</category>
+	<code>
+		<!-- Describes what was observed. Sometimes this is called the observation "name".
+	ESS: Da bør det passe med "observable entity" fra SNOMED CT. FHIR peker på LOINC. -->
+		<coding>
+			<system value="urn:std:iso:11073:10101"/>
+			<code value="188736"/>
+			<display value="MDC_MASS_BODY_ACTUAL"/>
+		</coding>
+<!--		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="363808001"/>
+			<display value="Body weight measure (observable entity)"/>
+		</coding> -->
+		<coding>
+			<system value="http://loinc.org" />
+			<code value="3141-9" />
+			<display value="Weight" />
+		</coding>
+		<!--		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="107647005"/>
+			<display value="Weight finding (finding)"/>
+		</coding> -->
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="27113001 "/>
+			<display value="Body weight (observable entity)"/>
+		</coding>
+		<!--		<coding>
+			<system value="http://hl7.org/fhir/ValueSet/observation-codes" />
+			<code value="" />
+			<display value="" />
+		</coding> -->
+	</code>
+	<subject>
+		<reference value="http://helsenorge.no/helsearkiv/fhir-resource/patient/f4c8d929-c6c8-4ecc-8484-8442d540b3f5"/>
+	</subject>
+	<effectiveDateTime value="2015-12-08T12:34:56"/>
+	<valueQuantity>
+		<value value="42"/>
+		<unit value="kg"/>
+		<system value="urn:std.iso:11073:10101"/>
+		<code value="263875"/>
+	</valueQuantity>
+	<bodySite>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="38266002"/>
+			<display value="Entire body as a whole (body structure)"/>
+		</coding>
+		<text value="Hele kroppen, gitt!" />
+	</bodySite>
+	<device>
+		<reference value="http://helsenorge.no/helsearkiv/fhir/devicemetric/9ae6ac0f-2987-4aa7-b286-17d95098b910"/>
+	</device>
+</Observation>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/observation.xsd">
+	<id value="0886ca08-d98d-4392-96cd-0685996fe3fe"/>
+	<language value="nb-NO"/>
+	<status value="final"/>
+	<code>
+		<coding>
+			<system value="urn:std:iso:11073:10101"/>
+			<code value="149530"/>
+			<display value="MDC_PULS_OXIM_PULS_RATE"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/36405ed0-9d9e-11e5-a837-0800200c9a66"/>
+	</subject>
+	<effectiveDateTime value="2015-12-08T12:34:56"/>
+	<valueQuantity>
+		<value value="144"/>
+		<unit value="Hz"/>
+		<system value="urn:std.iso:11073:10101"/>
+		<code value="264640"/>
+	</valueQuantity>
+	<device>
+		<reference value="http://helsenorge.no/helsearkiv/fhir/devicemetric/99cedca0-9d9f-11e5-a837-0800200c9a66"/>
+	</device>
+	<component>
+		<code>
+			<coding>
+				<system value="urn:std:iso:11073:10101"/>
+				<code value="150456"/>
+				<display value="MDC_PULS_OXIM_SAT_O2"/>
+			</coding>
+		</code>
+		<valueQuantity>
+			<value value="96"/>
+			<unit value="%"/>
+			<system value="urn:std.iso:11073:10101"/>
+			<code value="262688"/>
+		</valueQuantity>
+	</component>
+</Observation>

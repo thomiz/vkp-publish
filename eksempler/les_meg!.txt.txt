@@ -1,0 +1,9 @@
+Dette er IKKE-NORMATIVE eksempler. 
+
+De kan, og vil, inneholde feil og avvik fra offisielle profiler. 
+Bruk de som inspirasjon til ditt arbeide med FHIR. 
+
+Spørsmål:
+Espen Stranger Seland
+espen.stranger.seland@ehelse.no
+

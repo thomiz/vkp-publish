@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/observation.xsd">
+	<id value="a1738297-8552-43a0-bc3a-49d42aea2158" />
+	<language value="nb-NO"/>
+	<status value="final"/>
+	<code>
+		<coding>
+			<system value="urn:std:iso:11073:10101"/>
+			<code value="150020"/>
+			<display value="MDC_PRESS_BLD_NONINV"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="http://helsenorge.no/helsearkiv/fhir-resource/patient/a4194e68-5dec-4110-a0f0-e901ba1a3b4f"/>
+	</subject>
+	<effectiveDateTime value="2015-12-08T12:34:56"/>
+	<device>
+		<reference value="http://helsenorge.no/helsearkiv/fhir/devicemetric/5d1967c4-192b-422d-b7d2-4e5e9b08d370 "/>
+	</device>
+	<component>
+		<code>
+			<coding>
+				<system value="urn:std:iso:11073:10101"/>
+				<code value="150021"/>
+				<display value="MDC_PRESS_BLD_NONINV_SYS"/>
+			</coding>
+		</code>
+		<valueQuantity>
+			<value value="126"/>
+			<unit value="mmHg"/>
+			<system value="urn:std.iso:11073:10101"/>
+			<code value="266016"/>
+		</valueQuantity>
+	</component>
+	<component>
+		<code>
+			<coding>
+				<system value="urn:std:iso:11073:10101"/>
+				<code value="150022"/>
+				<display value="MDC_PRESS_BLD_NONINV_DIA"/>
+			</coding>
+		</code>
+		<valueQuantity>
+			<value value="82"/>
+			<unit value="mmHg"/>
+			<system value="urn:std.iso:11073:10101"/>
+			<code value="266016"/>
+		</valueQuantity>
+	</component>
+	<component>
+		<code>
+			<coding>
+				<system value="urn:std:iso:11073:10101"/>
+				<code value="150023"/>
+				<display value="MDC_PRESS_BLD_NONINV_MEAN"/>
+			</coding>
+		</code>
+		<valueQuantity>
+			<value value="94"/>
+			<unit value="mmHg"/>
+			<system value="urn:std.iso:11073:10101"/>
+			<code value="266016"/>
+		</valueQuantity>
+	</component>
+</Observation>

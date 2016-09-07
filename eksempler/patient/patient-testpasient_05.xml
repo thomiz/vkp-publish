@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Testaktører versjon 3.7 -->
+<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/fhir-single.xsd">
+	<id value="83d0e9ae-19ca-49c0-ba71-26d1f64c0ae6"/>
+	<meta>
+		<versionId value="42"/>
+		<lastUpdated value="2016-01-08T12:07:40+02:00"/>
+	</meta>
+	<language value="nb-NO"/>
+	<text>
+		<status value="generated"/>
+		<xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml">
+Testpasient 5 - barn
+Navn	Folke	Danser
+Fødselsnummer	140198 00513
+Gateadresse	Numedalsveien 52
+Postadresse	3602	Kongsberg
+Kommunenummer	0604
+		</xhtml:div>
+	</text>
+	<identifier>
+		<type>
+			<coding>
+				<system value="2.16.578.1.12.4.1.1.8116"/>
+				<code value="FNR"/>
+				<display value="Fødselsnummer"/>
+			</coding>
+			<text value="140198 00513"/>
+		</type>
+		<value value="14019800513"/>
+	</identifier>
+	<name>
+		<text value="Folke Danser"/>
+		<family value="Danser"/>
+		<given value="Folke"/>
+	</name>
+	<address>
+		<extension url="http://ehelse.no/fhir/extension/kommunenummer">
+			<valueString value="0604"/>
+		</extension>
+		<text value="Numedalsveien 52, 3602 Kongsberg"/>
+		<line value="Numedalsveien 52"/>
+		<city value="Kongsberg"/>
+		<postalCode value="3602"/>
+	</address>
+</Patient>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2016-09-06T10:10:25.629+02:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/ig/vft/example" />
+  <name value="VFT" />
+  <status value="draft" />
+  <experimental value="false" />
+  <date value="2016-09-06T10:10:19+02:00" />
+  <fhirVersion value="1.0.2" />
+  <page>
+    <source value="http://ehelse.no/fhir/vft/example" />
+    <name value="MyPage" />
+    <kind value="list" />
+  </page>
+</ImplementationGuide>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Testaktører versjon 3.7 -->
+<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/fhir-single.xsd">
+	<id value="e209ebf6-c1e8-4323-b46b-8f39de0a4b32"/>
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2016-01-08T12:07:40+02:00"/>
+	</meta>
+	<language value="nb-NO"/>
+	<text>
+		<status value="generated"/>
+		<xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml">
+Testpasient 18 – Felles hjelpenummer og samisk navn
+Navn	Ovlláš	Rástoš
+Felles hjelpenr	800014 43511
+Gateadresse	Dovreveien 33
+Postadresse	7030	Trondheim
+Kommunenummer	1601
+		</xhtml:div>
+	</text>
+	<identifier>
+		<type>
+			<coding>
+				<system value="2.16.578.1.12.4.1.1.8116"/>
+				<code value="FHN"/>
+				<display value="Felles hjelpenummer"/>
+			</coding>
+			<text value="800014 43511"/>
+		</type>
+		<value value="80001443511"/>
+	</identifier>
+	<name>
+		<text value="Ovlláš Rástoš"/>
+		<family value="Rástoš"/>
+		<given value="Ovlláš"/>
+	</name>
+	<address>
+		<extension url="http://ehelse.no/fhir/extension/kommunenummer">
+			<valueString value="1601"/>
+		</extension>
+		<text value="Dovreveien 33, 7030 Trondheim"/>
+		<line value="Dovreveien 33"/>
+		<city value="Trondheim"/>
+		<postalCode value="7030"/>
+	</address>
+</Patient>

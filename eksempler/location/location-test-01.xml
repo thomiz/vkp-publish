@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Eksempel på kartkoordinat-basert lokasjon. 
+http://docs.opengeospatial.org/is/12-007r2/12-007r2.html
+-->
+<Location xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/fhir-base.xsd">
+	<name value="Oslo" />
+	<address>
+		<city value="Oslo" />
+		<country value="NOR"/>
+	</address>
+	<position>
+		<longitude value="10.42"/>
+		<latitude value="59.57"/>
+	</position>
+</Location>

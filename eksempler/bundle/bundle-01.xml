@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/fhir-base.xsd">
+	<!-- Pasient + blodtrykksmåling + devicecomponent/metric -->
+	<id value="86227881-67a7-4464-9005-9176f0304d14"/>
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2016-01-15T12:13:14Z"/>
+	</meta>
+	<language value="nb-NO"/>
+	<type value="collection"/>
+	<!--
+document					Document			The bundle is a document. The first resource is a Composition.
+message					Message			The bundle is a message. The first resource is a MessageHeader.
+transaction				Transaction		The bundle is a transaction - intended to be processed by a server as an atomic commit.
+transaction-response	Transaction Response	The bundle is a transaction response. Because the response is a transaction response, the transactionhas succeeded, and all responses are error free.
+batch						Batch				The bundle is a transaction - intended to be processed by a server as a group of actions.
+batch-response			Batch Response	The bundle is a batch response. Note that as a batch, some responses may indicate failure and others success.
+history						History List		The bundle is a list of resources from a history interaction on a server.
+searchset					Search Results	The bundle is a list of resources returned as a result of a search/query interaction, operation, or message.
+collection					Collection			The bundle is a set of resources collected into a single document for ease of distribution.
+-->
+	<!--
+	<link>
+		<relation value="about"></relation>
+		<url></url>
+	</link>
+-->
+	<!--
+bdl-5: must be a resource unless there's a request or response (xpath: f:resource or f:request or f:response)
+bdl-6: The fullUrl element must be present when a resource is present, and not present otherwise (xpath: (not(exists(f:fullUrl)) and not(exists(f:resource))) or (exists(f:fullUrl) and exists(f:resource)))
+-->
+	<entry>
+		<fullUrl value="http://ehelse.no/eksempel/fhir/patient/6800fde2-af77-49f2-84c4-853b4316e4f5"/>
+		<resource>
+			<Patient>
+				<id value="6800fde2-af77-49f2-84c4-853b4316e4f5"/>
+				<identifier>
+					<type>
+						<coding>
+							<system value="2.16.578.1.12.4.1.1.8116"/>
+							<code value="FNR"/>
+							<display value="Fødselsnummer"/>
+						</coding>
+						<text value="150765 00565"/>
+					</type>
+					<value value="15076500565"/>
+				</identifier>
+				<name>
+					<text value="Roland Gundersen"/>
+					<family value="Gundersen"/>
+					<given value="Roland"/>
+				</name>
+			</Patient>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<DeviceComponent>
+				<id value="a4235a00-c8a6-41e8-bfb7-26c94fb5f57d"/>
+				<type>
+					<coding>
+						<system value="???"/>
+						<!-- Mangler kodeverk -->
+						<code value="???"/>
+						<display value="BLODTRYKKSMÅLER"/>
+					</coding>
+				</type>
+				<identifier/>
+				<lastSystemChange value="2015-12-09T14:17:23.123+02:00"/>
+			</DeviceComponent>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<DeviceMetric>
+				<type>
+					<coding>
+						<system value="urn:std:iso:11073:10101"/>
+						<code value="150020"/>
+						<display value="MDC_PRESS_BLD_NONINV"/>
+					</coding>
+				</type>
+				<identifier>
+					<system value=""/>
+				</identifier>
+				<unit>
+					<coding>
+						<system value="urn:std.iso:11073:10101"/>
+						<code value="266016"/>
+						<display value="mmHg"/>
+					</coding>
+				</unit>
+				<parent>
+					<reference value="DeviceComponent/a4235a00-c8a6-41e8-bfb7-26c94fb5f57d"/>
+				</parent>
+				<category value="measurement"/>
+			</DeviceMetric>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<DeviceMetric>
+				<type>
+					<coding>
+						<system value="urn:std:iso:11073:10101"/>
+						<code value="150020"/>
+						<display value="MDC_PRESS_BLD_NONINV"/>
+					</coding>
+				</type>
+				<identifier>
+					<system value=""/>
+				</identifier>
+				<unit>
+					<coding>
+						<system value="urn:std.iso:11073:10101"/>
+						<code value="266016"/>
+						<display value="mmHg"/>
+					</coding>
+				</unit>
+				<parent>
+					<reference value="DeviceComponent/a4235a00-c8a6-41e8-bfb7-26c94fb5f57d"/>
+				</parent>
+				<category value="measurement"/>
+			</DeviceMetric>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="a1738297-8552-43a0-bc3a-49d42aea2158"/>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="urn:std:iso:11073:10101"/>
+						<code value="150020"/>
+						<display value="MDC_PRESS_BLD_NONINV"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/6800fde2-af77-49f2-84c4-853b4316e4f5"/>
+				</subject>
+				<effectiveDateTime value="2015-12-08T12:34:56"/>
+				<device>
+					<reference value="DeviceComponent/a4235a00-c8a6-41e8-bfb7-26c94fb5f57d"/>
+				</device>
+				<component>
+					<code>
+						<coding>
+							<system value="urn:std:iso:11073:10101"/>
+							<code value="150021"/>
+							<display value="MDC_PRESS_BLD_NONINV_SYS"/>
+						</coding>
+					</code>
+					<valueQuantity>
+						<value value="126"/>
+						<unit value="mmHg"/>
+						<system value="urn:std.iso:11073:10101"/>
+						<code value="266016"/>
+					</valueQuantity>
+				</component>
+				<component>
+					<code>
+						<coding>
+							<system value="urn:std:iso:11073:10101"/>
+							<code value="150022"/>
+							<display value="MDC_PRESS_BLD_NONINV_DIA"/>
+						</coding>
+					</code>
+					<valueQuantity>
+						<value value="82"/>
+						<unit value="mmHg"/>
+						<system value="urn:std.iso:11073:10101"/>
+						<code value="266016"/>
+					</valueQuantity>
+				</component>
+				<component>
+					<code>
+						<coding>
+							<system value="urn:std:iso:11073:10101"/>
+							<code value="150023"/>
+							<display value="MDC_PRESS_BLD_NONINV_MEAN"/>
+						</coding>
+					</code>
+					<valueQuantity>
+						<value value="94"/>
+						<unit value="mmHg"/>
+						<system value="urn:std.iso:11073:10101"/>
+						<code value="266016"/>
+					</valueQuantity>
+				</component>
+			</Observation>
+		</resource>
+	</entry>
+	<!--
+<signature>
+		<type>
+		</type>
+		<when></when>
+		<whoUri></whoUri>
+		<contentType></contentType>
+		<blob value="asdasd"></blob>
+	</signature>
+-->
+</Bundle>

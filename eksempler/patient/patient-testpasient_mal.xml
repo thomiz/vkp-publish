@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Testaktører versjon 3.7 -->
+<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/fhir-single.xsd">
+	<id value="UUID"/>
+	<meta>
+		<versionId value="42"/>
+		<lastUpdated value="2016-01-01T12:00:00+02:00"/>
+	</meta>
+	<language value="nb-NO"/>
+	<text>
+		<status value="generated"/>
+		<xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml">
+		</xhtml:div>
+	</text>
+	<identifier>
+		<type>
+			<coding>
+				<system value="2.16.578.1.12.4.1.1.8116"/>
+				<code value="FNR"/>
+				<display value="Fødselsnummer"/>
+			</coding>
+			<text value="x"/>
+		</type>
+		<value value="x"/>
+	</identifier>
+	<name>
+		<text value="x"/>
+		<family value="x"/>
+		<given value="x"/>
+	</name>
+	<address>
+		<extension url="http://ehelse.no/fhir/extension/kommunenummer">
+			<valueString value="x"/>
+		</extension>
+		<text value="x"/>
+		<line value="x"/>
+		<city value="x"/>
+		<postalCode value="x"/>
+	</address>
+</Patient>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2016-09-05T14:28:58.484+02:00" />
+  </meta>
+  <url value="StructureDefinition/Quantity11073" />
+  <name value="Quantity11073" />
+  <status value="draft" />
+  <contact>
+    <name value="Espen Stranger Seland" />
+    <telecom>
+      <system value="email" />
+      <value value="Espen.Stranger.Seland@ehelse.no" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <date value="2016-09-05T00:00:00+02:00" />
+  <description value="Observed quantity coded with 11073-10101 and RTM. " />
+  <fhirVersion value="1.0.2" />
+  <kind value="datatype" />
+  <constrainedType value="Quantity" />
+  <abstract value="false" />
+  <base value="http://hl7.org/fhir/StructureDefinition/Quantity" />
+  <differential>
+    <element>
+      <path value="Quantity" />
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element>
+      <path value="Quantity.value" />
+      <exampleDecimal value="140" />
+    </element>
+    <element>
+      <path value="Quantity.unit" />
+      <definition value="UOM_UCUM from 11073-10101 and RTM. " />
+      <exampleString value="mmHg" />
+    </element>
+    <element>
+      <path value="Quantity.system" />
+      <definition value="Allways urn:std.iso:11073:10101" />
+      <fixedUri value="urn:std.iso:11073:10101" />
+      <exampleUri value="urn:std.iso:11073:10101" />
+    </element>
+    <element>
+      <path value="Quantity.code" />
+      <definition value="CF_UCODE10 from11073-10101 and RTM. " />
+      <exampleCode value="266016" />
+    </element>
+  </differential>
+</StructureDefinition>

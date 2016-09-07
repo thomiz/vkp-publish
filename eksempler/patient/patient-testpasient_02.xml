@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Testaktører versjon 3.7 -->
+<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/fhir-single.xsd">
+	<id value="a1157707-5225-470b-bfb4-bbb946c3f1bd"/>
+	<meta>
+		<versionId value="2"/>
+		<lastUpdated value="2016-01-08T12:08:40+02:00"/>
+	</meta>
+	<language value="nb-NO"/>
+	<text>
+		<status value="generated"/>
+		<xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml">
+Testpasient 2 - mann
+Navn	Finn 	Dottno
+Fødselsnummer	210164 00952
+Gateadresse	Åssiden 31
+Postadresse	3008	Drammen
+Kommunenummer	0602
+		</xhtml:div>
+	</text>
+	<identifier>
+		<type>
+			<coding>
+				<system value="2.16.578.1.12.4.1.1.8116"/>
+				<code value="FNR"/>
+				<display value="Fødselsnummer"/>
+			</coding>
+			<text value="210164 00952"/>
+		</type>
+		<value value="21016400952"/>
+	</identifier>
+	<name>
+		<text value="Finn Dottno"/>
+		<family value="Dottno"/>
+		<given value="Finn"/>
+	</name>
+	<address>
+		<extension url="http://ehelse.no/fhir/extension/kommunenummer">
+			<valueString value="0602"/>
+		</extension>
+		<text value="Åssiden 31, 3008 Drammen"/>
+		<line value="Åssiden 31"/>
+		<city value="Drammen"/>
+		<postalCode value="3008"/>
+	</address>
+</Patient>

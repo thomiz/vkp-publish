@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2016-09-06T09:17:02.715+02:00" />
+  </meta>
+  <url value="StructureDefinition/Coding11073" />
+  <name value="Coding11073" />
+  <status value="draft" />
+  <fhirVersion value="1.0.2" />
+  <kind value="datatype" />
+  <constrainedType value="Coding" />
+  <abstract value="false" />
+  <base value="http://hl7.org/fhir/StructureDefinition/Coding" />
+  <differential>
+    <element>
+      <path value="Coding" />
+      <type>
+        <code value="Coding" />
+      </type>
+    </element>
+    <element>
+      <path value="Coding.system" />
+      <fixedUri value="urn:std:iso:11073:10101" />
+    </element>
+  </differential>
+</StructureDefinition>

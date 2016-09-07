@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Testaktører versjon 3.7-->
+<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/fhir-single.xsd">
+	<id value="2e10e212-6a03-43d5-bae9-c3316636a300"/>
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2016-01-08T12:07:40+02:00"/>
+	</meta>
+	<language value="nb-NO"/>
+<text>
+	<status value="generated"></status>
+	<xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml">
+Testpasient 9 – andre tegn i navn
+Navn	TOR-ERIK	ÄLMGREN
+Fødselsnummer	020390 00183
+Gateadresse	Mellomveien 304
+Postadresse	0603	Etterstad (erstattet med Oslo)
+Kommunenummer	0301</xhtml:div>
+</text>
+	<identifier>
+		<type>
+			<coding>
+				<system value="2.16.578.1.12.4.1.1.8116"/>
+				<code value="FNR"/>
+				<display value="Fødselsnummer"/>
+			</coding>
+			<text value="020390 00183"/>
+		</type>
+		<value value="02039000183"/>
+	</identifier>
+	<name>
+		<text value="TOR-ERIK	ÄLMGREN"/>
+		<family value="ÄLMGREN"/>
+		<given value="TOR-ERIK"/>
+	</name>
+	<address>
+		<extension url="http://ehelse.no/fhir/extension/kommunenummer">
+			<valueString value="0301" />
+		</extension>
+		<text value="Mellomveien 304, 0603 Oslo"/>
+		<line value="Mellomveien 304"/>
+		<city value="Oslo"/>
+		<postalCode value="0603"/>
+	</address>
+</Patient>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Testaktører versjon 3.7 - Testpasient 17 -->
+<!-- I dokumentet brukes postadresse "Etterstad", men korrekt er "Oslo" -->
+<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/fhir-single.xsd">
+	<id value="f32bdad6-5963-438d-a67c-b9e0b76ea4e3"/>
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2016-01-08T12:07:40+02:00"/>
+	</meta>
+	<language value="nb-NO"/>
+	<identifier>
+		<type>
+			<coding>
+				<system value="2.16.578.1.12.4.1.1.8116"/>
+				<code value="FNR"/>
+				<display value="Fødselsnummer"/>
+			</coding>
+			<text value="110795 00412"/>
+		</type>
+		<value value="11079500412"/>
+	</identifier>
+	<identifier>
+		<type>
+			<coding>
+				<system value="2.16.578.1.12.4.1.1.8116"/>
+				<code value="FHN"/>
+				<display value="Felles hjelpenummer"/>
+			</coding>
+			<text value="800050 45804"/>
+		</type>
+		<value value="80005045804"/>
+	</identifier>
+	<name>
+		<text value="Ann Kristin Leistad"/>
+		<family value="Leistad"/>
+		<given value="Ann Kristin"/>
+	</name>
+	<address>
+		<text value="Vinkelveien 33, 0603 Oslo"/>
+		<line value="Vinkelveien 33"/>
+		<city value="Oslo"/>
+		<postalCode value="0603"/>
+	</address>
+</Patient>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Eksempel på kartkoordinat-basert lokasjon. 
+http://docs.opengeospatial.org/is/12-007r2/12-007r2.html
+-->
+<Location xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/fhir-base.xsd">
+	<status value="active"/>
+	<name value="Direktoratet for e-helse, Skøyen (Monierbygget)"/>
+	<description value="Direktoratet for e-helse sine lokaler på Skøyen"/>
+	<mode value="instance"/>
+	<address>
+		<use value="work"/>
+		<type value="physical"/>
+		<text value="Verkstedveien 1, 0277 Oslo"/>
+		<line value="Verkstedveien 1"/>
+		<city value="Oslo"/>
+		<postalCode value="0277"/>
+		<country value="NOR"/>
+	</address>
+	<!--	<position>
+		<longitude value="10.42"/>
+		<latitude value="59.57"/>
+	</position>-->
+</Location>
