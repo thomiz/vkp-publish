@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2016-09-07T15:34:49.511+02:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/vft" />
+  <name value="CarePlanEgenbehandling" />
+  <status value="draft" />
+  <contact>
+    <name value="Thomas Tveit Rosenlund" />
+  </contact>
+  <date value="2016-09-07T00:00:00+02:00" />
+  <description value="CarePlan profile for use in applications where a health practitioner establishes an individual CarePlan for å patient and the patient is supposed to receive care in their own home. The CarePlan can include goals for home measurements, use of questionnaires and medication." />
+  <fhirVersion value="1.0.2" />
+  <kind value="resource" />
+  <constrainedType value="CarePlan" />
+  <abstract value="false" />
+  <base value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
+  <differential>
+    <element>
+      <path value="CarePlan" />
+      <type>
+        <code value="CarePlan" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
