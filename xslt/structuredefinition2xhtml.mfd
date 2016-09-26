@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2016r2sp1 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="4" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="4"/>
+					</targets>
+					<view ltx="549" lty="23" rbx="617" rby="41"/>
+					<data>
+						<constant value=".xhtml" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="6" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="5"/>
+						<datapoint pos="1" key="6"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="7"/>
+					</targets>
+					<view ltx="651" lty="85" rbx="726" rby="143"/>
+				</component>
+				<component name="constant" library="core" uid="8" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="8"/>
+					</targets>
+					<view ltx="567" lty="301" rbx="683" rby="319"/>
+					<data>
+						<constant value="Kontaktperson: " datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="structuredefinition" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view rbx="417" rby="670"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="2" outkey="9" expanded="1">
+								<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="StructureDefinition" ns="1" outkey="2" expanded="1">
+										<entry name="name" ns="1" outkey="10" expanded="1">
+											<entry name="id" type="attribute" outkey="11"/>
+											<entry name="value" type="attribute" outkey="12"/>
+										</entry>
+										<entry name="contact" ns="1" expanded="1">
+											<entry name="name" ns="1" outkey="13" expanded="1">
+												<entry name="id" type="attribute" outkey="14"/>
+												<entry name="value" type="attribute" outkey="15"/>
+											</entry>
+										</entry>
+										<entry name="date" ns="1" expanded="1"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\fhir-all-xsd\structuredefinition.xsd" inputinstance="..\profiles\velferdsteknologi\WAN-IF-FHIR-Patient.xml" instanceroot="{http://hl7.org/fhir}StructureDefinition"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="7" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="16"/>
+					</targets>
+					<view ltx="567" lty="158" rbx="700" rby="176"/>
+					<data>
+						<constant value="Espens profil-viser!" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="xhtml1-strict" library="xml" uid="3" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" DynamicFilenames="1"/>
+					<view ltx="1068" rbx="1552" rby="698"/>
+					<data>
+						<root scrollposition="701">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.w3.org/1999/xhtml"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="2" inpkey="17" expanded="1">
+								<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="html" ns="1" inpkey="1" expanded="1">
+										<entry name="head" ns="1" expanded="1">
+											<entry name="title" ns="1" expanded="1">
+												<entry name="#text" inpkey="18"/>
+											</entry>
+										</entry>
+										<entry name="body" ns="1" expanded="1">
+											<entry name="p" ns="1" inpkey="19" expanded="1">
+												<entry name="id" type="attribute" inpkey="20"/>
+												<entry name="#text" inpkey="21"/>
+											</entry>
+											<entry name="h1" ns="1" inpkey="22">
+												<entry name="id" type="attribute" inpkey="23"/>
+												<entry name="#text" inpkey="24"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="xhtml1-strict.xsd" instanceroot="{http://www.w3.org/1999/xhtml}html"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="10" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="25"/>
+						<datapoint pos="1" key="26"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="27"/>
+					</targets>
+					<view ltx="712" lty="301" rbx="787" rby="359"/>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="1" edgekey="28"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="6" edgekey="29"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="17" edgekey="30"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="25" edgekey="31"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="5" edgekey="32"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="22" edgekey="33"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="23" edgekey="34"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="24" edgekey="35"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="19" edgekey="36"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="14">
+						<edges>
+							<edge vertexkey="20" edgekey="37"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="26" edgekey="38"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="18" edgekey="39"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="27">
+						<edges>
+							<edge vertexkey="21" edgekey="40"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
