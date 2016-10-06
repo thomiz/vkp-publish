@@ -12,7 +12,7 @@
 				<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
 					<valueInteger value="5"/>
 				</extension>
-				<url value="https://www.simplifier.net/Velferdsteknologipro/PatientVFT"/>
+				<url value="https://www.ehelse.no/fhir/profiles/velferdsteknologi/Patient"/>
 				<name value="Patient"/>
 				<display value="Device user"/>
 				<status value="draft"/>
