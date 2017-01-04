@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-01-04T19:09:41.857+01:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/profiles/vft/GeoPosition" />
+  <name value="GeoPosition" />
+  <status value="draft" />
+  <publisher value="eHelse" />
+  <date value="2017-01-04T18:52:16+01:00" />
+  <description value="Geoposisjon med timestamp, retning og hastighet." />
+  <kind value="resource" />
+  <constrainedType value="Location" />
+  <abstract value="false" />
+  <base value="http://hl7.org/fhir/StructureDefinition/Location" />
+  <differential>
+    <element>
+      <path value="Location" />
+    </element>
+    <element>
+      <path value="Location.extension" />
+      <slicing>
+        <discriminator value="url" />
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element>
+      <path value="Location.extension" />
+      <name value="PositionTimestamp" />
+      <definition value="Timestamp of the position" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://www.hl7.org/FHIR/StructureDefinition/dateTime" />
+      </type>
+    </element>
+    <element>
+      <path value="Location.extension" />
+      <name value="velocityms" />
+      <definition value="Velocity annotated in meter per second" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://www.hl7.org/FHIR/StructureDefinition/decimal" />
+      </type>
+    </element>
+    <element>
+      <path value="Location.extension" />
+      <name value="DirectionDegrees" />
+      <definition value="Direction of travel in radian (rad)" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://www.hl7.org/FHIR/StructureDefinition/decimal" />
+      </type>
+    </element>
+    <element>
+      <path value="Location.status" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Location.name" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Location.description" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Location.mode" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Location.type" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Location.telecom" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Location.address" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Location.physicalType" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Location.managingOrganization" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Location.partOf" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
