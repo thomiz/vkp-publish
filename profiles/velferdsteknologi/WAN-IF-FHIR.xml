@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <url value="http://ehelse.no/fhir/profile/demoxxx" />
+  <name value="MyImplementationGuide" />
+  <status value="draft" />
+  <date value="2015-10-07T10:48:40+02:00" />
+  <fhirVersion value="1.0.1" />
+  <package>
+    <name value="WAN-IF" />
+    <description value="TODO" />
+    <resource>
+      <purpose value="profile" />
+      <sourceUri value="TODO" />
+    </resource>
+  </package>
+  <page />
+</ImplementationGuide>
