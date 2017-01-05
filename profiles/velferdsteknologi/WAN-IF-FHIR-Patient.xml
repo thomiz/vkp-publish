@@ -1,5 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="utf-8"?>
+<!--<StructureDefinition xmlns="http://hl7.org/fhir">-->
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/structuredefinition.xsd">
   <id value="3f4c00aa-5667-4263-9a2f-73b4027c5e6e" />
   <meta>
     <lastUpdated value="2016-09-06T15:56:03.73+02:00" />

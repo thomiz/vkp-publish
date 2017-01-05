@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2016-09-07T15:34:49.511+02:00" />
+    <lastUpdated value="2016-09-07T15:38:30.614+02:00" />
   </meta>
   <url value="http://ehelse.no/fhir/vft" />
   <name value="CarePlanEgenbehandling" />
@@ -22,6 +22,10 @@
       <type>
         <code value="CarePlan" />
       </type>
+    </element>
+    <element>
+      <path value="CarePlan.context" />
+      <max value="0" />
     </element>
   </differential>
 </StructureDefinition>

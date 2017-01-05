@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/bundle.xsd">
+	<type value="batch"/>
+	<entry>
+	<fullUrl value="http://www.ehelse.no/test/" />
+		<resource>
+			<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/bundle.xsd">
+				<id value="3f4c00aa-5667-4263-9a2f-73b4027c5e6e"/>
+				<meta>
+					<lastUpdated value="2016-09-06T15:56:03.73+02:00"/>
+				</meta>
+				<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+					<valueInteger value="5"/>
+				</extension>
+				<url value="https://www.ehelse.no/fhir/profiles/velferdsteknologi/Patient"/>
+				<name value="Patient"/>
+				<display value="Device user"/>
+				<status value="draft"/>
+				<publisher value="Norwegian Directorate of eHealth"/>
+				<contact>
+					<name value="Espen Stranger Seland"/>
+					<telecom>
+						<system value="email"/>
+						<value value="Espen.Stranger.Seland@ehelse.no"/>
+						<use value="work"/>
+					</telecom>
+				</contact>
+				<contact>
+					<name value="Thomas Tveit Rosenlund"/>
+					<telecom>
+						<system value="email"/>
+						<value value="Thomas.Tveit.Rosenlund@ehelse.no"/>
+						<use value="work"/>
+					</telecom>
+				</contact>
+				<description value="Brukes for å overføre grunnleggende informasjon om brukeren. Patient skal inneholde brukerens navn og fødselsnummer eller D-nummer. Andre felt brukes etter behov. "/>
+				<kind value="resource"/>
+				<constrainedType value="Patient"/>
+				<abstract value="false"/>
+				<base value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+				<differential>
+					<element>
+						<path value="Patient"/>
+						<type>
+							<code value="Patient"/>
+						</type>
+					</element>
+					<element>
+						<path value="Patient.identifier"/>
+						<short value="Fødselsnummer eller D-nummer"/>
+						<definition value="SKAL inneholde brukerens fødselsnumer eller D-nummer. Andre identifikatorer er ikke tillat.&#xD;&#xA;"/>
+						<comments value="Continua: PCD-01 PID"/>
+						<min value="1"/>
+						<type>
+							<code value="Identifier"/>
+						</type>
+						<type>
+							<code value="Identifier"/>
+							<profile value="https://www.simplifier.net/Velferdsteknologipro/IdentifierPersonNorway"/>
+						</type>
+					</element>
+					<element>
+						<path value="Patient.identifier.type.coding.system"/>
+						<code>
+							<system value="oid:2.16.578.1.12.4.1.1.8116"/>
+							<display value="ID-type for personer"/>
+						</code>
+						<fixedUri value="oid:2.16.578.1.12.4.1.1.8116"/>
+					</element>
+					<element>
+						<path value="Patient.identifier.type.coding.code"/>
+						<comments value="Lovlige verdier fra 8116 (3):&#xD;&#xA;FNR (Fødselsnummer)&#xD;&#xA;DNR (D-nummer)"/>
+						<exampleCode value="FNR"/>
+					</element>
+					<element>
+						<path value="Patient.identifier.type.coding.display"/>
+						<comments value="Eksempler:&#xD;&#xA;«Fødselsnummer»&#xD;&#xA;«D-nummer»"/>
+					</element>
+					<element>
+						<path value="Patient.identifier.value"/>
+						<short value="Fødselsnummer eller D-nummer"/>
+						<min value="1"/>
+						<exampleString value="11079500412"/>
+					</element>
+					<element>
+						<path value="Patient.name"/>
+						<short value="Brukerens navn"/>
+						<min value="1"/>
+						<max value="1"/>
+					</element>
+					<element>
+						<path value="Patient.name.family"/>
+						<short value="Etternavn"/>
+						<min value="1"/>
+						<max value="1"/>
+						<exampleString value="Leistad"/>
+					</element>
+					<element>
+						<path value="Patient.name.given"/>
+						<short value="Fornavn"/>
+						<exampleString value="Ann Kristin"/>
+					</element>
+					<element>
+						<path value="Patient.deceased[x]"/>
+						<max value="0"/>
+					</element>
+					<element>
+						<path value="Patient.multipleBirth[x]"/>
+						<max value="0"/>
+					</element>
+					<element>
+						<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+							<valueString value="Animal"/>
+						</extension>
+						<path value="Patient.animal"/>
+						<max value="0"/>
+					</element>
+				</differential>
+			</StructureDefinition>
+		</resource>
+	</entry>
+</Bundle>

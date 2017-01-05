@@ -62,4 +62,19 @@
 			<code value="266016"/>
 		</valueQuantity>
 	</component>
+	<component>
+		<code>
+			<coding>
+				<system value="urn:std:iso:11073:10101"/>
+				<code value="149546"/>
+				<display value="MDC_PULS_RATE_NON_INV"/>
+			</coding>
+		</code>
+		<valueQuantity>
+			<value value="65"/>
+			<unit value="bpm"/>
+			<system value="urn:std.iso:11073:10101"/>
+			<code value="264864"/>
+		</valueQuantity>
+	</component>
 </Observation>
