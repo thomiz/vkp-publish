@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="GeoPositionExtension" />
+  <meta>
+    <lastUpdated value="2017-01-06T13:25:10.301+01:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/profiles/vft/GeoPositionExtension" />
+  <version value="0.1" />
+  <name value="GeoPositionExtension" />
+  <status value="draft" />
+  <date value="2017-01-06T12:39:39.839743+01:00" />
+  <description value="GeoPositionExtension" />
+  <kind value="datatype" />
+  <constrainedType value="Extension" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="Location" />
+  <base value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <differential>
+    <element>
+      <path value="Extension" />
+      <short value="Geographical Position" />
+      <definition value="Geographical position with lat, lon, timestamp, velocity and direction of travel" />
+    </element>
+    <element>
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator value="url" />
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element>
+      <path value="Extension.extension" />
+      <name value="lat" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element>
+      <path value="Extension.extension.url" />
+      <fixedUri value="lat" />
+    </element>
+    <element>
+      <path value="Extension.extension.valueDecimal" />
+      <min value="1" />
+      <type>
+        <code value="decimal" />
+      </type>
+    </element>
+    <element>
+      <path value="Extension.extension" />
+      <name value="lon" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element>
+      <path value="Extension.extension.url" />
+      <fixedUri value="lon" />
+    </element>
+    <element>
+      <path value="Extension.extension.valueDecimal" />
+      <min value="1" />
+      <type>
+        <code value="decimal" />
+      </type>
+    </element>
+    <element>
+      <path value="Extension.extension" />
+      <name value="timestamp" />
+      <max value="1" />
+    </element>
+    <element>
+      <path value="Extension.extension.url" />
+      <fixedUri value="timestamp" />
+    </element>
+    <element>
+      <path value="Extension.extension.valueDateTime" />
+      <min value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element>
+      <path value="Extension.extension" />
+      <name value="velocityms" />
+      <max value="1" />
+    </element>
+    <element>
+      <path value="Extension.extension.url" />
+      <fixedUri value="velocityms" />
+    </element>
+    <element>
+      <path value="Extension.extension.valueDecimal" />
+      <min value="1" />
+      <type>
+        <code value="decimal" />
+      </type>
+    </element>
+    <element>
+      <path value="Extension.extension" />
+      <name value="direction" />
+      <max value="1" />
+    </element>
+    <element>
+      <path value="Extension.extension.url" />
+      <fixedUri value="direction" />
+    </element>
+    <element>
+      <path value="Extension.extension.valueDecimal" />
+      <min value="1" />
+      <type>
+        <code value="decimal" />
+      </type>
+    </element>
+    <element>
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/profiles/vft/GeoPositionExtension" />
+    </element>
+    <element>
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
