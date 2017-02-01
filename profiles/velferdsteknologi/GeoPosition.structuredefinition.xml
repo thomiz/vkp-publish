@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-01-04T19:09:41.857+01:00" />
+    <lastUpdated value="2017-01-25T10:47:27.632+01:00" />
   </meta>
   <url value="http://ehelse.no/fhir/profiles/vft/GeoPosition" />
   <name value="GeoPosition" />
   <status value="draft" />
   <publisher value="eHelse" />
   <date value="2017-01-04T18:52:16+01:00" />
-  <description value="Geoposisjon med timestamp, retning og hastighet." />
+  <description value="Geoposisjon with timestamp, bearing and speed." />
   <kind value="resource" />
   <constrainedType value="Location" />
   <abstract value="false" />
@@ -27,8 +27,7 @@
     <element>
       <path value="Location.extension" />
       <name value="PositionTimestamp" />
-      <definition value="Timestamp of the position" />
-      <min value="0" />
+      <definition value="Timestamp of the position measurement" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -39,7 +38,6 @@
       <path value="Location.extension" />
       <name value="velocityms" />
       <definition value="Velocity annotated in meter per second" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -49,8 +47,7 @@
     <element>
       <path value="Location.extension" />
       <name value="DirectionDegrees" />
-      <definition value="Direction of travel in radian (rad)" />
-      <min value="0" />
+      <definition value="Direction of travel in desimal degrees (DD)" />
       <max value="1" />
       <type>
         <code value="Extension" />
