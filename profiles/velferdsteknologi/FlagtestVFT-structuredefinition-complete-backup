@@ -1,21 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="21596e7d-3832-4102-a091-abd35c9d1e3f" />
-  <meta>
-    <versionId value="5" />
-    <lastUpdated value="2017-02-02T10:17:50.733+01:00" />
-  </meta>
-  <url value="http://ehelse.no/fhir/profiles/vft/FlagVFT" />
-  <version value="0.1" />
-  <name value="FlagVFT" />
-  <status value="draft" />
-  <date value="2017-01-04T14:52:21+01:00" />
-  <description value="Profile of the Flag Resource to be used in Personal Connected Health in Norway. Adds Severity, category, timestamp, URL and Geoposition to the base http://hl7.org/fhir/StructureDefinition/Flag resource.&#xD;&#xA;" />
-  <kind value="resource" />
-  <constrainedType value="Flag" />
-  <abstract value="false" />
-  <base value="http://hl7.org/fhir/StructureDefinition/Flag" />
-  <snapshot>
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/fhir-single.xsd">
+    <id value="1"/>
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2017-02-02T08:21:54.792+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/profiles/vft/FlagtestVFT" />
+    <version value="0.1" />
+    <name value="FlagtestVFT" />
+    <status value="draft" />
+    <date value="2017-01-04T14:52:21+01:00" />
+    <description value="Profile of the Flag Resource to be used in Personal Connected Health in Norway. Adds Severity, category, timestamp, URL and Geoposition to the base http://hl7.org/fhir/StructureDefinition/Flag resource." />
+    <kind value="resource" />
+    <constrainedType value="Flag" />
+    <abstract value="false" />
+    <base value="http://hl7.org/fhir/StructureDefinition/Flag" />
+    <snapshot>
     <element>
       <path value="Flag" />
       <short value="Key information to flag to healthcare providers" />
@@ -402,6 +402,44 @@
     </element>
     <element>
       <path value="Flag.extension" />
+      <name value="category" />
+      <short value="Text describing the flag category" />
+      <definition value="Text for describing the text category for grouping in Transmed" />
+      <comments value="Note that FHIR strings may not exceed 1MB in size" />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="DomainResource.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
+          <valueString value="children()" />
+        </extension>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Flag.extension" />
       <name value="URL" />
       <short value="Url for the alarm" />
       <definition value="Url to open the alarm in a browser" />
@@ -440,9 +478,9 @@
     </element>
     <element>
       <path value="Flag.extension" />
-      <name value="geopositions" />
+      <name value="Geopositions" />
       <short value="Details and position information for a physical place" />
-      <definition value="Details and position information for a physical place where services are provided  and resources and participants may be stored, found, contained or accommodated." />
+      <definition value="Position measurements" />
       <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -3347,6 +3385,17 @@
     </element>
     <element>
       <path value="Flag.extension" />
+      <name value="category" />
+      <short value="Text describing the flag category" />
+      <definition value="Text for describing the text category for grouping in Transmed" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element>
+      <path value="Flag.extension" />
       <name value="URL" />
       <short value="Url for the alarm" />
       <definition value="Url to open the alarm in a browser" />
@@ -3358,8 +3407,8 @@
     </element>
     <element>
       <path value="Flag.extension" />
-      <name value="geopositions" />
-      <min value="0" />
+      <name value="Geopositions" />
+      <definition value="Position measurements" />
       <type>
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/profiles/vft/GeoPosition" />
