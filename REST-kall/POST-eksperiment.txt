@@ -1,0 +1,8 @@
+http://localhost:8080/baseDstu2/StructureDefinition/SeverityValueSet?_format=application/xml+fhir?
+http://localhost:8080/baseDstu2/StructureDefinition/SeverityValueSet?content-type=application/xml+fhir?
+POST http://localhost:8080/baseDstu2/StructureDefinition?_format=xml&_pretty=true
+Accept-Charset: utf-8
+Accept: application/xml+fhir
+User-Agent: HAPI-FHIR/2.2 (FHIR Client; FHIR 1.0.2/DSTU2; apache)
+Accept-Encoding: gzip
+Content-Type: application/xml+fhir; charset=UTF-8
