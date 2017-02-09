@@ -7,4 +7,8 @@ User-Agent: HAPI-FHIR/2.2 (FHIR Client; FHIR 1.0.2/DSTU2; apache)
 Accept-Encoding: gzip
 Content-Type: application/xml+fhir; charset=UTF-8
 
+<<<<<<< HEAD
 curl http://ehelse.no/fhir/profiles/vft/GeoPosition --upload-file GeoPosition.structuredefinition.xml
+=======
+POST http://localhost:8080/create
+>>>>>>> 4ae84baba253f44049cf7dde7ef2cdb08fc9fd92
