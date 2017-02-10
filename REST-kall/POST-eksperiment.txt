@@ -18,3 +18,11 @@ I Powershell:
 osition.structuredefinition.xml
 & 'C:\Program Files\curl\curl.exe' http://localhost:8080/baseDstu2/StructureDefinition/SeverityValueSet --upload-file SeverityValueSet.structuredefinition.xml
 & 'C:\Program Files\curl\curl.exe' http://localhost:8080/baseDstu2/StructureDefinition/FlagVFT --upload-file FlagVFT.structuredefinition.xml
+
+curl.exe http://localhost:8080/baseDstu2/StructureDefinition/Velocityms --upload-file extensions\Velocityms.structuredefinition.xml
+curl.exe http://localhost:8080/baseDstu2/StructureDefinition/DirectionDecimalDegrees --upload-file extensions/DirectionDecimalDegrees.structuredefinition.xml
+curl.exe http://localhost:8080/baseDstu2/StructureDefinition/Timestamp --upload-file extensions/Timestamp.structuredefinition.xml
+curl.exe http://localhost:8080/baseDstu2/StructureDefinition/URL --upload-file extensions/URL.structuredefinition.xml
+curl.exe http://localhost:8080/baseDstu2/StructureDefinition/GeoPosition --upload-file profiles/velferdsteknologi/GeoPosition.structuredefinition.xml
+curl.exe http://localhost:8080/baseDstu2/StructureDefinition/SeverityValueSet --upload-file profiles/velferdsteknologi/SeverityValueSet.structuredefinition.xml
+curl.exe http://localhost:8080/baseDstu2/StructureDefinition/FlagVFT --upload-file profiles/velferdsteknologi/FlagVFT.structuredefinition.xml
