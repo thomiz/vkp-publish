@@ -14,10 +14,16 @@ POST http://localhost:8080/create
 
 I Powershell:
 
-& 'C:\Program Files\curl\curl.exe' http://localhost:8080/baseDstu2/StructureDefinition/GeoPosition --upload-file GeoP
-osition.structuredefinition.xml
-& 'C:\Program Files\curl\curl.exe' http://localhost:8080/baseDstu2/StructureDefinition/SeverityValueSet --upload-file SeverityValueSet.structuredefinition.xml
-& 'C:\Program Files\curl\curl.exe' http://localhost:8080/baseDstu2/StructureDefinition/FlagVFT --upload-file FlagVFT.structuredefinition.xml
+& 'C:\Program Files\curl\curl.exe' http://localhost:8080/baseDstu2/StructureDefinition/Velocityms --upload-file extensions\Velocityms.structuredefinition.xml
+& 'C:\Program Files\curl\curl.exe' http://localhost:8080/baseDstu2/StructureDefinition/DirectionDecimalDegrees --upload-file extensions/DirectionDecimalDegrees.structuredefinition.xml
+& 'C:\Program Files\curl\curl.exe' http://localhost:8080/baseDstu2/StructureDefinition/Timestamp --upload-file extensions/Timestamp.structuredefinition.xml
+& 'C:\Program Files\curl\curl.exe' http://localhost:8080/baseDstu2/StructureDefinition/URL --upload-file extensions/URL.structuredefinition.xml
+& 'C:\Program Files\curl\curl.exe' http://localhost:8080/baseDstu2/StructureDefinition/GeoPosition --upload-file profiles/velferdsteteknologi/GeoPosition.structuredefinition.xml
+& 'C:\Program Files\curl\curl.exe' http://localhost:8080/baseDstu2/StructureDefinition/SeverityValueSet --upload-file profiles/velferdsteteknologi/SeverityValueSet.structuredefinition.xml
+& 'C:\Program Files\curl\curl.exe' http://localhost:8080/baseDstu2/StructureDefinition/FlagVFT --upload-file profiles/velferdsteteknologi/FlagVFT.structuredefinition.xml
+
+
+På hjemmepc:
 
 curl.exe http://localhost:8080/baseDstu2/StructureDefinition/Velocityms --upload-file extensions\Velocityms.structuredefinition.xml
 curl.exe http://localhost:8080/baseDstu2/StructureDefinition/DirectionDecimalDegrees --upload-file extensions/DirectionDecimalDegrees.structuredefinition.xml
