@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/structuredefinition.xsd">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="GeoPosition" />
   <meta>
-    <lastUpdated value="2017-02-23T10:24:42.871+01:00" />
+    <lastUpdated value="2017-02-24T14:40:19.842+01:00" />
   </meta>
   <url value="http://ehelse.no/fhir/profiles/vft/GeoPosition" />
   <name value="GeoPosition" />

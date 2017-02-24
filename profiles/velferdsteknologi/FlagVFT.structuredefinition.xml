@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/structuredefinition.xsd">
+<StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="FlagVFT" />
   <meta>
     <versionId value="5" />
-    <lastUpdated value="2017-02-24T08:02:37.786+01:00" />
+    <lastUpdated value="2017-02-24T14:59:35.194+01:00" />
   </meta>
   <url value="http://ehelse.no/fhir/profiles/vft/FlagVFT" />
   <version value="0.1" />
@@ -23,17 +23,19 @@
       <path value="Flag.extension" />
       <slicing>
         <discriminator value="url" />
-        <rules value="openAtEnd" />
+        <rules value="open" />
       </slicing>
     </element>
     <element>
       <path value="Flag.extension" />
       <name value="Severity" />
+      <short value="Base for all elements" />
+      <definition value="Optional Extensions Element - found in all resources." />
       <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/profiles/vft/SeverityValueSet" />
+        <profile value="http://ehelse.no/fhir/extentions/StructureDefinition/SeverityValueSet" />
       </type>
       <binding>
         <strength value="required" />
@@ -65,12 +67,14 @@
     </element>
     <element>
       <path value="Flag.extension" />
-      <name value="geopositions" />
+      <name value="ReferenceToGeoPosition" />
+      <short value="ReferenceGeoLocation" />
+      <definition value="A reference to the Geolocation describing the geolocation measurement connected to the Flag." />
       <min value="0" />
-      <max value="*" />
+      <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/profiles/vft/GeoPosition" />
+        <profile value="http://ehelse.no/fhir/extentions/StructureDefinition/ReferenceGeoPosition" />
       </type>
     </element>
     <element>

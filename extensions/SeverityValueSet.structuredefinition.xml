@@ -2,9 +2,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="SeverityValueSet" />
   <meta>
-    <lastUpdated value="2017-01-04T17:40:58.458+01:00" />
+    <lastUpdated value="2017-02-24T10:25:13.484+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/profiles/vft/SeverityValueSet" />
+  <url value="http://ehelse.no/fhir/extentions/StructureDefinition/SeverityValueSet" />
   <version value="0.1" />
   <name value="SeverityValueSet" />
   <status value="draft" />
@@ -22,7 +22,7 @@
     </element>
     <element>
       <path value="Extension.url" />
-      <fixedUri value="http://ehelse.no/fhir/profiles/vft/SeverityValueSet" />
+      <fixedUri value="http://ehelse.no/fhir/extentions/StructureDefinition/SeverityValueSet" />
     </element>
     <element>
       <path value="Extension.valueCode" />
