@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2016-11-18T13:23:06.495+01:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/profiles/velferdsteknologi/StructureDefinition/VelferdCarePlan" />
+  <version value="0.1" />
+  <name value="VelferdCarePlan" />
+  <status value="draft" />
+  <description value="CarePlan resource for home patient monitoring" />
+  <fhirVersion value="1.0.2" />
+  <kind value="resource" />
+  <constrainedType value="CarePlan" />
+  <abstract value="false" />
+  <base value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
+  <differential>
+    <element>
+      <path value="CarePlan" />
+      <short value="CarePlan for velferdsteknologi" />
+      <type>
+        <code value="CarePlan" />
+      </type>
+    </element>
+    <element>
+      <path value="CarePlan.extension" />
+      <slicing>
+        <discriminator value="url" />
+        <rules value="openAtEnd" />
+      </slicing>
+    </element>
+    <element>
+      <path value="CarePlan.extension" />
+      <name value="MyExtension" />
+      <short value="TestextForGoal" />
+      <definition value="Optional Extensions Element - found in all resources." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="StructureDefinition/TestGoalExtention" />
+      </type>
+    </element>
+    <element>
+      <path value="CarePlan.contained" />
+      <name value="jepp" />
+      <slicing>
+        <discriminator value="@type" />
+        <rules value="openAtEnd" />
+      </slicing>
+    </element>
+    <element>
+      <path value="CarePlan.contained" />
+      <name value="practitioner" />
+      <short value="Contained practiotioner resource" />
+      <definition value="Contained practiotioner resource" />
+      <max value="1" />
+      <type>
+        <code value="Resource" />
+      </type>
+      <type>
+        <code value="Practitioner" />
+      </type>
+    </element>
+    <element>
+      <path value="CarePlan.contained" />
+      <name value="organization" />
+      <short value="Contained organization resource" />
+      <definition value="Contained organization resource" />
+      <max value="1" />
+      <type>
+        <code value="Resource" />
+      </type>
+      <type>
+        <code value="Organization" />
+      </type>
+    </element>
+    <element>
+      <path value="CarePlan.contained" />
+      <name value="goal" />
+      <short value="Contained Goals" />
+      <definition value="Contained Goals" />
+      <type>
+        <code value="Resource" />
+      </type>
+      <type>
+        <code value="Goal" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

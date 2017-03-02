@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-01-04T19:12:04.858+01:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/profiles/vft/FlagVFT" />
+  <version value="0.1" />
+  <name value="FlagVFT" />
+  <status value="draft" />
+  <date value="2017-01-04T14:52:21+01:00" />
+  <description value="Flag ressurs for bruk innen velferdsteknologi&#xD;&#xA;" />
+  <kind value="resource" />
+  <constrainedType value="Flag" />
+  <abstract value="false" />
+  <base value="http://hl7.org/fhir/StructureDefinition/Flag" />
+  <differential>
+    <element>
+      <path value="Flag" />
+    </element>
+    <element>
+      <path value="Flag.extension" />
+      <slicing>
+        <discriminator value="url" />
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element>
+      <path value="Flag.extension" />
+      <name value="Severity" />
+      <short value="Base for all elements" />
+      <definition value="Optional Extensions Element - found in all resources." />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/profiles/vft/SeverityValueSet" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="red|yellow|green|greenwithmessage|notreported" />
+      </binding>
+    </element>
+    <element>
+      <path value="Flag.extension" />
+      <name value="timestamp" />
+      <short value="timestampExtention" />
+      <definition value="Simple timpestamp for when the Flag was generated" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://www.hl7.org/FHIR/StructureDefinition/dateTime" />
+      </type>
+    </element>
+    <element>
+      <path value="Flag.extension" />
+      <name value="category" />
+      <short value="fritekst for kategori" />
+      <definition value="fritekst for kategori kategori grupperes i Transmed" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element>
+      <path value="Flag.extension" />
+      <name value="URL" />
+      <short value="Url til alarmen" />
+      <definition value="Url for å åpne denne alarmen i nettleser" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://www.hl7.org/FHIR/StructureDefinition/uri" />
+      </type>
+    </element>
+    <element>
+      <path value="Flag.extension" />
+      <name value="Geopositions" />
+      <definition value="Position measurements" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/profiles/vft/GeoPosition" />
+      </type>
+    </element>
+    <element>
+      <path value="Flag.identifier" />
+      <name value="alarmid" />
+      <short value="Identifiserer alarmen/flagget" />
+      <definition value="Unik idntifikator som identifiserer flagget som sendes mellom systemene, UUID skal benyttes" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
