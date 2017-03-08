@@ -26,11 +26,11 @@ Til NHN test:
 & 'C:\Program Files\curl\curl.exe' http://tgs-fhir-web.testsenter.nhn.no/baseDstu2/StructureDefinition/Velocityms --upload-file extensions\Velocityms.structuredefinition.xml
 & 'C:\Program Files\curl\curl.exe' http://tgs-fhir-web.testsenter.nhn.no/baseDstu2/StructureDefinition/DirectionDecimalDegrees --upload-file extensions\DirectionDecimalDegrees.structuredefinition.xml
 & 'C:\Program Files\curl\curl.exe' http://tgs-fhir-web.testsenter.nhn.no/baseDstu2/StructureDefinition/Timestamp --upload-file extensions\Timestamp.structuredefinition.xml
-
-& 'C:\Program Files\curl\curl.exe' http://tgs-fhir-web.testsenter.nhn.no/baseDstu2/StructureDefinition/Velocityms --upload-file extensions\Velocityms.structuredefinition.xml
-& 'C:\Program Files\curl\curl.exe' http://tgs-fhir-web.testsenter.nhn.no/baseDstu2/StructureDefinition/Velocityms --upload-file extensions\Velocityms.structuredefinition.xml
-& 'C:\Program Files\curl\curl.exe' http://tgs-fhir-web.testsenter.nhn.no/baseDstu2/StructureDefinition/Velocityms --upload-file extensions\Velocityms.structuredefinition.xml
-& 'C:\Program Files\curl\curl.exe' http://tgs-fhir-web.testsenter.nhn.no/baseDstu2/StructureDefinition/Velocityms --upload-file extensions\Velocityms.structuredefinition.xml
+& 'C:\Program Files\curl\curl.exe' http://tgs-fhir-web.testsenter.nhn.no/baseDstu2/StructureDefinition/ReferenceGeoPosition --upload-file extensions\ReferenceGeoPosition.structuredefinition.xml
+& 'C:\Program Files\curl\curl.exe' http://tgs-fhir-web.testsenter.nhn.no/baseDstu2/StructureDefinition/SeverityValueSet --upload-file extensions\SeverityValueSet.structuredefinition.xml
+& 'C:\Program Files\curl\curl.exe' http://tgs-fhir-web.testsenter.nhn.no/baseDstu2/StructureDefinition/URL --upload-file extensions\URL.structuredefinition.xml
+& 'C:\Program Files\curl\curl.exe' http://tgs-fhir-web.testsenter.nhn.no/baseDstu2/StructureDefinition/GeoPosition --upload-file profiles\velferdsteknologi\GeoPosition.structuredefinition.xml
+& 'C:\Program Files\curl\curl.exe' http://tgs-fhir-web.testsenter.nhn.no/baseDstu2/StructureDefinition/FlagVFT --upload-file profiles\velferdsteknologi\FlagVFT.structuredefinition.xml
 
 På hjemmepc:
 
