@@ -43,3 +43,4 @@ curl.exe http://localhost:8080/baseDstu2/StructureDefinition/SeverityValueSet --
 curl.exe http://localhost:8080/baseDstu2/StructureDefinition/FlagVFT --upload-file profiles/velferdsteknologi/FlagVFT.structuredefinition.xml
 
 curl.exe http://tgs-fhir-web.testsenter.nhn.no/baseDstu2/StructureDefinition/PCHAObservation --upload-file profiles/PCHA/PCHAObservation.structuredefinition.xml
+curl.exe http://localhost:8080/baseDstu2/StructureDefinition/PCHAObservation --upload-file profiles/PCHA/PCHAObservation.structuredefinition.xml

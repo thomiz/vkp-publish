@@ -1,0 +1,28 @@
+{
+  "resourceType": "Location",
+  "id": "cf-1489083382559",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Timestamp: 2017-03-09T19:16:27+01:00identifier: id of the location<a name='mm'/></div>"
+  },
+  "meta": {
+    "profile": [
+      "http://ehelse.no/fhir/profiles/vft/GeoPosition"
+    ]
+  },
+  "extension": [
+    {
+      "url": [
+        "http://ehelse.no/fhir/extentions/StructureDefinition/Timestamp"
+      ],
+      "valueDateTime": "2017-03-09T19:16:27+01:00"
+    }
+  ],
+  "identifier": [
+    {
+      "value": "id of the location",
+      "system": "uuid"
+    }
+  ],
+  "position": {}
+}

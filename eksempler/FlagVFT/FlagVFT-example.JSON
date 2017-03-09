@@ -1,0 +1,28 @@
+{
+  "resourceType": "Flag",
+  "id": "cf-1489082986767",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Test FlagVFTstatus: activeTimestamp: 2017-03-09T19:13:52+01:00code: text value<a name='mm'/></div>"
+  },
+  "meta": {
+    "profile": [
+      "http://ehelse.no/fhir/profiles/vft/FlagVFT"
+    ]
+  },
+  "subject": {
+    "reference": "Patient/4865"
+  },
+  "extension": [
+    {
+      "url": [
+        "http://ehelse.no/fhir/extentions/StructureDefinition/Timestamp"
+      ],
+      "valueDateTime": "2017-03-09T19:13:52+01:00"
+    }
+  ],
+  "status": "active",
+  "code": {
+    "text": "text value"
+  }
+}
