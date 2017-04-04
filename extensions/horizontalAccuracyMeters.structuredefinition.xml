@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="StructureDefinition/velocityMs" />
+  <id value="StructureDefinition/horizontalAccuracyMeters" />
   <meta>
-    <lastUpdated value="2017-04-04T09:44:22.191+02:00" />
+    <lastUpdated value="2017-04-04T09:54:41.063+02:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/extentions/StructureDefinition/velocityMs" />
-  <name value="velocityMs" />
+  <url value="http://ehelse.no/fhir/extentions/StructureDefinition/horizontalAccuracyMeters" />
+  <name value="horizontalAccuracyMeters" />
   <status value="draft" />
-  <date value="2017-02-10T15:23:45.8713745+01:00" />
-  <description value="Extention for velocity annotated in m/s" />
+  <date value="2017-04-04T09:51:14.4874973+02:00" />
+  <description value="Accurracy of geoPosition measurement annotated in meters" />
   <fhirVersion value="1.0.2" />
   <kind value="datatype" />
   <constrainedType value="Extension" />
@@ -19,8 +19,8 @@
   <snapshot>
     <element>
       <path value="Extension" />
-      <short value="Velocity" />
-      <definition value="Velocity annotated in m per second." />
+      <short value="Base for all elements" />
+      <definition value="Optional Extensions Element - found in all resources." />
       <min value="0" />
       <max value="*" />
       <base>
@@ -131,7 +131,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://ehelse.no/fhir/extentions/StructureDefinition/velocityMs" />
+      <fixedUri value="http://ehelse.no/fhir/extentions/StructureDefinition/horizontalAccuracyMeters" />
       <condition value="ele-1" />
       <constraint>
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
@@ -153,7 +153,6 @@
     </element>
     <element>
       <path value="Extension.valueDecimal" />
-      <name value="valueVelocity" />
       <short value="Value of extension" />
       <definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." />
       <min value="0" />
@@ -189,16 +188,13 @@
   <differential>
     <element>
       <path value="Extension" />
-      <short value="Velocity" />
-      <definition value="Velocity annotated in m per second." />
     </element>
     <element>
       <path value="Extension.url" />
-      <fixedUri value="http://ehelse.no/fhir/extentions/StructureDefinition/velocityMs" />
+      <fixedUri value="http://ehelse.no/fhir/extentions/StructureDefinition/horizontalAccuracyMeters" />
     </element>
     <element>
       <path value="Extension.valueDecimal" />
-      <name value="valueVelocity" />
       <type>
         <code value="decimal" />
       </type>

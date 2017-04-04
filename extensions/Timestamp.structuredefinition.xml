@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="StructureDefinition/Timestamp" />
+  <id value="StructureDefinition/timestamp" />
   <meta>
-    <lastUpdated value="2017-02-10T15:36:27.743+01:00" />
+    <lastUpdated value="2017-04-04T09:43:40.332+02:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/extentions/StructureDefinition/Timestamp" />
-  <name value="Timestamp" />
+  <url value="http://ehelse.no/fhir/extentions/StructureDefinition/timestamp" />
+  <name value="timestamp" />
   <status value="draft" />
   <date value="2017-02-10T15:30:20.3833931+01:00" />
-  <description value="Basic timestamp" />
+  <description value="Basic timestamp with UTC offset" />
+  <fhirVersion value="1.0.2" />
   <kind value="datatype" />
   <constrainedType value="Extension" />
   <abstract value="false" />
@@ -33,7 +34,7 @@
       <condition value="ele-1" />
       <constraint>
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
-          <valueString value="*" />
+          <valueString value="children()" />
         </extension>
         <key value="ele-1" />
         <severity value="error" />
@@ -67,7 +68,7 @@
       <condition value="ele-1" />
       <constraint>
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
-          <valueString value="*" />
+          <valueString value="children()" />
         </extension>
         <key value="ele-1" />
         <severity value="error" />
@@ -99,7 +100,7 @@
       <condition value="ele-1" />
       <constraint>
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
-          <valueString value="*" />
+          <valueString value="children()" />
         </extension>
         <key value="ele-1" />
         <severity value="error" />
@@ -130,11 +131,11 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://ehelse.no/fhir/extentions/StructureDefinition/Timestamp" />
+      <fixedUri value="http://ehelse.no/fhir/extentions/StructureDefinition/timestamp" />
       <condition value="ele-1" />
       <constraint>
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
-          <valueString value="*" />
+          <valueString value="children()" />
         </extension>
         <key value="ele-1" />
         <severity value="error" />
@@ -168,7 +169,7 @@
       <condition value="ele-1" />
       <constraint>
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
-          <valueString value="*" />
+          <valueString value="children()" />
         </extension>
         <key value="ele-1" />
         <severity value="error" />
@@ -191,7 +192,7 @@
     </element>
     <element>
       <path value="Extension.url" />
-      <fixedUri value="http://ehelse.no/fhir/extentions/StructureDefinition/Timestamp" />
+      <fixedUri value="http://ehelse.no/fhir/extentions/StructureDefinition/timestamp" />
     </element>
     <element>
       <path value="Extension.valueDateTime" />
