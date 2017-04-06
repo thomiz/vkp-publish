@@ -3,7 +3,7 @@
   <id value="vft-flag" />
   <meta>
     <versionId value="5" />
-    <lastUpdated value="2017-04-03T15:49:34.854+02:00" />
+    <lastUpdated value="2017-04-06T13:00:34.742+02:00" />
   </meta>
   <url value="http://ehelse.no/fhir/profiles/vft/vft-flag" />
   <version value="0.1" />
@@ -441,9 +441,9 @@
     </element>
     <element>
       <path value="Flag.extension" />
-      <name value="referenceToGeoPosition" />
-      <short value="referenceGeoLocation" />
-      <definition value="A reference to the Geolocation describing the geolocation measurement connected to the Flag." />
+      <name value="geoposition" />
+      <short value="Geographical Position" />
+      <definition value="Geographical position with lat, lon, timestamp, velocity and direction of travel" />
       <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -456,7 +456,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/extentions/StructureDefinition/ReferenceGeoPosition" />
+        <profile value="http://ehelse.no/fhir/extentions/StructureDefinition/vft-geoposition" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -3313,13 +3313,14 @@
     </element>
     <element>
       <path value="Flag.extension" />
-      <name value="referenceToGeoPosition" />
-      <short value="referenceGeoLocation" />
-      <definition value="A reference to the Geolocation describing the geolocation measurement connected to the Flag." />
+      <name value="geoposition" />
+      <short value="Geographical Position" />
+      <definition value="Geographical position with lat, lon, timestamp, velocity and direction of travel" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/extentions/StructureDefinition/ReferenceGeoPosition" />
+        <profile value="http://ehelse.no/fhir/extentions/StructureDefinition/vft-geoposition" />
       </type>
     </element>
     <element>
