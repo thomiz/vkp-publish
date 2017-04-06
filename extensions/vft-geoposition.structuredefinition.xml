@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="vft-geoposition" />
+  <id value="StructureDefinition/vft-geoposition" />
   <meta>
-    <lastUpdated value="2017-04-06T12:58:03.381+02:00" />
+    <lastUpdated value="2017-04-06T13:18:49.31+02:00" />
   </meta>
   <url value="http://ehelse.no/fhir/extentions/StructureDefinition/vft-geoposition" />
   <version value="0.1" />
@@ -11,7 +11,7 @@
   <date value="2017-01-06T12:39:39.839743+01:00" />
   <description value="Geoposition measurement for the PCH in Norway" />
   <fhirVersion value="1.0.2" />
-  <kind value="datatype" />
+  <kind value="resource" />
   <constrainedType value="Extension" />
   <abstract value="false" />
   <contextType value="resource" />
