@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="PCHAObservation" />
   <meta>
-    <lastUpdated value="2017-03-09T19:33:13.464+01:00" />
+    <lastUpdated value="2017-03-15T10:48:59.717+01:00" />
   </meta>
   <url value="http://pcha.org/phd/documents/fhir/StructureDefinition/PCHAObservation" />
   <name value="PCHAObservation" />
@@ -9294,7 +9294,7 @@
     <element>
       <path value="Observation.device" />
       <slicing>
-        <description value="One Reference for the Sensor Device and another reference for the PHG Device" />
+        <description value="Reference to a PHG device and a Sensor Device" />
         <rules value="openAtEnd" />
       </slicing>
     </element>
