@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="StructureDefinition/vft-geoposition" />
+  <id value="vft-geoposition" />
   <meta>
-    <lastUpdated value="2017-04-06T13:18:49.31+02:00" />
+    <lastUpdated value="2017-04-25T19:49:58.952+02:00" />
   </meta>
   <url value="http://ehelse.no/fhir/extentions/StructureDefinition/vft-geoposition" />
   <version value="0.1" />
@@ -1045,7 +1045,7 @@
       </mapping>
     </element>
     <element>
-      <path value="Extension.extension.valueDecimal" />
+      <path value="Extension.extension.valueQuantity" />
       <short value="Value of extension" />
       <definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." />
       <min value="1" />
@@ -1056,7 +1056,8 @@
         <max value="1" />
       </base>
       <type>
-        <code value="decimal" />
+        <code value="Quantity" />
+        <profile value="http://ehelse.no/fhir/profiles/vft/vft-quantityvelocityms" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -2027,10 +2028,11 @@
       <fixedUri value="velocityMs" />
     </element>
     <element>
-      <path value="Extension.extension.valueDecimal" />
+      <path value="Extension.extension.valueQuantity" />
       <min value="1" />
       <type>
-        <code value="decimal" />
+        <code value="Quantity" />
+        <profile value="http://ehelse.no/fhir/profiles/vft/vft-quantityvelocityms" />
       </type>
     </element>
     <element>
