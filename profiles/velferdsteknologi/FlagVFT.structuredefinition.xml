@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="vft-flag" />
   <meta>
     <versionId value="5" />
-    <lastUpdated value="2017-04-06T13:00:34.742+02:00" />
+    <lastUpdated value="2017-04-28T16:02:39.279+02:00" />
   </meta>
   <url value="http://ehelse.no/fhir/profiles/vft/vft-flag" />
   <version value="0.1" />
@@ -3316,7 +3315,6 @@
       <name value="geoposition" />
       <short value="Geographical Position" />
       <definition value="Geographical position with lat, lon, timestamp, velocity and direction of travel" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />

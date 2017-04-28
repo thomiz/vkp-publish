@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Flag xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/fhir-single.xsd">
+<Flag xmlns="http://hl7.org/fhir">
   <meta>
     <profile value="http://ehelse.no/fhir/profiles/vft/FlagVFT" />
   </meta>
@@ -10,7 +10,7 @@
     <valueDateTime value="2000-02-02T10:00:00.936+02:00"></valueDateTime>
   </extension>
   <extension url="http://ehelse.no/fhir/extentions/StructureDefinition/URL">
-    <valueUri value="http://not.a.real.adress" />
+    <valueDecimal value="1.0"/>
   </extension>
   <extension url="http://ehelse.no/fhir/extentions/StructureDefinition/vft-geoposition">
     <extension url="" />

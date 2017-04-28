@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="StructureDefinition/timestamp" />
+  <id value="timestamp" />
   <meta>
-    <lastUpdated value="2017-04-04T09:43:40.332+02:00" />
+    <lastUpdated value="2017-04-28T16:02:43.978+02:00" />
   </meta>
   <url value="http://ehelse.no/fhir/extentions/StructureDefinition/timestamp" />
   <name value="timestamp" />
