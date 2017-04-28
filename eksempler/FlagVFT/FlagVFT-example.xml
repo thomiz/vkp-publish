@@ -1,13 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Flag xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/fhir-single.xsd">
- <!-- from Resource: id, meta, implicitRules, and language -->
- <!-- from DomainResource: text, contained, extension, and modifierExtension -->
- <identifier><!-- 0..* Identifier Business identifier --></identifier>
- <category><!-- 0..1 CodeableConcept Clinical, administrative, etc. --></category>
- <status value="[code]"/><!-- 1..1 active | inactive | entered-in-error -->
- <period><!-- 0..1 Period Time period when flag is active --></period>
- <subject><!-- 1..1 Reference(Patient|Location|Group|Organization|Practitioner) Who/What is flag about? --></subject>
- <encounter><!-- 0..1 Reference(Encounter) Alert relevant during encounter --></encounter>
- <author><!-- 0..1 Reference(Device|Organization|Patient|Practitioner) Flag creator --></author>
- <code><!-- 1..1 CodeableConcept Partially deaf, Requires easy open caps, No permanent address, etc. --></code>
+  <meta>
+    <profile value="http://ehelse.no/fhir/profiles/vft/FlagVFT" />
+  </meta>
+  <extension url="http://ehelse.no/fhir/extentions/StructureDefinition/SeverityValueSet">
+    <valueDateTime value="2000-02-02T10:00:00.936+02:00" />
+  </extension>
+  <extension url="http://ehelse.no/fhir/extentions/StructureDefinition/URL">
+    <valueUri value="http://dette.er.ikke.en.reell.adresse"/>
+  </extension>
+  <extension url="http://ehelse.no/fhir/extentions/StructureDefinition/vft-geoposition">
+    <extension url="" />
+  </extension>
+  <identifier>
+    <value value="test-id" />
+  </identifier>
+  <status value="active" />
+  <!-- 1..1 active | inactive | entered-in-error -->
+  <subject>
+    <!-- 1..1 Reference(Patient|Location|Group|Organization|Practitioner) Who/What is flag about? -->
+    <reference id="1" />
+    <display value="test" />
+  </subject>
+  <author>
+    <!-- 0..1 Reference(Device|Organization|Patient|Practitioner) Flag creator -->
+  </author>
+  <code>
+    <!-- 1..1 CodeableConcept Partially deaf, Requires easy open caps, No permanent address, etc. -->
+  </code>
 </Flag>
