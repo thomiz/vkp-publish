@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="StructureDefinition/ReferenceGeoPosition" />
+  <meta>
+    <lastUpdated value="2017-02-24T14:43:21.484+01:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/extentions/StructureDefinition/ReferenceGeoPosition" />
+  <name value="ReferenceGeoPosition" />
+  <status value="draft" />
+  <date value="2017-02-24T14:30:08.52775+01:00" />
+  <requirements value="A reference to a geoposition measurement" />
+  <kind value="datatype" />
+  <constrainedType value="Extension" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="Reference" />
+  <base value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <differential>
+    <element>
+      <path value="Extension" />
+      <short value="ReferenceGeoPosition" />
+      <definition value="Reference to a GeoPosition measurement" />
+    </element>
+    <element>
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/extentions/StructureDefinition/ReferenceGeoPosition" />
+    </element>
+    <element>
+      <path value="Extension.valueReference" />
+      <name value="geopositionReference" />
+      <short value="A reference to the Geoposition" />
+      <definition value="A reference to the Geoposition" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://ehelse.no/fhir/profiles/vft/GeoPosition" />
+        <aggregation value="referenced" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
