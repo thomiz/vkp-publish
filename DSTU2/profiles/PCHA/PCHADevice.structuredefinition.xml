@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="PCHADevice" />
+  <meta>
+    <lastUpdated value="2017-03-07T14:25:03.965+01:00" />
+  </meta>
+  <url value="http://pcha.org/phd/documents/fhir/StructureDefinition/PCHADevice" />
+  <name value="PCHADevice" />
+  <status value="draft" />
+  <date value="2017-03-02T19:10:45.6173177+01:00" />
+  <kind value="resource" />
+  <constrainedType value="Device" />
+  <abstract value="false" />
+  <base value="http://hl7.org/fhir/StructureDefinition/Device" />
+  <differential>
+    <element>
+      <path value="Device" />
+    </element>
+    <element>
+      <path value="Device.extension" />
+      <slicing>
+        <discriminator value="url" />
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element>
+      <path value="Device.extension" />
+      <name value="deviceProperty" />
+      <short value="Base for all elements" />
+      <definition value="Optional Extensions Element - found in all resources." />
+      <type>
+        <code value="Extension" />
+        <profile value="http://pcha.org/phd/documents/fhir/extensions/device-property" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
