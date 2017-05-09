@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="STU3/StructureDefinition/vft-quantityvelocityms" />
+  <meta>
+    <lastUpdated value="2017-05-09T16:38:31.934+02:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-quantityvelocityms" />
+  <name value="vft-quantityvelocityms" />
+  <status value="draft" />
+  <date value="2017-05-09T16:26:00.9197334+02:00" />
+  <publisher value="Direktoratet for e-helse" />
+  <description value="Velocity annotated in meter per second (m/s)" />
+  <fhirVersion value="3.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Quantity" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Quantity" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="Quantity.value" />
+      <short value="velocity in meters per second" />
+      <definition value="Norwegian vft project: Value of velocity measured in meter per second" />
+      <min value="1" />
+    </element>
+    <element>
+      <path value="Quantity.comparator" />
+      <max value="0" />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Quantity.unit" />
+      <short value="Unit m/s" />
+      <definition value="fixed value of m/s" />
+      <min value="1" />
+      <fixedString value="m/s" />
+    </element>
+    <element>
+      <path value="Quantity.system" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Quantity.code" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
