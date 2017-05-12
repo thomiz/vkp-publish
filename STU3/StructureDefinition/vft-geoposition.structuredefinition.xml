@@ -2,12 +2,14 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="STU3/StructureDefinition/vft-geoposition" />
   <meta>
-    <lastUpdated value="2017-05-09T16:58:33.45+02:00" />
+    <lastUpdated value="2017-05-12T10:21:51.149+02:00" />
   </meta>
   <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-geoposition" />
+  <version value="0.2" />
   <name value="vft-geoposition" />
   <status value="draft" />
   <date value="2017-05-09T16:53:54.8520187+02:00" />
+  <publisher value="The Norwegian Directorate of eHealth" />
   <description value="Geoposition measurement for the PCH in Norway" />
   <fhirVersion value="3.0.0" />
   <kind value="resource" />
@@ -25,8 +27,162 @@
       <definition value="Geographical position with lat, lon, timestamp, velocity and direction of travel" />
     </element>
     <element>
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="extention.timestamp">
+      <path value="Extension.extension" />
+      <sliceName value="timestamp" />
+      <short value="Timestamp of the position measurement" />
+      <definition value="Timestamp of the position measurement" />
+    </element>
+    <element>
+      <path value="Extension.extension.url" />
+      <fixedUri value="timestamp" />
+    </element>
+    <element>
+      <path value="Extension.extension.valueDateTime" />
+      <sliceName value="timestamp" />
+      <min value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element>
+      <path value="Extension.extension" />
+      <sliceName value="positionEpsg4326" />
+      <short value="Position" />
+      <definition value="WGS 84" />
+    </element>
+    <element>
+      <path value="Extension.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element>
+      <path value="Extension.extension.extension" />
+      <sliceName value="latitude" />
+      <short value="latitude" />
+      <definition value="latitude annoated in decimal" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element>
+      <path value="Extension.extension.extension.url" />
+      <fixedUri value="latitude" />
+    </element>
+    <element>
+      <path value="Extension.extension.extension.valueDecimal" />
+      <type>
+        <code value="decimal" />
+      </type>
+    </element>
+    <element>
+      <path value="Extension.extension.extension" />
+      <sliceName value="longitude" />
+      <short value="longitude" />
+      <definition value="longitude annotated in decimal" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element>
+      <path value="Extension.extension.extension.url" />
+      <fixedUri value="longitude" />
+    </element>
+    <element>
+      <path value="Extension.extension.extension.valueDecimal" />
+      <type>
+        <code value="decimal" />
+      </type>
+    </element>
+    <element>
+      <path value="Extension.extension.url" />
+      <fixedUri value="positionEpsg4326" />
+    </element>
+    <element>
+      <path value="Extension.extension.value[x]" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Extension.extension" />
+      <sliceName value="velocityMs" />
+      <short value="Velocity" />
+      <definition value="Velocity measured in meter per second" />
+    </element>
+    <element>
+      <path value="Extension.extension.url" />
+      <fixedUri value="velocityMs" />
+    </element>
+    <element>
+      <path value="Extension.extension.valueQuantity" />
+      <type>
+        <code value="Quantity" />
+        <profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-quantityvelocityms" />
+      </type>
+    </element>
+    <element>
+      <path value="Extension.extension" />
+      <sliceName value="altitudeMeters" />
+      <short value="Altitude" />
+      <definition value="Altitude measured in meters" />
+    </element>
+    <element>
+      <path value="Extension.extension.url" />
+      <fixedUri value="altitudeMeters" />
+    </element>
+    <element>
+      <path value="Extension.extension.valueQuantity" />
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element>
+      <path value="Extension.extension.valueQuantity.value" />
+      <min value="1" />
+    </element>
+    <element>
+      <path value="Extension.extension.valueQuantity.comparator" />
+      <max value="0" />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Extension.extension.valueQuantity.unit" />
+      <short value="Unit meters" />
+      <definition value="Unit meters UCUM" />
+      <min value="1" />
+      <fixedString value="m" />
+    </element>
+    <element>
+      <path value="Extension.extension.valueQuantity.system" />
+      <short value="UCUM" />
+      <definition value="UCUM units" />
+      <fixedUri value="http://unitsofmeasure.org" />
+    </element>
+    <element>
+      <path value="Extension.extension.valueQuantity.code" />
+      <short value="UCUM value" />
+      <fixedCode value="m" />
+    </element>
+    <element>
       <path value="Extension.url" />
       <fixedUri value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-geoposition" />
+    </element>
+    <element>
+      <path value="Extension.value[x]" />
+      <max value="0" />
     </element>
   </differential>
 </StructureDefinition>

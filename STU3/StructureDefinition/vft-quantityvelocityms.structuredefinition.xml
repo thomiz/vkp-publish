@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="STU3/StructureDefinition/vft-quantityvelocityms" />
   <meta>
-    <lastUpdated value="2017-05-09T16:38:31.934+02:00" />
+    <lastUpdated value="2017-05-12T10:21:58.894+02:00" />
   </meta>
   <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-quantityvelocityms" />
   <name value="vft-quantityvelocityms" />
