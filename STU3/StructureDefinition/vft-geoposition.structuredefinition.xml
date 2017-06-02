@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="STU3/StructureDefinition/vft-geoposition" />
   <meta>
-    <lastUpdated value="2017-05-12T10:21:51.149+02:00" />
+    <lastUpdated value="2017-06-02T12:20:02.892+02:00" />
   </meta>
   <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-geoposition" />
   <version value="0.2" />
@@ -28,25 +28,13 @@
     </element>
     <element>
       <path value="Extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="extention.timestamp">
-      <path value="Extension.extension" />
       <sliceName value="timestamp" />
-      <short value="Timestamp of the position measurement" />
-      <definition value="Timestamp of the position measurement" />
     </element>
-    <element>
+    <element id="Extension.extension:timestamp.url">
       <path value="Extension.extension.url" />
       <fixedUri value="timestamp" />
     </element>
-    <element>
+    <element id="Extension.extension:timestamp.valueDateTime:timestamp">
       <path value="Extension.extension.valueDateTime" />
       <sliceName value="timestamp" />
       <min value="1" />
@@ -57,8 +45,46 @@
     <element>
       <path value="Extension.extension" />
       <sliceName value="positionEpsg4326" />
-      <short value="Position" />
-      <definition value="WGS 84" />
+    </element>
+    <element>
+      <path value="Extension.extension.extension" />
+      <sliceName value="latitude" />
+    </element>
+    <element id="Extension.extension:positionEpsg4326.extension:latitude.url">
+      <path value="Extension.extension.extension.url" />
+      <fixedUri value="latitude" />
+    </element>
+    <element id="Extension.extension:positionEpsg4326.extension:latitude.valueDecimal">
+      <path value="Extension.extension.extension.valueDecimal" />
+      <type>
+        <code value="decimal" />
+      </type>
+    </element>
+    <element>
+      <path value="Extension.extension.extension" />
+      <sliceName value="longitude" />
+    </element>
+    <element id="Extension.extension:positionEpsg4326.extension:longitude.url">
+      <path value="Extension.extension.extension.url" />
+      <fixedUri value="longitude" />
+    </element>
+    <element id="Extension.extension:positionEpsg4326.extension:longitude.valueDecimal">
+      <path value="Extension.extension.extension.valueDecimal" />
+      <type>
+        <code value="decimal" />
+      </type>
+    </element>
+    <element id="Extension.extension:positionEpsg4326.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="positionEpsg4326" />
+    </element>
+    <element id="Extension.extension:positionEpsg4326.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Extension.extension" />
+      <sliceName value="velocityMs" />
     </element>
     <element>
       <path value="Extension.extension.extension" />
@@ -72,33 +98,32 @@
     </element>
     <element>
       <path value="Extension.extension.extension" />
-      <sliceName value="latitude" />
-      <short value="latitude" />
-      <definition value="latitude annoated in decimal" />
+      <sliceName value="speedMs" />
       <min value="1" />
       <max value="1" />
     </element>
     <element>
       <path value="Extension.extension.extension.url" />
-      <fixedUri value="latitude" />
+      <fixedUri value="speedMs" />
     </element>
     <element>
-      <path value="Extension.extension.extension.valueDecimal" />
+      <path value="Extension.extension.extension.valueQuantity" />
+      <sliceName value="speed" />
       <type>
-        <code value="decimal" />
+        <code value="Quantity" />
+        <profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-quantityspeedms" />
       </type>
     </element>
     <element>
       <path value="Extension.extension.extension" />
-      <sliceName value="longitude" />
-      <short value="longitude" />
-      <definition value="longitude annotated in decimal" />
-      <min value="1" />
+      <sliceName value="directionDecimalDegrees" />
+      <short value="The direction of travel" />
+      <definition value="The direction of travel in decimal degrees" />
       <max value="1" />
     </element>
     <element>
       <path value="Extension.extension.extension.url" />
-      <fixedUri value="longitude" />
+      <fixedUri value="directionDecimalDegrees" />
     </element>
     <element>
       <path value="Extension.extension.extension.valueDecimal" />
@@ -106,56 +131,148 @@
         <code value="decimal" />
       </type>
     </element>
-    <element>
+    <element id="Extension.extension:speedMs.url">
       <path value="Extension.extension.url" />
-      <fixedUri value="positionEpsg4326" />
+      <fixedUri value="speedMs" />
     </element>
-    <element>
+    <element id="Extension.extension:speedMs.valueQuantity">
       <path value="Extension.extension.value[x]" />
       <max value="0" />
-    </element>
-    <element>
-      <path value="Extension.extension" />
-      <sliceName value="velocityMs" />
-      <short value="Velocity" />
-      <definition value="Velocity measured in meter per second" />
-    </element>
-    <element>
-      <path value="Extension.extension.url" />
-      <fixedUri value="velocityMs" />
-    </element>
-    <element>
-      <path value="Extension.extension.valueQuantity" />
+      <type>
+        <code value="base64Binary" />
+      </type>
+      <type>
+        <code value="boolean" />
+      </type>
+      <type>
+        <code value="code" />
+      </type>
+      <type>
+        <code value="date" />
+      </type>
+      <type>
+        <code value="dateTime" />
+      </type>
+      <type>
+        <code value="decimal" />
+      </type>
+      <type>
+        <code value="id" />
+      </type>
+      <type>
+        <code value="instant" />
+      </type>
+      <type>
+        <code value="integer" />
+      </type>
+      <type>
+        <code value="markdown" />
+      </type>
+      <type>
+        <code value="oid" />
+      </type>
+      <type>
+        <code value="positiveInt" />
+      </type>
+      <type>
+        <code value="string" />
+      </type>
+      <type>
+        <code value="time" />
+      </type>
+      <type>
+        <code value="unsignedInt" />
+      </type>
+      <type>
+        <code value="uri" />
+      </type>
+      <type>
+        <code value="Address" />
+      </type>
+      <type>
+        <code value="Age" />
+      </type>
+      <type>
+        <code value="Annotation" />
+      </type>
+      <type>
+        <code value="Attachment" />
+      </type>
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <type>
+        <code value="Coding" />
+      </type>
+      <type>
+        <code value="ContactPoint" />
+      </type>
+      <type>
+        <code value="Count" />
+      </type>
+      <type>
+        <code value="Distance" />
+      </type>
+      <type>
+        <code value="Duration" />
+      </type>
+      <type>
+        <code value="HumanName" />
+      </type>
+      <type>
+        <code value="Identifier" />
+      </type>
+      <type>
+        <code value="Money" />
+      </type>
+      <type>
+        <code value="Period" />
+      </type>
       <type>
         <code value="Quantity" />
-        <profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-quantityvelocityms" />
+      </type>
+      <type>
+        <code value="Range" />
+      </type>
+      <type>
+        <code value="Ratio" />
+      </type>
+      <type>
+        <code value="Reference" />
+      </type>
+      <type>
+        <code value="SampledData" />
+      </type>
+      <type>
+        <code value="Signature" />
+      </type>
+      <type>
+        <code value="Timing" />
+      </type>
+      <type>
+        <code value="Quantity" />
+        <profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-quantityspeedms" />
       </type>
     </element>
     <element>
       <path value="Extension.extension" />
       <sliceName value="altitudeMeters" />
-      <short value="Altitude" />
-      <definition value="Altitude measured in meters" />
     </element>
-    <element>
+    <element id="Extension.extension:altitudeMeters.url">
       <path value="Extension.extension.url" />
       <fixedUri value="altitudeMeters" />
     </element>
-    <element>
-      <path value="Extension.extension.valueQuantity" />
-      <type>
-        <code value="Quantity" />
-      </type>
-    </element>
-    <element>
+    <element id="Extension.extension:altitudeMeters.valueQuantity.value:altitude">
       <path value="Extension.extension.valueQuantity.value" />
+      <sliceName value="altitude" />
+      <short value="altitude in meters" />
       <min value="1" />
     </element>
-    <element>
+    <element id="Extension.extension:altitudeMeters.valueQuantity.comparator">
       <path value="Extension.extension.valueQuantity.comparator" />
       <max value="0" />
     </element>
-    <element>
+    <element id="Extension.extension:altitudeMeters.valueQuantity.unit">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -165,16 +282,50 @@
       <min value="1" />
       <fixedString value="m" />
     </element>
-    <element>
+    <element id="Extension.extension:altitudeMeters.valueQuantity.system">
       <path value="Extension.extension.valueQuantity.system" />
       <short value="UCUM" />
       <definition value="UCUM units" />
       <fixedUri value="http://unitsofmeasure.org" />
     </element>
-    <element>
+    <element id="Extension.extension:altitudeMeters.valueQuantity.code">
       <path value="Extension.extension.valueQuantity.code" />
-      <short value="UCUM value" />
+      <short value="UCUM code" />
       <fixedCode value="m" />
+    </element>
+    <element>
+      <path value="Extension.extension" />
+      <sliceName value="horizontalAccuracy" />
+      <short value="The horizontal accuracy of the position measurement" />
+      <definition value="The horizontal accuracy of the position measurement in meters" />
+      <max value="1" />
+    </element>
+    <element>
+      <path value="Extension.extension.url" />
+      <fixedUri value="horizontalAccuracy" />
+    </element>
+    <element>
+      <path value="Extension.extension.valueDecimal" />
+      <type>
+        <code value="decimal" />
+      </type>
+    </element>
+    <element>
+      <path value="Extension.extension" />
+      <sliceName value="verticalAccuracy" />
+      <short value="The vertical accuracy of the position " />
+      <definition value="The vertical accuracy of the position measurement in meters" />
+      <max value="1" />
+    </element>
+    <element>
+      <path value="Extension.extension.url" />
+      <fixedUri value="verticalAccuracy" />
+    </element>
+    <element>
+      <path value="Extension.extension.valueDecimal" />
+      <type>
+        <code value="decimal" />
+      </type>
     </element>
     <element>
       <path value="Extension.url" />

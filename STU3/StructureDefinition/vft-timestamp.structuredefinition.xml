@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="STU3/StructureDefinition/vft-timestamp" />
+  <meta>
+    <lastUpdated value="2017-06-02T16:18:24.883+02:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp" />
+  <name value="vft-timestamp" />
+  <status value="draft" />
+  <date value="2017-06-02T15:54:32.348998+02:00" />
+  <description value="Basic timestamp with UTC offset" />
+  <fhirVersion value="3.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="Flag" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp" />
+    </element>
+    <element>
+      <path value="Extension.valueDateTime" />
+      <sliceName value="valueTimestamp" />
+      <short value="timestamp" />
+      <definition value="simple timestamp with UTC offset" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

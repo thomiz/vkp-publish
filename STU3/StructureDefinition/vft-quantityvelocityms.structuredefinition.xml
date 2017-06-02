@@ -1,15 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="STU3/StructureDefinition/vft-quantityvelocityms" />
+  <id value="STU3/StructureDefinition/vft-quantityspeedms" />
   <meta>
-    <lastUpdated value="2017-05-12T10:21:58.894+02:00" />
+    <lastUpdated value="2017-06-02T08:48:15.749+02:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-quantityvelocityms" />
-  <name value="vft-quantityvelocityms" />
+  <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-quantityspeedms" />
+  <name value="vft-quantityspeedms" />
   <status value="draft" />
   <date value="2017-05-09T16:26:00.9197334+02:00" />
   <publisher value="Direktoratet for e-helse" />
-  <description value="Velocity annotated in meter per second (m/s)" />
+  <description value="Scalar speed annotated in meter per second (m/s)" />
+  <purpose value="Scalar speed annotated in meter per second (m/s)" />
   <fhirVersion value="3.0.0" />
   <kind value="complex-type" />
   <abstract value="false" />
@@ -19,8 +20,8 @@
   <differential>
     <element>
       <path value="Quantity.value" />
-      <short value="velocity in meters per second" />
-      <definition value="Norwegian vft project: Value of velocity measured in meter per second" />
+      <short value="speed in meters per second" />
+      <definition value="Norwegian vft project: Value of speed measured in meter per second" />
       <min value="1" />
     </element>
     <element>

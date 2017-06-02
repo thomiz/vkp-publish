@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="STU3/StructureDefinition/vft-flag" />
+  <meta>
+    <lastUpdated value="2017-06-02T16:24:43.307+02:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pc" />
+  </extension>
+  <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-flag" />
+  <name value="vft-flag" />
+  <status value="draft" />
+  <date value="2017-06-02T15:06:12.7177486+02:00" />
+  <description value="Profile of the Flag Resource to be used in Personal Connected Health in Norway. Adds Severity, category, timestamp, URL and Geoposition to the base http://hl7.org/fhir/StructureDefinition/Flag resource." />
+  <fhirVersion value="3.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Flag" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Flag" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="Flag.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element>
+      <path value="Flag.extension" />
+      <sliceName value="severity" />
+      <short value="severity of the event" />
+      <definition value="severity of the event" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-severityvalueset" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="red|yellow|green|greenwithmessage|notreported" />
+      </binding>
+    </element>
+    <element>
+      <path value="Flag.extension" />
+      <sliceName value="timestamp" />
+      <short value="timestamp" />
+      <definition value="Simple timestamp for the generation time of the Flag" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp" />
+      </type>
+    </element>
+    <element>
+      <path value="Flag.extension" />
+      <sliceName value="URL" />
+      <short value="Url for the alarm" />
+      <definition value="Url to open the alarm in a browser" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-URL" />
+      </type>
+    </element>
+    <element>
+      <path value="Flag.extension" />
+      <sliceName value="geoposition" />
+      <short value="Geographical Position" />
+      <definition value="Geographical position with lat, lon, timestamp, velocity and direction of travel" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-geoposition" />
+      </type>
+    </element>
+    <element>
+      <path value="Flag.identifier" />
+      <sliceName value="alarmid" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="STU3/StructureDefinition/vft-severityvalueset" />
+  <meta>
+    <lastUpdated value="2017-06-02T15:27:37.029+02:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-severityvalueset" />
+  <name value="vft-severityvalueset" />
+  <status value="draft" />
+  <date value="2017-06-02T15:10:57.5784347+02:00" />
+  <description value="Codeset for Severity level" />
+  <fhirVersion value="3.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="Flag" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-severityvalueset" />
+    </element>
+    <element>
+      <path value="Extension.valueCode" />
+      <sliceName value="severityValueSet" />
+      <code>
+        <code value="red" />
+        <display value="red" />
+      </code>
+      <code>
+        <code value="yellow" />
+        <display value="yellow" />
+      </code>
+      <code>
+        <code value="green" />
+        <display value="green" />
+      </code>
+      <code>
+        <code value="greenwithmessage" />
+        <display value="greenwithmessage" />
+      </code>
+      <code>
+        <code value="notreported" />
+        <display value="notreported" />
+      </code>
+      <short value="red|yellow|green|greenwithmessage|notreported" />
+      <definition value="red|yellow|green|greenwithmessage|notreported" />
+      <type>
+        <code value="code" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
