@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd">
+    <id value="10bb101f-a121-4264-a920-67be9cb82c74" />
+    <type value="message" />
+    <entry>
+        <fullUrl value="urn:uuid:267b18ce-3d37-4581-9baa-6fada338038b" />
+        <resource>
+            <MessageHeader>
+                <id value="1cbdfb97-5859-48a4-8301-d54eab818d68" />
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <p>
+                            Velferdsteknologi eksempel
+                        </p>
+                    </div>
+                </text>
+                <event>
+                    <system value="http://hl7.org/fhir/message-events" />
+                    <code value="MedicationAdministration-Update" />
+                </event>
+                <receiver>
+                    <identifier>
+                        <system value="http://ehelse.no/fhir/identifiertypes/HERID" />
+                        <value value="15076500000" />
+                    </identifier>
+                    <display value="Oslo Kommune 15076500000" />
+                </receiver>
+                <sender>
+                    <identifier>
+                        <system value="http://ehelse.no/fhir/identifiertypes/HERID" />
+                        <value value="15076500000" />
+                    </identifier>
+                    <display value="Acme Medisindispensersky AS 15076500000" />
+                </sender>
+                <timestamp value="2012-01-04T09:10:14+00:00" />
+                <source>
+                    <name value="Acme Medisindispensersky AS" />
+                    <endpoint value="http://medisindispensersky.com/api" />
+                </source>
+                <focus>
+                    <reference value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" />
+                    <display value="MedicationAdministration" />
+                </focus>
+                <focus>
+                    <reference value="urn:uuid:e83a9596-8993-11e7-bb31-be2e44b06b34" />
+                    <display value="Device" />
+                </focus>
+            </MessageHeader>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" />
+        <resource>
+            <MedicationAdministration>
+                <id value="ef91399e-8993-11e7-bb31-be2e44b06b34" />
+                <identifier>
+                    <system value="http://acme-medisindispenser.com/medisindispenser-event-id" />
+                    <value value="en-ekstern-id-laget-av-medisindispenser-forsystemet" />
+                </identifier>
+                <status value="completed" />
+                <category>
+                    <coding>
+                        <system value="http://hl7.org/fhir/medication-admin-category" />
+                        <code value="community" />
+                    </coding>
+                </category>
+                <medicationCodeableConcept>
+                    <coding>
+                        <system value="http://ehelse.no/fhir/unknown" />
+                        <code value="Unknown" />
+                        <display value="Unknown" />
+                    </coding>
+                    <text value="Ukjent medisin" />
+                </medicationCodeableConcept>
+                <subject>
+                    <identifier>
+                        <system value="http://ehelse.no/fhir/identifiertypes/FNR" />
+                        <value value="15076500000" />
+                    </identifier>
+                    <display value="Bestemor Duck" />
+                </subject>
+                <effectiveDateTime value="2015-01-15T04:30:00+01:00" />
+                <device>
+                    <reference value="urn:uuid:e83a9596-8993-11e7-bb31-be2e44b06b34" />
+                </device>
+                <note>
+                    <authorReference>
+                        <identifier>
+                            <system value="http://ehelse.no/fhir/identifiertypes/HPR" />
+                            <value value="15076500000" />
+                        </identifier>
+                        <display value="HPR 15076500000" />
+                    </authorReference>
+                    <text value="A note about the medication administration, for example how it was handled. " />
+                </note>
+            </MedicationAdministration>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:e83a9596-8993-11e7-bb31-be2e44b06b34" />
+        <resource>
+            <Device>
+                <id value="e83a9596-8993-11e7-bb31-be2e44b06b34" />
+                <identifier>
+                    <system value="http://acme-medisindispenser.com/id" />
+                    <value value="123345" />
+                </identifier>
+                <manufacturer value="Acme Medisindispenser" />
+            </Device>
+        </resource>
+    </entry>
+</Bundle>
