@@ -22,21 +22,27 @@
                 <receiver>
                     <identifier>
                         <system value="http://ehelse.no/fhir/identifiertypes/HERID" />
-                        <value value="15076500000" />
+                        <value value="87740" /> <!-- Dette er HER-id fra register-web.test.nhn.no for Oslo kommune sin Pleie og omsorgstjeneste -->
                     </identifier>
-                    <display value="Oslo Kommune 15076500000" />
+                    <display value="Pleie- og omsorgstjeneste" />
                 </receiver>
-                <sender>
+                <sender> <!-- Skal identifisere tjenesten for forsystemet slik det er registert i NHN-Adresseregister -->
                     <identifier>
-                        <system value="http://ehelse.no/fhir/identifiertypes/HERID" />
-                        <value value="15076500000" />
+                        <system value="http://ehelse.no/fhir/identifiertypes/HERID" /> 
+                        <value value="95341" /> <!-- Dette er HER-id fra register-web.test.nhn.no for tjenesten Velferdpoclev1 (vi kan jo lage andre testtjenester?) -->
                     </identifier>
-                    <display value="Acme Medisindispensersky AS 15076500000" />
+                    <display value="Velferdpoclev1" />
                 </sender>
                 <timestamp value="2012-01-04T09:10:14+00:00" />
-                <source>
-                    <name value="Acme Medisindispensersky AS" />
-                    <endpoint value="http://medisindispensersky.com/api" />
+                <source> <!-- Identifiserer avsenderapplikasjonen -->
+                    <name value="Dignio prevent" />
+					<software value="Dignio prevent forsystemapplikasjon"/>
+					<version value="v2.45"/>
+					<contact>
+						<system value="email"/>
+						<value value="support@dignio.no"/>
+					</contact>
+                    <endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341" /> <!-- Actual source adress or ID, her bør vi bare legge samme HER som i sender -->
                 </source>
                 <focus>
                     <reference value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" />
@@ -50,21 +56,16 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" />
+        <fullUrl value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" /> <!-- Unik URL som identifiserer ressursen unikt, henger sammen med ressursens logiske id, denne kan genereres av forsystemet og vil aldri endres men ressursen kan oppdateres -->
         <resource>
             <MedicationAdministration>
-                <id value="ef91399e-8993-11e7-bb31-be2e44b06b34" />
+                <id value="ef91399e-8993-11e7-bb31-be2e44b06b34" /> <!-- ressursens logiske id, forutsetter vi i dette scenariet at forsystemet har rettigheter til å generere slike id'er for fagsystemet, akkurat den forutseningen må etterprøves -->
                 <identifier>
-                    <system value="http://acme-medisindispenser.com/medisindispenser-event-id" />
-                    <value value="en-ekstern-id-laget-av-medisindispenser-forsystemet" />
+                    <system value="http://dignio.no/medisindispenser-event-id" />
+                    <value value="c42984fc-8ca8-48d7-8bbf-7fe5503c49a9" /> <!-- Business identifier for hendelsen, kan for eksempel henge sammen med hendelsen generert av medisindispenseren -->
                 </identifier>
-                <status value="completed" />
-                <medicationCodeableConcept>
-                    <coding>
-                        <system value="http://ehelse.no/fhir/unknown" />
-                        <code value="Unknown" />
-                        <display value="Unknown" />
-                    </coding>
+                <status value="completed" /> <!-- Det bør antakelig lages retningslinjer for hovrdan disse statusmeldingene skal tolkes, det kan til og med være forskjellig for forskjellige typer hendelser -->
+                <medicationCodeableConcept> <!-- Hvis dette uansett skal være statisk kan hele coding elementet tas bort -->
                     <text value="Ukjent medisin" />
                 </medicationCodeableConcept>
                 <subject>
@@ -76,7 +77,7 @@
                 </subject>
                 <effectiveDateTime value="2015-01-15T04:30:00+01:00" />
                 <device>
-                    <reference value="urn:uuid:e83a9596-8993-11e7-bb31-be2e44b06b34" />
+                    <reference value="urn:uuid:e83a9596-8993-11e7-bb31-be2e44b06b34" /> <!-- Forsystemet som sender meldingen må kjenne til id for Devicen, avhengig av måten vi refererer på må forsystemet også vite hva Devicen heter i mottakersystemet -->
                 </device>
                 <note>
                     <authorReference>
