@@ -1,11 +1,11 @@
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="10bb101f-a121-4264-a920-67be9cb82c74" />
+  <id value="c3b83c9c-61a2-46d8-b5a1-0ca73017598b" />
   <type value="message" />
   <entry>
-    <fullUrl value="urn:uuid:1cbdfb97-5859-48a4-8301-d54eab818d68" />
+    <fullUrl value="urn:uuid:c69f217d-1501-46fd-b46b-c3637cccaa3c" />
     <resource>
       <MessageHeader>
-        <id value="1cbdfb97-5859-48a4-8301-d54eab818d68" />
+        <id value="c69f217d-1501-46fd-b46b-c3637cccaa3c" />
         <event>
           <system value="http://hl7.org/fhir/message-events" />
           <code value="MedicationAdministration-Update" />
@@ -29,20 +29,20 @@
           <endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341" />
         </source>
         <focus>
-          <reference value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" />
+          <reference value="urn:uuid:15a8d9ed-4e1f-4ccb-91ee-5040b4c62be9" />
           <display value="MedicationAdministration" />
         </focus>
       </MessageHeader>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" />
+    <fullUrl value="urn:uuid:15a8d9ed-4e1f-4ccb-91ee-5040b4c62be9" />
     <resource>
       <MedicationAdministration>
-        <id value="ef91399e-8993-11e7-bb31-be2e44b06b34" />
+        <id value="15a8d9ed-4e1f-4ccb-91ee-5040b4c62be9" />
         <identifier>
           <system value="http://dignio.no/medisindispenser-event-id" />
-          <value value="c42984fc-8ca8-48d7-8bbf-7fe5503c49a9" />
+          <value value="4566b542-0ec5-474a-9c9f-f5402b579a54" />
         </identifier>
         <status value="completed" />
         <category>
@@ -59,7 +59,7 @@
             <system value="http://ehelse.no/fhir/identifiertypes/FNR" />
             <value value="05073500186" />
           </identifier>
-          <display value="Ærlend Sørgård" />
+          <display value="?rlend S?rg?rd" />
         </subject>
         <effectiveDateTime value="2012-01-04T09:10:14+00:00" />
         <device>
