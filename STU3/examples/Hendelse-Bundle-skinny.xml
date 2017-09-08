@@ -47,9 +47,13 @@
         <status value="completed" />
         <category>
           <coding>
-            <system value="http://ehelse.no/fhir/medisindispenserhendelser" />
-            <code value="medisin_utlevert" />
+            <system value="http://ehelse.no/fhir/vft/STU3/CodeSystem/medisindispenserhendelser" />
+            <code value="0a"/>
+			<display value="medisin_utlevert" />
           </coding>
+		  <coding>
+			<code value="community"/>
+		  </coding>
         </category>
         <medicationCodeableConcept>
           <text value="Ukjent medisin" />
