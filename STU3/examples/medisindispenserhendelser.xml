@@ -1,63 +1,63 @@
-﻿<CodeSystem xmlns="http://hl7.org/fhir">
+<CodeSystem xmlns="http://hl7.org/fhir">
     <url value="http://ehelse.no/fhir/vft/STU3/CodeSystem/medisindispenserhendelser" />
-    <version value="0.1" />
+    <version value="0.2" />
     <name value="medisindispenserhendelser" />
     <status value="draft" />
     <publisher value="Direktoratet for e-helse" />
     <content value="complete" />
     <concept>
-        <code value="0a" />
+        <code value="1" />
         <display value="medisin_utlevert" />
 		<definition value="Medisin ble utlevert til planlagt tid"/>
     </concept>
     <concept>
-        <code value="0b" />
+        <code value="2" />
         <display value="medisin_utlevert_forsinket" />
 		<definition value="Medisin ble utlevert senere enn planlagt"/>
     </concept>
 	<concept>
-        <code value="1" />
+        <code value="3" />
         <display value="medisin_ikke_utlevert" />
 		<definition value="Medisin ble ikke utlevert til planlagt tid"/>
     </concept>
 	<concept>
-        <code value="2" />
+        <code value="4" />
         <display value="medisin_mangler_bekreftelse" />
-		<definition value="Ingen bekreftelse på at medisin ble utlevert til planlagt tid"/>
+		<definition value="Har ikke fått bekreftet at medisin ble utlevert til planlagt tid"/>
     </concept>
 	<concept>
-        <code value="3" />
+        <code value="5" />
         <display value="medisin_teknisk_feil" />
 		<definition value="Teknisk feil på medisindispenser, utmating stanset"/>
     </concept>
 	<concept>
-        <code value="4" />
+        <code value="6" />
         <display value="medisin_feil_rull" />
 		<definition value="Feil ved multidoserullen, utmating stanset"/>
     </concept>
 	<concept>
-        <code value="5" />
+        <code value="7" />
         <display value="medisin_mangler" />
 		<definition value="Tomt for medisin i dispenseren"/>
     </concept>
 	<concept>
-        <code value="6" />
+        <code value="8" />
         <display value="medisin_mangler_ikke_utlevert" />
 		<definition value="Medisin ble ikke utlevert til planlagt tid, da det var tomt for medisin i dispenseren"/>
     </concept>
 	<concept>
-        <code value="7" />
+        <code value="9" />
         <display value="medisin_mangler_tidsplan" />
 		<definition value="Ingen tidsplan for medisinering"/>
     </concept>
 	<concept>
-        <code value="8" />
+        <code value="10" />
         <display value="medisin_ikke_tilkoblet" />
-		<definition value="Teknisk, medisindispenser ikke koblet til strøm"/>
+		<definition value="Teknisk varsel, medisindispenseren er ikke koblet til strøm"/>
     </concept>
 	<concept>
-        <code value="9" />
+        <code value="11" />
         <display value="medisin_ingen_kontakt" />
-		<definition value="Teknisk, ingen kontakt med medisindispenser"/>
+		<definition value="Teknisk varsel, ingen kontakt med medisindispenseren"/>
     </concept>
 </CodeSystem>
