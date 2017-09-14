@@ -1,9 +1,8 @@
-﻿<MedicationAdministration xmlns="http://hl7.org/fhir">
-	 
+<MedicationAdministration xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd">
         <id value="ef91399e-8993-11e7-bb31-be2e44b06b34" />
 		<meta>
-        <profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-MedicationAdministration" />
-    </meta>
+			<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-MedicationAdministration" />
+		</meta>
         <identifier>
           <system value="http://dignio.no/medisindispenser-event-id" />
           <value value="c42984fc-8ca8-48d7-8bbf-7fe5503c49a9" />

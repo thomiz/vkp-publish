@@ -6,6 +6,9 @@
     <resource>
       <MessageHeader>
         <id value="1cbdfb97-5859-48a4-8301-d54eab818d68" />
+        <meta>
+			<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-messageheader" />
+		</meta>
         <event>
           <system value="http://hl7.org/fhir/message-events" />
           <code value="MedicationAdministration-Update" />
@@ -28,10 +31,10 @@
         <source>
 			<name value="Visi/Transmed8/Safemate"/>
 			<contact>
-				<phone>
-					<system value="phone"/>
-				</phone>
-				<videoStreamUrl></videoStreamUrl>
+				<system value="phone"/>
+			</contact>
+			<contact>
+				<system value="url"/>
 			</contact>
           <endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341" />
         </source>
