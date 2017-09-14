@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="STU3/StructureDefinition/vft-URL" />
+  <id value="vft-URL" />
   <meta>
-    <lastUpdated value="2017-06-02T16:10:46.497+02:00" />
+    <lastUpdated value="2017-09-14T19:46:51.827+02:00" />
   </meta>
   <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-URL" />
   <name value="vft-URL" />
@@ -19,11 +19,11 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
-    <element>
+    <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-URL" />
     </element>
-    <element>
+    <element id="Extension.value[x]:vft-URL">
       <path value="Extension.valueUri" />
       <sliceName value="vft-URL" />
       <type>

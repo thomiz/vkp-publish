@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Flag xmlns="http://hl7.org/fhir">
+			<meta>
+				<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/test-flag"/>
+			</meta>
+			<extension url="kodeverdi">
+				<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>
+			</extension>
+			<identifier>
+				<value value="test-id"/>
+			</identifier>
+			<status value="active"/>
+			<!-- 1..1 active | inactive | entered-in-error -->
+			<code>
+				<!-- 1..1 CodeableConcept Partially deaf, Requires easy open caps, No permanent address, etc. -->
+				<text value="Bruker utenfor Geofence"/>
+			</code>
+			<subject> <!-- Referanse til pasient to ganger, antkelig ikke nødvendig -->
+				<identifier>
+					<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+					<value value="05073500186"/>
+				</identifier>
+			</subject>
+		</Flag>

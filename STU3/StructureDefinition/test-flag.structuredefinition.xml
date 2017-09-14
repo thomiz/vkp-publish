@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-09-14T20:02:26.104+02:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/test-flag" />
+  <name value="test-flag" />
+  <status value="draft" />
+  <date value="2017-09-14T19:56:05.448+02:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Flag" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Flag" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Flag.extension">
+      <path value="Flag.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Flag.extension:kodeverdi">
+      <path value="Flag.extension" />
+      <sliceName value="kodeverdi" />
+      <short value="Optional Extensions Element" />
+      <definition value="Optional Extension Element - found in all resources." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="vft-quantityaltitudemeters" />
+  <meta>
+    <lastUpdated value="2017-09-14T18:44:52.387+02:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-quantityaltitudemeters" />
+  <name value="vft-quantityaltitudemeters" />
+  <status value="draft" />
+  <date value="2017-05-09T16:26:00.9197334+02:00" />
+  <publisher value="Direktoratet for e-helse" />
+  <description value="Scalar altitude annotated in meter" />
+  <purpose value="Scalar altitude annotated in meter" />
+  <fhirVersion value="3.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Quantity" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Quantity" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Quantity.value">
+      <path value="Quantity.value" />
+      <short value="altitude in meters" />
+      <definition value="Norwegian vft project: Value of altitude in meters" />
+      <min value="1" />
+    </element>
+    <element id="Quantity.comparator">
+      <path value="Quantity.comparator" />
+      <max value="0" />
+    </element>
+    <element id="Quantity.unit">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Quantity.unit" />
+      <short value="Unit m" />
+      <definition value="fixed value of m" />
+      <min value="1" />
+      <fixedString value="m" />
+    </element>
+    <element id="Quantity.system">
+      <path value="Quantity.system" />
+      <max value="0" />
+    </element>
+    <element id="Quantity.code">
+      <path value="Quantity.code" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

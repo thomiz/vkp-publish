@@ -1,10 +1,10 @@
-<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd">
+<Bundle xmlns="http://hl7.org/fhir" >
 	<id value="10bb101f-a121-4264-a920-67be9cb82c74"/>
 	<type value="message"/>
 	<entry>
 		<fullUrl value="urn:uuid:1cbdfb97-5859-48a4-8301-d54eab818d68"/>
 		<resource>
-			<MessageHeader xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd">
+			<MessageHeader>
 				<id value="1cbdfb97-5859-48a4-8301-d54eab818d68"/>
 				<meta>
 					<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-messageheader"/>
@@ -44,7 +44,7 @@
 	<entry>
 		<fullUrl value="58c41c82-761e-4948-a07f-c97bc69d3dee"/>
 		<resource>
-			<Patient><!-- Referanse til pasient to ganger, antkelig ikke nødvendig -->
+			<Patient> <!-- Referanse til pasient to ganger, antkelig ikke nødvendig -->
 				<identifier>
 					<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
 					<value value="05073500186"/>
@@ -72,18 +72,18 @@
 		<resource>
 		<Flag>
 			<meta>
-				<profile value="http://ehelse.no/fhir/profiles/vft/FlagVFT"/>
+				<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-flag"/>
 			</meta>
-			<extension url="http://ehelse.no/fhir/extentions/StructureDefinition/SeverityValueSet">
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-severityvalueset">
 				<valueCode value="green"/>
 			</extension>
-			<extension url="http://ehelse.no/fhir/extentions/StructureDefinition/timestamp">
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp">
 				<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>
 			</extension>
-			<extension url="http://ehelse.no/fhir/extentions/StructureDefinition/URL">
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp">
 				<valueUri value="http://not.a.real.adress"/>
 			</extension>
-			<extension url="http://ehelse.no/fhir/extentions/StructureDefinition/vft-geoposition">
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-geoposition">
 				<extension url="timestamp">
 					<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>
 				</extension>
