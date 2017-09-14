@@ -44,11 +44,26 @@
 	<entry>
 		<fullUrl value="58c41c82-761e-4948-a07f-c97bc69d3dee"/>
 		<resource>
-			<Patient>
+			<Patient><!-- Referanse til pasient to ganger, antkelig ikke nødvendig -->
 				<identifier>
 					<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
 					<value value="05073500186"/>
 				</identifier>
+				<contact>
+					<relationship>
+						<coding>
+							<code value="N"/>
+							<display value="Next-of-Kin"/>
+						</coding>
+					</relationship>
+					<name>
+						<text value="Arne Sørgård"/>
+					</name>
+					<telecom>
+						<system value="phone"/>
+						<value value="+4792565689"/>
+					</telecom>
+				</contact>
 			</Patient>
 		</resource>
 	</entry>
@@ -108,9 +123,11 @@
 				<!-- 1..1 CodeableConcept Partially deaf, Requires easy open caps, No permanent address, etc. -->
 				<text value="Bruker utenfor Geofence"/>
 			</code>
-			<subject>
-				<!-- 1..1 Reference(Patient|Location|Group|Organization|Practitioner) Who/What is flag about? -->
-				<reference id="1"/>
+			<subject> <!-- Referanse til pasient to ganger, antkelig ikke nødvendig -->
+				<identifier>
+					<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+					<value value="05073500186"/>
+				</identifier>
 			</subject>
 		</Flag>
 		</resource>
