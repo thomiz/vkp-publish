@@ -4,10 +4,14 @@
 				<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-flag"/>
 			</meta>
 			<extension url="severity">
-				<valueCode value="green"/>
+				<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-severityvalueset">
+					<valueCode value="green"/>
+				</extension>
 			</extension>
 			<extension url="timestamp">
-				<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>
+				<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp">
+					<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>
+				</extension>
 			</extension>
 			<extension url="URL">
 				<valueUri value="http://not.a.real.adress"/>

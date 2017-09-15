@@ -26,7 +26,7 @@
         <source>
 			<name value="Visi/Transmed8/Safemate"/>
 			<contact>
-				<system value="fax"/>
+				<system value="url"/>
 			</contact>
           <endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341" />
         </source>

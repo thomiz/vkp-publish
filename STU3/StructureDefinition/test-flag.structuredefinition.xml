@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-09-14T20:02:26.104+02:00" />
+    <lastUpdated value="2017-09-15T08:40:47.815+02:00" />
   </meta>
   <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/test-flag" />
   <name value="test-flag" />
@@ -27,9 +27,18 @@
     <element id="Flag.extension:kodeverdi">
       <path value="Flag.extension" />
       <sliceName value="kodeverdi" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp" />
+      </type>
+    </element>
+    <element id="Flag.extension:kodeverdi-obligatorisk">
+      <path value="Flag.extension" />
+      <sliceName value="kodeverdi-obligatorisk" />
       <short value="Optional Extensions Element" />
       <definition value="Optional Extension Element - found in all resources." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />

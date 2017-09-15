@@ -9,18 +9,18 @@
 				<meta>
 					<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-messageheader"/>
 				</meta>
-				<event>
+				<event> <!-- Event er obligatorisk i FHIR MessageHeader, men kodeverket kan vi bruke hva vi vil -->
 					<system value="http://hl7.org/fhir/message-events"/>
 					<code value="MedicationAdministration-Update"/>
 				</event>
-				<timestamp value="2012-01-04T09:10:14+00:00"/>
+				<timestamp value="2012-01-04T09:10:14+00:00"/> <!-- obligatorisk i FHIR MessageHeader -->
 				<source>
 					<name value="Visi/Transmed8/Safemate"/>
 					<contact>
 						<system value="phone"/>
 						<value value="+4791445874"/>
 					</contact>
-					<endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341"/>
+					<endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341"/> <!-- obligatorisk i FHIR MessageHeader.source -->
 				</source>
 			</MessageHeader>
 		</resource>
