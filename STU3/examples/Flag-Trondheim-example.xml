@@ -3,20 +3,16 @@
 			<meta>
 				<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-flag"/>
 			</meta>
-			<extension url="severity">
-				<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-severityvalueset">
-					<valueCode value="green"/>
-				</extension>
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-severityvalueset">
+				<valueCode value="green"/>
 			</extension>
-			<extension url="timestamp">
-				<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp">
-					<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>
-				</extension>
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp">
+				<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>
 			</extension>
-			<extension url="URL">
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-URL">
 				<valueUri value="http://not.a.real.adress"/>
 			</extension>
-			<extension url="vft-geoposition">
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-geoposition">
 				<extension url="timestamp">
 					<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>
 				</extension>

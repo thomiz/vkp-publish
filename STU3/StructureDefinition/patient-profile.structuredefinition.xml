@@ -1,0 +1,59 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="patient-profile" />
+  <!-- snip other metadata, narrative -->
+  <differential>
+
+    <!-- first, the patient root element
+      - can be copy/paste from the base patient profile -->
+    <element>
+      <path value="Patient"/>
+      <!-- snip definition -->
+    </element>
+
+    <!-- now, the general definition for extensions
+      - can be copied/pasted from the base patient profile,
+      with changes for slicing  -->
+    <element>
+      <path value="Patient.extension"/>
+      <!-- we're going to slice the extension element, and
+        one of the extensions is one we have defined -->
+      <slicing>
+        <!-- extension is always sliced on url -->
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <!-- we don't care what the order of any extensions is -->
+        <ordered value="false"/>
+        <!-- Other extensions are allowed in addition to this one -->
+        <rules value="open"/>
+      </slicing>
+      <!-- snip definition -->
+    </element>
+
+    <!-- now, the slice that contains our extension -->
+    <element>
+      <path value="Patient.extension"/>
+      <sliceName value="base-extension"/>
+      <!-- clone information from the extension definition.
+        duplicative, but this duplication makes it simpler overall -->
+      <short value="Agreed agreement/policy"/>
+      <definition value="A URI that identifies a participation agreement/policy
+      to which the patient has agreed"/>
+      <!--  min has to be 1, since the extension itself has min = 1 -->
+      <min value="1"/>
+      <max value="*"/>
+      <type>
+        <!-- obviously it has to be an extension -->
+        <code value="Extension"/>
+        <!-- and here is the link to the extension definition:
+          this extension has to conform to the rules laid down in its definition -->
+        <profile value="http://example.org/phr/documents/fhir/extensions#participation-agreement"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+
+  <!-- snip the rest of the profile -->
+
+  </differential>
+</StructureDefinition>
