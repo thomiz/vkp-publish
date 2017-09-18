@@ -6,3 +6,4 @@ curl.exe http://localhost:8080/baseDstu3/Bundle --upload-file examples/eVik-mess
 
 curl.exe http://localhost:8080/baseDstu3/StructureDefinition/vft-timestamp --upload-file StructureDefinition\vft-timestamp.structuredefinition.xml
 curl.exe http://localhost:8080/baseDstu3/StructureDefinition/test-flag --upload-file StructureDefinition\test-flag.structuredefinition.xml
+curl.exe http://localhost:8080/baseDstu3/Flag/test-flag --upload-file examples\test-flag-testing.xml
