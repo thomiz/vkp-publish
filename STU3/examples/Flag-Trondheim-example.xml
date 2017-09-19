@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Flag xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="utf-8"?>
+<Flag xmlns="http://hl7.org/fhir" >
 			<meta>
 				<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-flag"/>
 			</meta>
@@ -31,7 +31,10 @@
 					</valueQuantity>
 				</extension>
 				<extension url="altitudeMeters">
-					<valueDecimal value="2.0"/>
+					<valueQuantity>
+						<value value="2.0"/>
+						<unit value="m"/>
+					</valueQuantity>
 				</extension>
 				<extension url="directionDegrees">
 					<valueDecimal value="180.0"/>

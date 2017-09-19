@@ -3,16 +3,12 @@
 			<meta>
 				<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/test-flag"/>
 			</meta>
-			<extension url="kodeverdi">
-				<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp">
-					<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>
-				</extension>
-			</extension>
-			<extension url="kodeverdi-obligatorisk">
-				<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp">
-					<valueDateTime value="2017-05-09T11:00:00.936+02:00"/>
-				</extension>
-			</extension>
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp">
+               <valueDateTime value="2017-05-09T11:00:00.936+02:00"/>
+            </extension>
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-quantityspeedms-ext">
+               <valueDateTime value="2017-05-09T12:00:00.936+02:00"/>
+            </extension>
 			<identifier>
 				<value value="test-id"/>
 			</identifier>
