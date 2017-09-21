@@ -76,6 +76,18 @@
 					<family value="Leistad"/>
 					<given value="Ann Kristin"/>
 				</name>
+				<telecom>
+					<system value="phone"/>
+					<value value="+4712345678"/>
+					<use value="mobile"/>
+					<rank value="2"/>
+				</telecom>
+				<telecom>
+					<system value="url"/>
+					<value value="http://transmed.no/video/ann-kristin-leistad"/>
+					<use value="home"/>
+					<rank value="1"/>
+				</telecom>
 				<address>
 					<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/norwegian-eiendomsinformasjon">
 						<extension url="gardsnummer">
@@ -170,7 +182,7 @@
 				<!-- 1..1 CodeableConcept Partially deaf, Requires easy open caps, No permanent address, etc. -->
 				<text value="Bruker utenfor Geofence"/>
 			</code>
-			<subject> <!-- Referanse til pasient to ganger, antkelig ikke nødvendig -->
+			<subject> <!-- Referanse til pasient to ganger, antakelig ikke nødvendig -->
 				<identifier>
 					<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
 					<value value="05073500186"/>
