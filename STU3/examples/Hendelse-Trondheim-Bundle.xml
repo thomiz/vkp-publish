@@ -30,10 +30,6 @@
 				<timestamp value="2012-01-04T09:10:14+00:00"/> <!-- obligatorisk i FHIR MessageHeader -->
 				<source>
 					<name value="Visi/Transmed8/Safemate"/>
-					<contact>
-						<system value="phone"/>
-						<value value="+4791445874"/>
-					</contact>
 					<endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341"/> <!-- obligatorisk i FHIR MessageHeader.source -->
 				</source>
 			</MessageHeader>
@@ -46,13 +42,17 @@
 				<identifier>
 					<value value="a74b6bee-0eb4-4d60-bb05-71e27146d9d2"/>
 				</identifier>
-				<contact>
+				<contact> <!-- Connectedphone number og url for kontakt ved utløsning av trygghetsalarm -->
 					<system value="phone"/>
 					<value value="+4712345678"/>
+					<use value="home"/>
+					<rank value="1"/>
 				</contact>
 				<contact>
-					<system value="email"/>
-					<value value="support@transmed.no"/>
+					<system value="url"/>
+					<value value="http://transmed.no/video/ann-kristin-leistad"/>
+					<use value="home"/>
+					<rank value="2"/>
 				</contact>
 				<location>
 					<identifier>
@@ -66,7 +66,7 @@
 	<entry>
 		<fullUrl value="58c41c82-761e-4948-a07f-c97bc69d3dee"/>
 		<resource>
-			<Patient> <!-- Referanse til pasient to ganger, antkelig ikke nødvendig -->
+			<Patient> 
 				<identifier>
 					<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
 					<value value="11079500412"/>
@@ -80,12 +80,6 @@
 					<system value="phone"/>
 					<value value="+4712345678"/>
 					<use value="mobile"/>
-					<rank value="2"/>
-				</telecom>
-				<telecom>
-					<system value="url"/>
-					<value value="http://transmed.no/video/ann-kristin-leistad"/>
-					<use value="home"/>
 					<rank value="1"/>
 				</telecom>
 				<address>
@@ -101,7 +95,6 @@
 					<line value="Vinkelveien 33"/>
 					<city value="Etterstad"/>
 					<postalCode value="0603"/>
-					
 				</address>
 				<contact>
 					<relationship>
