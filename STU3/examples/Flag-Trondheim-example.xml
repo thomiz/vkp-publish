@@ -9,7 +9,7 @@
 			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp">
 				<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>
 			</extension>
-			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-URL">
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-displayURL">
 				<valueUri value="http://not.a.real.adress"/>
 			</extension>
 			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-geoposition">
@@ -25,19 +25,21 @@
 					</extension>
 				</extension>
 				<extension url="velocityMs">
-					<valueQuantity>
-						<value value="2.0"/>
-						<unit value="m/s"/>
-					</valueQuantity>
+					<extension url="directionDecimalDegrees">
+						<valueDecimal value="180.0"/>
+					</extension>
+					<extension url="speedMs">
+						<valueQuantity>
+							<value value="2.0"/>
+							<unit value="m/s"/>
+						</valueQuantity>
+					</extension>
 				</extension>
 				<extension url="altitudeMeters">
 					<valueQuantity>
 						<value value="2.0"/>
 						<unit value="m"/>
 					</valueQuantity>
-				</extension>
-				<extension url="directionDegrees">
-					<valueDecimal value="180.0"/>
 				</extension>
 				<extension url="horizontalAccuracy">
 					<valueDecimal value="5.0"/>
