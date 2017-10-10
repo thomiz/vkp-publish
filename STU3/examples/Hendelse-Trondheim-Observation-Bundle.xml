@@ -191,8 +191,13 @@
 				<meta>
 					<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-flag"/>
 				</meta>
-				<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-severityvalueset">
-					<valueCode value="green"/>
+				<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-severity">
+					<extension url="code">
+						<valueCode value="green"/>
+					</extension>
+					<extension url="text">
+						<valueString value="Green status, all is well"/>
+					</extension>
 				</extension>
 				<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp"> <!-- Tidspunkt for når flagget ble generert -->
 					<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>

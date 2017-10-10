@@ -3,8 +3,16 @@
 			<meta>
 				<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-flag"/>
 			</meta>
-			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-severityvalueset">
-				<valueCode value="green"/>
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-severity">
+				<extension url="severity">
+					<valueCodeableConcept>
+						<coding>
+							<system value="http://ehelse.no/fhir/vft/STU3/CodeSystem/severity-codesystems"/>
+							<code value="OB"/>
+							<display value="green"/>
+						</coding>
+					</valueCodeableConcept>
+				</extension>
 			</extension>
 			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp">
 				<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>
