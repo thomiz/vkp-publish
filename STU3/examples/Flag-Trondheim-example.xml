@@ -8,7 +8,7 @@
 					<valueCodeableConcept>
 						<coding>
 							<system value="http://ehelse.no/fhir/vft/STU3/CodeSystem/severity-codesystems"/>
-							<code value="OB"/>
+							<code value="G"/>
 							<display value="green"/>
 						</coding>
 					</valueCodeableConcept>
