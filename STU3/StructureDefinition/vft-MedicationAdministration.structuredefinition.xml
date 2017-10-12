@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="vft-MedicationAdministration" />
   <meta>
-    <lastUpdated value="2017-10-10T13:52:09.434+02:00" />
+    <lastUpdated value="2017-10-12T13:13:23.238+02:00" />
   </meta>
   <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-MedicationAdministration" />
   <name value="vft-MedicationAdministration" />
@@ -392,8 +392,8 @@
     </element>
     <element id="MedicationAdministration.identifier">
       <path value="MedicationAdministration.identifier" />
-      <short value="External identifier" />
-      <definition value="External identifier - FHIR will generate its own internal identifiers (probably URLs) which do not need to be explicitly managed by the resource.  The identifier here is one that would be used by another non-FHIR system - for example an automated medication pump would provide a record each time it operated; an administration while the patient was off the ward might be made with a different system and entered after the event.  Particularly important if these records have to be updated." />
+      <short value="Unique code or number identifying the MedicationAdministration" />
+      <definition value="Unique code or number identifying the MedicationAdministration, should be a UUID. Example: urn:uuid:2e82976a-35d6-4870-a4d5-d79abf772a8f" />
       <comment value="Shoud be a UUID" />
       <min value="0" />
       <max value="*" />
@@ -2197,8 +2197,8 @@
     </element>
     <element id="MedicationAdministration.category">
       <path value="MedicationAdministration.category" />
-      <short value="Type of medication usage" />
-      <definition value="Indicates the type of medication administration and where the medication is expected to be consumed or administered." />
+      <short value="Event types for medication dispencer" />
+      <definition value="Event types when medication dispencer performs the medication administration. Values from http://ehelse.no/fhir/vft/STU3/CodeSystem/medisindispenserhendelser is preferred" />
       <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
       <min value="0" />
       <max value="1" />
@@ -2224,7 +2224,7 @@
         </extension>
         <strength value="preferred" />
         <description value="A coded concept describing where the medication administered is expected to occur" />
-        <valueSetUri value="http://ehelse.no/fhir/vft/STU3/CodeSystem/medisindispenserhendelser" />
+        <valueSetUri value="http://ehelse.no/fhir/vft/STU3/CodeSystem/vft-medisindispenserhendelser-valueset" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -7049,7 +7049,7 @@
     <element id="MedicationAdministration.device">
       <path value="MedicationAdministration.device" />
       <short value="Device used to administer" />
-      <definition value="The device used in administering the medication to the patient.  For example, a particular infusion pump.&#xD;&#xA;&#xD;&#xA;Should be a logical reference containing the IMEI number of the device.&#xD;&#xA;display value should conatin the name of the device type" />
+      <definition value="The device used in administering the medication to the patient.  For example, a particular infusion pump.&#xD;&#xA;&#xD;&#xA;Should be a logical reference containing the IMEI number of the device.&#xD;&#xA;display value should conatin the name of the device type&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;&lt;device&gt;&#xD;&#xA;          &lt;identifier&gt;&#xD;&#xA;            &lt;system value=&quot;http://dignio.no/IMEInummer&quot; /&gt;&#xD;&#xA;            &lt;value value=&quot;123456789101112&quot; /&gt;&#xD;&#xA;          &lt;/identifier&gt;&#xD;&#xA;          &lt;display value=&quot;Medido multidosesdispenser&quot;/&gt;&#xD;&#xA;        &lt;/device&gt;" />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <min value="1" />
       <max value="1" />
@@ -12543,6 +12543,8 @@
   <differential>
     <element id="MedicationAdministration.identifier">
       <path value="MedicationAdministration.identifier" />
+      <short value="Unique code or number identifying the MedicationAdministration" />
+      <definition value="Unique code or number identifying the MedicationAdministration, should be a UUID. Example: urn:uuid:2e82976a-35d6-4870-a4d5-d79abf772a8f" />
       <comment value="Shoud be a UUID" />
     </element>
     <element id="MedicationAdministration.definition">
@@ -12569,12 +12571,14 @@
     </element>
     <element id="MedicationAdministration.category">
       <path value="MedicationAdministration.category" />
+      <short value="Event types for medication dispencer" />
+      <definition value="Event types when medication dispencer performs the medication administration. Values from http://ehelse.no/fhir/vft/STU3/CodeSystem/medisindispenserhendelser is preferred" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="MedicationAdministrationCategory" />
         </extension>
         <strength value="preferred" />
-        <valueSetUri value="http://ehelse.no/fhir/vft/STU3/CodeSystem/medisindispenserhendelser" />
+        <valueSetUri value="http://ehelse.no/fhir/vft/STU3/CodeSystem/vft-medisindispenserhendelser-valueset" />
       </binding>
     </element>
     <element id="coding.system">
@@ -12683,7 +12687,7 @@
     </element>
     <element id="MedicationAdministration.device">
       <path value="MedicationAdministration.device" />
-      <definition value="The device used in administering the medication to the patient.  For example, a particular infusion pump.&#xD;&#xA;&#xD;&#xA;Should be a logical reference containing the IMEI number of the device.&#xD;&#xA;display value should conatin the name of the device type" />
+      <definition value="The device used in administering the medication to the patient.  For example, a particular infusion pump.&#xD;&#xA;&#xD;&#xA;Should be a logical reference containing the IMEI number of the device.&#xD;&#xA;display value should conatin the name of the device type&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;&lt;device&gt;&#xD;&#xA;          &lt;identifier&gt;&#xD;&#xA;            &lt;system value=&quot;http://dignio.no/IMEInummer&quot; /&gt;&#xD;&#xA;            &lt;value value=&quot;123456789101112&quot; /&gt;&#xD;&#xA;          &lt;/identifier&gt;&#xD;&#xA;          &lt;display value=&quot;Medido multidosesdispenser&quot;/&gt;&#xD;&#xA;        &lt;/device&gt;" />
       <min value="1" />
       <max value="1" />
     </element>

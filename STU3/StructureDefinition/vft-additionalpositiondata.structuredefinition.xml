@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="vft-additionalpositiondata" />
   <meta>
-    <lastUpdated value="2017-10-11T18:59:26.486+02:00" />
+    <lastUpdated value="2017-10-12T09:50:04.647+02:00" />
   </meta>
   <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-additionalpositiondata" />
   <version value="0.2" />
@@ -10,7 +10,7 @@
   <status value="draft" />
   <date value="2017-05-09T16:53:54.8520187+02:00" />
   <publisher value="The Norwegian Directorate of eHealth" />
-  <description value="Geoposition measurement for the PCH in Norway" />
+  <description value="Additional information about the geoposition measurement for the PCH in Norway. Contains timestamp, altitudeMeters, horizontal accuracy, vertical accuracy, velocity and direction of travel" />
   <fhirVersion value="3.0.0" />
   <kind value="resource" />
   <abstract value="false" />
@@ -137,8 +137,8 @@
     <element id="Extension.extension:timestamp">
       <path value="Extension.extension" />
       <sliceName value="timestamp" />
-      <short value="Additional Content defined by implementations" />
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <short value="Timestamp for the measurement" />
+      <definition value="Timestamp describing when the device recorded the measurement. Basic timestamp with UTC offset" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -324,8 +324,8 @@
     <element id="Extension.extension:altitudeMeters">
       <path value="Extension.extension" />
       <sliceName value="altitudeMeters" />
-      <short value="Additional Content defined by implementations" />
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <short value="Recorded altitude in meters" />
+      <definition value="The recorded altitude by the device, measured in meters" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -796,7 +796,7 @@
     <element id="Extension.extension:horizontalAccuracy">
       <path value="Extension.extension" />
       <sliceName value="horizontalAccuracy" />
-      <short value="The horizontal accuracy of the position measurement" />
+      <short value="The horizontal accuracy of the measurement" />
       <definition value="The horizontal accuracy of the position measurement in meters" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -1168,8 +1168,8 @@
     <element id="Extension.extension:velocityMs">
       <path value="Extension.extension" />
       <sliceName value="velocityMs" />
-      <short value="Additional Content defined by implementations" />
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <short value="Recorded speed and direction of travel" />
+      <definition value="Recorded speed and direction of travel as recorded by the device" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -1288,8 +1288,8 @@
     <element id="Extension.extension:velocityMs.extension:directionDecimalDegrees">
       <path value="Extension.extension.extension" />
       <sliceName value="directionDecimalDegrees" />
-      <short value="Additional Content defined by implementations" />
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <short value="Direction of travel" />
+      <definition value="Direction of travel as measured by the device, annotated in Decimal degrees" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -1475,8 +1475,8 @@
     <element id="Extension.extension:velocityMs.extension:speedMs">
       <path value="Extension.extension.extension" />
       <sliceName value="speedMs" />
-      <short value="Additional Content defined by implementations" />
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <short value="The recorded speed" />
+      <definition value="The speed as recorded by the device. Measured in m/s" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -2048,6 +2048,8 @@
     <element id="Extension.extension:timestamp">
       <path value="Extension.extension" />
       <sliceName value="timestamp" />
+      <short value="Timestamp for the measurement" />
+      <definition value="Timestamp describing when the device recorded the measurement. Basic timestamp with UTC offset" />
     </element>
     <element id="Extension.extension:timestamp.url">
       <path value="Extension.extension.url" />
@@ -2064,6 +2066,8 @@
     <element id="Extension.extension:altitudeMeters">
       <path value="Extension.extension" />
       <sliceName value="altitudeMeters" />
+      <short value="Recorded altitude in meters" />
+      <definition value="The recorded altitude by the device, measured in meters" />
     </element>
     <element id="Extension.extension:altitudeMeters.url">
       <path value="Extension.extension.url" />
@@ -2099,7 +2103,7 @@
     <element id="Extension.extension:horizontalAccuracy">
       <path value="Extension.extension" />
       <sliceName value="horizontalAccuracy" />
-      <short value="The horizontal accuracy of the position measurement" />
+      <short value="The horizontal accuracy of the measurement" />
       <definition value="The horizontal accuracy of the position measurement in meters" />
       <max value="1" />
     </element>
@@ -2133,6 +2137,8 @@
     <element id="Extension.extension:velocityMs">
       <path value="Extension.extension" />
       <sliceName value="velocityMs" />
+      <short value="Recorded speed and direction of travel" />
+      <definition value="Recorded speed and direction of travel as recorded by the device" />
     </element>
     <element id="Extension.extension:velocityMs.extension">
       <path value="Extension.extension.extension" />
@@ -2147,6 +2153,8 @@
     <element id="Extension.extension:velocityMs.extension:directionDecimalDegrees">
       <path value="Extension.extension.extension" />
       <sliceName value="directionDecimalDegrees" />
+      <short value="Direction of travel" />
+      <definition value="Direction of travel as measured by the device, annotated in Decimal degrees" />
     </element>
     <element id="Extension.extension:velocityMs.extension:directionDecimalDegrees.url">
       <path value="Extension.extension.extension.url" />
@@ -2162,6 +2170,8 @@
     <element id="Extension.extension:velocityMs.extension:speedMs">
       <path value="Extension.extension.extension" />
       <sliceName value="speedMs" />
+      <short value="The recorded speed" />
+      <definition value="The speed as recorded by the device. Measured in m/s" />
     </element>
     <element id="Extension.extension:velocityMs.extension:speedMs.url">
       <path value="Extension.extension.extension.url" />

@@ -1,4 +1,4 @@
-<Bundle xmlns="http://hl7.org/fhir">
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd">
 	<id value="10bb101f-a121-4264-a920-67be9cb82c74"/>
 	<type value="message"/>
 	<entry>
@@ -162,6 +162,7 @@
 					<system value="urn:ietf:rfc:3986" />
 					<value value="urn:uuid:2e82976a-35d6-4870-a4d5-d79abf772a8f"/>
 				</identifier>
+				<description value="User outside goefence"/>
 				<telecom> <!-- URL for å vise hendelsen i webleser-->
 					<system value="url"/>
 					<value value="http://display.event.data"/>

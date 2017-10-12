@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="vft-flag" />
   <meta>
-    <lastUpdated value="2017-10-11T18:57:46.405+02:00" />
+    <lastUpdated value="2017-10-12T13:33:42.965+02:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pc" />
@@ -2381,7 +2381,7 @@
     <element id="Flag.code">
       <path value="Flag.code" />
       <short value="Coded or textual message to display to user" />
-      <definition value="The coded value or textual component of the flag to display to the user." />
+      <definition value="Used in the PCH Norway project to enter text to be displayed to the user describing the Flagged event. in Code.text attribute&#xD;&#xA;" />
       <comment value="If non coded, use CodeableConcept.text.  This element should always be included in the narrative." />
       <min value="1" />
       <max value="1" />
@@ -2864,8 +2864,8 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Flag.code.text" />
-      <short value="Plain text representation of the concept" />
-      <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
+      <short value="Used in the PCH Norway project to enter text to be displayed to the user describing the Flagged event. in Code.text attribute" />
+      <definition value="Used in the PCH Norway project to enter text to be displayed to the user describing the Flagged event. in Code.text attribute" />
       <comment value="Very often the text is the same as a displayName of one of the codings." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
       <min value="0" />
@@ -3932,6 +3932,18 @@
       <sliceName value="alarmid" />
       <min value="1" />
       <max value="1" />
+    </element>
+    <element id="Flag.code">
+      <path value="Flag.code" />
+      <definition value="Used in the PCH Norway project to enter text to be displayed to the user describing the Flagged event. in Code.text attribute&#xD;&#xA;" />
+    </element>
+    <element id="Flag.code.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Flag.code.text" />
+      <short value="Used in the PCH Norway project to enter text to be displayed to the user describing the Flagged event. in Code.text attribute" />
+      <definition value="Used in the PCH Norway project to enter text to be displayed to the user describing the Flagged event. in Code.text attribute" />
     </element>
   </differential>
 </StructureDefinition>
