@@ -1,0 +1,174 @@
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd">
+  <id value="10bb101f-a121-4264-a920-67be9cb82c74" />
+  <type value="message" />
+  <entry>
+    <fullUrl value="urn:uuid:1cbdfb97-5859-48a4-8301-d54eab818d68" />
+    <resource>
+      <MessageHeader>
+        <id value="1cbdfb97-5859-48a4-8301-d54eab818d68" />
+        <event>
+          <system value="http://hl7.org/fhir/message-events" />
+          <code value="MedicationAdministration-Update" />
+        </event>
+        <receiver>
+          <identifier>
+            <system value="http://ehelse.no/fhir/identifiertypes/HERID" />
+            <value value="102287" />
+          </identifier>
+          <display value="Sykepleietjeneste, pleie- og omsorg" />
+        </receiver>
+        <sender>
+          <identifier>
+            <system value="http://ehelse.no/fhir/identifiertypes/HERID" />
+            <value value="95341" />
+          </identifier>
+          <display value="Velferdpoclev1" />
+        </sender>
+        <timestamp value="2012-01-04T09:10:14+00:00" />
+        <source>
+          <endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341" />
+        </source>
+        <focus>
+          <reference value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" />
+          <display value="MedicationAdministration" />
+        </focus>
+        <focus>
+			<reference value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" />
+			<display value="Flag" />
+        </focus>
+      </MessageHeader>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" />
+    <resource>
+      <MedicationAdministration>
+        <id value="ef91399e-8993-11e7-bb31-be2e44b06b34" />
+        <meta>
+			<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-MedicationAdministration"/>
+		</meta>
+        <identifier>
+          <system value="http://dignio.no/medisindispenser-event-id" />
+          <value value="urn:uuid:c42984fc-8ca8-48d7-8bbf-7fe5503c49a9" />
+        </identifier>
+        <status value="completed" />
+        <category>
+          <coding>
+            <system value="http://ehelse.no/fhir/vft/STU3/CodeSystem/medisindispenserhendelser" />
+            <code value="2"/>
+			<display value="medisin_ikke_utlevert" />
+          </coding>
+		  <coding>
+			<code value="community"/>
+		  </coding>
+        </category>
+        <medicationCodeableConcept>
+          <text value="Ukjent medisin" />
+        </medicationCodeableConcept>
+        <subject>
+          <identifier>
+            <system value="http://ehelse.no/fhir/identifiertypes/FNR" />
+            <value value="05073500186" />
+          </identifier>
+          <display value="Ærlend Sørgård" />
+        </subject>
+        <effectiveDateTime value="2017-05-09T10:00:00.936+02:00" />
+        <device>
+          <identifier>
+            <system value="http://dignio.no/IMEInummer" />
+            <value value="123456789101112" />
+          </identifier>
+          <display value="Medido multidosesdispenser"/>
+        </device>
+      </MedicationAdministration>
+    </resource>
+  </entry>
+  <entry>
+	<fullUrl value="urn:uuid:d0a5238c-51be-4c67-b949-a4ef0b2c65fb"/>
+		<resource>
+			<Flag xmlns="http://hl7.org/fhir"> 
+				<id value="d0a5238c-51be-4c67-b949-a4ef0b2c65fb"/>
+				<meta>
+					<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-flag"/>
+				</meta>
+				<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-severity">
+					<extension url="severity">
+						<valueCodeableConcept>
+							<coding>
+								<code value="Y"/>
+								<display value="urgent"/>
+							</coding>
+							<text value="teststreng"/>
+						</valueCodeableConcept> 
+					</extension>
+				</extension>
+				<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp"> <!-- Tidspunkt for når flagget ble generert -->
+					<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>
+				</extension>
+				<extension url="http://hl7.org/fhir/StructureDefinition/flag-detail"> <!-- Offisiell FHIR utvidelse for å legge inn referanse til ressurs som inneholder ytterligere informasjon i dette tilfellet Observation -->
+					<valueReference>
+						<reference value="urn:uuid:c42984fc-8ca8-48d7-8bbf-7fe5503c49a9"/>
+					</valueReference>
+				</extension>
+				<identifier> <!-- Forretnings identifikator for Flagget (Business identifier), vi foretrekker en unik persistent id UUID -->
+					<system value="urn:ietf:rfc:3986" />
+					<value value="urn:uuid:850ccc4d-3021-448d-aa9c-5f46efbf4f6a"/>
+				</identifier>
+				<status value="active"/>
+				<!-- 1..1 active | inactive | entered-in-error -->
+				<code>
+					<!-- 1..1 CodeableConcept Partially deaf, Requires easy open caps, No permanent address, etc. -->
+					<text value="Medisin ble ikke utlevert til planlagt tid"/>
+				</code>
+				<subject>
+					<!-- Referanse til pasient to ganger, antakelig ikke nødvendig -->
+					<identifier>
+						<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+						<value value="05073500186"/>
+					</identifier>
+				</subject>
+			</Flag>
+		</resource>
+  </entry>
+  <entry>
+	  <resource>
+			<Composition>
+				<status value="final"/>
+				<type>
+					<coding>
+						<code value="11488-4"/> <!-- LOINC kode, mer enn tusen koder å velge mellom -->
+						<display value="Consult note"/> 
+					</coding>
+				</type>
+				<subject>
+					<!-- Referanse til pasient obligatorisk i Composition-->
+					<identifier>
+						<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+						<value value="05073500186"/>
+					</identifier>
+				</subject>
+				<date value="2017-05-09T10:00:00.936+02:00"/>
+				<author>
+					<identifier>
+					  <system value="http://ehelse.no/fhir/identifiertypes/FNR" />
+					  <value value="04056600324" />
+					</identifier>
+					<display value="Magnar Koman" />
+				</author>
+				<title value="Journalnotat for Medisinutleveringen"/>
+				<section>
+					<text>
+						<status value="additional"/> <!-- Alltid additional siden dette er mennersker som har skrevet notater som tillegg til den strukturerte informasjonen-->
+						<div xmlns="http://www.w3.org/1999/xhtml">
+							XHtml strukturert tekstinformasjon
+						</div>
+					</text>
+					<entry> <!-- A reference to data that supports this section -->
+						<reference value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" />
+						<display value="MedicationAdministration" />
+					</entry>
+				</section>
+			</Composition>
+		</resource>
+  </entry>
+</Bundle>
