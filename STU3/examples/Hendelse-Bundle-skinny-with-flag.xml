@@ -33,7 +33,7 @@
           <display value="MedicationAdministration" />
         </focus>
         <focus>
-			<reference value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" />
+			<reference value="urn:uuid:d0a5238c-51be-4c67-b949-a4ef0b2c65fb" />
 			<display value="Flag" />
         </focus>
       </MessageHeader>
@@ -58,9 +58,6 @@
             <code value="2"/>
 			<display value="medisin_ikke_utlevert" />
           </coding>
-		  <coding>
-			<code value="community"/>
-		  </coding>
         </category>
         <medicationCodeableConcept>
           <text value="Ukjent medisin" />
@@ -80,16 +77,6 @@
           </identifier>
           <display value="Medido multidosesdispenser"/>
         </device>
-        <note>
-          <authorReference>
-            <identifier>
-              <system value="http://ehelse.no/fhir/identifiertypes/FNR" />
-              <value value="04056600324" />
-            </identifier>
-            <display value="Magnar Koman" />
-          </authorReference>
-          <text value="A note about the medication administration, for example how it was handled. " />
-        </note>
       </MedicationAdministration>
     </resource>
   </entry>
@@ -105,9 +92,8 @@
 						<valueCodeableConcept>
 							<coding>
 								<code value="Y"/>
-								<display value="urgent"/>
+								<display value="yellow"/>
 							</coding>
-							<text value="teststreng"/>
 						</valueCodeableConcept> 
 					</extension>
 				</extension>

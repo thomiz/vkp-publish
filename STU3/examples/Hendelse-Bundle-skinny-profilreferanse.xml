@@ -54,9 +54,6 @@
             <code value="1"/>
 			<display value="medisin_utlevert" />
           </coding>
-		  <coding>
-			<code value="community"/>
-		  </coding>
         </category>
         <medicationCodeableConcept>
           <text value="Ukjent medisin" />
@@ -76,16 +73,6 @@
           </identifier>
           <display value="Medido multidosesdispenser"/>
         </device>
-        <note>
-          <authorReference>
-            <identifier>
-              <system value="http://ehelse.no/fhir/identifiertypes/FNR" />
-              <value value="04056600324" />
-            </identifier>
-            <display value="Magnar Koman" />
-          </authorReference>
-          <text value="A note about the medication administration, for example how it was handled. " />
-        </note>
       </MedicationAdministration>
     </resource>
   </entry>

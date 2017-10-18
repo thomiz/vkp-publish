@@ -51,9 +51,6 @@
             <code value="1"/>
 			<display value="medisin_utlevert" />
           </coding>
-		  <coding>
-			<code value="community"/>
-		  </coding>
         </category>
         <medicationCodeableConcept>
           <text value="Ukjent medisin" />
