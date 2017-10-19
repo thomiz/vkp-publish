@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="vft-severity-valueset" />
-    <url value="http://ehelse.no/fhir/vft/STU3/CodeSystem/vft-severity-valueset" />
-    <version value="0.1" />
-    <name value="vft-severity-valueset" />
+    <id value="vft-emergency-level-valueset" />
+    <url value="http://ehelse.no/fhir/vft/STU3/CodeSystem/vft-emergency-level-valueset" />
+    <version value="0.2" />
+    <name value="vft-emergency-level-valueset" />
     <status value="draft" />
     <experimental value="true" />
     <publisher value="Direktoratet for e-helse" />
     <immutable value="false" />
     <compose>
         <include>
-            <system value="http://ehelse.no/fhir/vft/STU3/CodeSystem/severity-codesystem" />
+            <system value="http://ehelse.no/fhir/vft/STU3/CodeSystem/emergency-level-codesystem" />
         </include>
 		<include>
 			<system value="http://ehelse.no/fhir/vft/STU3/CodeSystem/triage-codesystem"/>
