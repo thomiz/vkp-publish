@@ -70,7 +70,7 @@
 					<text> <!-- Selve notatet-->
 						<status value="additional"/> <!-- Alltid additional siden dette er mennesker som har skrevet notater som tillegg til den strukturerte informasjonen-->
 						<div xmlns="http://www.w3.org/1999/xhtml">
-							XHtml strukturert tekstinformasjon
+							XHTML strukturert tekstinformasjon
 						</div>
 					</text>
 					<entry> <!-- A reference to data that supports this section. In this case the vft-medicationadministration -->

@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="vft-severity" />
+  <id value="oldshit-vft-emergencylevel" />
   <meta>
-    <lastUpdated value="2017-10-12T13:39:39.88+02:00" />
+    <lastUpdated value="2017-10-20T10:08:03.608+02:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-severity" />
-  <name value="vft-severity" />
+  <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/oldshit-vft-emergencylevel" />
+  <name value="oldshit-vft-emergencylevel" />
   <status value="draft" />
   <date value="2017-10-10T09:58:08.81+02:00" />
   <description value="Describes the severity of the Flagged event." />
@@ -131,10 +131,10 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.extension:severity">
+    <element id="Extension.extension:emergencylevel">
       <path value="Extension.extension" />
-      <sliceName value="severity" />
-      <short value="Severity of the Flagged event" />
+      <sliceName value="emergencylevel" />
+      <short value="Emergency level of the Flagged event" />
       <definition value="Description of the severity of the flagged event using color codes." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -166,7 +166,7 @@
       </constraint>
       <binding>
         <strength value="preferred" />
-        <valueSetUri value="http://ehelse.no/fhir/vft/STU3/CodeSystem/vft-medisindispenserhendelser-valueset" />
+        <valueSetUri value="http://ehelse.no/fhir/vft/STU3/CodeSystem/vft-emergencylevel-valueset" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -177,7 +177,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.extension:severity.id">
+    <element id="Extension.extension:emergencylevel.id">
       <path value="Extension.extension.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -206,7 +206,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Extension.extension:severity.extension">
+    <element id="Extension.extension:emergencylevel.extension">
       <path value="Extension.extension.extension" />
       <slicing>
         <discriminator>
@@ -255,7 +255,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.extension:severity.url">
+    <element id="Extension.extension:emergencylevel.url">
       <path value="Extension.extension.url" />
       <representation value="xmlAttr" />
       <short value="identifies the meaning of the extension" />
@@ -271,7 +271,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="severity" />
+      <fixedUri value="emergencylevel" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -289,7 +289,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.extension:severity.value[x]:valueCodeableConcept">
+    <element id="Extension.extension:emergencylevel.value[x]:valueCodeableConcept">
       <path value="Extension.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <short value="Value of extension" />
@@ -338,7 +338,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-severity" />
+      <fixedUri value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-emergencylevel" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -511,21 +511,21 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Extension.extension:severity">
+    <element id="Extension.extension:emergencylevel">
       <path value="Extension.extension" />
-      <sliceName value="severity" />
-      <short value="Severity of the Flagged event" />
+      <sliceName value="emergencylevel" />
+      <short value="Emergency level of the Flagged event" />
       <definition value="Description of the severity of the flagged event using color codes." />
       <binding>
         <strength value="preferred" />
-        <valueSetUri value="http://ehelse.no/fhir/vft/STU3/CodeSystem/vft-medisindispenserhendelser-valueset" />
+        <valueSetUri value="http://ehelse.no/fhir/vft/STU3/CodeSystem/vft-emergencylevel-valueset" />
       </binding>
     </element>
-    <element id="Extension.extension:severity.url">
+    <element id="Extension.extension:emergencylevel.url">
       <path value="Extension.extension.url" />
-      <fixedUri value="severity" />
+      <fixedUri value="emergencylevel" />
     </element>
-    <element id="Extension.extension:severity.value[x]:valueCodeableConcept">
+    <element id="Extension.extension:emergencylevel.value[x]:valueCodeableConcept">
       <path value="Extension.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <type>
@@ -534,7 +534,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-severity" />
+      <fixedUri value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-emergencylevel" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

@@ -9,6 +9,7 @@
   <name value="emergency-level-codesystem" />
   <status value="draft" />
   <publisher value="Direktoratet for e-helse" />
+  <description value="Hastegrad, samme som hastegrad AMG Volven OID 7340. Norsk Medisinsk Indeks. Denne versjonen er definert opp som FHIR CodeSystem for bruk innen kategorisering av hendelser til responssenter."/>
   <content value="complete" />
   <concept>
     <code value="A" />
