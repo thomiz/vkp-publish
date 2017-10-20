@@ -182,20 +182,21 @@
 				<meta>
 					<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-flag"/>
 				</meta>
-				<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-severity">
-					<extension url="code">
-						<valueCode value="green"/>
-					</extension>
-					<extension url="text">
-						<valueString value="Green status, all is well"/>
-					</extension>
+				<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-emergencylevel">
+					<valueCodeableConcept>
+						<coding>
+							<system value="http://ehelse.no/fhir/vft/STU3/CodeSystem/emergency-level-codesystem"/>
+							<code value="V"/>
+							<display value="Vanlig (grønn)"/>
+						</coding>
+					</valueCodeableConcept>
 				</extension>
 				<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp"> <!-- Tidspunkt for når flagget ble generert -->
 					<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>
 				</extension>
-				<extension url="http://hl7.org/fhir/StructureDefinition/flag-detail"> <!-- Offisiell FHIR utvidelse for å legge inn referanse til ressurs som inneholder ytterligere informasjon i dette tilfellet Observation -->
+				<extension url="http://hl7.org/fhir/StructureDefinition/flag-detail"> <!-- Offisiell FHIR utvidelse for å legge inn referanse til ressurs som inneholder ytterligere informasjon i dette tilfellet Location -->
 					<valueReference>
-						<reference value="urn:uuid:2e82976a-35d6-4870-a4d5-d79abf772a8f"/>
+						<reference value="urn:uuid:4183309e-bb0b-477d-80d9-46728ef85409"/>
 					</valueReference>
 				</extension>
 				<identifier> <!-- Forretnings identifikator for Flagget (Business identifier), vi foretrekker en unik persistent id UUID -->

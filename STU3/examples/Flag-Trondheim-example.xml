@@ -3,13 +3,13 @@
 			<meta>
 				<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-flag"/>
 			</meta>
-			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-severity">
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-emergencylevel">
 				<extension url="severity">
 					<valueCodeableConcept>
 						<coding>
-							<system value="http://ehelse.no/fhir/vft/STU3/CodeSystem/severity-codesystems"/>
-							<code value="G"/>
-							<display value="green"/>
+							<system value="http://ehelse.no/fhir/vft/STU3/CodeSystem/emergency-level-codesystems"/>
+							<code value="V"/>
+							<display value="vanlig"/>
 						</coding>
 					</valueCodeableConcept>
 				</extension>

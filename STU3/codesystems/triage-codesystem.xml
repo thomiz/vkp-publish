@@ -4,7 +4,7 @@
   <meta>
     <lastUpdated value="2017-09-12T15:00:50.532+02:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/vft/STU3/CodeSystem/triage-codesystem	" />
+  <url value="http://ehelse.no/fhir/vft/STU3/CodeSystem/triage-codesystem" />
   <version value="0.1" />
   <name value="triage-codesystem" />
   <status value="draft" />
