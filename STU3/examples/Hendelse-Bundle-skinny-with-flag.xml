@@ -42,7 +42,7 @@
   <entry>
     <fullUrl value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" />
     <resource>
-      <MedicationAdministration>
+      <MedicationDispense>
         <id value="ef91399e-8993-11e7-bb31-be2e44b06b34" />
         <meta>
 			<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-MedicationAdministration"/>
@@ -69,15 +69,17 @@
           </identifier>
           <display value="Ærlend Sørgård" />
         </subject>
-        <effectiveDateTime value="2017-05-09T10:00:00.936+02:00" />
-        <device>
+		<performer>
+			<actor>
           <identifier>
             <system value="http://dignio.no/IMEInummer" />
             <value value="123456789101112" />
           </identifier>
           <display value="Medido multidosesdispenser"/>
-        </device>
-      </MedicationAdministration>
+        </actor>
+      </performer>
+			<whenHandedOver value="2017-05-09T10:00:00.936+02:00"/>
+      </MedicationDispense>
     </resource>
   </entry>
   <entry>
