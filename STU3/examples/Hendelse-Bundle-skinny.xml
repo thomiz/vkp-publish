@@ -38,18 +38,21 @@
   <entry>
     <fullUrl value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" />
     <resource>
-      <MedicationAdministration>
+      <MedicationDispense>
         <id value="ef91399e-8993-11e7-bb31-be2e44b06b34" />
+        <meta>
+			<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-MedicationDispense"/>
+		</meta>
         <identifier>
           <system value="http://dignio.no/medisindispenser-event-id" />
-          <value value="c42984fc-8ca8-48d7-8bbf-7fe5503c49a9" />
+          <value value="urn:uuid:c42984fc-8ca8-48d7-8bbf-7fe5503c49a9" />
         </identifier>
         <status value="completed" />
         <category>
           <coding>
             <system value="http://ehelse.no/fhir/vft/STU3/CodeSystem/medisindispenserhendelser" />
-            <code value="1"/>
-			<display value="medisin_utlevert" />
+            <code value="2"/>
+			<display value="medisin_ikke_utlevert" />
           </coding>
         </category>
         <medicationCodeableConcept>
@@ -62,15 +65,17 @@
           </identifier>
           <display value="Ærlend Sørgård" />
         </subject>
-        <effectiveDateTime value="2012-01-04T09:10:14+00:00" />
-        <device>
+		<performer>
+			<actor>
           <identifier>
             <system value="http://dignio.no/IMEInummer" />
             <value value="123456789101112" />
           </identifier>
           <display value="Medido multidosesdispenser"/>
-        </device>
-      </MedicationAdministration>
+        </actor>
+      </performer>
+			<whenHandedOver value="2017-05-09T10:00:00.936+02:00"/>
+      </MedicationDispense>
     </resource>
   </entry>
 </Bundle>
