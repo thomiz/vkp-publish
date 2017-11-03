@@ -7,8 +7,8 @@
       <MessageHeader>
         <id value="1cbdfb97-5859-48a4-8301-d54eab818d68" />
         <event>
-          <system value="http://hl7.org/fhir/message-events" />
-          <code value="MedicationAdministration-Update" />
+          <system value="http://ehelse.no/fhir/vft/STU3/CodeSystem/vft-MessageEvent.valueset" />
+          <code value="MedicationDispense" />
         </event>
         <receiver>
           <identifier>
@@ -30,7 +30,7 @@
         </source>
         <focus>
           <reference value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" />
-          <display value="MedicationAdministration" />
+          <display value="MedicationDispense" />
         </focus>
       </MessageHeader>
     </resource>
