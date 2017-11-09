@@ -93,8 +93,8 @@
 					<extension url="emergencylevel">
 						<valueCodeableConcept>
 							<coding>
-								<code value="H"/>
-								<display value="Haster (gul)"/>
+								<code value="Y"/>
+								<display value="yellow"/>
 							</coding>
 						</valueCodeableConcept> 
 					</extension>
