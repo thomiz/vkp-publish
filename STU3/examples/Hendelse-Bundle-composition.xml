@@ -29,12 +29,12 @@
 					<endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341"/>
 				</source>
 				<focus>
-					<reference value="urn:uuid:c31bd880-2b09-4eda-a5a3-90090d49dad5"/>
-					<display value="MedicationDispense"/>
-				</focus>
-				<focus>
 					<reference value="urn:uuid:285357b8-1ec8-429b-827e-3bcd92366126"/>
 					<display value="Composition"/>
+				</focus>
+				<focus>
+					<reference value="urn:uuid:c31bd880-2b09-4eda-a5a3-90090d49dad5"/>
+					<display value="MedicationDispense"/>
 				</focus>
 			</MessageHeader>
 		</resource>
@@ -43,6 +43,7 @@
 		<fullUrl value="urn:uuid:285357b8-1ec8-429b-827e-3bcd92366126"/>
 		<resource>
 			<Composition>
+				<id value="285357b8-1ec8-429b-827e-3bcd92366126"/>
 				<status value="final"/>
 				<!-- Status er alltid final når Composition sendes første gang, kan ha andre statuser hvis man ønsker å endre på avsendt Composition (amended og entered in error) -->
 				<type>
