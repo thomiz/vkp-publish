@@ -1,11 +1,11 @@
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd">
-  <id value="10bb101f-a121-4264-a920-67be9cb82c74" />
+  <id value="033056cb-f7b5-450f-a2bd-67bf2c6d5a4f" />
   <type value="message" />
   <entry>
-    <fullUrl value="urn:uuid:1cbdfb97-5859-48a4-8301-d54eab818d68" />
+    <fullUrl value="urn:uuid:b6915161-13b1-41d1-9820-fc34b76005a6" />
     <resource>
       <MessageHeader>
-        <id value="1cbdfb97-5859-48a4-8301-d54eab818d68" />
+        <id value="b6915161-13b1-41d1-9820-fc34b76005a6" />
         <event>
           <system value="http://ehelse.no/fhir/vft/STU3/CodeSystem/vft-MessageEvent.valueset" />
           <code value="MedicationDispense" />
@@ -29,7 +29,7 @@
           <endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341" />
         </source>
         <focus>
-          <reference value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" />
+          <reference value="urn:uuid:9c16a4a0-dfc0-4cc1-b136-579571cecbae" />
           <display value="MedicationDispense" />
         </focus>
         <focus>
@@ -40,10 +40,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" />
+    <fullUrl value="urn:uuid:9c16a4a0-dfc0-4cc1-b136-579571cecbae" />
     <resource>
       <MedicationDispense>
-        <id value="ef91399e-8993-11e7-bb31-be2e44b06b34" />
+        <id value="9c16a4a0-dfc0-4cc1-b136-579571cecbae" />
         <meta>
 			<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-MedicationDispense"/>
 		</meta>
