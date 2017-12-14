@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="vft-MedicationDispense" />
+  <id value="vkp-MedicationDispense-v05" />
   <meta>
-    <lastUpdated value="2017-10-31T14:05:05.424+01:00" />
+    <lastUpdated value="2017-12-14T14:56:09.705+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-MedicationDispense" />
-  <name value="vft-MedicationDispense" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v05" />
+  <name value="vkp-MedicationDispense" />
   <status value="draft" />
   <date value="2017-10-31T13:47:23.347+01:00" />
   <fhirVersion value="3.0.1" />

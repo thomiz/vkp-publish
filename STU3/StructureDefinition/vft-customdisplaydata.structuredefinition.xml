@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="vft-customdisplaydata" />
+  <id value="vkp-customdisplaydata-v05" />
   <meta>
-    <lastUpdated value="2017-09-26T08:35:04.303+02:00" />
+    <lastUpdated value="2017-12-14T15:01:12.618+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-customdisplaydata" />
-  <name value="vft-customdisplaydata" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/vkp-customdisplaydata-v05" />
+  <name value="vkp-customdisplaydata" />
   <status value="draft" />
   <date value="2017-09-26T08:22:10.103+02:00" />
   <description value="Custom display field. The client software can provide one or more fields of custom display data that could be displayed to a human operator. contains a fieldname and content. Both should be human readable." />
@@ -522,7 +522,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-customdisplaydata" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/vkp-customdisplaydata-v05" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -731,7 +731,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-customdisplaydata" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/vkp-customdisplaydata-v05" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

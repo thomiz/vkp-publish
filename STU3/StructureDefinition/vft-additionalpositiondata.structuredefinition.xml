@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="vft-additionalpositiondata" />
+  <id value="no-additionalpositiondata-v05" />
   <meta>
-    <lastUpdated value="2017-10-12T09:50:04.647+02:00" />
+    <lastUpdated value="2017-12-14T15:00:04.638+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-additionalpositiondata" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/no-additionalpositiondata-v05" />
   <version value="0.2" />
-  <name value="vft-additionalpositiondata" />
+  <name value="no-additionalpositiondata" />
   <status value="draft" />
   <date value="2017-05-09T16:53:54.8520187+02:00" />
   <publisher value="The Norwegian Directorate of eHealth" />
@@ -1868,6 +1868,7 @@
       <type>
         <code value="uri" />
       </type>
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/no-additionalpositiondata-v05" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -2192,6 +2193,10 @@
     <element id="Extension.extension:velocityMs.value[x]">
       <path value="Extension.extension.value[x]" />
       <max value="0" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/no-additionalpositiondata-v05" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

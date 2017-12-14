@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="norwegian-address" />
+  <id value="no-address-v05" />
   <meta>
-    <lastUpdated value="2017-09-20T15:25:25.603+02:00" />
+    <lastUpdated value="2017-12-14T14:58:46.673+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/norwegian-address" />
-  <name value="norwegian-address" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/no-address-v05" />
+  <name value="no-address" />
   <status value="draft" />
   <date value="2017-09-20T15:13:47.019+02:00" />
   <fhirVersion value="3.0.1" />
@@ -147,7 +147,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/norwegian-eiendomsinformasjon" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-eiendomsinformasjon-v05" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -852,7 +852,7 @@
       <sliceName value="eiendomsinformasjon" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/norwegian-eiendomsinformasjon" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-eiendomsinformasjon-v05" />
       </type>
     </element>
   </differential>

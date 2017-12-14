@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="vft-emergencylevel" />
+  <id value="vkp-emergencylevel-v05" />
   <meta>
     <lastUpdated value="2017-10-20T10:50:25.986+02:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-emergencylevel" />
-  <name value="vft-emergencylevel" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/vkp-emergencylevel-v05" />
+  <name value="vkp-emergencylevel" />
   <status value="draft" />
   <date value="2017-10-10T09:58:08.81+02:00" />
   <description value="Describes the severity of the Flagged event." />
