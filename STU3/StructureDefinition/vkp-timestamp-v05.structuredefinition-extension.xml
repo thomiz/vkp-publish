@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="vft-timestamp" />
+  <id value="vkp-timestamp-v05" />
   <meta>
-    <lastUpdated value="2017-09-18T09:21:55.887+02:00" />
+    <lastUpdated value="2017-12-19T14:46:53.093+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp" />
-  <name value="vft-timestamp" />
+  <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vkp-timestamp-v05" />
+  <name value="vkp-timestamp" />
   <status value="draft" />
   <date value="2017-06-02T15:54:32.348998+02:00" />
   <description value="Basic timestamp with UTC offset" />
@@ -147,7 +147,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp" />
+      <fixedUri value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vkp-timestamp-v05" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -206,7 +206,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp" />
+      <fixedUri value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vkp-timestamp-v05" />
     </element>
     <element id="Extension.value[x]:valueTimestamp">
       <path value="Extension.valueDateTime" />
