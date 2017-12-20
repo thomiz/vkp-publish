@@ -7,7 +7,7 @@
       <MessageHeader>
         <id value="4c576e97-2e1d-4f4f-8381-fc2c4e3abd9e" />
         <event>
-          <system value="http://ehelse.no/fhir/vft/STU3/CodeSystem/vft-MessageEvent.valueset" />
+          <system value="http://ehelse.no/fhir/ValueSet/vkp-message-event-v05" />
           <code value="MedicationDispense" />
         </event>
         <receiver>

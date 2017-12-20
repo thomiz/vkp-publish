@@ -1,12 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-  <id value="triage-codesystem" />
+  <id value="vkp-triage-v05" />
   <meta>
     <lastUpdated value="2017-09-12T15:00:50.532+02:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/vft/STU3/CodeSystem/triage-codesystem" />
-  <version value="0.1" />
-  <name value="triage-codesystem" />
+  <url value="http://ehelse.no/fhir/CodeSystem/vkp-triage-v05" />
+  <version value="0.5" />
+  <name value="vkp-triage" />
   <status value="draft" />
   <publisher value="Direktoratet for e-helse" />
   <content value="complete" />

@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="vkp-emergencylevel-v05" />
   <meta>
-    <lastUpdated value="2017-10-20T10:50:25.986+02:00" />
+    <lastUpdated value="2017-12-20T16:06:05.098+01:00" />
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/vkp-emergencylevel-v05" />
   <name value="vkp-emergencylevel" />
@@ -147,7 +147,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-emergencylevel" />
+      <fixedUri value="http://ehelse.no/fhir/ValueSet/vkp-emergency-level-v05" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -191,7 +191,7 @@
       </constraint>
       <binding>
         <strength value="preferred" />
-        <valueSetUri value="http://ehelse.no/fhir/vft/STU3/CodeSystem/vft-emergency-level-valueset" />
+        <valueSetUri value="http://ehelse.no/fhir/ValueSet/vkp-emergency-level-v05" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -211,7 +211,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-emergencylevel" />
+      <fixedUri value="http://ehelse.no/fhir/ValueSet/vkp-emergency-level-v05" />
     </element>
     <element id="Extension.value[x]:valueCodeableConcept">
       <path value="Extension.valueCodeableConcept" />
@@ -221,7 +221,7 @@
       </type>
       <binding>
         <strength value="preferred" />
-        <valueSetUri value="http://ehelse.no/fhir/vft/STU3/CodeSystem/vft-emergency-level-valueset" />
+        <valueSetUri value="http://ehelse.no/fhir/ValueSet/vkp-emergency-level-v05" />
       </binding>
     </element>
   </differential>

@@ -2,9 +2,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="vkp-timestamp-v05" />
   <meta>
-    <lastUpdated value="2017-12-19T14:46:53.093+01:00" />
+    <lastUpdated value="2017-12-20T15:48:00.63+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vkp-timestamp-v05" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/vkp-timestamp-v05" />
   <name value="vkp-timestamp" />
   <status value="draft" />
   <date value="2017-06-02T15:54:32.348998+02:00" />
@@ -147,7 +147,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vkp-timestamp-v05" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/vkp-timestamp-v05" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -206,7 +206,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vkp-timestamp-v05" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/vkp-timestamp-v05" />
     </element>
     <element id="Extension.value[x]:valueTimestamp">
       <path value="Extension.valueDateTime" />

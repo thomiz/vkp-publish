@@ -7,7 +7,7 @@
 			<MessageHeader>
 				<id value="2981a09d-4637-4c4d-bc4c-670cfa0497c0"/>
 				<event>
-					<system value="http://ehelse.no/fhir/vft/STU3/CodeSystem/vft-MessageEvent.valueset" />
+					<system value="http://ehelse.no/fhir/ValueSet/vkp-message-event-v05" />
 					<code value="MedicationDispense" />
 				</event>
 				<receiver>
@@ -95,7 +95,7 @@
 			<MedicationDispense>
 				<id value="c31bd880-2b09-4eda-a5a3-90090d49dad5"/>
 				<meta>
-					<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-MedicationDispense"/>
+					<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v05"/>
 				</meta>
 				<identifier>
 					<system value="http://dignio.no/medisindispenser-event-id"/>
@@ -104,7 +104,7 @@
 				<status value="completed"/>
 				<category>
 					<coding>
-						<system value="http://ehelse.no/fhir/vft/STU3/CodeSystem/medisindispenserhendelser"/>
+						<system value="http://ehelse.no/fhir/ValueSet/vkp-medicationdispense-events-v05"/>
 						<code value="2"/>
 						<display value="medisin_ikke_utlevert"/>
 					</coding>

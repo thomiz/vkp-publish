@@ -7,7 +7,7 @@
       <MessageHeader>
         <id value="b6915161-13b1-41d1-9820-fc34b76005a6" />
         <event>
-          <system value="http://ehelse.no/fhir/vft/STU3/CodeSystem/vft-MessageEvent.valueset" />
+          <system value="http://ehelse.no/fhir/ValueSet/vkp-message-event-v05" />
           <code value="MedicationDispense" />
         </event>
         <receiver>
@@ -45,7 +45,7 @@
       <MedicationDispense>
         <id value="9c16a4a0-dfc0-4cc1-b136-579571cecbae" />
         <meta>
-			<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-MedicationDispense"/>
+			<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v05"/>
 		</meta>
         <identifier>
           <system value="http://dignio.no/medisindispenser-event-id" />
@@ -54,7 +54,7 @@
         <status value="completed" />
         <category>
           <coding>
-            <system value="http://ehelse.no/fhir/vft/STU3/CodeSystem/medisindispenserhendelser" />
+            <system value="http://ehelse.no/fhir/ValueSet/vkp-medicationdispense-events-v05" />
             <code value="2"/>
 			<display value="medisin_ikke_utlevert" />
           </coding>
@@ -87,9 +87,9 @@
 		<resource>
 			<Flag xmlns="http://hl7.org/fhir"> 
 				<meta>
-					<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-flag"/>
+					<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-Flag-v05"/>
 				</meta>
-				<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-emergencylevel">
+				<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-emergencylevel-v05">
 					<extension url="emergencylevel">
 						<valueCodeableConcept>
 							<coding>
@@ -99,7 +99,7 @@
 						</valueCodeableConcept> 
 					</extension>
 				</extension>
-				<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp"> <!-- Tidspunkt for når flagget ble generert -->
+				<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-timestamp-v05"> <!-- Tidspunkt for når flagget ble generert -->
 					<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>
 				</extension>
 				<extension url="http://hl7.org/fhir/StructureDefinition/flag-detail"> <!-- Offisiell FHIR utvidelse for å legge inn referanse til ressurs som inneholder ytterligere informasjon i dette tilfellet Observation -->

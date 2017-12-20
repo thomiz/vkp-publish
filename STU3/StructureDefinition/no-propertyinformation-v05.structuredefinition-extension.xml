@@ -2,12 +2,13 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="no-propertyinformation-v05" />
   <meta>
-    <lastUpdated value="2017-12-19T14:49:10.062+01:00" />
+    <lastUpdated value="2017-12-20T15:26:43.474+01:00" />
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/no-propertyinformation-v05" />
   <name value="no-propertyinformation" />
   <status value="draft" />
   <date value="2017-09-20T15:15:06.192+02:00" />
+  <description value="Extension Describing norwegian specific property information " />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
