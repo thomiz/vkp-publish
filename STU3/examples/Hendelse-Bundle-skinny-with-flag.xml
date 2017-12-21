@@ -89,10 +89,11 @@
 				<meta>
 					<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-Flag-v05"/>
 				</meta>
-				<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-emergencylevel-v05">
-					<extension url="emergencylevel">
+				<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-emergency-level-v05">
+					<extension url="emergency-level">
 						<valueCodeableConcept>
 							<coding>
+								<system value="http://ehelse.no/fhir/ValueSet/vkp-emergency-level-v05" />
 								<code value="Y"/>
 								<display value="yellow"/>
 							</coding>
