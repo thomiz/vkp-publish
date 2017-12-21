@@ -31,25 +31,8 @@
         <response>
 			<identifier value="1cbdfb97-5859-48a4-8301-d54eab818d68"/>
 			<code value="ok"/>
-			<details>
-				<!-- A reference to the operation outcome resource -->
-				<reference value="urn:uuid:ffc834d4-8be5-4f6b-be7d-cdca23000fd6"/>
-			</details>
         </response>
       </MessageHeader>
     </resource>
-  </entry>
-  <entry>
-	<fullUrl value="urn:uuid:ffc834d4-8be5-4f6b-be7d-cdca23000fd6" />
-	<resource>
-		<OperationOutcome>
-			<id value="ffc834d4-8be5-4f6b-be7d-cdca23000fd6"/>
-			<issue>
-				<severity value="error"/>
-				<code value="structure"/>
-				<diagnostics value="Feil i strukturen på meldingen"/>
-			</issue>
-		</OperationOutcome>
-	</resource>
   </entry>
 </Bundle>

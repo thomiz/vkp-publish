@@ -186,7 +186,7 @@
 					<extension url="emergency-level">
 						<valueCodeableConcept>
 							<coding>
-								<system value="http://ehelse.no/fhir/ValueSet/vkp-emergency-level-v05"/>
+								<system value="http://ehelse.no/fhir/CodeSystem/vkp-emergency-level-v05"/>
 								<code value="V"/>
 								<display value="Vanlig (grønn)"/>
 							</coding>

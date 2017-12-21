@@ -7,7 +7,7 @@
 				<extension url="severity">
 					<valueCodeableConcept>
 						<coding>
-							<system value="http://ehelse.no/fhir/ValueSet/vkp-emergency-level-v05"/>
+							<system value="http://ehelse.no/fhir/CodeSystem/vkp-emergency-level-v05"/>
 							<code value="V"/>
 							<display value="vanlig"/>
 						</coding>

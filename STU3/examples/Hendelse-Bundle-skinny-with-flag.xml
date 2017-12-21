@@ -7,7 +7,7 @@
       <MessageHeader>
         <id value="b6915161-13b1-41d1-9820-fc34b76005a6" />
         <event>
-          <system value="http://ehelse.no/fhir/ValueSet/vkp-message-event-v05" />
+          <system value="http://ehelse.no/fhir/CodeSystem/vkp-message-event-v05" />
           <code value="MedicationDispense" />
         </event>
         <receiver>
@@ -54,7 +54,7 @@
         <status value="completed" />
         <category>
           <coding>
-            <system value="http://ehelse.no/fhir/ValueSet/vkp-medicationdispense-events-v05" />
+            <system value="http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v05" />
             <code value="2"/>
 			<display value="medisin_ikke_utlevert" />
           </coding>
@@ -93,7 +93,7 @@
 					<extension url="emergency-level">
 						<valueCodeableConcept>
 							<coding>
-								<system value="http://ehelse.no/fhir/ValueSet/vkp-emergency-level-v05" />
+								<system value="http://ehelse.no/fhir/CodeSystem/vkp-emergency-level-v05" />
 								<code value="Y"/>
 								<display value="yellow"/>
 							</coding>
