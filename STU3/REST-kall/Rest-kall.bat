@@ -14,3 +14,5 @@ curl.exe http://localhost:8080/baseDstu3/StructureDefinition/vft-quantityaltitud
 curl.exe http://localhost:8080/baseDstu3/StructureDefinition/vft-timestamp --upload-file StructureDefinition\vft-timestamp.structuredefinition.xml
 curl.exe http://localhost:8080/baseDstu3/StructureDefinition/vft-URL --upload-file StructureDefinition\vft-URL.structuredefinition.xml
 curl.exe http://localhost:8080/baseDstu3/StructureDefinition/vft-severityvalueset --upload-file StructureDefinition\vft-severityvalueset.structuredefinition.xml
+
+curl.exe https://vkp-functionapp-larslekekasse.azurewebsites.net/api/ValidateFhir --upload-file StructureDefinition\vft-flag.structuredefinition.xml
