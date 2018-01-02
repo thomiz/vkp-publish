@@ -1,0 +1,11 @@
+For å kunne bruke validere eksemplene i XMLSPY må referansen til skjemafilene endres.
+Skal filene benyttes i testing andre steder så må alt unntatt  xmlns="http://hl7.org/fhir"
+fjernes i første linje.
+EKS: 
+<Organization xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/andalm/Development/FHIR/ExampleDev/schema/organization.xsd">
+
+blir til
+
+<Organization xmlns="http://hl7.org/fhir">
+
+Er det noen spørsmål om eksemplene så bare ta kontakt med anders.almas@ehelse.no

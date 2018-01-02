@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Practitioner xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/andalm/Development/FHIR/ExampleDev/schema/practitioner.xsd">
+	<id value="234"/>
+	<meta>
+		<profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/RegisteredBy" />
+	</meta>
+	<identifier>
+		<type>
+			<coding>
+				<system value="2.16.578.1.12.4.1.1.8116"/>
+				<code value="HPR"/>
+				<display value="HPR-nummer"/>
+			</coding>
+		</type>
+		<value value="222200063"/>
+	</identifier>
+	<name>
+		<family value="Lillehagen"/>
+		<given value="Rolf Fos"/>
+	</name>
+</Practitioner>
+
