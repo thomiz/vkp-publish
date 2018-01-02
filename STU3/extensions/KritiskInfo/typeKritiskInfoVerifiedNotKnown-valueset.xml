@@ -1,0 +1,15 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="typeKritiskInfoVerifiedNotKnown-valueset" />
+  <url value="http://ehelse.no/fhir/ki/STU3/CodeSystem/typeKritiskInfoVerifiedNotKnown-valueset" />
+  <version value="0.1" />
+  <name value="typeKritiskInfoVerifiedNotKnown-valueset" />
+  <status value="draft" />
+  <experimental value="true" />
+  <publisher value="Direktoratet for e-helse" />
+  <immutable value="false" />
+  <compose>
+    <include>
+      <system value="http://ehelse.no/fhir/ki/STU3/CodeSystem/typeKritiskInfoVerifiedNotKnown" />
+    </include>
+  </compose>
+</ValueSet>
