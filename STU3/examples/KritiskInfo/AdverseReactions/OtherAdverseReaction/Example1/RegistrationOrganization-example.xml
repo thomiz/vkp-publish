@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Organization xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/andalm/Development/FHIR/ExampleDev/schema/organization.xsd">
+	<id value="123"/>
+	<meta>
+		<profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/RegistrationOrganization" />
+	</meta>
+	<identifier>
+		<type>
+			<coding>
+				<system value="2.16.578.1.12.4.1.1.9051"/>
+				<code value="ENH"/>
+				<display value="Organisasjonsnummeret i Enhetsregister (Brønnøysund)"/>
+			</coding>
+		</type>
+		<value value="883974832"/>
+	</identifier>
+	<name value="ST OLAVS HOSPITAL HF"/>
+	
+</Organization>

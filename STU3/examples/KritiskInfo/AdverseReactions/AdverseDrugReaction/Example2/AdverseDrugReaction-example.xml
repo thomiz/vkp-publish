@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AllergyIntolerance xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/andalm/Development/FHIR/ExampleDev/schema/allergyintolerance.xsd">
+ <id value="ef91399e-8993-11e7-bb31-be2e44b06b34" />
+  <meta>
+    <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/AdverseDrugReaction" />
+  </meta>
+	<extension url="http://ehelse.no/fhir/ki/STU3/StructureDefinition/CommonBaseType" >
+		<extension url="http://ehelse.no/fhir/ki/STU3/StructureDefinition/Metadata" >
+			<extension url="globalID">
+				<valueString value="b0a32b17-f1d3-43d9-a2cd-a6329854b0ce"/>
+			</extension>
+			<extension url="ChangeNumber">
+				<valueInteger value="1"/>
+			</extension>
+			<extension url="FirstRegistration">
+				<valueReference id="/RegistrationInformation/234"/>
+			</extension>
+		</extension>
+	</extension>
+	<extension url="http://ehelse.no/fhir/ki/STU3/StructureDefinition/SourceOfInformation">
+		<extension url="source">
+			<valueCodeableConcept>
+				<coding>
+					<system value="urn:uid:2.16.578.1.12.4.1.1.7498"/>
+					<code value="2"/>
+					<display value="Observert av behandlende lege"/>
+				</coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="patientAge">
+			<valueInteger value="2"/>
+		</extension>
+		<extension url="date">
+			<valueDateTime value="2016-06-01"/>
+		</extension>
+	</extension>
+	<verificationStatus value="confirmed"/>
+	<category value="medication"/>
+	<patient>
+		<reference value="Patient/456"/>
+	</patient>
+	<reaction>
+		<extension url="http://ehelse.no/fhir/ki/STU3/StructureDefinition/CodeValue" id="severity">
+			<valueCodeableConcept id="severity">
+				<coding>
+					<system value="urn:uid:2.16.578.1.12.4.1.1.7520"/>
+					<code value="1"/>
+					<display value="Alvorlig"/>
+				</coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="http://ehelse.no/fhir/ki/STU3/StructureDefinition/CodeValue" id="certainty">
+			<valueCodeableConcept id="certainty">
+				<coding>
+					<system value="urn:uid:2.16.578.1.12.4.1.1.7521"/>
+					<code value="1"/>
+					<display value="Mistenkt"/>
+				</coding>
+			</valueCodeableConcept>
+		</extension>
+		<substance>
+			<extension url="http://ehelse.no/fhir/ki/STU3/StructureDefinition/MedicineBrandedProduct">
+				<extension url="Id">
+					<valueString value="ID_E5F60594-01A8-4E47-98E2-083270D3A4B5"/>
+				</extension>
+				<extension url="NameFormStrength">
+					<valueString  value="'Eprex Inj væske 40000 IU/ml"/>
+				</extension>
+				<extension url="Atc">
+					<valueCodeableConcept id="Atc">
+						<coding>
+							<system value="urn:uid:2.16.578.1.12.4.1.1.7180"/>
+							<code value="B03XA01"/>
+							<display value="Erytropoietin"/>
+						</coding>
+					</valueCodeableConcept>
+				</extension>
+				<extension url="http://ehelse.no/fhir/ki/STU3/StructureDefinition/ActiveIngredient">
+					<extension url="Id">
+						<valueString value="ID_0FA99635-AD3B-49E4-AD44-5F9E7255ACAA"/>
+					</extension>
+					<extension url="Name">
+						<valueString value="Epoetin alfa"/>
+					</extension>
+				</extension>
+			</extension>
+		</substance>
+		<manifestation>
+			<coding>
+				<system value="urn:uid:2.16.578.1.12.4.1.1.7497"/>
+				<code value="3"/>
+				<display value="Alvorlig arytmi"/>
+			</coding>
+		</manifestation>
+		<note id="Comment">
+			<text value="Reaksjon på legemiddel merkevare"/>
+		</note>
+	</reaction>
+</AllergyIntolerance>

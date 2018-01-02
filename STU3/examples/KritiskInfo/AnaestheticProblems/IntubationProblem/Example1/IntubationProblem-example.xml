@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Condition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/andalm/Development/FHIR/ExampleDev/schema/condition.xsd">
+	<id value="ef91399e-8993-11e7-bb31-be2e44b06b34" />
+  <meta>
+    <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/IntubationProblem" />
+  </meta>
+	<extension url="http://ehelse.no/fhir/ki/STU3/StructureDefinition/CommonBaseType" >
+		<extension url="http://ehelse.no/fhir/ki/STU3/StructureDefinition/Metadata" >
+			<extension url="globalID">
+				<valueString value="5149168d-543c-4eaf-8591-edafcf1379a5"/>
+			</extension>
+			<extension url="ChangeNumber">
+				<valueInteger value="1"/>
+			</extension>
+			<extension url="FirstRegistration">
+				<valueReference id="/RegistrationInformation/234"/>
+			</extension>
+			<extension url="LastUpdate">
+				<valueReference id="/RegistrationInformation/567"/>
+			</extension>
+		</extension>
+	</extension>
+	<extension url="http://ehelse.no/fhir/ki/STU3/StructureDefinition/SourceOfInformation">
+		<extension url="source">
+			<valueCodeableConcept>
+				<coding>
+					<system value="urn:uid:2.16.578.1.12.4.1.1.7498"/>
+					<code value="2"/>
+					<display value="Observert av behandlende lege"/>
+				</coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="date">
+			<valueDateTime value="2016-06-01"/>
+		</extension>
+	</extension>
+	<category>
+		<text value="Intubasjonsproblemer"/>
+	</category>
+	<code>
+		<coding>
+			<system value="urn:uid:2.16.578.1.12.4.1.1.7516"/>
+			<code value="4"/>
+			<display value="Ikke angitt"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/456"/>
+	</subject>
+	<evidence>
+		<code>
+			<text id="OtherProblem" value="Trang hals"/>
+		</code>
+	</evidence>
+	<note>
+		<text value="Intubasjonsproblemer registrert med fritekst"/>
+	</note> 
+</Condition>
