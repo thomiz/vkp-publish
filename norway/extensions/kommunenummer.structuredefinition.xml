@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2016-09-06T09:00:37.503+02:00" />
+  </meta>
+  <!-- URL må endres -->
+  <url value="https://git.sarepta.ehelse.no/utvikling/FHIR/raw/4-extension-kommunenummer/norway/extensions/kommunenummer.structuredefinition.xml" />
+  <name value="Kommunenummer" />
+  <status value="draft" />
+  <contact>
+    <name value="Espen Stranger Seland" />
+    <telecom>
+      <system value="email" />
+      <value value="Espen.Stranger.Seland@ehelse.no" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Kommunenummer angis med fire siffer, i henhold til SSB sin inndeling. De to første sifrene angir fylle og de to siste er kommunens nummer innenfor fylket. KUN kommunenummeret skal oppgis, ikke kommunenavnet." />
+  <requirements value="The ability to add extensions in a structured way is what keeps FHIR resources simple." />
+  <fhirVersion value="1.0.2" />
+  <kind value="datatype" />
+  <constrainedType value="Extension" />
+  <abstract value="false" />
+  <contextType value="datatype" />
+  <context value="Address" />
+  <base value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <differential>
+    <element>
+      <path value="Extension" />
+    </element>
+    <element>
+      <path value="Extension.url" />
+      <representation value="xmlAttr" />
+      <fixedUri value="https://www.simplifier.net/Velferdsteknologipro/Kommunenummer" />
+    </element>
+    <element>
+      <path value="Extension.valueString" />
+      <name value="Kommunenummer" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+      <patternString value="[0-9]{4}" />
+      <exampleString value="2177" />
+      <maxLength value="4" />
+    </element>
+  </differential>
+</StructureDefinition>
