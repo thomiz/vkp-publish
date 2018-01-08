@@ -3,6 +3,7 @@ Område for utvikling FHIR-komponenter:
 - Extensions
 - Eksempler
 
-Per nå har vi bare grenene "master" og "develop", det holder nok inntil videre. 
+Husk å sjekke [wiki'en](https://git.sarepta.ehelse.no/utvikling/FHIR/wikis/home)
+
 
 Thomas og Espen
