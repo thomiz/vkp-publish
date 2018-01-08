@@ -3,6 +3,7 @@
   <meta>
     <lastUpdated value="2016-09-06T09:00:37.503+02:00" />
   </meta>
+  <!-- URL må endres -->
   <url value="https://git.sarepta.ehelse.no/utvikling/FHIR/raw/4-extension-kommunenummer/norway/extensions/kommunenummer.structuredefinition.xml" />
   <name value="Kommunenummer" />
   <status value="draft" />
