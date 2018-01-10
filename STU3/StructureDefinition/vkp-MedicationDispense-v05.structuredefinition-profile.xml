@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="vkp-MedicationDispense-v05" />
   <meta>
-    <lastUpdated value="2017-12-20T16:25:18.109+01:00" />
+    <lastUpdated value="2017-12-20T16:12:01.35+01:00" />
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v05" />
   <name value="vkp-MedicationDispense" />
@@ -539,7 +539,7 @@
     <element id="MedicationDispense.category">
       <path value="MedicationDispense.category" />
       <short value="Event types when medication dispencer performs the medication dispense" />
-      <definition value="Event types when medication dispencer performs the medication dispense. Values from http://ehelse.no/fhir/vft/STU3/CodeSystem/medisindispenserhendelser is preferred" />
+      <definition value="Event types when medication dispencer performs the medication dispense. Values from http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v05 is preferred&#xD;&#xA;" />
       <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
       <min value="0" />
       <max value="1" />
@@ -2097,7 +2097,7 @@
     <element id="MedicationDispense.category">
       <path value="MedicationDispense.category" />
       <short value="Event types when medication dispencer performs the medication dispense" />
-      <definition value="Event types when medication dispencer performs the medication dispense. Values from http://ehelse.no/fhir/vft/STU3/CodeSystem/medisindispenserhendelser is preferred" />
+      <definition value="Event types when medication dispencer performs the medication dispense. Values from http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v05 is preferred&#xD;&#xA;" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="MedicationDispenseCategory" />

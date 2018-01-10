@@ -103,9 +103,9 @@
 				<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-timestamp-v05"> <!-- Tidspunkt for når flagget ble generert -->
 					<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>
 				</extension>
-				<extension url="http://hl7.org/fhir/StructureDefinition/flag-detail"> <!-- Offisiell FHIR utvidelse for å legge inn referanse til ressurs som inneholder ytterligere informasjon i dette tilfellet Observation -->
+				<extension url="http://hl7.org/fhir/StructureDefinition/flag-detail"> <!-- Offisiell FHIR utvidelse for å legge inn referanse til ressurs som inneholder ytterligere informasjon i dette tilfellet MedicationDispense -->
 					<valueReference>
-						<reference value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34"/>
+						<reference value="urn:uuid:9c16a4a0-dfc0-4cc1-b136-579571cecbae"/>
 					</valueReference>
 				</extension>
 				<identifier> <!-- Forretnings identifikator for Flagget (Business identifier), vi foretrekker en unik persistent id UUID -->
