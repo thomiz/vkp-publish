@@ -1,0 +1,37 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://example.org/fhir/StructureDefinition/participation-agreement" />
+  <name value="Example Extension Definition" />
+  <title value="Example Extension Definition participation agreement"/>
+  <status value="draft"/>
+  <!-- snip other metadata -->
+  <kind value="datatype" />
+  <contextType value="resource" />
+  <context value="Patient" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org.fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+
+  <differential>
+    <element>
+      <path value="Extension"/>
+      <short value="Agreed agreement/policy" />
+      <definition value="A URI that identifies a participation agreement/policy
+        to which the patient has agreed" />
+      <comment value="URI is a literal reference to agreement text (html).
+        Systems SHALL conform to the policies as indicated.
+        For further information, see the partnership agreement..." />
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element>
+      <path value="Extension.valueUri"/>
+      <short value="The URI value" />
+      <min value="1" />
+      <max value="*" />
+      <type>
+         <code value="uri" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

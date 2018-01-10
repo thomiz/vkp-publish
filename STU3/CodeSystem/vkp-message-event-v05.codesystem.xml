@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="vkp-message-event-v05" />
+  <meta>
+    <lastUpdated value="2017-09-12T15:00:50.532+02:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/CodeSystem/vkp-message-event-v05" />
+  <version value="0.5" />
+  <name value="vkp-message-event" />
+  <status value="draft" />
+  <publisher value="Direktoratet for e-helse" />
+  <content value="complete" />
+  <concept>
+    <code value="MedicationDispense" />
+    <display value="MedicationDispense" />
+    <definition value="MedicationDispense message event" />
+  </concept>
+</CodeSystem>

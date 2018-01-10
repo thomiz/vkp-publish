@@ -1,0 +1,211 @@
+<Bundle xmlns="http://hl7.org/fhir" >
+	<id value="10bb101f-a121-4264-a920-67be9cb82c74"/>
+	<type value="message"/>
+	<entry>
+		<fullUrl value="urn:uuid:1cbdfb97-5859-48a4-8301-d54eab818d68"/>
+		<resource>
+			<MessageHeader>
+				<id value="1cbdfb97-5859-48a4-8301-d54eab818d68"/>
+				<meta>
+					<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-messageheader"/>
+				</meta>
+				<event> <!-- Event er obligatorisk i FHIR MessageHeader, men kodeverket kan vi bruke hva vi vil -->
+					<system value="http://hl7.org/fhir/message-events"/>
+					<code value="MedicationAdministration-Update"/>
+				</event>
+				<receiver>
+					<identifier>
+						<system value="http://ehelse.no/fhir/identifiertypes/HERID" />
+						<value value="85441" />
+					</identifier>
+					<display value="Rehabilitering" />
+				</receiver>
+				<sender>
+					<identifier>
+						<system value="http://ehelse.no/fhir/identifiertypes/HERID" />
+						<value value="12345" />
+					</identifier>
+					<display value="Transmed forsystem" />
+				</sender>
+				<timestamp value="2012-01-04T09:10:14+00:00"/> <!-- obligatorisk i FHIR MessageHeader -->
+				<source>
+					<name value="Visi/Transmed8/Safemate"/>
+					<endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341"/> <!-- obligatorisk i FHIR MessageHeader.source -->
+				</source>
+			</MessageHeader>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:cd892e8a-7139-42fd-9f79-5c4a04e40296"/>
+		<resource>
+			<Device>
+				<identifier>
+					<value value="a74b6bee-0eb4-4d60-bb05-71e27146d9d2"/>
+				</identifier>
+				<contact> <!-- Connectedphone number og url for kontakt ved utløsning av trygghetsalarm -->
+					<system value="phone"/>
+					<value value="+4712345678"/>
+					<use value="home"/>
+					<rank value="1"/>
+				</contact>
+				<contact>
+					<system value="url"/>
+					<value value="http://transmed.no/video/ann-kristin-leistad"/>
+					<use value="home"/>
+					<rank value="2"/>
+				</contact>
+				<location>
+					<identifier>
+						<value value="adresseid-device"/>
+					</identifier>
+					<display value="hjemmeadresse-device"/>
+				</location>
+			</Device>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="58c41c82-761e-4948-a07f-c97bc69d3dee"/>
+		<resource>
+			<Patient> 
+				<identifier>
+					<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+					<value value="11079500412"/>
+				</identifier>
+				<name>
+					<text value="Ann Kristin Leistad"/>
+					<family value="Leistad"/>
+					<given value="Ann Kristin"/>
+				</name>
+				<telecom>
+					<system value="phone"/>
+					<value value="+4712345678"/>
+					<use value="mobile"/>
+					<rank value="1"/>
+				</telecom>
+				<address>
+					<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/norwegian-eiendomsinformasjon">
+						<extension url="gardsnummer">
+							<valueInteger value="105"/>
+						</extension>
+						<extension url="bruksnummer">
+							<valueInteger value="3"/>
+						</extension>
+					</extension>
+					<type value="both"/>
+					<line value="Vinkelveien 33"/>
+					<city value="Etterstad"/>
+					<postalCode value="0603"/>
+				</address>
+				<contact>
+					<relationship>
+						<coding>
+							<code value="N"/>
+							<display value="Next-of-Kin"/>
+						</coding>
+					</relationship>
+					<name>
+						<text value="Arne Sørgård"/>
+					</name>
+					<telecom>
+						<system value="phone"/>
+						<value value="+4792565689"/>
+					</telecom>
+				</contact>
+			</Patient>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="c6e68cd8-3dc5-4c06-bbd0-7984f9ed6637"/>
+		<resource>
+		<Flag xmlns="http://hl7.org/fhir" >
+			<meta>
+				<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-flag"/>
+			</meta>
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-severityvalueset">
+				<valueCode value="green"/>
+			</extension>
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp">
+				<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>
+			</extension>
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-displayURL">
+				<valueUri value="http://not.a.real.adress"/>
+			</extension>
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-geoposition">
+				<extension url="timestamp">
+					<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>
+				</extension>
+				<extension url="positionEpsg4326">
+					<extension url="latitude">
+						<valueDecimal value="59.9216712"/>
+					</extension>
+					<extension url="longitude">
+						<valueDecimal value="10.6861143"/>
+					</extension>
+				</extension>
+				<extension url="velocityMs">
+					<extension url="speedMs">
+						<valueQuantity>
+							<value value="2.0"/>
+							<unit value="m/s"/>
+						</valueQuantity>
+					</extension>
+					<extension url="directionDecimalDegrees">
+						<valueDecimal value="180"/>
+					</extension>
+				</extension>
+				<extension url="altitudeMeters">
+					<valueQuantity>
+						<value value="2.0"/>
+						<unit value="m"/>
+					</valueQuantity>
+				</extension>
+				<extension url="horizontalAccuracy">
+					<valueDecimal value="5.0"/>
+				</extension>
+				<extension url="verticalAccuracy">
+					<valueDecimal value="10"/>
+				</extension>
+			</extension>
+			<identifier>
+				<value value="test-id"/>
+			</identifier>
+			<status value="active"/>
+			<!-- 1..1 active | inactive | entered-in-error -->
+			<code>
+				<!-- 1..1 CodeableConcept Partially deaf, Requires easy open caps, No permanent address, etc. -->
+				<text value="Bruker utenfor Geofence"/>
+			</code>
+			<subject> <!-- Referanse til pasient to ganger, antakelig ikke nødvendig -->
+				<identifier>
+					<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+					<value value="05073500186"/>
+				</identifier>
+			</subject>
+		</Flag>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="d924e388-d39e-4126-b357-6a74d2b62f64"/>
+		<resource>
+			<Location>
+				<identifier>
+					<value value="adresseid-device"/>
+				</identifier>
+				<address>
+					<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/norwegian-eiendomsinformasjon">
+						<extension url="gardsnummer">
+							<valueInteger value="105"/>
+						</extension>
+						<extension url="bruksnummer">
+							<valueInteger value="3"/>
+						</extension>
+					</extension>
+					<type value="both"/>
+					<line value="Vinkelveien 33"/>
+					<city value="Etterstad"/>
+					<postalCode value="0603"/>
+				</address>
+			</Location>
+		</resource>
+	</entry>
+</Bundle>

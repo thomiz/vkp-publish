@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Flag xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../fhir-all-xsd/fhir-single.xsd">
   <meta>
     <profile value="http://ehelse.no/fhir/profiles/vft/FlagVFT" />
@@ -7,25 +7,53 @@
     <valueCode value="green" />
   </extension>
   <extension url="http://ehelse.no/fhir/extentions/StructureDefinition/timestamp">
-    <valueDateTime value="2000-02-02T10:00:00.936+02:00"></valueDateTime>
+    <valueDateTime value="2017-05-09T10:00:00.936+02:00"></valueDateTime>
   </extension>
   <extension url="http://ehelse.no/fhir/extentions/StructureDefinition/URL">
     <valueUri value="http://not.a.real.adress" />
   </extension>
   <extension url="http://ehelse.no/fhir/extentions/StructureDefinition/vft-geoposition">
-    <extension url="" />
+    <extension url="timestamp" >
+		<valueDateTime value="2017-05-09T10:00:00.936+02:00"></valueDateTime>
+    </extension>
+    <extension url="positionEpsg4326">
+		<extension url="latitude">
+			<valueDecimal value="59.9216712"/>
+		</extension>
+		<extension url="longitude">
+			<valueDecimal value="10.6861143"/>
+		</extension>
+    </extension>
+    <extension url="velocityMs">
+	  <valueQuantity>
+		  <value value="2.0"/>
+		  <unit value="m/s"/>
+	  </valueQuantity>
+	  </extension>
+	  <extension url="altitudeMeters">
+		  <valueDecimal value="2.0"/>
+	  </extension>
+	  <extension url="directionDegrees">
+		  <valueDecimal value="180.0"/>
+	  </extension>
+	  <extension url="horizontalAccuracy">
+		  <valueDecimal value="5.0"/>
+	  </extension>
+	  <extension url="verticalAccuracy">
+		  <valueDecimal value="10"/>
+	  </extension>
   </extension>
   <identifier>
     <value value="test-id" />
   </identifier>
   <status value="active" />
-  <!-- 1..1 active | inactive | entered-in-error -->
+	  <!-- 1..1 active | inactive | entered-in-error -->
   <subject>
     <!-- 1..1 Reference(Patient|Location|Group|Organization|Practitioner) Who/What is flag about? -->
     <reference id="1" />
   </subject>
   <code>
     <!-- 1..1 CodeableConcept Partially deaf, Requires easy open caps, No permanent address, etc. -->
-    <text value="Bruker uten for Geofence"></text>
+    <text value="Bruker utenfor Geofence"></text>
   </code>
 </Flag>

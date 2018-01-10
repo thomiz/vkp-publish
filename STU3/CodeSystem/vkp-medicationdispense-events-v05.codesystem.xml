@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="vkp-medicationdispense-events-v05" />
+  <meta>
+    <lastUpdated value="2017-09-12T15:00:50.532+02:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v05" />
+  <version value="0.5" />
+  <name value="vkp-medicationdispense-events" />
+  <status value="draft" />
+  <publisher value="Direktoratet for e-helse" />
+  <content value="complete" />
+  <concept>
+    <code value="1" />
+    <display value="medisin_utlevert" />
+    <definition value="Medisin ble utlevert" />
+  </concept>
+  <concept>
+    <code value="2" />
+    <display value="medisin_ikke_utlevert" />
+    <definition value="Medisin ble ikke utlevert til planlagt tid" />
+  </concept>
+  <concept>
+    <code value="3" />
+    <display value="medisin_mangler_bekreftelse" />
+    <definition value="Har ikke fått bekreftet at medisin ble utlevert til planlagt tid" />
+  </concept>
+  <concept>
+    <code value="4" />
+    <display value="medisin_teknisk_feil" />
+    <definition value="Teknisk feil på medisindispenser, utmating stanset" />
+  </concept>
+  <concept>
+    <code value="5" />
+    <display value="medisin_feil_rull" />
+    <definition value="Feil ved multidoserullen, utmating stanset" />
+  </concept>
+  <concept>
+    <code value="6" />
+    <display value="medisin_mangler" />
+    <definition value="Dispenseren er tom for medisin" />
+  </concept>
+  <concept>
+    <code value="7" />
+    <display value="medisin_mangler_ikke_utlevert" />
+    <definition value="Medisin ble ikke utlevert til planlagt tid, da det var tomt for medisin i dispenseren" />
+  </concept>
+  <concept>
+    <code value="8" />
+    <display value="medisin_mangler_tidsplan" />
+    <definition value="Dispenseren har ingen tidsplan for medisinering" />
+  </concept>
+  <concept>
+    <code value="9" />
+    <display value="medisin_ikke_tilkoblet" />
+    <definition value="Teknisk varsel, medisindispenseren er ikke koblet til strøm" />
+  </concept>
+  <concept>
+    <code value="10" />
+    <display value="medisin_ingen_kontakt" />
+    <definition value="Teknisk varsel, ingen kontakt med medisindispenseren" />
+  </concept>
+</CodeSystem>

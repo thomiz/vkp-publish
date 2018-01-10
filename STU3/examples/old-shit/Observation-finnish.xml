@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+			<meta>
+				<profile value="http://phr.kanta.fi/StructureDefinition/fiphr-bloodglucose-stu3"/>
+			</meta>
+			<language value="no"/>
+			<extension url="hoursAfterMeal">
+				<extension url="http://phr.kanta.fi/StructureDefinition/fiphr-unsignedint">
+					<valueUnsignedInt value="2"/>
+				</extension>
+			</extension>
+			
+			<identifier>
+				<value value="test-id2"/>
+			</identifier>
+			<status value="final"/>
+			<category>
+				<text value="testverdi"/>
+			</category>
+			<code>
+				<text value="9279-1"/>
+			</code>
+			<subject>
+				<identifier>
+					<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+					<value value="05073500186"/>
+				</identifier>
+			</subject>
+			
+		</Observation>

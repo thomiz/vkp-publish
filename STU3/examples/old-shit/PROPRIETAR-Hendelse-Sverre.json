@@ -1,0 +1,35 @@
+{
+  "Message_Type": "Medisindispenser",
+   "Message_Header": {
+    "Message_Id": "DP12345",
+    "Sender": {
+      "Sender_Id": "195341",
+      "Sender_ContactEmail": "Fiks.Fiksesen@Dignio.no",
+      "Sender_ContactPhone": "+4769333333"
+    },
+    "Receiver_Id": "102287",
+    "Patient": {
+      "Patient_IdType": "Fnr",
+      "Patient_Id": "05063000000",
+      "Patient_Name": "Brukers navn"
+    }
+  },
+  "Event": {
+    "Event_Type": "Medisin_ikke_utlevert",
+    "Event_Id": "Prevent intern-ID",
+    "Event_DateTime": "2017-09-01T14:35:56.8796829+02:00",
+    "Event_Text": "Medisin ikke utlevert som følge av teknisk feil på medisindispenser - varslet 01.09.17 klokken 14.35", 
+    "Event_Status": "completed",
+    "Response_handling": {
+      "Author_IdType": "Fnr",
+      "Author_Id": "01017012345",
+      "Author_Text": "Det jeg har gjort som følge av varsel",
+      "Author_Name": "Ola Normann"
+    }
+  },
+  "Device": {
+    "Device_IdType": "IMEI",
+    "Device_Id": "123456789012345",
+    "Device_ProductName": "Medido multidosedispenser"
+  }
+}

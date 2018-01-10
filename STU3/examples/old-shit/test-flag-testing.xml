@@ -1,0 +1,24 @@
+ <Flag xmlns="http://hl7.org/fhir">
+            <meta>
+               <profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/test-flag"/>
+            </meta>
+            <extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-timestamp">
+               <valueDateTime value="2017-05-09T11:00:00.936+02:00"/>
+            </extension>
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-quantityspeedms-ext">
+               <valueDateTime value="2017-05-09T12:00:00.936+02:00"/>
+            </extension>
+            <identifier>
+               <value value="test-id"/>
+            </identifier>
+            <status value="active"/>
+            <code>
+               <text value="Bruker utenfor Geofence"/>
+            </code>
+            <subject>
+               <identifier>
+                  <system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+                  <value value="05073500186"/>
+               </identifier>
+            </subject>
+         </Flag>
