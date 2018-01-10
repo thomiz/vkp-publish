@@ -1,0 +1,110 @@
+{
+ "resourceType": "Bundle",
+ "id": "10bb101f-a121-4264-a920-67be9cb82c74",
+ "type": "message",
+ "entry": [{
+   "fullUrl": "urn:uuid:267b18ce-3d37-4581-9baa-6fada338038b",
+   "resource": {
+    "resourceType": "MessageHeader",
+    "id": "1cbdfb97-5859-48a4-8301-d54eab818d68",
+    "text": {
+     "status": "generated",
+     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Velferdsteknologi eksempel</p></div>"
+    },
+    "event": {
+     "system": "http://hl7.org/fhir/message-events",
+     "code": "MedicationAdministration-Update"
+    },
+    "sender": {
+     "identifier": {
+      "system": "http://ehelse.no/fhir/identifiertypes/HERID",
+      "value": "15076500000"
+     },
+     "display": "Acme Medisindispensersky AS 15076500000"
+    },
+    "receiver": {
+     "identifier": {
+      "system": "http://ehelse.no/fhir/identifiertypes/HERID",
+      "value": "15076500000"
+     },
+     "display": "Oslo Kommune 15076500000"
+    },
+    "timestamp": "2012-01-04T09:10:14Z",
+    "source": {
+     "name": "Acme Medisindispensersky AS",
+     "endpoint": "http://medisindispensersky.com/api"
+    },
+    "focus": [{
+      "reference": "urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34",
+      "display": "MedicationAdministration"
+     }, {
+      "reference": "urn:uuid:e83a9596-8993-11e7-bb31-be2e44b06b34",
+      "display": "Device"
+     }
+    ]
+   }
+  }, {
+   "fullUrl": "urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34",
+   "resource": {
+    "resourceType": "MedicationAdministration",
+    "id": "ef91399e-8993-11e7-bb31-be2e44b06b34",
+    "identifier": [{
+      "system": "http://acme-medisindispenser.com/medisindispenser-event-id",
+      "value": "en-ekstern-id-laget-av-medisindispenser-forsystemet"
+     }
+    ],
+    "subject": {
+     "identifier": {
+      "system": "http://ehelse.no/fhir/identifiertypes/FNR",
+      "value": "15076500000"
+     },
+     "display": "Bestemor Duck"
+    },
+    "status": "completed",
+    "effectiveDateTime": "2015-01-15T04:30:00+01:00",
+    "device": {
+     "reference": "urn:uuid:e83a9596-8993-11e7-bb31-be2e44b06b34"
+    },
+    "category": {
+     "coding": [{
+       "system": "http://hl7.org/fhir/medication-admin-category",
+       "code": "community"
+      }
+     ]
+    },
+    "medicationCodeableConcept": {
+     "text": "Ukjent medisin",
+     "coding": [{
+       "display": "Unknown",
+       "system": "http://ehelse.no/fhir/unknown",
+       "code": "Unknown"
+      }
+     ]
+    },
+    "note": [{
+      "authorReference": {
+       "identifier": {
+        "system": "http://ehelse.no/fhir/identifiertypes/HPR",
+        "value": "15076500000"
+       },
+       "display": "HPR 15076500000"
+      },
+      "text": "A note about the medication administration, for example how it was handled. "
+     }
+    ]
+   }
+  }, {
+   "fullUrl": "urn:uuid:e83a9596-8993-11e7-bb31-be2e44b06b34",
+   "resource": {
+    "resourceType": "Device",
+    "id": "e83a9596-8993-11e7-bb31-be2e44b06b34",
+    "identifier": [{
+      "system": "http://acme-medisindispenser.com/id",
+      "value": "123345"
+     }
+    ],
+    "manufacturer": "Acme Medisindispenser"
+   }
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Observation xmlns="http://hl7.org/fhir"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd">
+			<!-- <meta>
+				<profile value="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-flag"/>
+			</meta> -->
+			<!-- Mangler fremdeles CustomDisplayData, kan vi bruke comment? eller lage en extension?-->
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-severityvalueset">  <!-- Denne kan puttes i flagget og hastegrad markeres der? -->
+				<valueCode value="green"/>
+			</extension>
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-URL"> <!-- Trengs antakelig fortsatt -->
+				<valueUri value="http://not.a.real.adress"/>
+			</extension>
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-geoposition"> <!-- Selve posisjonen, støttes ikke native av observation-->
+				<extension url="timestamp">
+					<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>
+				</extension>
+				<extension url="positionEpsg4326">
+					<extension url="latitude">
+						<valueDecimal value="59.9216712"/>
+					</extension>
+					<extension url="longitude">
+						<valueDecimal value="10.6861143"/>
+					</extension>
+				</extension>
+				<extension url="velocityMs">
+					<valueQuantity>
+						<value value="2.0"/>
+						<unit value="m/s"/>
+					</valueQuantity>
+				</extension>
+				<extension url="altitudeMeters">
+					<valueQuantity>
+						<value value="2.0"/>
+						<unit value="m"/>
+					</valueQuantity>
+				</extension>
+				<extension url="directionDegrees">
+					<valueDecimal value="180.0"/>
+				</extension>
+				<extension url="horizontalAccuracy">
+					<valueDecimal value="5.0"/>
+				</extension>
+				<extension url="verticalAccuracy">
+					<valueDecimal value="10"/>
+				</extension>
+			</extension>
+			<extension url="http://ehelse.no/fhir/vft/STU3/StructureDefinition/vft-customdisplaydata"> <!-- CustomDisplayData -->
+				<extension url="name">
+					<valueString value="Name of custom field"/>
+				</extension>
+				<extension url="content">
+					<valueString value="Content of the custom display data to be shown to the user"/>
+				</extension>
+			</extension>
+			<identifier>
+				<value value="test-id"/>
+			</identifier>
+			<status value="final"/>
+			<!-- registered | preliminary | final | amended -->
+			<code>
+				<!-- Kan godt definere et kodeverk for disse kodene istedenfor ren tekst hvis det er ønskelig -->
+				<text value="Bruker utenfor Geofence"/>
+			</code>
+			<subject> <!-- Referanse til pasient to ganger, antakelig ikke nødvendig -->
+				<identifier>
+					<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+					<value value="05073500186"/>
+				</identifier>
+			</subject>
+			<issued value="2017-05-09T10:00:00.936+02:00"/>
+		</Observation>

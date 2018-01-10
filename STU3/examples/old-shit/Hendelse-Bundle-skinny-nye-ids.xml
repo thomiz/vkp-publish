@@ -1,0 +1,84 @@
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="c3b83c9c-61a2-46d8-b5a1-0ca73017598b" />
+  <type value="message" />
+  <entry>
+    <fullUrl value="urn:uuid:c69f217d-1501-46fd-b46b-c3637cccaa3c" />
+    <resource>
+      <MessageHeader>
+        <id value="c69f217d-1501-46fd-b46b-c3637cccaa3c" />
+        <event>
+          <system value="http://hl7.org/fhir/message-events" />
+          <code value="MedicationAdministration-Update" />
+        </event>
+        <receiver>
+          <identifier>
+            <system value="http://ehelse.no/fhir/identifiertypes/HERID" />
+            <value value="102287" />
+          </identifier>
+          <display value="Sykepleietjeneste, pleie- og omsorg" />
+        </receiver>
+        <sender>
+          <identifier>
+            <system value="http://ehelse.no/fhir/identifiertypes/HERID" />
+            <value value="95341" />
+          </identifier>
+          <display value="Velferdpoclev1" />
+        </sender>
+        <timestamp value="2012-01-04T09:10:14+00:00" />
+        <source>
+          <endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341" />
+        </source>
+        <focus>
+          <reference value="urn:uuid:15a8d9ed-4e1f-4ccb-91ee-5040b4c62be9" />
+          <display value="MedicationAdministration" />
+        </focus>
+      </MessageHeader>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:15a8d9ed-4e1f-4ccb-91ee-5040b4c62be9" />
+    <resource>
+      <MedicationAdministration>
+        <id value="15a8d9ed-4e1f-4ccb-91ee-5040b4c62be9" />
+        <identifier>
+          <system value="http://dignio.no/medisindispenser-event-id" />
+          <value value="4566b542-0ec5-474a-9c9f-f5402b579a54" />
+        </identifier>
+        <status value="completed" />
+        <category>
+          <coding>
+            <system value="http://ehelse.no/fhir/medisindispenserhendelser" />
+            <code value="medisin_utlevert" />
+          </coding>
+        </category>
+        <medicationCodeableConcept>
+          <text value="Ukjent medisin" />
+        </medicationCodeableConcept>
+        <subject>
+          <identifier>
+            <system value="http://ehelse.no/fhir/identifiertypes/FNR" />
+            <value value="05073500186" />
+          </identifier>
+          <display value="?rlend S?rg?rd" />
+        </subject>
+        <effectiveDateTime value="2012-01-04T09:10:14+00:00" />
+        <device>
+          <identifier>
+            <system value="http://dignio.no/IMEInummer" />
+            <value value="123456789101112" />
+          </identifier>
+        </device>
+        <note>
+          <authorReference>
+            <identifier>
+              <system value="http://ehelse.no/fhir/identifiertypes/FNR" />
+              <value value="04056600324" />
+            </identifier>
+            <display value="Magnar Koman" />
+          </authorReference>
+          <text value="A note about the medication administration, for example how it was handled. " />
+        </note>
+      </MedicationAdministration>
+    </resource>
+  </entry>
+</Bundle>
