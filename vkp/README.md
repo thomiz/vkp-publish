@@ -6,7 +6,7 @@
 
 ## Publisering
 Ferdige profiler publiseres også her: 
-![Velferdsteknologi på SIMPLIFIER] (https://simplifier.net/Velferdsteknologi2/~resources)
+(https://simplifier.net/Velferdsteknologi2/~resources)
 
 ## Vi benytter Feature branch workflow
 ![Feature branch workflow]
