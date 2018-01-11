@@ -15,27 +15,25 @@ Vi baserer oss på at nye features utvikles i egne feature branches og merges in
 ## Katalogstruktur
 For at repositoriet skal være enkelt å navigere i for alle foreslår vi at alle bygger prosjektene sine over samme lest:
 
-|\\[prosjektnavn]| |
-|---|---|
-|   \\CodeSystem | CodeSystem definisjoner |
-|   \\Examples | eksempler |
-|   \\REST-kall | Optional |
-|   \\StructureDefinition | alle extensions og profiler |
-|   \\ValueSet | ValueSet definisjoner |
-|   \\ImplementationGuide-definition | Definisjonene for implementationguide |
-|   \\ImplementationGuidePublish | Rendring av implementationguide for publisering på web |
-|   [prosjektnavn]-[versjon].zip | Pakke med det ferdige resultatet for en versjon |
+|\\[prosjektnavn]| | |
+|---|---|---|
+| |\\CodeSystem | CodeSystem definisjoner |
+| |\\examples | eksempler |
+| |\\REST-kall | Optional |
+| |\\StructureDefinition | alle extensions og profiler |
+| |\\ValueSet | ValueSet definisjoner |
+| |\\ImplementationGuide-definition | Definisjonene for implementationguide |
+| |\\ImplementationGuidePublish | Rendring av implementationguide for publisering på web |
+| |[prosjektnavn]-[versjon].zip | Pakke med det ferdige resultatet for en versjon |
 
 ## Navngivning av filer
 Inne i katalogene anbefaler vi å følge navngivningsregler fra [SIMPLIFIER Best practices] (https://simplifier.net/guide/ProfilingAcademy/Best-practices)
 
-**Filnavn for profiler og extensions:**
+**Filnavn for profiler og extensions:**  
+vkp-Flag-v05.structuredefinition-profile.xml  
+vkp-additionalpositiondata-v05.structuredefinition-extension.xml  
 
-vkp-Flag-v05.structuredefinition-profile.xml
-
-vkp-additionalpositiondata-v05.structuredefinition-extension.xml
-
-**URL'ene i koden:**
+**URL'ene i koden:**  
 http://ehelse.no/fhir/StructureDefinition/vkp-Flag-v05
 
 NB! mye taler for å utelate versjonsnummer i navn og URL og heller markere en full versjon med Tags i Git-repo og pakke den i en .zip fil

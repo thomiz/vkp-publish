@@ -20,7 +20,7 @@ https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workf
 |\\[prosjektnavn]| | |
 |---|---|---|
 | |\\CodeSystem | CodeSystem definisjoner |
-| |\\Examples | eksempler |
+| |\\examples | eksempler |
 | |\\REST-kall | Optional |
 | |\\StructureDefinition | alle extensions og profiler |
 | |\\ValueSet | ValueSet definisjoner |
@@ -35,7 +35,7 @@ Inne i katalogene benytter vi navngivningsregler fra [SIMPLIFIER Best practices]
 vkp-Flag-v05.structuredefinition-profile.xml  
 vkp-additionalpositiondata-v05.structuredefinition-extension.xml  
 
-**URL'ene i koden:**
+**URL'ene i koden:**  
 http://ehelse.no/fhir/StructureDefinition/vkp-Flag-v05
 
 ## kontakt
