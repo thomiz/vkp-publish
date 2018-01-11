@@ -1,12 +1,13 @@
-﻿Område for utvikling FHIR-komponenter:
+Område for utvikling FHIR-komponenter:
 - Profiler av resources
 - Extensions
 - Eksempler
+- Implemntasjonsguider med metafiler
 
-Forslag til Workflow
-**Gitflow workflow:**
-![Gitflow workflow]
-(https://git.sarepta.ehelse.no/utvikling/FHIR/raw/c542beb03528635a4e8b0125016aad1021f1e068/Gitflow-workflow.png)
+Forslag til Workflow:
+**Feature branch workflow:**
+![Feature branch workflow]
+(https://git.sarepta.ehelse.no/utvikling/FHIR/raw/Feature-branch-workflow.png)
 
 Husk å sjekke [wiki'en](https://git.sarepta.ehelse.no/utvikling/FHIR/wikis/home)
 
