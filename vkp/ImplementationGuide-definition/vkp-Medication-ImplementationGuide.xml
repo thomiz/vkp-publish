@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="MedicationDispense-IG" />
+  <meta>
+    <lastUpdated value="2018-01-09T15:58:08.122+01:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/ImplementationGuide/MedicationDispense-IG" />
+  <name value="VKP-Medication-ImplementationGuide" />
+  <status value="draft" />
+  <experimental value="true" />
+  <date value="2018-01-09T15:58:05.0658847+01:00" />
+  <description value="This is a description" />
+  <copyright value="Public domain" />
+  <fhirVersion value="3.0.1" />
+  <package>
+    <name value="base" />
+	
+    <resource>
+      <example value="false" />
+      <name value="vkp-MessageHeader-v05" />
+      <description value="Profile of the MessageHeader resource. Used in the Norwegian Personal Connected Health project to document MedicationDispense events from devices dispensing medication to the user at the patients home." />
+      <sourceReference>
+        <reference value="StructureDefinition/vkp-MessageHeader-v05" />
+      </sourceReference>
+    </resource>
+	
+	<resource>
+      <example value="false" />
+      <name value="vkp-MedicationDispense-v05" />
+      <description value="Profile of the MedicationDispense resource. Used in the Norwegian Personal Connected Health project to document MedicationDispense events from devices dispensing medication to the user at the patients home." />
+      <sourceReference>
+        <reference value="StructureDefinition/vkp-MedicationDispense-v05" />
+      </sourceReference>
+    </resource>
+	
+	<resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/vkp-medicationdispense-events-v05"/>
+      </sourceReference>
+    </resource>
+	<resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/vkp-medicationdispense-message-status-v05"/>
+      </sourceReference>
+    </resource>
+	<resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/vkp-message-event-v05"/>
+      </sourceReference>
+    </resource>
+	<resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/vkp-emergency-level-v05"/>
+      </sourceReference>
+    </resource>
+	
+	<resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/vkp-emergency-level-v05"/>
+      </sourceReference>
+    </resource>
+	<resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/vkp-medicationdispense-events-v05"/>
+      </sourceReference>
+    </resource>
+	<resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/vkp-message-event-v05"/>
+      </sourceReference>
+    </resource>
+	<resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/vkp-triage-v05"/>
+      </sourceReference>
+    </resource>
+	
+  </package>
+</ImplementationGuide>
