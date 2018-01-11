@@ -26,6 +26,13 @@ For at repositoriet skal være enkelt å navigere i for alle foreslår vi at all
 | ImplementationGuidePublish | Rendring av implementationguide for publisering på web |
 | [prosjektnavn]-[versjon].zip | Pakke med det ferdige resultatet for en versjon |
 
+```mermaid
+graph TD;
+  A-->B;
+  A-->C;
+  B-->D;
+  C-->D;
+```
 
 Husk å sjekke [wiki'en](https://git.sarepta.ehelse.no/utvikling/FHIR/wikis/home)
 
