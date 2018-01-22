@@ -2,12 +2,13 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="vkp-MessageHeader-v05" />
   <meta>
-    <lastUpdated value="2018-01-05T16:22:46.728+01:00" />
+    <lastUpdated value="2018-01-22T13:38:35.322+01:00" />
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/vkp-MessageHeader-v05" />
   <name value="vkp-MessageHeader" />
   <status value="draft" />
   <date value="2017-09-14T07:27:52.114+02:00" />
+  <description value="Profile of the MessageHeader resource. Used in the Norwegian Personal Connected Health project to document events from devices user at the patients home. Messages can contain Resources like: &#xD;&#xA;- vkp-MedicationDispense - to document MedicationDispense events&#xD;&#xA;- vkp-Location - to document changes of the Patients geoposition&#xD;&#xA;- vkp-Flag - to document events that need attention&#xD;&#xA;- Composition - additional information about handling of a reported event documented  by the person handling that event" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
