@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="no-propertyinformation-v05" />
   <meta>
-    <lastUpdated value="2017-12-20T15:26:43.474+01:00" />
+    <lastUpdated value="2018-02-01T14:52:12.093+01:00" />
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/no-propertyinformation-v05" />
   <name value="no-propertyinformation" />
@@ -20,8 +20,8 @@
   <snapshot>
     <element id="Extension">
       <path value="Extension" />
-      <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources." />
+      <short value="real property identification" />
+      <definition value="Additional information identifying norwegian real property." />
       <min value="0" />
       <max value="*" />
       <base>
@@ -134,9 +134,9 @@
     <element id="Extension.extension:gardsnummer">
       <path value="Extension.extension" />
       <sliceName value="gardsnummer" />
-      <short value="Additional Content defined by implementations" />
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <short value="gardsnummer" />
+      <definition value="Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer." />
+      <comment value="Gårdsnummer" />
       <alias value="extensions" />
       <alias value="user content" />
       <min value="1" />
@@ -321,9 +321,9 @@
     <element id="Extension.extension:bruksnummer">
       <path value="Extension.extension" />
       <sliceName value="bruksnummer" />
-      <short value="Additional Content defined by implementations" />
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <short value="bruksnummer" />
+      <definition value="Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer." />
+      <comment value="bruksnummer" />
       <alias value="extensions" />
       <alias value="user content" />
       <min value="1" />
@@ -508,9 +508,9 @@
     <element id="Extension.extension:festenummer">
       <path value="Extension.extension" />
       <sliceName value="festenummer" />
-      <short value="Additional Content defined by implementations" />
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <short value="festenummer" />
+      <definition value="Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer" />
+      <comment value="Festenummer" />
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
@@ -695,9 +695,9 @@
     <element id="Extension.extension:seksjonsnummer">
       <path value="Extension.extension" />
       <sliceName value="seksjonsnummer" />
-      <short value="Additional Content defined by implementations" />
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <short value="Seksjonsnummer" />
+      <definition value="Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition some real property is split into sections identified by its seksjonsnummer" />
+      <comment value="Seksjonsnummer" />
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
@@ -882,8 +882,8 @@
     <element id="Extension.extension:kommune">
       <path value="Extension.extension" />
       <sliceName value="kommune" />
-      <short value="Additional Content defined by implementations" />
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <short value="Name of a Norwegian kommune" />
+      <definition value="The norwegian kommune identifies an administrative geographic unit in Norway called kommune by its official name." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -1069,8 +1069,8 @@
     <element id="Extension.extension:kommunenummer">
       <path value="Extension.extension" />
       <sliceName value="kommunenummer" />
-      <short value="Additional Content defined by implementations" />
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <short value="Kommunenummer" />
+      <definition value="The norwegian kommunenummer identifies an administrative geographic unit in Norway called kommune by a predefined number.&#xD;&#xA;" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -1432,6 +1432,11 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="real property identification" />
+      <definition value="Additional information identifying norwegian real property." />
+    </element>
     <element id="Extension.extension">
       <path value="Extension.extension" />
       <slicing>
@@ -1445,6 +1450,9 @@
     <element id="Extension.extension:gardsnummer">
       <path value="Extension.extension" />
       <sliceName value="gardsnummer" />
+      <short value="gardsnummer" />
+      <definition value="Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer." />
+      <comment value="Gårdsnummer" />
       <min value="1" />
       <max value="1" />
     </element>
@@ -1462,6 +1470,9 @@
     <element id="Extension.extension:bruksnummer">
       <path value="Extension.extension" />
       <sliceName value="bruksnummer" />
+      <short value="bruksnummer" />
+      <definition value="Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer." />
+      <comment value="bruksnummer" />
       <min value="1" />
       <max value="1" />
     </element>
@@ -1479,6 +1490,9 @@
     <element id="Extension.extension:festenummer">
       <path value="Extension.extension" />
       <sliceName value="festenummer" />
+      <short value="festenummer" />
+      <definition value="Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer" />
+      <comment value="Festenummer" />
     </element>
     <element id="Extension.extension:festenummer.url">
       <path value="Extension.extension.url" />
@@ -1494,6 +1508,9 @@
     <element id="Extension.extension:seksjonsnummer">
       <path value="Extension.extension" />
       <sliceName value="seksjonsnummer" />
+      <short value="Seksjonsnummer" />
+      <definition value="Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition some real property is split into sections identified by its seksjonsnummer" />
+      <comment value="Seksjonsnummer" />
     </element>
     <element id="Extension.extension:seksjonsnummer.url">
       <path value="Extension.extension.url" />
@@ -1509,6 +1526,8 @@
     <element id="Extension.extension:kommune">
       <path value="Extension.extension" />
       <sliceName value="kommune" />
+      <short value="Name of a Norwegian kommune" />
+      <definition value="The norwegian kommune identifies an administrative geographic unit in Norway called kommune by its official name." />
     </element>
     <element id="Extension.extension:kommune.url">
       <path value="Extension.extension.url" />
@@ -1524,6 +1543,8 @@
     <element id="Extension.extension:kommunenummer">
       <path value="Extension.extension" />
       <sliceName value="kommunenummer" />
+      <short value="Kommunenummer" />
+      <definition value="The norwegian kommunenummer identifies an administrative geographic unit in Norway called kommune by a predefined number.&#xD;&#xA;" />
     </element>
     <element id="Extension.extension:kommunenummer.url">
       <path value="Extension.extension.url" />
