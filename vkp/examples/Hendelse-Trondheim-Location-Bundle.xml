@@ -1,4 +1,4 @@
-<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd">
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
 	<id value="10bb101f-a121-4264-a920-67be9cb82c74"/>
 	<type value="message"/>
 	<entry>
@@ -33,6 +33,26 @@
 					<endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341"/>
 					<!-- obligatorisk i FHIR MessageHeader.source -->
 				</source>
+				<focus>
+					<reference value="urn:uuid:cd892e8a-7139-42fd-9f79-5c4a04e40296"/>
+					<display value="Device"/>
+				</focus>
+				<focus>
+					<reference value="urn:uuid:58c41c82-761e-4948-a07f-c97bc69d3dee"/>
+					<display value="Patient"/>
+				</focus>
+				<focus>
+					<reference value="urn:uuid:4183309e-bb0b-477d-80d9-46728ef85409"/>
+					<display value="Location-measurement"/>
+				</focus>
+				<focus>
+					<reference value="urn:uuid:c6e68cd8-3dc5-4c06-bbd0-7984f9ed6637"/>
+					<display value="Flag"/>
+				</focus>
+				<focus>
+					<reference value="urn:uuid:d924e388-d39e-4126-b357-6a74d2b62f64"/>
+					<display value="Location-address"/>
+				</focus>
 			</MessageHeader>
 		</resource>
 	</entry>
