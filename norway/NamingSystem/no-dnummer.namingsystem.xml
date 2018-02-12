@@ -3,10 +3,10 @@
     <meta>
         <versionId value="0.1" />
     </meta>
-    <name value="D-nummerr" />
+    <name value="D-nummer" />
     <status value="draft" />
     <kind value="identifier" />
-    <date value="2018-02-08"/>
+    <date value="2018-02-12"/>
     <publisher value="e-helse" />
     <responsible value="Skatteetaten"/>
     <description value="TODO" />
