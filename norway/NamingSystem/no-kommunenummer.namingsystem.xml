@@ -3,13 +3,13 @@
     <meta>
         <versionId value="0.1" />
     </meta>
-    <name value="Kommunenummer" />
+    <name value="Kommunenummer alle" />
     <status value="draft" />
     <kind value="identifier" />
     <date value="2018-02-12"/>
     <publisher value="Direktoratet for e-helse" />
-    <responsible value="Statistisk sentralbyrå"/> <!-- Espen: Sjekk dette TODO -->
-    <description value="Nummerering av kommuner i henhold til Statistisk sentralbyrå." />
+    <responsible value="Statistisk sentralbyrå"/>
+    <description value="Nummerering av kommuner i henhold til SSB sin offisielle liste. Inneholder fremtidige, gyldige og utgåtte kommunenummer." />
     <uniqueId>
         <type value="uri" />
         <value value="http://ehelse.no/fhir/NamingSystem/kommunenummer" />
@@ -18,12 +18,7 @@
     <uniqueId>
         <type value="uri" />
         <value value="https://register.geonorge.no/subregister/sosi-kodelister/kartverket/kommunenummer-alle" />
-        <preferred value="false" />
-    </uniqueId>
-    <uniqueId>
-        <type value="oid" />
-        <value value="" />
         <preferred value="true" />
     </uniqueId>
-    <!-- Espen: TODO finne offisiell ID for kommunenummer-kodeverk -->
+    <!-- Espen: TODO finne offisiell ID for kommunenummer-kodeverk (hvis dette ikke er korrekt -->
 </NamingSystem>
