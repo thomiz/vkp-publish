@@ -7,9 +7,9 @@
     <status value="draft" />
     <kind value="identifier" />
     <date value="2018-02-12"/>
-    <publisher value="e-helse" />
+    <publisher value="Direktoratet for e-helse" />
     <responsible value="Skatteetaten"/>
-    <description value="TODO" />
+    <description value="Personidentifikator for personer som ikke har fødselsnummer og som ikke skal registreres som bosatt i Norge." />
     <uniqueId>
         <type value="uri" />
         <value value="http://ehelse.no/fhir/NamingSystem/DNR" />
