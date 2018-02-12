@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <NamingSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
     <meta>
-        <versionId value="0.1" />
+        <versionId value="0.2" />
     </meta>
     <name value="Kommunenummer alle" />
     <status value="draft" />
@@ -21,4 +21,6 @@
         <preferred value="true" />
     </uniqueId>
     <!-- Espen: TODO finne offisiell ID for kommunenummer-kodeverk (hvis dette ikke er korrekt -->
+    <!-- Datasett: https://data.norge.no/data/statens-kartverk/kommunenummer -->
+    <!-- Datasett SSB: https://www.ssb.no/offentlig-sektor/kommunekatalog/kommunekatalog-2017 -->
 </NamingSystem>
