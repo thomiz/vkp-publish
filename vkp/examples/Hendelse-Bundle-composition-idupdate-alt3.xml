@@ -69,17 +69,6 @@
 					</identifier>
 					<display value="Magnar Koman"/>
 				</author>
-				<author> <!-- Sekundær identifikatoren for forfatteren litt harry metode -->
-					<identifier>
-						<use value="secondary"/>
-						<type>
-							<coding>
-								<code value="EN"/>
-							</coding>
-						</type>
-						<value value="238"/>
-					</identifier>
-				</author>
 				<title value="Journalnotat for Medisinutleveringen"/>
 				<section>
 					<text>
@@ -95,6 +84,14 @@
 						<reference value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34"/>
 						<display value="MedicationDispense"/>
 					</entry>
+				</section>
+				<section>
+					<title value="Forfatter"/>
+					<text>
+						<status value="additional"/>
+						<div xmlns="http://www.w3.org/1999/xhtml">
+						Magnar Komann annsattid 238</div>
+					</text>
 				</section>
 			</Composition>
 		</resource>
