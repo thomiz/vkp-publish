@@ -1,6 +1,8 @@
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
 	<id value="605f4a17-12a4-4f75-b649-1a706c03f015"/>
 	<type value="message"/>
+	<!-- Hendelse MedicationDispense Composition Bundle
+         Example of Hendelse Bundle with MedicationDispense and Compositon for use in eVik (Hendelse-Bundle-composition-idupdate-alt3.xml) -->
 	<entry>
 		<fullUrl value="urn:uuid:2981a09d-4637-4c4d-bc4c-670cfa0497c0"/>
 		<resource>
@@ -81,16 +83,16 @@
 					</text>
 					<entry>
 						<!-- A reference to data that supports this section. In this case the vft-medicationadministration -->
-						<reference value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34"/>
+						<reference value="urn:uuid:c31bd880-2b09-4eda-a5a3-90090d49dad5"/>
 						<display value="MedicationDispense"/>
 					</entry>
 				</section>
 				<section>
-					<title value="Forfatter"/>
+					<title value="Signature"/>
 					<text>
 						<status value="additional"/>
 						<div xmlns="http://www.w3.org/1999/xhtml">
-						Magnar Komann annsattid 238</div>
+						Magnar Komann (magnark)</div>
 					</text>
 				</section>
 			</Composition>
