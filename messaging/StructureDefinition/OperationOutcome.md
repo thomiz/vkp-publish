@@ -8,8 +8,9 @@ Formål: Fungere som AppRec ved messaging i samme kontekst som AppRec: Samhandli
 
 ## Krav (utkast for diskusjon)
 
-* Det skal alltid sendes kvittering ved meldingsutveksling mellom virksomheter, også positive. 
- <br/>**Problem**: OperationOutcome har ikke "OK", bare "information" (severity)/"informational"(code). Mulig "positiv AppRec" må være en egen annen/melding.
+* Det skal alltid sendes kvittering ved *anynkron* meldingsutveksling mellom virksomheter, også positive. 
+  <br/>**Problem**: OperationOutcome har ikke "OK", bare "information" (severity)/"informational"(code). Mulig "positiv AppRec" må være en egen annen/melding.
+  <br/>For HTTP benyttes 200 OK eller 202 Accepted.
 * Det skal alltid sendes eventuell negativ kvittering ved meldingsutveksling internt i virksomheter, for eksempel mellom systemer på et sykehus. 
 
 Se også DetectedIssue
