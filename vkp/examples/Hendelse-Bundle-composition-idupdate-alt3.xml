@@ -73,6 +73,7 @@
 				</author>
 				<title value="Journalnotat for Medisinutleveringen"/>
 				<section>
+					<title value="Response summary"/>
 					<text>
 						<!-- Selve notatet-->
 						<status value="additional"/>
