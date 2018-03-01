@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="no-propertyinformation-v05" />
   <meta>
-    <lastUpdated value="2018-02-01T14:52:12.093+01:00" />
+    <lastUpdated value="2018-03-01T13:36:13.023+01:00" />
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/no-propertyinformation-v05" />
   <name value="no-propertyinformation" />
@@ -139,7 +139,7 @@
       <comment value="Gårdsnummer" />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Element.extension" />
@@ -285,7 +285,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.extension:gardsnummer.value[x]:valueInteger">
+    <element id="Extension.extension:gardsnummer.valueInteger:valueInteger">
       <path value="Extension.extension.valueInteger" />
       <sliceName value="valueInteger" />
       <short value="Value of extension" />
@@ -326,7 +326,7 @@
       <comment value="bruksnummer" />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Element.extension" />
@@ -472,7 +472,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.extension:bruksnummer.value[x]:valueInteger">
+    <element id="Extension.extension:bruksnummer.valueInteger:valueInteger">
       <path value="Extension.extension.valueInteger" />
       <sliceName value="valueInteger" />
       <short value="Value of extension" />
@@ -659,7 +659,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.extension:festenummer.value[x]:valueInteger">
+    <element id="Extension.extension:festenummer.valueInteger:valueInteger">
       <path value="Extension.extension.valueInteger" />
       <sliceName value="valueInteger" />
       <short value="Value of extension" />
@@ -846,7 +846,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.extension:seksjonsnummer.value[x]:valueInteger">
+    <element id="Extension.extension:seksjonsnummer.valueInteger:valueInteger">
       <path value="Extension.extension.valueInteger" />
       <sliceName value="valueInteger" />
       <short value="Value of extension" />
@@ -1033,7 +1033,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.extension:kommune.value[x]:valueString">
+    <element id="Extension.extension:kommune.valueString:valueString">
       <path value="Extension.extension.valueString" />
       <sliceName value="valueString" />
       <short value="Value of extension" />
@@ -1220,7 +1220,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.extension:kommunenummer.value[x]:valueString">
+    <element id="Extension.extension:kommunenummer.valueString:valueString">
       <path value="Extension.extension.valueString" />
       <sliceName value="valueString" />
       <short value="Value of extension" />
@@ -1236,6 +1236,12 @@
       <type>
         <code value="string" />
       </type>
+      <patternString value="[0-9]{4}" />
+      <example>
+        <label value="kommunenummer" />
+        <valueString value="2177" />
+      </example>
+      <maxLength value="4" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1453,14 +1459,13 @@
       <short value="gardsnummer" />
       <definition value="Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer." />
       <comment value="Gårdsnummer" />
-      <min value="1" />
       <max value="1" />
     </element>
     <element id="Extension.extension:gardsnummer.url">
       <path value="Extension.extension.url" />
       <fixedUri value="gardsnummer" />
     </element>
-    <element id="Extension.extension:gardsnummer.value[x]:valueInteger">
+    <element id="Extension.extension:gardsnummer.valueInteger:valueInteger">
       <path value="Extension.extension.valueInteger" />
       <sliceName value="valueInteger" />
       <type>
@@ -1473,14 +1478,13 @@
       <short value="bruksnummer" />
       <definition value="Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer." />
       <comment value="bruksnummer" />
-      <min value="1" />
       <max value="1" />
     </element>
     <element id="Extension.extension:bruksnummer.url">
       <path value="Extension.extension.url" />
       <fixedUri value="bruksnummer" />
     </element>
-    <element id="Extension.extension:bruksnummer.value[x]:valueInteger">
+    <element id="Extension.extension:bruksnummer.valueInteger:valueInteger">
       <path value="Extension.extension.valueInteger" />
       <sliceName value="valueInteger" />
       <type>
@@ -1498,7 +1502,7 @@
       <path value="Extension.extension.url" />
       <fixedUri value="festenummer" />
     </element>
-    <element id="Extension.extension:festenummer.value[x]:valueInteger">
+    <element id="Extension.extension:festenummer.valueInteger:valueInteger">
       <path value="Extension.extension.valueInteger" />
       <sliceName value="valueInteger" />
       <type>
@@ -1516,7 +1520,7 @@
       <path value="Extension.extension.url" />
       <fixedUri value="seksjonsnummer" />
     </element>
-    <element id="Extension.extension:seksjonsnummer.value[x]:valueInteger">
+    <element id="Extension.extension:seksjonsnummer.valueInteger:valueInteger">
       <path value="Extension.extension.valueInteger" />
       <sliceName value="valueInteger" />
       <type>
@@ -1533,7 +1537,7 @@
       <path value="Extension.extension.url" />
       <fixedUri value="kommune" />
     </element>
-    <element id="Extension.extension:kommune.value[x]:valueString">
+    <element id="Extension.extension:kommune.valueString:valueString">
       <path value="Extension.extension.valueString" />
       <sliceName value="valueString" />
       <type>
@@ -1550,12 +1554,18 @@
       <path value="Extension.extension.url" />
       <fixedUri value="kommunenummer" />
     </element>
-    <element id="Extension.extension:kommunenummer.value[x]:valueString">
+    <element id="Extension.extension:kommunenummer.valueString:valueString">
       <path value="Extension.extension.valueString" />
       <sliceName value="valueString" />
       <type>
         <code value="string" />
       </type>
+      <patternString value="[0-9]{4}" />
+      <example>
+        <label value="kommunenummer" />
+        <valueString value="2177" />
+      </example>
+      <maxLength value="4" />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
