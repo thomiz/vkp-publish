@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="no-Patient" />
   <meta>
-    <lastUpdated value="2018-03-01T14:03:26.628+01:00" />
+    <lastUpdated value="2018-03-01T16:30:59.472+01:00" />
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/no-Patient" />
   <version value="0.1" />
@@ -3153,7 +3153,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="https://ehelse.no/fhir/StructureDefinition/no-middlename" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-middlename" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -12816,7 +12816,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://ehelse.no/fhir/StructureDefinition/no-middlename" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-middlename" />
       </type>
     </element>
   </differential>

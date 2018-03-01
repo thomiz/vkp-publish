@@ -2,9 +2,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="no-middlename" />
   <meta>
-    <lastUpdated value="2018-03-01T13:52:35.139+01:00" />
+    <lastUpdated value="2018-03-01T16:30:39.894+01:00" />
   </meta>
-  <url value="https://ehelse.no/fhir/StructureDefinition/no-middlename" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/no-middlename" />
   <version value="0.1" />
   <name value="no-middlename" />
   <status value="draft" />
@@ -150,7 +150,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="https://ehelse.no/fhir/StructureDefinition/no-middlename" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/no-middlename" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -211,7 +211,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://ehelse.no/fhir/StructureDefinition/no-middlename" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/no-middlename" />
     </element>
     <element id="Extension.value[x]:middlename">
       <path value="Extension.valueString" />
