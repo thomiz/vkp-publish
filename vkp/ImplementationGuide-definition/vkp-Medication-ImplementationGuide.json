@@ -1,0 +1,107 @@
+{
+   "tool":"jekyll",
+   "paths":{
+      "resources":[
+         "resources",
+		 "StructureDefinition",
+		 "CodeSystem",
+		 "examples",
+		 "ValueSet"
+      ],
+      "pages":"pages",
+      "temp":"temp",
+      "output":"output",
+      "qa":"qa",
+      "txCache":"txCache",
+      "specification":"http://hl7.org/fhir/STU3/"
+   },
+   "canonicalBase":"http://ehelse.no/fhir",
+   "jurisdiction":"NO",
+   "sct-edition":"http://snomed.info/sct/900000000000207008",
+   "defaults":{
+      "_documentation":"this object contains the default publishing policy for different types. Anything not mentioned defaults to true",
+      "Any":{
+         "xml":true,
+         "json":true,
+         "ttl":true,
+         "xml-html":true,
+         "json-html":true,
+         "ttl-html":true,
+         "template-format":"instance-template-format.html",
+         "template-base":"instance-template-base.html"
+      },
+      "StructureDefinition":{
+         "shex":true,
+         "sch":true,
+         "json-schema":true,
+         "summary":true,
+         "header":true,
+         "diff":true,
+         "snapshot":true,
+         "pseudo-xml":true,
+         "pseudo-json":true,
+         "pseudo-ttl":true,
+         "uml":true,
+         "tx":true,
+         "inv":true,
+         "dict":true,
+         "maps":true,
+         "xref":true
+      }
+   },
+   "source":"vkp-Medication-ImplementationGuide.xml",
+   "spreadsheets":[
+
+   ],
+   "resources":{
+      "StructureDefinition/vkp-MessageHeader-v05":{
+         "source":"vkp-MessageHeader-v05.structuredefinition-profile.xml",
+         "defns":"vkp-MessageHeader-v05.html#definitions",
+         "base":"vkp-MessageHeader-v05.html"
+      },
+	  "StructureDefinition/vkp-MedicationDispense-v05":{
+         "source":"vkp-MedicationDispense-v05.structuredefinition-profile.xml",
+         "defns":"vkp-MedicationDispense-v05.html",
+         "base":"vkp-MedicationDispense-v05.html"
+      },
+	  "StructureDefinition/vkp-Flag-v05":{
+         "source":"vkp-Flag-v05.structuredefinition-profile.xml",
+         "defns":"vkp-Flag-v05.html#definitions",
+         "base":"vkp-Flag-v05.html"
+      },
+	  
+	  "ValueSet/vkp-medicationdispense-events-v05": {
+			"base": "valuesets.html#test-ig-vs",
+			"source": "vkp-medicationdispense-events-v05.valueset.xml"
+		},
+		"ValueSet/vkp-medicationdispense-message-status-v05": {
+			"base": "valuesets.html#test-ig-vs",
+			"source": "vkp-medicationdispense-message-status-v05.valueset.xml"
+		},
+		"ValueSet/vkp-emergency-level-v05": {
+			"base": "valuesets.html#test-ig-vs",
+			"source": "vkp-emergency-level-v05.valueset.xml"
+		},
+		"ValueSet/vkp-message-event-v05": {
+			"base": "valuesets.html#test-ig-vs",
+			"source": "vkp-message-event-v05.valueset.xml"
+		},
+		
+		"CodeSystem/vkp-emergency-level-v05": {
+			"base": "valuesets.html#test-ig-vs",
+			"source": "vkp-emergency-level-v05.codesystem.xml"
+		},
+		"CodeSystem/vkp-medicationdispense-events-v05": {
+			"base": "valuesets.html#test-ig-vs",
+			"source": "vkp-medicationdispense-events-v05.codesystem.xml"
+		},
+		"CodeSystem/vkp-message-event-v05": {
+			"base": "valuesets.html#test-ig-vs",
+			"source": "vkp-message-event-v05.codesystem.xml"
+		},
+		"CodeSystem/vkp-triage-v05": {
+			"base": "valuesets.html#test-ig-vs",
+			"source": "vkp-triage-v05.codesystem.xml"
+		}
+   }
+}

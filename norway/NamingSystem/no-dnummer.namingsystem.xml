@@ -3,21 +3,21 @@
     <meta>
         <versionId value="0.1" />
     </meta>
-    <name value="Norsk Fødselsnummer" />
+    <name value="D-nummer" />
     <status value="draft" />
     <kind value="identifier" />
-    <date value="2018-02-08"/>
+    <date value="2018-02-12"/>
     <publisher value="Direktoratet for e-helse" />
     <responsible value="Skatteetaten"/>
-    <description value="Et fødselsnummer er et ellevesifret identifikasjonsnummer. Alle som er folkeregistrert i Norge har et fødselsnummer." />
+    <description value="Personidentifikator for personer som ikke har fødselsnummer og som ikke skal registreres som bosatt i Norge." />
     <uniqueId>
         <type value="uri" />
-        <value value="http://ehelse.no/fhir/NamingSystem/FNR" />
+        <value value="http://ehelse.no/fhir/NamingSystem/DNR" />
         <preferred value="false" />
     </uniqueId>
     <uniqueId>
         <type value="oid" />
-        <value value="2.16.578.1.12.4.1.4.1" />
+        <value value="2.16.578.1.12.4.1.4.2" />
         <preferred value="true" />
     </uniqueId>
 </NamingSystem>
