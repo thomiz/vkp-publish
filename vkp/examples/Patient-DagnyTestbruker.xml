@@ -12,6 +12,9 @@
 			</valueCodeableConcept>
 		</extension>
 	</extension>
+	<extension url="http://ehelse.no/fhir/StructureDefinition/no-bydel">
+		<valueString value="Testbruker-bydel"/>
+	</extension>
 	<identifier>
 		<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
 		<value value="23048000000"/>
@@ -24,6 +27,18 @@
 		<given value="Dagny"/>
 	</name>
 	<gender value="female"/>
+	<address>
+		<extension url="http://ehelse.no/fhir/StructureDefinition/no-propertyinformation-v05">
+			<extension url="kommune">
+				<valueString value="Oslo"/>
+			</extension>
+		</extension>
+		<use value="home"/> 
+		<line value="Dronningdagnysalee"/> 
+		<city value="Oslo"/> 
+		<postalCode value="45"/> 
+		<country value="NO"/> 
+	</address>
 	<maritalStatus>
 		<coding>
 			<system value="http://hl7.org/fhir/v3/MaritalStatus"/>
@@ -31,5 +46,4 @@
 			<display value="unmarried"/>
 		</coding>
 	</maritalStatus>
-	
 </Patient>
