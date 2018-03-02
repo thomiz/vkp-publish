@@ -1,4 +1,4 @@
-<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
+﻿<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
 	<meta>
 		<profile value="http://ehelse.no/fhir/StructureDefinition/no-Patient"/>
 	</meta>
@@ -26,6 +26,11 @@
 		<family value="Testbruker"/>
 		<given value="Dagny"/>
 	</name>
+	<telecom>
+		<system value="phone"/>
+		<value value="+4733445566"/>
+		<use value="home"/>
+	</telecom>
 	<gender value="female"/>
 	<address>
 		<extension url="http://ehelse.no/fhir/StructureDefinition/no-propertyinformation-v05">
@@ -46,4 +51,21 @@
 			<display value="unmarried"/>
 		</coding>
 	</maritalStatus>
+	<contact>
+		<relationship>
+			<coding>
+				<system value="http://hl7.org/fhir/v2/0131"/>
+				<code value="CP"/>
+				<display value="Contact person"/>
+			</coding>
+		</relationship>
+		<name>
+			<extension url="http://ehelse.no/fhir/StructureDefinition/no-middlename">
+				<valueString value="Pårørende"/>
+			</extension>
+			<text value="Pål Pårørende Olsen"/>
+			<family value="Olsen"/>
+			<given value="Pål"/>
+		</name>
+	</contact>
 </Patient>
