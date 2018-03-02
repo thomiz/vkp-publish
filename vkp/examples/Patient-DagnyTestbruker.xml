@@ -1,4 +1,4 @@
-﻿<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
+<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
 	<meta>
 		<profile value="http://ehelse.no/fhir/StructureDefinition/no-Patient"/>
 	</meta>
@@ -18,6 +18,10 @@
 	<identifier>
 		<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
 		<value value="23048000000"/>
+	</identifier>
+	<identifier>
+		<system value="http://any.other/identifier"/>
+		<value value="123"/>
 	</identifier>
 	<name>
 		<extension url="http://ehelse.no/fhir/StructureDefinition/no-middlename">
