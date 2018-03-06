@@ -2,9 +2,10 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="vkp-MessageHeader-v05" />
   <meta>
-    <lastUpdated value="2018-02-07T13:59:26.386+01:00" />
+    <lastUpdated value="2018-03-06T10:08:06.581+01:00" />
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/vkp-MessageHeader-v05" />
+  <version value="0.5" />
   <name value="vkp-MessageHeader" />
   <status value="draft" />
   <date value="2017-09-14T07:27:52.114+02:00" />
@@ -2266,7 +2267,7 @@
       </extension>
       <path value="MessageHeader.source" />
       <short value="Message source application" />
-      <definition value="PCH norway uses the source to identify the endpoint of the source application and contact information for support.&#xD;&#xA;" />
+      <definition value="VKP norway uses the source to identify the endpoint of the source application and contact information for support.&#xD;&#xA;" />
       <requirements value="Allows replies, supports audit." />
       <min value="1" />
       <max value="1" />
@@ -2544,12 +2545,12 @@
           <type value="value" />
           <path value="system" />
         </discriminator>
-        <description value="PCH project in Norway uses the contact information, either Phone number or URL for contacting support regarding technical issues regarding message communication with the source system." />
+        <description value="VKP project in Norway uses the contact information, either Phone number or URL for contacting support regarding technical issues regarding message communication with the source system." />
         <rules value="closed" />
       </slicing>
       <short value="Human contact for problems" />
       <definition value="An e-mail, phone, website or other contact point to use to resolve issues with message communications." />
-      <comment value="PCH project in Norway uses the contact information, either Phone number or URL for contacting support regarding technical issues regarding message communication with the source system." />
+      <comment value="VKP project in Norway uses the contact information, either Phone number or URL for contacting support regarding technical issues regarding message communication with the source system." />
       <requirements value="Allows escalation of technical issues." />
       <min value="0" />
       <max value="1" />
@@ -3074,8 +3075,8 @@
     <element id="MessageHeader.source.contact:phone">
       <path value="MessageHeader.source.contact" />
       <sliceName value="phone" />
-      <short value="Human contact for problems" />
-      <definition value="An e-mail, phone, website or other contact point to use to resolve issues with message communications." />
+      <short value="Phone number human contact for problems" />
+      <definition value="Phone numberto use to resolve issues with message communications." />
       <requirements value="Allows escalation of technical issues." />
       <min value="0" />
       <max value="1" />
@@ -3601,8 +3602,8 @@
     <element id="MessageHeader.source.contact:videoStreamUrl">
       <path value="MessageHeader.source.contact" />
       <sliceName value="videoStreamUrl" />
-      <short value="Human contact for problems" />
-      <definition value="An e-mail, phone, website or other contact point to use to resolve issues with message communications." />
+      <short value="Video Stream human contact for problems" />
+      <definition value="URL endpoint for video call to use to resolve issues with message communications." />
       <requirements value="Allows escalation of technical issues." />
       <min value="0" />
       <max value="1" />
@@ -4167,7 +4168,7 @@
     <element id="MessageHeader.responsible">
       <path value="MessageHeader.responsible" />
       <short value="Final responsibility for event" />
-      <definition value="The person or organization that accepts overall responsibility for the contents of the message. The implication is that the message event happened under the policies of the responsible party." />
+      <definition value="VKP Norway do not use this information&#xD;&#xA;&#xD;&#xA;The person or organization that accepts overall responsibility for the contents of the message. The implication is that the message event happened under the policies of the responsible party." />
       <comment value="Usually only for the request, but can be used in a response." />
       <requirements value="Need to know for audit/traceback requirements and possibly for authorization." />
       <min value="0" />
@@ -4200,6 +4201,7 @@
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
       </constraint>
+      <mustSupport value="false" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4418,7 +4420,7 @@
     <element id="MessageHeader.reason">
       <path value="MessageHeader.reason" />
       <short value="Cause of event" />
-      <definition value="Coded indication of the cause for the event - indicates  a reason for the occurrence of the event that is a focus of this message." />
+      <definition value="VKP Norway do not use this information&#xD;&#xA;&#xD;&#xA;Coded indication of the cause for the event - indicates  a reason for the occurrence of the event that is a focus of this message." />
       <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
       <requirements value="Need to be able to track why resources are being changed and report in the audit log/history of the resource.  May affect authorization." />
       <min value="0" />
@@ -4439,6 +4441,7 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="false" />
       <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -5790,7 +5793,7 @@
         <valueString value="MessageSource" />
       </extension>
       <path value="MessageHeader.source" />
-      <definition value="PCH norway uses the source to identify the endpoint of the source application and contact information for support.&#xD;&#xA;" />
+      <definition value="VKP norway uses the source to identify the endpoint of the source application and contact information for support.&#xD;&#xA;" />
       <mustSupport value="true" />
     </element>
     <element id="MessageHeader.source.contact">
@@ -5800,14 +5803,16 @@
           <type value="value" />
           <path value="system" />
         </discriminator>
-        <description value="PCH project in Norway uses the contact information, either Phone number or URL for contacting support regarding technical issues regarding message communication with the source system." />
+        <description value="VKP project in Norway uses the contact information, either Phone number or URL for contacting support regarding technical issues regarding message communication with the source system." />
         <rules value="closed" />
       </slicing>
-      <comment value="PCH project in Norway uses the contact information, either Phone number or URL for contacting support regarding technical issues regarding message communication with the source system." />
+      <comment value="VKP project in Norway uses the contact information, either Phone number or URL for contacting support regarding technical issues regarding message communication with the source system." />
     </element>
     <element id="MessageHeader.source.contact:phone">
       <path value="MessageHeader.source.contact" />
       <sliceName value="phone" />
+      <short value="Phone number human contact for problems" />
+      <definition value="Phone numberto use to resolve issues with message communications." />
     </element>
     <element id="MessageHeader.source.contact:phone.system">
       <path value="MessageHeader.source.contact.system" />
@@ -5816,6 +5821,8 @@
     <element id="MessageHeader.source.contact:videoStreamUrl">
       <path value="MessageHeader.source.contact" />
       <sliceName value="videoStreamUrl" />
+      <short value="Video Stream human contact for problems" />
+      <definition value="URL endpoint for video call to use to resolve issues with message communications." />
     </element>
     <element id="MessageHeader.source.contact:videoStreamUrl.system">
       <path value="MessageHeader.source.contact.system" />
@@ -5825,6 +5832,16 @@
       <path value="MessageHeader.source.endpoint" />
       <definition value="Identifies the routing target to send acknowledgements to.&#xD;&#xA;&#xD;&#xA;VKP Norway identifies the endpoint identifier for the actual source application of the message. This logical identifier MUST be a Norwegian HER-id and taken from the NHN Address Register. In most cases this is the same HER-id used in sender.identfier.&#xD;&#xA;&#xD;&#xA;Example: &#xD;&#xA;~~~json&#xD;&#xA;&quot;source&quot;:{&#xD;&#xA;   &quot;endpoint&quot;:&quot;http://ehelse.no/fhir/NamingSystem/HER:95341&quot;&#xD;&#xA;}&#xD;&#xA;~~~" />
       <mustSupport value="true" />
+    </element>
+    <element id="MessageHeader.responsible">
+      <path value="MessageHeader.responsible" />
+      <definition value="VKP Norway do not use this information&#xD;&#xA;&#xD;&#xA;The person or organization that accepts overall responsibility for the contents of the message. The implication is that the message event happened under the policies of the responsible party." />
+      <mustSupport value="false" />
+    </element>
+    <element id="MessageHeader.reason">
+      <path value="MessageHeader.reason" />
+      <definition value="VKP Norway do not use this information&#xD;&#xA;&#xD;&#xA;Coded indication of the cause for the event - indicates  a reason for the occurrence of the event that is a focus of this message." />
+      <mustSupport value="false" />
     </element>
     <element id="MessageHeader.focus.reference">
       <path value="MessageHeader.focus.reference" />
