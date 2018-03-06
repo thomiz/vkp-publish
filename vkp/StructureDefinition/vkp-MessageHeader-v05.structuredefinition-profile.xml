@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="vkp-MessageHeader-v05" />
   <meta>
-    <lastUpdated value="2018-03-06T10:08:06.581+01:00" />
+    <lastUpdated value="2018-03-06T11:34:05.071+01:00" />
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/vkp-MessageHeader-v05" />
   <version value="0.5" />
@@ -380,7 +380,7 @@
     <element id="MessageHeader.event">
       <path value="MessageHeader.event" />
       <short value="Code for the event this message represents" />
-      <definition value="Code that identifies the event this message represents.&#xD;&#xA;&#xD;&#xA;VKP-norway uses the vkp-message-event ValueSet" />
+      <definition value="Code that identifies the event this message represents.&#xD;&#xA;&#xD;&#xA;VKP-norway uses the vkp-message-event ValueSet&#xD;&#xA;" />
       <comment value="Codes may be defined very casually in enumerations or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information." />
       <requirements value="Drives the behavior associated with this message." />
       <min value="1" />
@@ -525,7 +525,7 @@
     <element id="MessageHeader.event.system">
       <path value="MessageHeader.event.system" />
       <short value="Identity of the terminology system" />
-      <definition value="VKP-norway uses: http://ehelse.no/fhir/CodeSystem/vkp-message-event-v05&#xD;&#xA;&#xD;&#xA;The identification of the code system that defines the meaning of the symbol in the code." />
+      <definition value="VKP-norway uses: http://ehelse.no/fhir/CodeSystem/vkp-message-event-v06&#xD;&#xA;&#xD;&#xA;The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
       <min value="0" />
@@ -5679,7 +5679,7 @@
   <differential>
     <element id="MessageHeader.event">
       <path value="MessageHeader.event" />
-      <definition value="Code that identifies the event this message represents.&#xD;&#xA;&#xD;&#xA;VKP-norway uses the vkp-message-event ValueSet" />
+      <definition value="Code that identifies the event this message represents.&#xD;&#xA;&#xD;&#xA;VKP-norway uses the vkp-message-event ValueSet&#xD;&#xA;" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="MessageEvent" />
@@ -5696,7 +5696,7 @@
     </element>
     <element id="MessageHeader.event.system">
       <path value="MessageHeader.event.system" />
-      <definition value="VKP-norway uses: http://ehelse.no/fhir/CodeSystem/vkp-message-event-v05&#xD;&#xA;&#xD;&#xA;The identification of the code system that defines the meaning of the symbol in the code." />
+      <definition value="VKP-norway uses: http://ehelse.no/fhir/CodeSystem/vkp-message-event-v06&#xD;&#xA;&#xD;&#xA;The identification of the code system that defines the meaning of the symbol in the code." />
       <mustSupport value="true" />
     </element>
     <element id="MessageHeader.event.version">

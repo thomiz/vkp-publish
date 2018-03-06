@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="no-middlename" />
   <meta>
@@ -10,7 +10,7 @@
   <status value="draft" />
   <date value="2018-01-30T18:34:35.975+01:00" />
   <publisher value="Direktoratet for e-helse" />
-  <description value="Adds concept of middle name into HumanName" />
+  <description value="Adds concept of middle name to HumanName" />
   <purpose value="Specific usage of middle name as a specific part of official name standard where name order is important" />
   <fhirVersion value="3.0.1" />
   <kind value="primitive-type" />
