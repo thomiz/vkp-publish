@@ -1,8 +1,11 @@
+
 # Område for utvikling FHIR-komponenter:
 - Profiler av resources
 - Extensions
 - Eksempler
 - Implementasjonsguider med metafiler
+
+***Husk å sjekke [wiki'en](https://git.sarepta.ehelse.no/utvikling/FHIR/wikis/home) for mere informasjon om tilgang og bruk***
 
 ## Forslag til Workflow:
 **Feature branch workflow:**
@@ -38,6 +41,5 @@ http://ehelse.no/fhir/StructureDefinition/vkp-Flag-v05
 
 NB! mye taler for å utelate versjonsnummer i navn og URL og heller markere en full versjon med Tags i Git-repo og pakke den i en .zip fil
 
-Husk å sjekke [wiki'en](https://git.sarepta.ehelse.no/utvikling/FHIR/wikis/home)
 
 Thomas og Espen
