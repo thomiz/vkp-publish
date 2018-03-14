@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="vkp-MessageHeader-v05" />
   <meta>
-    <lastUpdated value="2018-03-06T18:48:16.227+01:00" />
+    <lastUpdated value="2018-03-08T13:19:09.633+01:00" />
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/vkp-MessageHeader-v05" />
   <version value="0.5" />
@@ -117,7 +117,11 @@
     </element>
     <element id="MessageHeader.timestamp">
       <path value="MessageHeader.timestamp" />
-      <definition value="The time that the message was sent.&#xD;&#xA;&#xD;&#xA;Example: &#xD;&#xA;~~~&#xD;&#xA;&lt;timestamp value=&quot;2012-01-04T09:10:14+00:00&quot; /&gt;&#xD;&#xA;~~~" />
+      <definition value="The time that the message was sent.&#xD;&#xA;&#xD;&#xA;Example code: &#xD;&#xA;~~~&#xD;&#xA;&lt;timestamp value=&quot;2012-01-04T09:10:14+00:00&quot; /&gt;&#xD;&#xA;~~~" />
+      <example>
+        <label value="example timestamp" />
+        <valueInstant value="2012-01-04T09:10:14+00:00" />
+      </example>
       <mustSupport value="true" />
     </element>
     <element id="MessageHeader.enterer">
