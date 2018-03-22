@@ -1,6 +1,6 @@
 # Norway
 
-Dette prosjektet skal utvikle norske grunnprofiler. 
+Dette prosjektet skal utvikle norske basisprofiler. 
 
 Kontaktperson: 
 
