@@ -1,0 +1,18 @@
+﻿<Condition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
+	<category>
+		<coding> <!-- Diagnosis based on an encounter -->
+            <system value="http://hl7.org/fhir/ValueSet/condition-category" />
+            <code value="encounter-diagnosis"/>
+          </coding>
+	</category>
+	<code> <!-- The actual diagnosis code -->
+		
+	</code>
+	<subject>
+		<identifier>
+			<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+		<value value="05073500186"/>
+		</identifier>
+		<display value="Ærlend Sørgård"/>
+	</subject>
+</Condition>
