@@ -1,4 +1,4 @@
-﻿<Condition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
+<Condition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
 	<category>
 		<coding> <!-- Diagnosis based on an encounter -->
             <system value="http://hl7.org/fhir/ValueSet/condition-category" />
@@ -6,7 +6,12 @@
           </coding>
 	</category>
 	<code> <!-- The actual diagnosis code -->
-		
+		<coding>
+		 <system value="http://snomed.info/sct"/> 
+		  <code value="39065001"/> 
+		  <display value="Burn of ear"/> 
+		</coding> 
+		<text value="Burnt Ear"/> 
 	</code>
 	<subject>
 		<identifier>
