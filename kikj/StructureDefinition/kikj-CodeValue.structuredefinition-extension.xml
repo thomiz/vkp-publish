@@ -2,7 +2,7 @@
   <meta>
     <lastUpdated value="2018-01-26T20:33:53.341+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CodeValue" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/kikj-CodeValue" />
   <version value="0.9" />
   <name value="kikj-CodeValue" />
   <status value="draft" />
@@ -146,7 +146,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CodeValue" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/kikj-CodeValue" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -668,7 +668,7 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CodeValue" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/kikj-CodeValue" />
     </element>
     <element id="Extension.value[x]:valueCodeableConcept">
       <path value="Extension.valueCodeableConcept" />

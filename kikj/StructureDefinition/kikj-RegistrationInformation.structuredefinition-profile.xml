@@ -2,7 +2,7 @@
   <meta>
     <lastUpdated value="2018-01-30T19:03:27.123+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-RegistrationInformation" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/kikj-RegistrationInformation" />
   <version value="0.9" />
   <name value="kikj-RegistrationInformation" />
   <status value="draft" />
@@ -7810,7 +7810,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-RegisteredBy" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/kikj-RegisteredBy" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -16258,7 +16258,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-RegistrationOrganization" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/kikj-RegistrationOrganization" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -16793,7 +16793,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-RegisteredBy" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/kikj-RegisteredBy" />
       </type>
     </element>
     <element id="Encounter.participant.individual.id">
@@ -16867,7 +16867,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-RegistrationOrganization" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/kikj-RegistrationOrganization" />
       </type>
     </element>
     <element id="Encounter.serviceProvider.id">

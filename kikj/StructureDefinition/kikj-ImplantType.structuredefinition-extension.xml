@@ -1,17 +1,18 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2018-01-26T20:09:58.607+01:00" />
+    <lastUpdated value="2018-03-08T09:43:04.444+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-Registration" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/kikj-ImplantType" />
   <version value="0.9" />
-  <name value="kikj-Registration" />
+  <name value="kikj-ImplantType" />
   <status value="draft" />
-  <date value="2017-11-23T17:27:16.191+01:00" />
+  <date value="2017-09-20T20:44:29.062+02:00" />
+  <description value="Does only contain the value &quot;Implantat&quot;" />
   <fhirVersion value="3.0.1" />
-  <kind value="complex-type" />
+  <kind value="primitive-type" />
   <abstract value="false" />
   <contextType value="resource" />
-  <context value="Basic" />
+  <context value="Device" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
@@ -20,8 +21,8 @@
       <path value="Extension" />
       <short value="Optional Extensions Element" />
       <definition value="Optional Extension Element - found in all resources." />
-      <min value="1" />
-      <max value="1" />
+      <min value="0" />
+      <max value="*" />
       <base>
         <path value="Element" />
         <min value="0" />
@@ -145,7 +146,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-Registration" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/kikj-ImplantType" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -163,9 +164,9 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.valueReference:valueReference">
-      <path value="Extension.valueReference" />
-      <sliceName value="valueReference" />
+    <element id="Extension.valueString:valueString">
+      <path value="Extension.valueString" />
+      <sliceName value="valueString" />
       <short value="Value of extension" />
       <definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." />
       <comment value="A stream of bytes, base64 encoded" />
@@ -177,10 +178,10 @@
         <max value="1" />
       </base>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-RegistrationInformation" />
-        <aggregation value="contained" />
+        <code value="string" />
       </type>
+      <defaultValueString value="Implantat" />
+      <fixedString value="Implantat" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -200,23 +201,18 @@
     </element>
   </snapshot>
   <differential>
-    <element id="Extension">
-      <path value="Extension" />
-      <min value="1" />
-      <max value="1" />
-    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-Registration" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/kikj-ImplantType" />
     </element>
-    <element id="Extension.valueReference:valueReference">
-      <path value="Extension.valueReference" />
-      <sliceName value="valueReference" />
+    <element id="Extension.valueString:valueString">
+      <path value="Extension.valueString" />
+      <sliceName value="valueString" />
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-RegistrationInformation" />
-        <aggregation value="contained" />
+        <code value="string" />
       </type>
+      <defaultValueString value="Implantat" />
+      <fixedString value="Implantat" />
     </element>
   </differential>
 </StructureDefinition>

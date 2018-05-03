@@ -3,7 +3,7 @@
   <meta>
     <lastUpdated value="2018-03-09T09:14:26.794+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/ki/STU3/CodeSystem/kikj-typeCriticalInfoVerifiedNoKnown" />
+  <url value="http://ehelse.no/fhir/CodeSystem/kikj-typeCriticalInfoVerifiedNoKnown" />
   <version value="1.0" />
   <name value="kikj-typeKritiskInfoVerifiedNoKnown" />
   <status value="draft" />

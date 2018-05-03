@@ -2,7 +2,7 @@
   <meta>
     <lastUpdated value="2018-03-08T11:21:17.354+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-RestrictionOfLifeProlongingTreatment" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/kikj-RestrictionOfLifeProlongingTreatment" />
   <version value="0.9" />
   <name value="kikj-RestrictionOfLifeProlongingTreatment" />
   <status value="draft" />
@@ -345,7 +345,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-TextField" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-TextField" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -389,7 +389,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CommonBaseType" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-CommonBaseType" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -7934,7 +7934,7 @@
       <sliceName value="note" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-TextField" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-TextField" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -7945,7 +7945,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CommonBaseType" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-CommonBaseType" />
       </type>
       <mustSupport value="true" />
     </element>

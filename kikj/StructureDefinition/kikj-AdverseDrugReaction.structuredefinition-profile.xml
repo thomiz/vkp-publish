@@ -2,7 +2,7 @@
   <meta>
     <lastUpdated value="2018-03-04T10:44:15.833+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-AdverseDrugReaction" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/kikj-AdverseDrugReaction" />
   <version value="0.9" />
   <name value="kikj-AdverseDrugReaction" />
   <status value="draft" />
@@ -356,7 +356,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CommonBaseType" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-CommonBaseType" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -400,7 +400,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-SourceOfInformation" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-SourceOfInformation" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1715,7 +1715,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CodeValue" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-CodeValue" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1759,7 +1759,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CodeValue" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-CodeValue" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1979,7 +1979,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-ActiveIngredient" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-ActiveIngredient" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -2022,7 +2022,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-InactiveIngredient" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-InactiveIngredient" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -2065,7 +2065,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-MedicineBrandedProduct" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-MedicineBrandedProduct" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -3233,7 +3233,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CommonBaseType" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-CommonBaseType" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -3242,7 +3242,7 @@
       <sliceName value="sourceOfInformation" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-SourceOfInformation" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-SourceOfInformation" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -3342,7 +3342,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CodeValue" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-CodeValue" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -3354,7 +3354,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CodeValue" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-CodeValue" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -3381,7 +3381,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-ActiveIngredient" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-ActiveIngredient" />
       </type>
     </element>
     <element id="AllergyIntolerance.reaction.substance.extension:inactiveIngredient">
@@ -3393,7 +3393,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-InactiveIngredient" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-InactiveIngredient" />
       </type>
     </element>
     <element id="AllergyIntolerance.reaction.substance.extension:medicineBrandedProduct">
@@ -3405,7 +3405,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-MedicineBrandedProduct" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-MedicineBrandedProduct" />
       </type>
     </element>
     <element id="AllergyIntolerance.reaction.substance.coding">
