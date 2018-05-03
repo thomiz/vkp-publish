@@ -2,7 +2,7 @@
   <meta>
     <lastUpdated value="2018-02-20T20:21:57.567+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CriticalInformation" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/kikj-CriticalInformation" />
   <name value="kikj-CriticalInformation" />
   <status value="draft" />
   <date value="2018-01-12T09:21:18.059+01:00" />
@@ -1976,47 +1976,47 @@
       </base>
       <type>
         <code value="AllergyIntolerance" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-AdverseDrugReaction" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-AdverseDrugReaction" />
       </type>
       <type>
         <code value="AllergyIntolerance" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-OtherAdverseReaction" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-OtherAdverseReaction" />
       </type>
       <type>
         <code value="Condition" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-IntubationProblem" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-IntubationProblem" />
       </type>
       <type>
         <code value="Condition" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-OtherAnaestheticProblem" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-OtherAnaestheticProblem" />
       </type>
       <type>
         <code value="Condition" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-MedicalConditionAlert" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-MedicalConditionAlert" />
       </type>
       <type>
         <code value="Procedure" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-Treatment" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-Treatment" />
       </type>
       <type>
         <code value="Device" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-Implant" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-Implant" />
       </type>
       <type>
         <code value="Consent" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-RestrictionOfLifeProlongingTreatment" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-RestrictionOfLifeProlongingTreatment" />
       </type>
       <type>
         <code value="Contract" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-AdvanceDirective" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-AdvanceDirective" />
       </type>
       <type>
         <code value="Condition" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-InfectiousDisease" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-InfectiousDisease" />
       </type>
       <type>
         <code value="Basic" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-VerifiedNoKnown" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-VerifiedNoKnown" />
       </type>
       <constraint>
         <key value="dom-2" />
@@ -3866,47 +3866,47 @@
       <short value="All sorts of critical information are linked in this bundle" />
       <type>
         <code value="AllergyIntolerance" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-AdverseDrugReaction" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-AdverseDrugReaction" />
       </type>
       <type>
         <code value="AllergyIntolerance" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-OtherAdverseReaction" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-OtherAdverseReaction" />
       </type>
       <type>
         <code value="Condition" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-IntubationProblem" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-IntubationProblem" />
       </type>
       <type>
         <code value="Condition" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-OtherAnaestheticProblem" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-OtherAnaestheticProblem" />
       </type>
       <type>
         <code value="Condition" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-MedicalConditionAlert" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-MedicalConditionAlert" />
       </type>
       <type>
         <code value="Procedure" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-Treatment" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-Treatment" />
       </type>
       <type>
         <code value="Device" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-Implant" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-Implant" />
       </type>
       <type>
         <code value="Consent" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-RestrictionOfLifeProlongingTreatment" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-RestrictionOfLifeProlongingTreatment" />
       </type>
       <type>
         <code value="Contract" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-AdvanceDirective" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-AdvanceDirective" />
       </type>
       <type>
         <code value="Condition" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-InfectiousDisease" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-InfectiousDisease" />
       </type>
       <type>
         <code value="Basic" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-VerifiedNoKnown" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-VerifiedNoKnown" />
       </type>
     </element>
   </differential>

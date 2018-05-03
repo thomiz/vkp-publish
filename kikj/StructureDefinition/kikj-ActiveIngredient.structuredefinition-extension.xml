@@ -2,7 +2,7 @@
   <meta>
     <lastUpdated value="2018-01-26T20:33:10.685+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-ActiveIngredient" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/kikj-ActiveIngredient" />
   <version value="0.9" />
   <name value="kikj-ActiveIngredient" />
   <status value="draft" />
@@ -520,7 +520,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-ActiveIngredient" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/kikj-ActiveIngredient" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -731,7 +731,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-ActiveIngredient" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/kikj-ActiveIngredient" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

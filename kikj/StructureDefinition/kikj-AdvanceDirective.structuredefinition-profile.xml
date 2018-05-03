@@ -2,7 +2,7 @@
   <meta>
     <lastUpdated value="2018-02-20T21:00:57.327+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-AdvanceDirective" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/kikj-AdvanceDirective" />
   <version value="0.9" />
   <name value="kikj-AdvanceDirective" />
   <status value="draft" />
@@ -341,7 +341,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CommonBaseType" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-CommonBaseType" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -19903,7 +19903,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CommonBaseType" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-CommonBaseType" />
       </type>
       <mustSupport value="true" />
     </element>

@@ -2,7 +2,7 @@
   <meta>
     <lastUpdated value="2018-01-30T21:25:55.048+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-RegistrationOrganization" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/kikj-RegistrationOrganization" />
   <version value="0.9" />
   <name value="kikj-RegistrationOrganization" />
   <status value="draft" />

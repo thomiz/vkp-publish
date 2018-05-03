@@ -2,7 +2,7 @@
   <meta>
     <lastUpdated value="2018-03-04T12:25:42.112+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-TextField" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/kikj-TextField" />
   <version value="0.9" />
   <name value="kikj-TextField" />
   <status value="draft" />
@@ -148,7 +148,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-TextField" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/kikj-TextField" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -417,7 +417,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-TextField" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/kikj-TextField" />
     </element>
     <element id="Extension.valueAnnotation:valueAnnotation">
       <path value="Extension.valueAnnotation" />

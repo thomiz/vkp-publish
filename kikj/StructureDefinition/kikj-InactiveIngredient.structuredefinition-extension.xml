@@ -2,7 +2,7 @@
   <meta>
     <lastUpdated value="2018-01-26T20:35:01.152+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-InactiveIngredient" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/kikj-InactiveIngredient" />
   <version value="0.9" />
   <name value="kikj-InactiveIngredient" />
   <status value="draft" />
@@ -64,7 +64,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-InactiveIngredient" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/kikj-InactiveIngredient" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

@@ -2,7 +2,7 @@
   <meta>
     <lastUpdated value="2018-03-04T12:39:56.015+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CommonBaseType" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/kikj-CommonBaseType" />
   <name value="kikj-CommonBaseType" />
   <status value="draft" />
   <date value="2017-11-10T10:30:43.419+01:00" />
@@ -1332,7 +1332,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-RegistrationInformation" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-RegistrationInformation" />
         <aggregation value="contained" />
       </type>
       <condition value="ele-1" />
@@ -1368,7 +1368,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CommonBaseType" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/kikj-CommonBaseType" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1654,13 +1654,13 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-RegistrationInformation" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-RegistrationInformation" />
         <aggregation value="contained" />
       </type>
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CommonBaseType" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/kikj-CommonBaseType" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

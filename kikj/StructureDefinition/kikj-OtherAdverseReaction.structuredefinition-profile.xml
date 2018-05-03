@@ -2,7 +2,7 @@
   <meta>
     <lastUpdated value="2018-03-04T11:05:36.147+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-OtherAdverseReaction" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/kikj-OtherAdverseReaction" />
   <version value="0.9" />
   <name value="kikj-OtherAdverseReaction" />
   <status value="draft" />
@@ -359,7 +359,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CommonBaseType" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-CommonBaseType" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -403,7 +403,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-SourceOfInformation" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-SourceOfInformation" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1506,7 +1506,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CodeValue" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-CodeValue" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1550,7 +1550,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CodeValue" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-CodeValue" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -3106,7 +3106,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CommonBaseType" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-CommonBaseType" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -3115,7 +3115,7 @@
       <sliceName value="sourceOfInformation" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-SourceOfInformation" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-SourceOfInformation" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -3216,7 +3216,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CodeValue" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-CodeValue" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -3227,7 +3227,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/ki/STU3/StructureDefinition/kikj-CodeValue" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-CodeValue" />
       </type>
       <mustSupport value="true" />
     </element>
