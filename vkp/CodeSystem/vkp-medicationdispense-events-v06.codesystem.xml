@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<CodeSystem xmlns="http://hl7.org/fhir"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
+<CodeSystem xmlns="http://hl7.org/fhir">
   <id value="vkp-medicationdispense-events-v05" />
   <meta>
     <lastUpdated value="2017-09-12T15:00:50.532+02:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v05" />
-  <version value="0.5" />
+  <url value="http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v06" />
+  <version value="0.6" />
   <name value="vkp-medicationdispense-events" />
   <status value="draft" />
   <publisher value="Direktoratet for e-helse" />
   <content value="complete" />
+  <concept>
+	  <code value="0"/>
+	  <display value="medisin_melding_test"/>
+	  <definition value="TEST: Journalføring av medisindispenserhendelser"/>
+  </concept>
   <concept>
     <code value="1" />
     <display value="medisin_utlevert" />
