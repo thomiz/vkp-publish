@@ -1,0 +1,151 @@
+{
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "resource": {
+        "sender": {
+          "identifier": {
+            "system": "http://ehelse.no/fhir/identifiertypes/HERID",
+            "value": "12345"
+          },
+          "display": "Dignio Prevent Medisineringsstøtte"
+        },
+        "resourceType": "MessageHeader",
+        "timestamp": "2018-05-09T09:45:56Z",
+        "focus": [
+          {
+            "display": "MedicationDispense",
+            "reference": "urn:uuid:d339118c-a9f6-577d-9c25-7ca281cde077"
+          },
+          {
+            "display": "Composition",
+            "reference": "urn:uuid:c34df624-72fc-5c2a-86de-e34cedd3aee6"
+          }
+        ],
+        "event": {
+          "code": "MedicationDispense",
+          "system": "http://ehelse.no/fhir/ValueSet/vkp-message-event-v05"
+        },
+        "source": {
+          "endpoint": "http://ehelse.no/fhir/identifiertypes/HERID:12345"
+        },
+        "receiver": {
+          "identifier": {
+            "system": "http://ehelse.no/fhir/identifiertypes/HERID",
+            "value": "95937"
+          },
+          "display": "Sykepleietjeneste, pleie- og omsorg"
+        },
+        "id": "d7e107dd-17fd-51ff-a15e-90fee4fca611"
+      },
+      "fullUrl": "urn:uuid:d7e107dd-17fd-51ff-a15e-90fee4fca611"
+    },
+    {
+      "resource": {
+        "category": {
+          "coding": [
+            {
+              "code": "0",
+              "display": "medisin_melding_test",
+              "system": "http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v06"
+            }
+          ]
+        },
+        "status": "completed",
+        "performer": [
+          {
+            "actor": {
+              "identifier": {
+                "system": "https://fhir.dignio.com/prevent-codes/IMEI",
+                "value": "012497009024120"
+              },
+              "display": "Medido multidosedispenser"
+            }
+          }
+        ],
+        "resourceType": "MedicationDispense",
+        "meta": {
+          "profile": [
+            "http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v06"
+          ]
+        },
+        "medicationCodeableConcept": {
+          "text": "Ukjent medisin"
+        },
+        "identifier": [
+          {
+            "system": "https://fhir.dignio.no/prevent-codes/event-id",
+            "value": "35223"
+          }
+        ],
+        "id": "d339118c-a9f6-577d-9c25-7ca281cde077",
+        "subject": {
+          "identifier": {
+            "system": "http://ehelse.no/fhir/identifiertypes/FNR",
+            "value": "12121244444"
+          },
+          "display": "Kaller Krank"
+        }
+      },
+      "fullUrl": "urn:uuid:d339118c-a9f6-577d-9c25-7ca281cde077"
+    },
+    {
+      "resource": {
+        "status": "final",
+        "author": [
+          {
+            "identifier": {
+              "system": "http://ehelse.no/fhir/identifiertypes/FNR",
+              "value": "98989898989"
+            },
+            "display": "Dagny Meltvik"
+          }
+        ],
+        "resourceType": "Composition",
+        "section": [
+          {
+            "entry": [
+              {
+                "display": "MedicationDispense",
+                "reference": "urn:uuid:d339118c-a9f6-577d-9c25-7ca281cde077"
+              }
+            ],
+            "title": "Response summary",
+            "text": {
+              "status": "additional",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\nForbindelse er opprettet fra Dignio Prevent for overføring til journal.\n</div>"
+            }
+          },
+          {
+            "text": {
+              "status": "additional",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dagny Meltvik (dagnystaging)</div>"
+            },
+            "title": "Signature"
+          }
+        ],
+        "title": "Journalnotat for medisinutleveringen",
+        "date": "2018-05-09T09:45:55Z",
+        "type": {
+          "coding": [
+            {
+              "code": "11488-4",
+              "display": "Consult note"
+            }
+          ]
+        },
+        "id": "c34df624-72fc-5c2a-86de-e34cedd3aee6",
+        "subject": {
+          "identifier": {
+            "system": "http://ehelse.no/fhir/identifiertypes/FNR",
+            "value": "12121244444"
+          },
+          "display": "Kaller Krank"
+        }
+      },
+      "fullUrl": "urn:uuid:c34df624-72fc-5c2a-86de-e34cedd3aee6"
+    }
+  ],
+  "type": "message",
+  "id": "f31c009b-db38-5937-af61-746ea10606f4"
+}
