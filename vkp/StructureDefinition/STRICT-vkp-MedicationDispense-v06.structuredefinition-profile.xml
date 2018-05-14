@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="STRICT-vkp-MedicationDispense-v05" />
+  <id value="STRICT-vkp-MedicationDispense-v06" />
   <meta>
     <lastUpdated value="2017-11-17T13:53:25.522+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/StructureDefinition/STRICT-vkp-MedicationDispense-v05" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/STRICT-vkp-MedicationDispense-v06" />
   <name value="STRICT-vkp-MedicationDispense" />
   <status value="draft" />
   <date value="2017-10-31T13:47:23.347+01:00" />

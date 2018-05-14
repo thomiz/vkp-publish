@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-  <id value="vkp-medicationdispense-events-v05" />
+  <id value="vkp-medicationdispense-events-v06" />
   <meta>
     <lastUpdated value="2017-09-12T15:00:50.532+02:00" />
   </meta>
