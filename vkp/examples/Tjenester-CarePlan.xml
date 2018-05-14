@@ -1,0 +1,30 @@
+﻿<CarePlan xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
+	<identifier>
+		<system value="urn:ietf:rfc:3986" />
+		<value value="urn:uuid:97aa40ab-732a-4c14-9915-a5bc595b9fa3"/> 
+	</identifier>
+	<status value="active"/> <!-- draft | active | suspended | completed | entered-in-error | cancelled | unknown -->
+	<intent value="order"/> <!-- proposal | plan | order | option -->
+	<!-- The code plan is used for defining the "tiltaksplan" that the user receives. 
+	The Code order is used for "tjenester" that the user has formal decision to receive -->
+	<title value="Vedtak tjeneste om hjemmehjelp"/>
+	<description value="Det er vedtatt at Ærlend Sørgård skal motta tjeneste om hjemmehjelp. To ganger per dag, til hjelp med påkledning, avkledning, bading og vasking."/> 
+	<!-- The actual decision of "tjenester" that the patient should receive -->
+	<subject> <!-- Who care plan is for, should be an uniqe identifier of the patient -->
+		<identifier>
+			<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+			<value value="05073500186"/>
+		</identifier>
+		<display value="Ærlend Sørgård"/>
+	</subject>
+	<period> <!-- Period when the plan is active, missing end date means the plan is ongoing -->
+		<start value="2018-03-31"/>
+	</period>
+	<author> <!-- Defines who is responsible for the content of the plan, should be an organization/tjeneste -->
+		<identifier>
+			<system value="http://ehelse.no/fhir/identifiertypes/HERID"/>
+			<value value="86145"/>
+		</identifier>
+		<display value="Pleie- og omsorgstjeneste"/> <!-- Pleie og omsorgstjeneste i Bærum kommune -->
+	</author>
+</CarePlan>

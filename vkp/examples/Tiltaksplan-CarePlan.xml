@@ -1,0 +1,82 @@
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
+<id value="15730f7c-d693-41b9-a969-7450eb22c219"/>
+	<type value="collection"/>
+	<entry>
+		<fullUrl value="urn:uuid:960432b3-bb0d-4053-8cbf-120cd17b62d6"/>
+		<resource>
+			<CarePlan>
+				<identifier>
+				<system value="urn:ietf:rfc:3986" />
+				<value value="urn:uuid:a76d9bbf-f293-4fb7-ad4c-2851cac77162" />
+			</identifier>
+			<basedOn> <!-- This CarePlan describes a "Tiltaksplan" that fullfills the "vedtak om tjeneste" described in the CarePlan order -->
+				<identifier>
+					<system value="urn:ietf:rfc:3986"/>
+					<value value="urn:uuid:97aa40ab-732a-4c14-9915-a5bc595b9fa3"/>
+				</identifier>
+			</basedOn>
+			<status value="active"/> <!-- draft | active | suspended | completed | entered-in-error | cancelled | unknown -->
+			<intent value="plan"/> <!-- proposal | plan | order | option -->
+			<!-- The code plan is used for defining the "tiltaksplan" that the user receives. 
+			The Code order is used for "tjenester" that the user has formal decision to receive -->
+			<title value="Tiltaksplan for Ærlend Sørgård"/>
+			<description value="Beskrivelse av planen"/> <!-- The actual "tiltaksplan" -->
+			<subject> <!-- Who care plan is for, should be an uniqe identifier of the patient -->
+				<identifier>
+					<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+					<value value="05073500186"/>
+				</identifier>
+				<display value="Ærlend Sørgård"/>
+			</subject>
+			<period> <!-- Period when the plan is active, missing end date means the plan is ongoing -->
+				<start value="2018-04-24T10:00:00.936+02:00"/>
+			</period>
+			<author> <!-- Defines who is responsible for the content of the plan, should be an organization/tjeneste -->
+				<identifier>
+					<system value="http://ehelse.no/fhir/identifiertypes/HERID"/>
+					<value value="102287"/>
+				</identifier>
+				<display value="Sykepleietjeneste, pleie- og omsorg"/>
+			</author>
+			<activity> <!-- Aktivitetene i Tiltaksplanen, ved flere aktiviteter legges det til flere Tasks i bundle og flere activiity med referanse i CarePlan -->
+				<reference> <!-- Logisk referanse til aktiviteten, Task, Tasken er også lagt ved i Bundle -->
+					<identifier>
+						<system value="urn:ietf:rfc:3986"/>
+						<value value="1d0cb1cd-4338-4976-8f48-2433d52d5c2d"/>
+					</identifier>
+				</reference>
+			</activity>
+		</CarePlan>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Task>
+				<identifier> <!-- Identifiserer oppgaven -->
+					<system value="urn:ietf:rfc:3986"/>
+					<value value="1d0cb1cd-4338-4976-8f48-2433d52d5c2d"/>
+				</identifier>
+				<status value="ready"/> <!-- Status på oppgaven skal alltid være ready for oppgaver i Tiltaksplanen -->
+				<intent value="plan"/> <!-- Intensjonen med oppgaven, skal alltid være "plan" for oppgaver i Tiltaksplanen -->
+				<code> <!-- Kode som identifiserer aktivitetstypen/tiltakstypen (her må vi opprette ett kodeverk) -->
+					<coding>
+						<system value="task-kode-kodeverk"/>
+						<code value="task-kode"/>
+					</coding>
+				</code>
+				<description value="Aktvitetsnavnet"/> <!-- Navnet på aktiviteten, her kan det også fylles ut beskrivelse -->
+				<executionPeriod> <!-- Perioden planen skal utføres i, kan være pågående hvis man ikke tar med sluttdato -->
+					<start value="2018-04-24T10:00:00.936+02:00"/>
+					<end value="2019-04-24T10:00:00.936+02:00"/>
+				</executionPeriod>
+				<owner> <!-- Referanse til utførereren for planen (practitioner eller organisasjon), her identifisert med fødselsnummer -->
+					<identifier>
+						<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+						<value value="04056600324"/>
+					</identifier>
+					<display value="Magnar Koman"/>
+				</owner>
+			</Task>
+		</resource>
+	</entry>
+</Bundle>

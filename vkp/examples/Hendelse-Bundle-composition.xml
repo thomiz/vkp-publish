@@ -1,4 +1,4 @@
-<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd">
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
 	<id value="605f4a17-12a4-4f75-b649-1a706c03f015"/>
 	<type value="message"/>
 	<entry>
