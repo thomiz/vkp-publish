@@ -42,7 +42,7 @@
 				<reference> <!-- Logisk referanse til aktiviteten, Task, Tasken er også lagt ved i Bundle -->
 					<identifier>
 						<system value="urn:ietf:rfc:3986"/>
-						<value value="1d0cb1cd-4338-4976-8f48-2433d52d5c2d"/>
+						<value value="urn:uuid:1d0cb1cd-4338-4976-8f48-2433d52d5c2d"/>
 					</identifier>
 				</reference>
 			</activity>
@@ -51,10 +51,10 @@
 	</entry>
 	<entry>
 		<resource>
-			<Task>
+			<Task> <!-- GeographicalLevels? -->
 				<identifier> <!-- Identifiserer oppgaven -->
 					<system value="urn:ietf:rfc:3986"/>
-					<value value="1d0cb1cd-4338-4976-8f48-2433d52d5c2d"/>
+					<value value="urn:uuid:1d0cb1cd-4338-4976-8f48-2433d52d5c2d"/>
 				</identifier>
 				<status value="ready"/> <!-- Status på oppgaven skal alltid være ready for oppgaver i Tiltaksplanen -->
 				<intent value="plan"/> <!-- Intensjonen med oppgaven, skal alltid være "plan" for oppgaver i Tiltaksplanen -->

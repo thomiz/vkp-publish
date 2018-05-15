@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
+<id value="0148af6b-4ef4-416a-aca4-dcb47fda5515"/>
+	<type value="collection"/>
+	<entry>
+		<fullUrl value="urn:uuid:54c77792-474c-407d-a18b-86a5dd8b8715"/>
+		<resource>
+			<CarePlan>
+				<identifier>
+				<system value="urn:ietf:rfc:3986" />
+				<value value="urn:uuid:20ce962f-d61f-44cf-9ddf-bf1a7a30eeac" />
+			</identifier>
+			<status value="active"/> <!-- draft | active | suspended | completed | entered-in-error | cancelled | unknown -->
+			<intent value="order"/> <!-- proposal | plan | order | option -->
+			<!-- The code plan is used for defining the "tiltaksplan" that the user receives. 
+			The Code order is used for "tjenester" that the user has formal decision to receive -->
+			<title value="Tjenesteoversikt for Ærlend Sørgård"/>
+			<description value="Beskrivelse av planen"/> <!-- The actual "Tjenesteoversikt" in human readable form -->
+			<subject> <!-- Who care Tjenesteoversikt is for, should be an uniqe identifier of the patient -->
+				<identifier>
+					<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+					<value value="05073500186"/>
+				</identifier>
+				<display value="Ærlend Sørgård"/>
+			</subject>
+			<period> <!-- Period when the tjeneste is active, missing end date means the tjeneste is ongoing -->
+				<start value="2018-04-24T10:00:00.936+02:00"/>
+			</period>
+			<author> <!-- Defines who is responsible for the content of the tjeneste, should be an organization/tjeneste -->
+				<identifier>
+					<system value="http://ehelse.no/fhir/identifiertypes/HERID"/>
+					<value value="102287"/>
+				</identifier>
+				<display value="Sykepleietjeneste, pleie- og omsorg"/>
+			</author>
+			<activity> <!-- Contents of Tjenesteoversikten. When more than one activity is added there should be more Task references and more Task resources added to the Bundle  -->
+				<reference> <!-- Logical reference to the Task, The Task is also added to the Bundle -->
+					<identifier>
+						<system value="urn:ietf:rfc:3986"/>
+						<value value="urn:uuid:13e85f77-ca7a-47a8-a724-43419ac0f136"/>
+					</identifier>
+				</reference>
+			</activity>
+		</CarePlan>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Task> <!-- GeographicalLevels? -->
+				<identifier> <!-- Uniqe identification of the Task, UUID is preferred -->
+					<system value="urn:ietf:rfc:3986"/>
+					<value value="urn:uuid:13e85f77-ca7a-47a8-a724-43419ac0f136"/>
+				</identifier>
+				<status value="requested"/> <!-- Status on the tasks in the tjenesteoversikt shoul always have status "requested" -->
+				<intent value="order"/> <!-- The intent of the task in the tjenesteoversikt should always be "order" -->
+				<code> <!-- The code that identifies the type of service (we need a CodeSystem for this) -->
+					<coding>
+						<system value="task-kode-kodeverk"/>
+						<code value="task-kode"/>
+					</coding>
+				</code>
+				<description value="Aktvitetsnavnet"/> <!-- The name of the Task -->
+				<executionPeriod> <!-- The period that the service should be performed, missing end date means that the service is ongoing indefinitely -->
+					<start value="2018-04-24T10:00:00.936+02:00"/>
+					<end value="2019-04-24T10:00:00.936+02:00"/>
+				</executionPeriod>
+				<owner> <!-- Reference to the performer of the spesific service (practitioner eller organisasjon), in this example a norwegian fødselsnummer is used -->
+					<identifier>
+						<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+						<value value="04056600324"/>
+					</identifier>
+					<display value="Magnar Koman"/>
+				</owner>
+			</Task>
+		</resource>
+	</entry>
+</Bundle>
