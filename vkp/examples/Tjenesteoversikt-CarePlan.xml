@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
-<id value="0148af6b-4ef4-416a-aca4-dcb47fda5515"/>
+<Bundle xmlns="http://hl7.org/fhir">
+<id value="3264c4f4-8250-4db7-adc3-a4dab412a3eb"/>
 	<type value="collection"/>
 	<entry>
 		<fullUrl value="urn:uuid:54c77792-474c-407d-a18b-86a5dd8b8715"/>
