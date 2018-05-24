@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CarePlan xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:uuid:20ce962f-d61f-44cf-9ddf-bf1a7a30eeac"/>
+	</identifier>
+	<status value="active"/>
+	<!-- draft | active | suspended | completed | entered-in-error | cancelled | unknown -->
+	<intent value="order"/>
+	<!-- proposal | plan | order | option -->
+	<!-- The code plan is used for defining the "tiltaksplan" that the user receives. 
+			The Code order is used for "tjenester" that the user has formal decision to receive -->
+	<title value="Tjenesteoversikt for Ærlend Sørgård"/>
+	<description value="Beskrivelse av planen"/>
+	<!-- The actual "Tjenesteoversikt" in human readable form -->
+	<subject>
+		<!-- Who care Tjenesteoversikt is for, should be an uniqe identifier of the patient -->
+		<identifier>
+			<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+			<value value="05073500186"/>
+		</identifier>
+		<display value="Ærlend Sørgård"/>
+	</subject>
+	<period>
+		<!-- Period when the tjeneste is active, missing end date means the tjeneste is ongoing -->
+		<start value="2018-04-24T10:00:00.936+02:00"/>
+	</period>
+	<author>
+		<!-- Defines who is responsible for the content of the tjeneste, should be an organization/tjeneste -->
+		<identifier>
+			<system value="http://ehelse.no/fhir/identifiertypes/HERID"/>
+			<value value="102287"/>
+		</identifier>
+		<display value="Sykepleietjeneste, pleie- og omsorg"/>
+	</author>
+	<activity>
+		<!-- Contents of Tjenesteoversikten. When more than one activity is added there should be more activity instanses added to the CarePlan  -->
+		
+		<detail>
+			<status></status>
+		</detail>
+	</activity>
+</CarePlan>

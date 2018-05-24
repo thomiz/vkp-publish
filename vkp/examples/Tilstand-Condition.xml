@@ -13,7 +13,7 @@
 		</coding> 
 		<text value="Burnt Ear"/> 
 	</code>
-	<subject>
+	<subject> <!-- Reference to the actual patient -->
 		<identifier>
 			<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
 		<value value="05073500186"/>
