@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="vkp-MedicationDispense-v06" />
+  <id value="vkp-MedicationDispense-v07" />
   <meta>
     <lastUpdated value="2018-01-23T10:23:40.585+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v06" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v07" />
   <name value="vkp-MedicationDispense" />
   <status value="draft" />
   <date value="2017-10-31T13:47:23.347+01:00" />
@@ -47,13 +47,13 @@
     <element id="MedicationDispense.category">
       <path value="MedicationDispense.category" />
       <short value="Event types when medication dispencer performs the medication dispense" />
-      <definition value="Event types when medication dispencer performs the medication dispense. Values from http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v06 is preferred&#xD;&#xA;" />
+      <definition value="Event types when medication dispencer performs the medication dispense. Values from http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v07 is required&#xD;&#xA;" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="MedicationDispenseCategory" />
         </extension>
         <strength value="required" />
-        <valueSetUri value="http://ehelse.no/fhir/ValueSet/vkp-medicationdispense-events-v06" />
+        <valueSetUri value="http://ehelse.no/fhir/ValueSet/vkp-medicationdispense-events-v07" />
       </binding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCodeableConcept">

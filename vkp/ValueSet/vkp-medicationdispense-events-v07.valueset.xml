@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="vkp-medicationdispense-events-v07" />
+    <url value="http://ehelse.no/fhir/ValueSet/vkp-medicationdispense-events-v07" />
+    <version value="0.7" />
+    <name value="vkp-medicationdispense-events-v07" />
+    <status value="draft" />
+    <experimental value="true" />
+    <publisher value="Direktoratet for e-helse" />
+    <immutable value="false" />
+    <compose>
+        <include>
+            <system value="http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v07" />
+        </include>
+    </compose>
+</ValueSet>
