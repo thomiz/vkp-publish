@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="vkp-careplan-category" />
+  <meta>
+    <lastUpdated value="2018-06-04T08:00:50.532+02:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/CodeSystem/vkp-careplan-category" />
+  <version value="0.1" />
+  <name value="vkp-careplan-category" />
+  <status value="draft" />
+  <publisher value="Direktoratet for e-helse" />
+  <content value="complete" />
+    <concept>
+    <code value="0" />
+    <display value="annen_type" />
+    <definition value="Ikke definert type plan" />
+  </concept>
+  <concept>
+	  <code value="1"/>
+	  <display value="tiltaksplan"/>
+	  <definition value="Tiltaksplan definert for brukeren"/>
+  </concept>
+  <concept>
+    <code value="2" />
+    <display value="tjenesteoversikt" />
+    <definition value="Oversikt over tjenestene brukeren er tildelt" />
+  </concept>
+  <concept>
+    <code value="3" />
+    <display value="besøksplan" />
+    <definition value="Besøksplanen definert for en bruker" />
+  </concept>
+</CodeSystem>
