@@ -13,49 +13,34 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
   <derivation value="constraint" />
   <differential>
-    <element id="CarePlan.category">
-      <path value="CarePlan.category" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="coding.code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
+    <element id="Resource.meta.tag">
+      <path value="Resource.meta.tag" />
+      <definition value="VKP-norway uses tags to distinguish different rules that applies to the different kinds of careplan:&#xD;&#xA;- tjenesteoversikt&#xD;&#xA;- tiltaksplan&#xD;&#xA;- besøksplan&#xD;&#xA;&#xD;&#xA;Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource." />
+      <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="Tags" />
+        </extension>
+        <strength value="extensible" />
+        <description value="vkp-careplan-category" />
+        <valueSetReference>
+          <reference value="http://ehelse.no/fhir/ValueSet/vkp-careplan-category" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Resource.category">
+      <path value="Resource.category" />
       <min value="1" />
       <max value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="CarePlanCategory" />
         </extension>
-        <strength value="extensible" />
+        <strength value="required" />
         <valueSetReference>
           <reference value="http://ehelse.no/fhir/ValueSet/vkp-careplan-category" />
         </valueSetReference>
       </binding>
-    </element>
-    <element id="CarePlan.category:tiltaksplan">
-      <path value="CarePlan.category" />
-      <sliceName value="tiltaksplan" />
-      <fixedCodeableConcept>
-        <coding>
-          <system value="http://ehelse.no/fhir/ValueSet/vkp-careplan-category" />
-          <code value="1" />
-          <display value="tiltaksplan" />
-        </coding>
-      </fixedCodeableConcept>
-    </element>
-    <element id="CarePlan.category:tjenesteoversikt">
-      <path value="CarePlan.category" />
-      <sliceName value="tjenesteoversikt" />
-      <max value="1" />
-      <fixedCodeableConcept>
-        <coding>
-          <system value="http://ehelse.no/fhir/ValueSet/vkp-careplan-category" />
-          <code value="2" />
-          <display value="tjenesteoversikt" />
-        </coding>
-      </fixedCodeableConcept>
     </element>
   </differential>
 </StructureDefinition>
