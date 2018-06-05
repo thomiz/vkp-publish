@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CarePlan xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:uuid:20ce962f-d61f-44cf-9ddf-bf1a7a30eeac"/>
+	</identifier>
+	<status value="active"/>
+	<!-- draft | active | suspended | completed | entered-in-error | cancelled | unknown -->
+	<intent value="order"/>
+	<!-- proposal | plan | order | option -->
+	<!-- The code plan is used for defining the "tiltaksplan" that the user receives. 
+	The Code order is used for "tjenester" that the user has formal decision to receive -->
+	<title value="Tjenesteoversikt for Ærlend Sørgård"/>
+	<description value="Beskrivelse av planen"/>
+	<!-- The actual "Tjenesteoversikt" in human readable form -->
+	<subject>
+		<!-- Who the Tjenesteoversikt is for, should be an uniqe identifier of the patient -->
+		<identifier>
+			<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+			<value value="05073500186"/>
+		</identifier>
+		<display value="Ærlend Sørgård"/>
+	</subject>
+	<period>
+		<!-- Period when the tjeneste is active, missing end date means the tjeneste is ongoing -->
+		<start value="2018-04-24T10:00:00.936+02:00"/>
+	</period>
+	<author>
+		<!-- Defines who is responsible for the content of the tjeneste, should be an organization/tjeneste -->
+		<identifier>
+			<system value="http://ehelse.no/fhir/identifiertypes/HERID"/>
+			<value value="102287"/>
+		</identifier>
+		<display value="Sykepleietjeneste, pleie- og omsorg"/>
+	</author>
+	<activity>
+		<!-- Contents of Tjenesteoversikten. When more than one activity is added there should be more activity instances added to the CarePlan  -->
+		<!-- One drawback of using the CarePlan.detail is that you don't have a proper identifier of each activity.detail--> 
+		<detail>
+			<category>
+			<!-- Tjeneste kategori (can be expanded/replaced with other CodeSystem: diet | drug | encounter | observation | procedure | supply | other -->
+				<coding>
+					<system value="http://hl7.org/fhir/care-plan-activity-category"/>
+					<code value="encounter"/>
+				</coding>
+			</category>
+			<!-- Status of the activities in the tjenesteoversikt. The status should be scheduled, in-progress or completed for "tjenester" in the "tjenesteoversikt" -->
+			<status value="in-progress"/>
+			<scheduledPeriod>  <!-- The period that the service should be performed, missing end date means that the service is ongoing indefinitely -->
+				<start value="2018-04-24T10:00:00.936+02:00"/>
+				<end value="2019-04-24T10:00:00.936+02:00"/>
+			</scheduledPeriod>
+			<performer> <!-- Reference to the performer of the specific service (practitioner or organization), in this example a norwegian fødselsnummer is used -->
+				<identifier>
+					<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+					<value value="04056600324"/>
+				</identifier>
+				<display value="Magnar Koman"/>
+			</performer>
+			<description value="Beskrivelsen av tjenesten som er tildelt"/> <!-- Human readable description of the "tjeneste" the patient is to receive -->
+		</detail>
+	</activity>
+</CarePlan>
