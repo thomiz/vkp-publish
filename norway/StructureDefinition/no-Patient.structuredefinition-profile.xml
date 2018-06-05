@@ -5,10 +5,10 @@
     <lastUpdated value="2018-03-05T14:13:31.121+01:00" />
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/no-Patient" />
-  <version value="0.1" />
+  <version value="0.2" />
   <name value="no-Patient" />
   <status value="draft" />
-  <date value="2018-03-01T12:50:19.411+01:00" />
+  <date value="2018-06-05" />
   <description value="Basisprofil for Norwegian Patient information. Defined by The Norwegian Directorate of eHealth. Should be used as a basis for further profiling in use-cases where specific identity information is needed. The basis profile is open, but derived profiles should close down the information elements according to specification relevant to the use-case." />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
@@ -105,6 +105,44 @@
         <label value="Fødselsnummer" />
         <valueString value="13057444850" />
       </example>
+    </element>
+    <element id="Patient.identifier:FHN">
+      <path value="Patient.identifier" />
+      <sliceName value="FHN" />
+      <short value="Felles hjelpenummer used for the patient" />
+      <definition value="Felles hjelpenummer for the patient. Felles hjelpenummer as one of the possible patient identification numbers. The norwegian Felles hjelpenummer shoud only be used when the Fødselsnummer og D-number is unknown." />
+      <max value="1" />
+    </element>
+    <element id="Patient.identifier:FHN.system">
+      <path value="Patient.identifier.system" />
+      <short value="Identification of the Norwegian felles hjelpenummer" />
+      <definition value="Norwegian felles hjelpenummer" />
+      <min value="1" />
+      <fixedUri value="urn:oid:2.16.578.1.12.4.1.4.3" />
+    </element>
+    <element id="Patient.identifier:FHN.value">
+      <path value="Patient.identifier.value" />
+      <short value="The actual Hjelpenummer" />
+      <definition value="The actual Norwegian Hjelpenummer" />
+      <min value="1" />
+    </element>
+    <element id="Patient.identifier:DNR">
+      <path value="Patient.identifier" />
+      <sliceName value="DNR" />
+      <max value="1" />
+    </element>
+    <element id="Patient.identifier:DNR.system">
+      <path value="Patient.identifier.system" />
+      <short value="The identification of the D-nummer" />
+      <definition value="The identification of the Norwegian D-nummer" />
+      <min value="1" />
+      <fixedUri value="urn:oid:2.16.578.1.12.4.1.4.2" />
+    </element>
+    <element id="Patient.identifier:DNR.value">
+      <path value="Patient.identifier.value" />
+      <short value="The actual D-nummer" />
+      <definition value="The actual Norwegian D-nummer" />
+      <min value="1" />
     </element>
     <element id="Patient.name.extension">
       <path value="Patient.name.extension" />
