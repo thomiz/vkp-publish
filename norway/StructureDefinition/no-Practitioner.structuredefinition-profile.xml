@@ -23,6 +23,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <definition value="An identifier that applies to this person in this role.&#xD;&#xA;&#xD;&#xA;In Norway all registered health care personnel is registered in the Helsepersonellregister (HPR) and is assigned a HPR-number that is used to identify the health care practitioner. Health care personnel not registered in HPR can use FNR for identification." />
     </element>
     <element id="Practitioner.identifier:HPR">
       <path value="Practitioner.identifier" />
@@ -89,6 +90,55 @@
         <code value="Address" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/no-Address-v05" />
       </type>
+    </element>
+    <element id="Practitioner.qualification.code">
+      <path value="Practitioner.qualification.code" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <definition value="Coded representation of the qualification of the health care practitioner. Usually contains healthPersonnellCategory according to Kategori helsepersonell (OID=9060) and approvalType according to Godkjenningstype HPR (OID=7704)" />
+    </element>
+    <element id="Practitioner.qualification.code:healthPersonnellCategory">
+      <path value="Practitioner.qualification.code" />
+      <sliceName value="healthPersonnellCategory" />
+      <short value="The health care personnel category" />
+      <definition value="Category of health care personnel authorization according to Helsepersonnelloven §48" />
+    </element>
+    <element id="Practitioner.qualification.code:healthPersonnellCategory.coding.system">
+      <path value="Practitioner.qualification.code.coding.system" />
+      <short value="Identification of the CodeSystem 9060 on Volven" />
+      <definition value="Identification of the CodeSystem Kategori helsepersonell (OID=9060) used to describe the category of authorized health care personnel" />
+      <min value="1" />
+      <fixedUri value="urn:oid:2.16.578.1.12.4.1.1.9060" />
+    </element>
+    <element id="Practitioner.qualification.code:healthPersonnellCategory.coding.code">
+      <path value="Practitioner.qualification.code.coding.code" />
+      <short value="The actual value according to 9060" />
+      <definition value="The actual value according to the CodeSystem Kategori helsepersonell (OID=9060)" />
+      <min value="1" />
+    </element>
+    <element id="Practitioner.qualification.code:approvalType">
+      <path value="Practitioner.qualification.code" />
+      <sliceName value="approvalType" />
+      <short value="The approval type of the practitioner" />
+      <definition value="The approval type of the practitioner (if applicable) according to the  CodeSystem Godkjenningstype HPR (OID=7704)" />
+    </element>
+    <element id="Practitioner.qualification.code:approvalType.coding.system">
+      <path value="Practitioner.qualification.code.coding.system" />
+      <short value="Identification of the CodeSystem 7704 on Volven" />
+      <definition value="Identification of the CodeSystem Godkjenningstype HPR (OID=7704)&#xD;&#xA;used to describe type of autohorization registered in HPR." />
+      <min value="1" />
+      <fixedUri value="urn:oid:2.16.578.1.12.4.1.1.7704" />
+    </element>
+    <element id="Practitioner.qualification.code:approvalType.coding.code">
+      <path value="Practitioner.qualification.code.coding.code" />
+      <short value="The actual value according to 7704" />
+      <definition value="The actual value according to the CodeSystem Godkjenningstype HPR (OID=7704)" />
+      <min value="1" />
     </element>
   </differential>
 </StructureDefinition>
