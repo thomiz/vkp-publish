@@ -81,6 +81,8 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <short value="Identifier for this patient" />
+      <definition value="An identifier for this patient. Should be at Fødselsnummer, Felles hjelpenummer or D-nummer." />
     </element>
     <element id="Patient.identifier:FNR">
       <path value="Patient.identifier" />
