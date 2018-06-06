@@ -2,13 +2,14 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="no-Patient" />
   <meta>
-    <lastUpdated value="2018-03-05T14:13:31.121+01:00" />
+    <versionId value="3" />
+    <lastUpdated value="2018-06-06T06:17:04.601+00:00" />
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/no-Patient" />
   <version value="0.2" />
   <name value="no-Patient" />
   <status value="draft" />
-  <date value="2018-06-05" />
+  <date value="2018-06-06T06:17:03.76Z" />
   <description value="Basisprofil for Norwegian Patient information. Defined by The Norwegian Directorate of eHealth. Should be used as a basis for further profiling in use-cases where specific identity information is needed. The basis profile is open, but derived profiles should close down the information elements according to specification relevant to the use-case." />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
@@ -129,6 +130,8 @@
     <element id="Patient.identifier:DNR">
       <path value="Patient.identifier" />
       <sliceName value="DNR" />
+      <short value="The D-nummer of the patient" />
+      <definition value="The D-nummer of the patient. (assigned by the norwegian Skatteetaten)" />
       <max value="1" />
     </element>
     <element id="Patient.identifier:DNR.system">

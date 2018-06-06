@@ -1,11 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="no-Practitioner" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2018-06-06T06:11:16.19+00:00" />
+  </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/no-Practitioner" />
   <version value="0.1" />
   <name value="no-Practitioner" />
   <status value="draft" />
-  <date value="2018-06-05" />
+  <date value="2018-06-06T06:11:15.177Z" />
   <description value="Basisprofil for Norwegian Practitioner information. Defined by The Norwegian Directorate of eHealth. Should be used as a basis for further profiling in use-cases where specific identity information is needed. The basis profile is open, but derived profiles should close down the information elements according to specification relevant to the use-case." />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
@@ -75,10 +79,6 @@
     <element id="Practitioner.name.extension:middlename">
       <path value="Practitioner.name.extension" />
       <sliceName value="middlename" />
-      <short value="Defines a middle name" />
-      <definition value="Defines a middle name as a specific extension as this is widely used in Norwegian names and the given shoul appear before any middle name." />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/no-middlename" />
