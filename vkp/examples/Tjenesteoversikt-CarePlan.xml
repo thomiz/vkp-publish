@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Bundle xmlns="http://hl7.org/fhir">
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
 <id value="3264c4f4-8250-4db7-adc3-a4dab412a3eb"/>
 	<type value="collection"/>
 	<entry>
@@ -14,6 +14,13 @@
 			<intent value="order"/> <!-- proposal | plan | order | option -->
 			<!-- The code plan is used for defining the "tiltaksplan" that the user receives. 
 			The Code order is used for "tjenester" that the user has formal decision to receive -->
+			<category>
+				<coding>
+					<system value="http://ehelse.no/fhir/ValueSet/vkp-careplan-category"/>
+					<code value="2"/>
+					<display value="tjenesteoversikt"/>
+				</coding>
+			</category>
 			<title value="Tjenesteoversikt for Ærlend Sørgård"/>
 			<description value="Beskrivelse av planen"/> <!-- The actual "Tjenesteoversikt" in human readable form -->
 			<subject> <!-- Who care Tjenesteoversikt is for, should be an uniqe identifier of the patient -->
