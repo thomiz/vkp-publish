@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2018-01-26T20:33:53.341+01:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/StructureDefinition/kikj-Certainty" />
+  <version value="0.9" />
+  <name value="kikj-Certainty" />
+  <status value="draft" />
+  <date value="2017-10-26T21:21:32.881+02:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="AllergyIntolerance.reaction" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/kikj-Certainty" />
+    </element>
+    <element id="Extension.value[x]:valueCodeableConcept">
+      <path value="Extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+    <element id="Extension.value[x]:valueCodeableConcept.coding.system">
+      <path value="Extension.valueCodeableConcept.coding.system" />
+      <fixedUri value="urn:uid:2.16.578.1.12.4.1.1.7521" />
+    </element>
+    <element id="Extension.value[x]:valueCodeableConcept.coding.version">
+      <path value="Extension.valueCodeableConcept.coding.version" />
+      <max value="0" />
+    </element>
+    <element id="Extension.value[x]:valueCodeableConcept.coding.userSelected">
+      <path value="Extension.valueCodeableConcept.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Extension.value[x]:valueCodeableConcept.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Extension.valueCodeableConcept.text" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

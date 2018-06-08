@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2018-03-08T11:21:17.354+01:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/StructureDefinition/kikj-RestrictionOfLifeProlongingTreatment" />
+  <version value="0.9" />
+  <name value="kikj-RestrictionOfLifeProlongingTreatment" />
+  <status value="draft" />
+  <date value="2017-11-01T11:45:50.861+01:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Consent" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Consent" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Consent.id">
+      <path value="Consent.id" />
+      <min value="1" />
+    </element>
+    <element id="Consent.meta.versionId">
+      <path value="Consent.meta.versionId" />
+      <min value="1" />
+    </element>
+    <element id="Consent.extension">
+      <path value="Consent.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Consent.extension:note">
+      <path value="Consent.extension" />
+      <sliceName value="note" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-Note" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Consent.extension:commonBaseType">
+      <path value="Consent.extension" />
+      <sliceName value="commonBaseType" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/kikj-CommonBaseType" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Consent.identifier">
+      <path value="Consent.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Consent.status">
+      <path value="Consent.status" />
+      <comment value="Dette elementet skal være satt til &quot;active&quot;" />
+      <fixedCode value="active" />
+    </element>
+    <element id="Consent.category">
+      <path value="Consent.category" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Consent.category.coding">
+      <path value="Consent.category.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Consent.category.coding.system">
+      <path value="Consent.category.coding.system" />
+      <type>
+        <code value="uri" />
+        <profile value="urn:uid:2.16.578.1.12.4.1.1.7651" />
+      </type>
+      <fixedUri value="urn:uid:2.16.578.1.12.4.1.1.7651" />
+    </element>
+    <element id="Consent.category.coding.code">
+      <path value="Consent.category.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Consent.category.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Consent.category.text" />
+      <max value="0" />
+      <fixedString value="Avgrensing av livsforlengende behandling" />
+    </element>
+    <element id="Consent.patient.identifier">
+      <path value="Consent.patient.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Consent.patient.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Consent.patient.display" />
+      <max value="0" />
+    </element>
+    <element id="Consent.period">
+      <path value="Consent.period" />
+      <min value="1" />
+    </element>
+    <element id="Consent.period.start">
+      <path value="Consent.period.start" />
+      <max value="0" />
+    </element>
+    <element id="Consent.period.end">
+      <path value="Consent.period.end" />
+      <short value="Når normal behandling starter på nytt." />
+      <definition value="Når normal behandling skal starte igjen." />
+      <min value="1" />
+    </element>
+    <element id="Consent.dateTime">
+      <path value="Consent.dateTime" />
+      <short value="When the information was recorded" />
+      <max value="0" />
+    </element>
+    <element id="Consent.consentingParty">
+      <path value="Consent.consentingParty" />
+      <max value="0" />
+    </element>
+    <element id="Consent.actor">
+      <path value="Consent.actor" />
+      <max value="0" />
+    </element>
+    <element id="Consent.action">
+      <path value="Consent.action" />
+      <max value="0" />
+    </element>
+    <element id="Consent.organization">
+      <path value="Consent.organization" />
+      <max value="0" />
+    </element>
+    <element id="Consent.source[x]">
+      <path value="Consent.source[x]" />
+      <max value="0" />
+    </element>
+    <element id="Consent.policy">
+      <path value="Consent.policy" />
+      <max value="0" />
+    </element>
+    <element id="Consent.policyRule">
+      <path value="Consent.policyRule" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/ConsentPolicy/opt-in" />
+    </element>
+    <element id="Consent.securityLabel">
+      <path value="Consent.securityLabel" />
+      <max value="0" />
+    </element>
+    <element id="Consent.purpose">
+      <path value="Consent.purpose" />
+      <max value="0" />
+    </element>
+    <element id="Consent.dataPeriod">
+      <path value="Consent.dataPeriod" />
+      <max value="0" />
+    </element>
+    <element id="Consent.data">
+      <path value="Consent.data" />
+      <max value="0" />
+    </element>
+    <element id="Consent.except">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Except" />
+      </extension>
+      <path value="Consent.except" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

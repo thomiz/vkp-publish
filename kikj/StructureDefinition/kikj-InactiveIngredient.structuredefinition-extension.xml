@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <lastUpdated value="2018-01-26T20:35:01.152+01:00" />
@@ -16,59 +17,18 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
-    <element id="Extension.extension">
-      <path value="Extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Extension.extension:Id">
-      <path value="Extension.extension" />
-      <sliceName value="Id" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Extension.extension:Id.url">
-      <path value="Extension.extension.url" />
-      <fixedUri value="Id" />
-    </element>
-    <element id="Extension.extension:Id.valueString:valueString">
-      <path value="Extension.extension.valueString" />
-      <sliceName value="valueString" />
-      <min value="1" />
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="Extension.extension:NameFormStrength">
-      <path value="Extension.extension" />
-      <sliceName value="NameFormStrength" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Extension.extension:NameFormStrength.url">
-      <path value="Extension.extension.url" />
-      <fixedUri value="NameFormStrength" />
-    </element>
-    <element id="Extension.extension:NameFormStrength.valueString:valueString">
-      <path value="Extension.extension.valueString" />
-      <sliceName value="valueString" />
-      <min value="1" />
-      <type>
-        <code value="string" />
-      </type>
-    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="http://ehelse.no/fhir/StructureDefinition/kikj-InactiveIngredient" />
     </element>
-    <element id="Extension.value[x]">
-      <path value="Extension.value[x]" />
-      <max value="0" />
+    <element id="Extension.value[x]:valueBoolean">
+      <path value="Extension.valueBoolean" />
+      <sliceName value="valueBoolean" />
+      <short value="True if inactive ingredient" />
+      <definition value="The extensions should have value true only if it is a rection based on an inactive ingredient." />
+      <type>
+        <code value="boolean" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>
