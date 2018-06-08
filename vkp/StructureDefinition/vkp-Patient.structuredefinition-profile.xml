@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="vkp-Patient" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/vkp-Patient" />
+  <version value="0.1" />
+  <name value="vkp-Patient" />
+  <status value="draft" />
+  <date value="2018-06-08" />
+  <description value="A profile on no-Patient to incorporate several elements needed in relation to handling of PCH event by the Norwegian VKP project." />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="http://ehelse.no/fhir/StructureDefinition/no-Patient" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Patient.extension">
+      <path value="Patient.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.extension:sone">
+      <path value="Patient.extension" />
+      <sliceName value="sone" />
+      <short value="The sone in wich a health service is provided" />
+      <definition value="The sone in wich a health service is provided. Juristictional sone." />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-sone" />
+      </type>
+    </element>
+    <element id="Patient.identifier:FNR">
+      <path value="Patient.identifier" />
+      <sliceName value="FNR" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:FHN">
+      <path value="Patient.identifier" />
+      <sliceName value="FHN" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Patient.identifier:DNR">
+      <path value="Patient.identifier" />
+      <sliceName value="DNR" />
+      <mustSupport value="false" />
+    </element>
+  </differential>
+</StructureDefinition>
