@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="no-Organization" />
+  <id value="no-basis-Organization" />
   <meta>
     <versionId value="2" />
     <lastUpdated value="2018-06-07T10:49:58.004+00:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/StructureDefinition/no-Organization" />
-  <version value="0.1" />
-  <name value="no-Organizations" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/no-basis-Organization" />
+  <version value="0.2" />
+  <name value="no-basis-Organizations" />
   <status value="draft" />
   <date value="2018-06-07T10:49:57.178Z" />
   <description value="Basisprofil for Norwegian Organization information. Defined by The Norwegian Directorate of eHealth. Should be used as a basis for further profiling in use-cases where specific identity information is needed. The basis profile is open, but derived profiles should close down the information elements according to specification relevant to the use-case." />
@@ -87,11 +87,29 @@
         <profile value="http://ehelse.no/fhir/StructureDefinition/no-Address-v05" />
       </type>
     </element>
+    <element id="Organization.address.extension:eiendomsinformasjon">
+      <path value="Organization.address.extension" />
+      <sliceName value="eiendomsinformasjon" />
+      <definition value="Additional information identifying norwegian real property." />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation" />
+      </type>
+    </element>
     <element id="Organization.contact.address">
       <path value="Organization.contact.address" />
       <type>
         <code value="Address" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/no-Address-v05" />
+      </type>
+    </element>
+    <element id="Organization.contact.address.extension:eiendomsinformasjon">
+      <path value="Organization.contact.address.extension" />
+      <sliceName value="eiendomsinformasjon" />
+      <definition value="Additional information identifying norwegian real property." />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation" />
       </type>
     </element>
   </differential>

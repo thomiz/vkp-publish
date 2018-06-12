@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="no-basis-Address" />
+  <meta>
+    <lastUpdated value="2018-03-01T18:39:34.183+01:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
+  <name value="no-basis-Address" />
+  <status value="draft" />
+  <date value="2017-09-20T15:13:47.019+02:00" />
+  <description value="Norwegian basisprofil for Address resource adding Norwegian specific property information." />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Address" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Address" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Address.extension">
+      <path value="Address.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Address.extension:eiendomsinformasjon">
+      <path value="Address.extension" />
+      <sliceName value="eiendomsinformasjon" />
+      <definition value="Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer." />
+      <comment value="real property identification" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

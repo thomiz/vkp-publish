@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="ttp://ehelse.no/fhir/StructureDefinition/no-basis-HumanName" />
+  <version value="0.2" />
+  <name value="no-basis-HumanName" />
+  <status value="draft" />
+  <date value="2018-06-12" />
+  <description value="The Norwegian basis-profile of HumanName adds the concept of middlename." />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="HumanName" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/HumanName" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="HumanName.extension">
+      <path value="HumanName.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="HumanName.extension:middlename">
+      <path value="HumanName.extension" />
+      <sliceName value="middlename" />
+      <short value="Defines a middle name" />
+      <definition value="Defines a middle name as a specific extension as this is widely used in Norwegian names and the given shoul appear before any middle name." />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

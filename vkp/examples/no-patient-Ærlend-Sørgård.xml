@@ -19,6 +19,15 @@
 		<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
 		<value value="05073500186"/>
 	</identifier>
+	<identifier>
+		<type>
+			<coding>
+				<system value="urn:oid:2.16.578.1.12.4.1.1.8327"/>
+				<code value="HNR"/>
+			</coding>
+		</type>
+		<value value="12345"/>
+	</identifier>
 	<identifier> <!-- en annen identifikator, for eksempel løpenummer i EPJ -->
 		<system value="http://profil.visma.no/lopenummer"/>
 		<value value="123"/>

@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="no-Practitioner" />
+  <id value="no-basis-Practitioner" />
   <meta>
     <versionId value="1" />
     <lastUpdated value="2018-06-06T06:11:16.19+00:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/StructureDefinition/no-Practitioner" />
-  <version value="0.1" />
-  <name value="no-Practitioner" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/no-basis-Practitioner" />
+  <version value="0.2" />
+  <name value="no-basis-Practitioner" />
   <status value="draft" />
   <date value="2018-06-06T06:11:15.177Z" />
   <description value="Basisprofil for Norwegian Practitioner information. Defined by The Norwegian Directorate of eHealth. Should be used as a basis for further profiling in use-cases where specific identity information is needed. The basis profile is open, but derived profiles should close down the information elements according to specification relevant to the use-case." />
@@ -66,22 +66,21 @@
       <short value="The actual FNR" />
       <min value="1" />
     </element>
-    <element id="Practitioner.name.extension">
-      <path value="Practitioner.name.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
+    <element id="Practitioner.name">
+      <path value="Practitioner.name" />
+      <type>
+        <code value="HumanName" />
+        <profile value="ttp://ehelse.no/fhir/StructureDefinition/no-basis-HumanName" />
+      </type>
     </element>
     <element id="Practitioner.name.extension:middlename">
       <path value="Practitioner.name.extension" />
       <sliceName value="middlename" />
+      <short value="Defines a Norwegian middle name" />
+      <definition value="The middlename should be a Norwegian middlename as defined by Norwegian legislation (Lov om personnavn)." />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-middlename" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename" />
       </type>
     </element>
     <element id="Practitioner.address">
@@ -89,6 +88,15 @@
       <type>
         <code value="Address" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/no-Address-v05" />
+      </type>
+    </element>
+    <element id="Practitioner.address.extension:eiendomsinformasjon">
+      <path value="Practitioner.address.extension" />
+      <sliceName value="eiendomsinformasjon" />
+      <definition value="Additional information identifying norwegian real property." />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation" />
       </type>
     </element>
     <element id="Practitioner.qualification.code">

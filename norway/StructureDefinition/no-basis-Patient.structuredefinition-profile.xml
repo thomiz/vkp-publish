@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="no-Patient" />
+  <id value="no-basis-Patient" />
   <meta>
     <versionId value="3" />
     <lastUpdated value="2018-06-06T06:17:04.601+00:00" />
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/no-Patient" />
   <version value="0.2" />
-  <name value="no-Patient" />
+  <name value="no-basis-Patient" />
   <status value="draft" />
   <date value="2018-06-06T06:17:03.76Z" />
   <description value="Basisprofil for Norwegian Patient information. Defined by The Norwegian Directorate of eHealth. Should be used as a basis for further profiling in use-cases where specific identity information is needed. The basis profile is open, but derived profiles should close down the information elements according to specification relevant to the use-case." />
@@ -39,7 +39,7 @@
       <definition value="The name of the bydel where the patient has registered home address." />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-bydel" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-bydel" />
       </type>
     </element>
     <element id="Patient.extension:nationality">
@@ -88,8 +88,7 @@
       <path value="Patient.identifier" />
       <sliceName value="FNR" />
       <short value="Norwegian FNR" />
-      <definition value="Fødselsnummer for the patient. Fødselsnummer as one of the possible patient identification numbers, should at least be sent unless there is a reason not to. Reasons for not sending the Fødselsnummer include but are not limited to, research and apps without a contract for processing data." />
-      <max value="1" />
+      <definition value="Fødselsnummer for the patient. Fødselsnummer as one of the possible patient identifier, should at least be sent unless there is a reason not to. Reasons for not sending the Fødselsnummer include but are not limited to, research and apps without a contract for processing data.&#xD;&#xA;&#xD;&#xA;Multiple FNR can exist for a person. If several FNR is provided the time period that each identifier is valid should be provided. No information about period is required when only one FNR is provided." />
     </element>
     <element id="Patient.identifier:FNR.system">
       <path value="Patient.identifier.system" />
@@ -114,7 +113,6 @@
       <sliceName value="FHN" />
       <short value="Felles hjelpenummer used for the patient" />
       <definition value="Felles hjelpenummer for the patient. Felles hjelpenummer as one of the possible patient identification numbers. The norwegian Felles hjelpenummer shoud only be used when the Fødselsnummer og D-number is unknown." />
-      <max value="1" />
     </element>
     <element id="Patient.identifier:FHN.system">
       <path value="Patient.identifier.system" />
@@ -134,7 +132,6 @@
       <sliceName value="DNR" />
       <short value="The D-nummer of the patient" />
       <definition value="The D-nummer of the patient. (assigned by the norwegian Skatteetaten)" />
-      <max value="1" />
     </element>
     <element id="Patient.identifier:DNR.system">
       <path value="Patient.identifier.system" />
@@ -149,22 +146,49 @@
       <definition value="The actual Norwegian D-nummer" />
       <min value="1" />
     </element>
-    <element id="Patient.name.extension">
-      <path value="Patient.name.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
+    <element id="Patient.identifier:HNR">
+      <path value="Patient.identifier" />
+      <sliceName value="HNR" />
+      <short value="A locally assigned H-nummer" />
+      <definition value="A locally assigned H-nummer. If this identifier is used, information about the assigner is mandatory." />
+    </element>
+    <element id="Patient.identifier:HNR.type.coding.system">
+      <path value="Patient.identifier.type.coding.system" />
+      <definition value="CodeSystem on Volven for official personal identifiers.&#xD;&#xA;The identification of the code system that defines the meaning of the symbol in the code." />
+      <min value="1" />
+      <fixedUri value="urn:oid:2.16.578.1.12.4.1.1.8327" />
+    </element>
+    <element id="Patient.identifier:HNR.type.coding.code">
+      <path value="Patient.identifier.type.coding.code" />
+      <definition value="The code for local Hjelpenummer in the CodeSystem&#xD;&#xA;&#xD;&#xA;A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
+      <min value="1" />
+      <fixedCode value="HNR" />
+    </element>
+    <element id="Patient.identifier:HNR.value">
+      <path value="Patient.identifier.value" />
+      <definition value="The actual Hjelpenummer.&#xD;&#xA;&#xD;&#xA;The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
+      <min value="1" />
+    </element>
+    <element id="Patient.identifier:HNR.assigner">
+      <path value="Patient.identifier.assigner" />
+      <definition value="Assigner is mandatory for localy assigne Hjelpenummer.&#xD;&#xA;&#xD;&#xA;Organization that issued/manages the identifier." />
+      <min value="1" />
+    </element>
+    <element id="Patient.name">
+      <path value="Patient.name" />
+      <type>
+        <code value="HumanName" />
+        <profile value="ttp://ehelse.no/fhir/StructureDefinition/no-basis-HumanName" />
+      </type>
     </element>
     <element id="Patient.name.extension:middlename">
       <path value="Patient.name.extension" />
       <sliceName value="middlename" />
+      <short value="Defines a Norwegian middle name" />
+      <definition value="The middlename should be a Norwegian middlename as defined by Norwegian legislation (Lov om personnavn)." />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-middlename" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename" />
       </type>
     </element>
     <element id="Patient.address">
@@ -173,7 +197,7 @@
       <definition value="http://ehelse.no/fhir/StructureDefinition/no-Address-v05" />
       <type>
         <code value="Address" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-Address-v05" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
       </type>
     </element>
   </differential>
