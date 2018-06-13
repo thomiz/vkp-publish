@@ -17,24 +17,48 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
-    <element id="Element">
-      <path value="Element" />
-      <short value="The sone in wich a health service is provided" />
-      <definition value="The sone in wich a health service is provided. Juristictional sone." />
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
-    <element id="Element.url">
-      <path value="Element.url" />
-      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/vkp-sone" />
+    <element id="Extension.extension:sone">
+      <path value="Extension.extension" />
+      <sliceName value="sone" />
     </element>
-    <element id="Element.value[x]:valueReference">
-      <path value="Element.valueReference" />
+    <element id="Extension.extension:sone.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="sone" />
+    </element>
+    <element id="Extension.extension:sone.value[x]:valueReference">
+      <path value="Extension.extension.valueReference" />
       <sliceName value="valueReference" />
-      <short value="Reference to the specified sone" />
-      <definition value="Reference to the specified sone hierarcy, also called &quot;tjenestested&quot;. Usually this is a hierarcy of municipality, district, sone and sub-sone." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-sone-Location" />
       </type>
+    </element>
+    <element id="Extension.extension:elem">
+      <path value="Extension.extension" />
+      <sliceName value="elem" />
+    </element>
+    <element id="Extension.extension:elem.value[x]:valueReference">
+      <path value="Extension.extension.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-sone-Location" />
+        <aggregation value="bundled" />
+      </type>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
     </element>
   </differential>
 </StructureDefinition>

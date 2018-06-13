@@ -25,14 +25,39 @@
       <path value="Extension.url" />
       <fixedUri value="http://ehelse.no/fhir/StructureDefinition/no-basis-bydel" />
     </element>
-    <element id="Extension.value[x]:valueString">
-      <path value="Extension.valueString" />
-      <sliceName value="valueString" />
-      <short value="The name of the bydel" />
-      <definition value="The name of the bydel (part of the city)" />
+    <element id="Extension.value[x]:valueCoding">
+      <path value="Extension.valueCoding" />
+      <sliceName value="valueCoding" />
+      <short value="Bydel information" />
+      <definition value="The name and number of the bydel (part of the city). If coded this information should be coded according to CodeSystem urn:uri:2.16.578.1.12.4.1.1.3403" />
       <type>
-        <code value="string" />
+        <code value="Coding" />
       </type>
+      <binding>
+        <strength value="required" />
+        <description value="Bydel" />
+        <valueSetUri value="urn:uri:2.16.578.1.12.4.1.1.3403" />
+      </binding>
+    </element>
+    <element id="Extension.value[x]:valueCoding.system">
+      <path value="Extension.valueCoding.system" />
+      <short value="Identity of the terminology system for bydel" />
+      <definition value="If coded this information should be coded according to CodeSystem urn:uri:2.16.578.1.12.4.1.1.3403" />
+      <fixedUri value="urn:uri:2.16.578.1.12.4.1.1.3403" />
+    </element>
+    <element id="Extension.value[x]:valueCoding.code">
+      <path value="Extension.valueCoding.code" />
+      <short value="Bydelskode" />
+      <definition value="Predefined code for bydel as defined in urn:uri:2.16.578.1.12.4.1.1.3403" />
+    </element>
+    <element id="Extension.value[x]:valueCoding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Extension.valueCoding.display" />
+      <short value="The name of the bydel" />
+      <definition value="The official name of the bydel as defined in urn:uri:2.16.578.1.12.4.1.1.3403" />
+      <min value="1" />
     </element>
   </differential>
 </StructureDefinition>

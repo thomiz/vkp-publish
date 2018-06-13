@@ -5,6 +5,7 @@
     <lastUpdated value="2018-03-01T18:39:34.183+01:00" />
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
+  <version value="0.5" />
   <name value="no-basis-Address" />
   <status value="draft" />
   <date value="2017-09-20T15:13:47.019+02:00" />
@@ -35,6 +36,30 @@
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation" />
       </type>
+    </element>
+    <element id="Address.city">
+      <path value="Address.city" />
+      <short value="Poststed or city" />
+      <definition value="When a postalcode is given the name of the city must be according to the official list of postalcodes used in Norway.&#xD;&#xA;&#xD;&#xA;The name of the city, town, village or other community or delivery center." />
+      <alias value="by" />
+      <alias value="poststed" />
+    </element>
+    <element id="Address.district">
+      <path value="Address.district" />
+      <short value="name of &quot;kommune&quot;" />
+      <definition value="Name of the county (norwegian &quot;kommune&quot;). If kommune number is required &quot;eiendomsinformasjon&quot; should be used.&#xD;&#xA;&#xD;&#xA;The name of the administrative area (county)." />
+      <alias value="kommune" />
+    </element>
+    <element id="Address.state">
+      <path value="Address.state" />
+      <short value="norwegian &quot;fylke&quot;" />
+      <definition value="Name of the norwegian &quot;fylke&quot;). If fylkes-number is required &quot;eiendomsinformasjon&quot; should be used with koded kommune-number.&#xD;&#xA;&#xD;&#xA;Sub-unit of a country with limited sovereignty in a federally organized country. A code may be used if codes are in common use (i.e. US 2 letter state codes)." />
+      <alias value="fylke" />
+    </element>
+    <element id="Address.postalCode">
+      <path value="Address.postalCode" />
+      <definition value="A postal code designating a region defined by the postal service.&#xD;&#xA;&#xD;&#xA;In Norway this is af four digit number defined by the norwegian postal service." />
+      <alias value="postnummer" />
     </element>
   </differential>
 </StructureDefinition>

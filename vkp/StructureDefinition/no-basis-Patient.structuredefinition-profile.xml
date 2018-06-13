@@ -35,8 +35,8 @@
     <element id="Patient.extension:bydel">
       <path value="Patient.extension" />
       <sliceName value="bydel" />
-      <short value="The bydel" />
-      <definition value="The name and number of the of the bydel where the patient has registered home address." />
+      <short value="The name of the bydel" />
+      <definition value="The name of the bydel where the patient has registered home address." />
       <type>
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-bydel" />
@@ -186,6 +186,10 @@
       <sliceName value="middlename" />
       <short value="Defines a Norwegian middle name" />
       <definition value="The middlename should be a Norwegian middlename as defined by Norwegian legislation (Lov om personnavn)." />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename" />
+      </type>
     </element>
     <element id="Patient.address">
       <path value="Patient.address" />
@@ -195,11 +199,6 @@
         <code value="Address" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
       </type>
-    </element>
-    <element id="Patient.address.extension:eiendomsinformasjon">
-      <path value="Patient.address.extension" />
-      <sliceName value="eiendomsinformasjon" />
-      <definition value="Additional information identifying norwegian real property." />
     </element>
   </differential>
 </StructureDefinition>
