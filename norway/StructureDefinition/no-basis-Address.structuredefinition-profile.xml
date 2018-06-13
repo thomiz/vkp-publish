@@ -2,13 +2,14 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="no-basis-Address" />
   <meta>
-    <lastUpdated value="2018-03-01T18:39:34.183+01:00" />
+    <versionId value="1" />
+    <lastUpdated value="2018-06-13T12:21:54.87+00:00" />
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
   <version value="0.5" />
   <name value="no-basis-Address" />
   <status value="draft" />
-  <date value="2017-09-20T15:13:47.019+02:00" />
+  <date value="2018-06-13T12:21:54.541Z" />
   <description value="Norwegian basisprofil for Address resource adding Norwegian specific property information." />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
