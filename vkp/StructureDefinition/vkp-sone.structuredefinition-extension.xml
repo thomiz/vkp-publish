@@ -2,9 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="vkp-sone" />
   <url value="http://ehelse.no/fhir/StructureDefinition/vkp-sone" />
+  <version value="0.1" />
   <name value="vkp-sone" />
   <status value="draft" />
-  <description value="The sone in wich a health service is provided. Juristictional sone." />
+  <date value="2018-06-14" />
+  <description value="Information about juristictional sone/subsone of the Person. Could be nested. The information about each sone must be included in a Bundle." />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
@@ -17,9 +19,16 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Reference to the top level in the Sone hierarcy" />
+      <definition value="Information about juristictional sone/subsone of the Person. Could be nested. The information about each sone must be included in a Bundle." />
+    </element>
     <element id="Extension.value[x]:valueReference">
       <path value="Extension.valueReference" />
       <sliceName value="valueReference" />
+      <short value="Reference to the top level in the Sone hierarcy" />
+      <definition value="Reference to the top level Sone in the Sone hierarcy. Provides information about juristictional sone/subsone of the Person. The Sone system can be nested. The information about each sone in the hierarcy must be included in a Bundle to provide information about each sone/Subsone/district e.a." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-sone-Location" />

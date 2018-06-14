@@ -2,15 +2,17 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="no-basis-Address" />
   <meta>
-    <versionId value="1" />
-    <lastUpdated value="2018-06-13T12:21:54.87+00:00" />
+    <versionId value="2" />
+    <lastUpdated value="2018-06-14T08:04:12.68+00:00" />
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
-  <version value="0.5" />
+  <version value="0.6" />
   <name value="no-basis-Address" />
+  <title value="no-basis-Address" />
   <status value="draft" />
-  <date value="2018-06-13T12:21:54.541Z" />
+  <date value="2018-06-14T08:04:12.233Z" />
   <description value="Norwegian basisprofil for Address resource adding Norwegian specific property information." />
+  <purpose value="Norwegian basisprofil for Address resource adding Norwegian specific property information, official use of address and further explanation of the use for the data-elements in a Norwegian address." />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
@@ -37,6 +39,26 @@
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation" />
       </type>
+    </element>
+    <element id="Address.extension:official">
+      <path value="Address.extension" />
+      <sliceName value="official" />
+      <short value="The concept of an officially registered address" />
+      <definition value="Defines the concept of an officially registered address in Norway. Usually this will be the adress registered in &quot;Folkeregisteret&quot; for persons or &quot;Enhetsregisteret&quot; for organizations." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-address-official" />
+      </type>
+    </element>
+    <element id="Address.use">
+      <path value="Address.use" />
+      <definition value="The purpose of this address.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide.&#xD;&#xA;" />
+    </element>
+    <element id="Address.type">
+      <path value="Address.type" />
+      <definition value="Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide.&#xD;&#xA;" />
     </element>
     <element id="Address.city">
       <path value="Address.city" />

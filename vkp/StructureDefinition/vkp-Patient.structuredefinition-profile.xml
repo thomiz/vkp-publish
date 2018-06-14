@@ -22,19 +22,26 @@
     <element id="Patient.extension:sone">
       <path value="Patient.extension" />
       <sliceName value="sone" />
-      <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources." />
-      <min value="0" />
-      <max value="*" />
+      <short value="The concept of an officially registered address" />
+      <definition value="Defines the concept of an officially registered address in Norway. Usually this will be the adress registered in &quot;Folkeregisteret&quot; for persons or &quot;Enhetsregisteret&quot; for organizations." />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-sone" />
       </type>
     </element>
+    <element id="Patient.identifier">
+      <path value="Patient.identifier" />
+      <definition value="VKP expects a Norwegian &quot;fødselsnummer&quot; as the primary patient identification.&#xD;&#xA;&#xD;&#xA;An identifier for this patient. Should be at Fødselsnummer, Felles hjelpenummer or D-nummer.&#xD;&#xA;" />
+    </element>
     <element id="Patient.name.extension:middlename">
       <path value="Patient.name.extension" />
       <sliceName value="middlename" />
       <max value="1" />
+    </element>
+    <element id="Patient.address">
+      <path value="Patient.address" />
+      <definition value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
     </element>
   </differential>
 </StructureDefinition>
