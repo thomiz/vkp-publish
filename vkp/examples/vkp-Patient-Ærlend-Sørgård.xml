@@ -1,4 +1,9 @@
-<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
+	<type value="collection"/>
+	<entry>
+		<fullUrl value="urn:uuid:cb458ad2-703e-4746-aab3-1de8dc8b5cda"/>
+		<resource>
+	<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
 	<meta>
 		<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-Patient"/>
 	</meta>
@@ -13,12 +18,13 @@
 		</extension>
 	</extension>
 	<extension url="http://ehelse.no/fhir/StructureDefinition/no-bydel">
-		<valueString value="Bydel Alna"/>
+		<valueString value="St. Hanshaugen"/>
 	</extension>
 	<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-sone">
 	<!-- Tjenestested/sone -->
 		<valueReference>
-		<!-- En logisk referanse til Toppnivå sonen til pasienten. En logisk referanse henviser alltid til den Identifier som er satt på ressursen, i dette til fellet en UUID. -->
+		<!-- En logisk referanse til Toppnivå sonen til pasienten. En logisk referanse henviser alltid til den Identifier som er satt på ressursen, i dette til fellet en UUID. 
+				Peker på Municipality: Oslo i Location ressursen lenger nede i Bundle -->
 			<identifier>
 				<system value="urn:ietf:rfc:3986"/>
 				<value value="urn:uuid:6a1cf8db-caa9-4b81-9c28-85f3e068c116"/>
@@ -83,4 +89,58 @@
 			<given value="Pål"/>
 		</name>
 	</contact>
+	<generalPractitioner>
+		<!-- HER-id til fastlegetjenesten som representerer fastlegen til pasienten -->
+		<identifier>
+			<system value="urn:oid:2.16.578.1.12.4.1.2"/>
+			<value value="720"/>
+		</identifier>
+		<display value="SIDSEL AASE JAVERY"/>
+	</generalPractitioner>
 </Patient>
+</resource>
+</entry>
+	<entry>
+	<fullUrl value="urn:uuid:85b12e39-44f1-4940-8e32-eca62e50d252"/>
+	<resource>
+		<Location xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
+			<meta>
+				<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-sone-Location"/>
+			</meta>
+			<identifier>
+				<system value="urn:ietf:rfc:3986"/>
+				<value value="urn:uuid:6a1cf8db-caa9-4b81-9c28-85f3e068c116"/>
+			</identifier>
+			<name value="Oslo"/>
+			<type>
+				<text value="Municipality"/>
+			</type>
+		</Location>
+	</resource>
+	</entry>
+	<entry>
+	<fullUrl value="urn:uuid:a1c7d6e0-c14f-42f9-aae8-4eec971e44c5"/>
+	<resource>
+		<Location xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
+			<meta>
+				<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-sone-Location"/>
+			</meta>
+			<identifier>
+				<system value="urn:ietf:rfc:3986"/>
+				<value value="urn:uuid:2c8990d2-3c67-41a9-b1ea-76e1b2f4f971"/>
+			</identifier>
+			<name value="St. Hanshaugen"/>
+			<type>
+				<text value="District"/>
+			</type>
+			<!-- Bydel St. Hanshaugen er en bydel som er en del av Oslo kommune -->
+			<partOf>
+				<identifier>
+					<system value="urn:ietf:rfc:3986"/>
+					<value value="urn:uuid:6a1cf8db-caa9-4b81-9c28-85f3e068c116"/>
+				</identifier>
+			</partOf>
+		</Location>
+	</resource>
+	</entry>
+</Bundle>
