@@ -33,9 +33,6 @@
     <element id="Patient.extension:elock">
       <path value="Patient.extension" />
       <sliceName value="elock" />
-      <short value="Information about elock present" />
-      <definition value="Information about elock present in the patients home (true/false)&#xD;&#xA;- true means the location/patient/address has installed elock&#xD;&#xA;- false means there is no installed elock at the location" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -54,6 +51,34 @@
     <element id="Patient.address">
       <path value="Patient.address" />
       <definition value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
+    </element>
+    <element id="Patient.contact.relationship">
+      <path value="Patient.contact.relationship" />
+      <definition value="VKP can use both coded and text value for relationship. Coded values are given according to HL7 CodeSystem http://hl7.org/fhir/ValueSet/v2-0131&#xD;&#xA;Text values can be free text description of the relationship. Both a textdescription and a coded value can be present.&#xD;&#xA;The main contact of the patient should be coded as &quot;C&quot; - &quot;Emergency Contact&quot;&#xD;&#xA;&#xD;&#xA;The nature of the relationship between the patient and the contact person." />
+    </element>
+    <element id="Patient.contact.relationship.coding">
+      <path value="Patient.contact.relationship.coding" />
+      <short value="Coded value for the relationship" />
+      <definition value="Coded value for the relationship" />
+    </element>
+    <element id="Patient.contact.relationship.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Patient.contact.relationship.text" />
+      <short value="Plain text representation of the relationship" />
+      <definition value="Plain text representation of the relationship" />
+    </element>
+    <element id="Patient.contact.name">
+      <path value="Patient.contact.name" />
+      <type>
+        <code value="HumanName" />
+        <profile value="ttp://ehelse.no/fhir/StructureDefinition/no-basis-HumanName" />
+      </type>
+    </element>
+    <element id="Patient.generalPractitioner">
+      <path value="Patient.generalPractitioner" />
+      <definition value="VKP expects the HER id of the &quot;tjeneste&quot; responsible for providing the patient with &quot;fastlege&quot; services.&#xD;&#xA;&#xD;&#xA;Patient's nominated care provider." />
     </element>
   </differential>
 </StructureDefinition>

@@ -4,7 +4,7 @@
   <url value="http://ehelse.no/fhir/StructureDefinition/vkp-sone-Location" />
   <name value="vkp-sone-Location" />
   <status value="draft" />
-  <description value="Information about juristictional sone/subsone of the Person. Could be nested. The information about each sone must be included in a Bundle." />
+  <description value="Information about juristictional sone/subsone denoting the &quot;tjenested&quot; of the Person. Could be nested. The information about each sone must be included in a Bundle." />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -12,6 +12,50 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Location" />
   <derivation value="constraint" />
   <differential>
+    <element id="Location">
+      <path value="Location" />
+      <short value="Information about juristictional sone/subsone denoting the &quot;tjenested&quot; " />
+      <definition value="Information about juristictional sone/subsone denoting the &quot;tjenested&quot; of the Person. Could be nested. The information about each sone must be included in a Bundle." />
+      <comment value="Some systems have a nested system with Municipality, District, Sone and SubSone to denote the proper juristictional sone within the Municipality" />
+      <alias value="tjenestested" />
+      <alias value="sone" />
+      <alias value="kommune" />
+      <alias value="bydel" />
+      <alias value="subsone" />
+      <alias value="district" />
+    </element>
+    <element id="Location.identifier">
+      <path value="Location.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <definition value="VKP expects an UUID, but any uniqe identifier could be applied.&#xD;&#xA;&#xD;&#xA;Unique code or number identifying the location to its users." />
+    </element>
+    <element id="Location.identifier:UUID">
+      <path value="Location.identifier" />
+      <sliceName value="UUID" />
+      <short value="A UUID identifier" />
+      <definition value="A UUID identifier is represented with system and value.&#xD;&#xA;" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Location.identifier:UUID.system">
+      <path value="Location.identifier.system" />
+      <short value="namespace for general URN" />
+      <definition value="VKP expects &quot;urn:ietf:rfc:3986&quot; as system when UUID is used&#xD;&#xA;&#xD;&#xA;Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
+      <min value="1" />
+      <fixedUri value="urn:ietf:rfc:3986" />
+    </element>
+    <element id="Location.identifier:UUID.value">
+      <path value="Location.identifier.value" />
+      <short value="UUID value" />
+      <definition value="VKP and FHIR expects UUID to have prefix &quot;urn:uuid:&quot;&#xD;&#xA;&#xD;&#xA;The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
+      <min value="1" />
+    </element>
     <element id="Location.status">
       <path value="Location.status" />
       <max value="0" />
@@ -20,6 +64,10 @@
       <path value="Location.operationalStatus" />
       <max value="0" />
     </element>
+    <element id="Location.name">
+      <path value="Location.name" />
+      <short value="Name of the sone/tjenestested" />
+    </element>
     <element id="Location.alias">
       <path value="Location.alias" />
       <max value="0" />
@@ -27,6 +75,19 @@
     <element id="Location.mode">
       <path value="Location.mode" />
       <max value="0" />
+    </element>
+    <element id="Location.type">
+      <path value="Location.type" />
+      <short value="Type of tjenestested" />
+      <definition value="Type of juristictionaly sone denoted. There will always be a set of predefined types for each system or municipality. e.g. Municipality, District, Sone and subsone. Because no standardized way of denoting the sone/subsone exists only the text value denoting sone.type are used for VKP." />
+    </element>
+    <element id="Location.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Location.type.text" />
+      <short value="Text defining the type of juristictional sone" />
+      <definition value="Text defining the type of juristictional sone" />
     </element>
     <element id="Location.physicalType">
       <path value="Location.physicalType" />
@@ -45,9 +106,13 @@
     </element>
     <element id="Location.partOf">
       <path value="Location.partOf" />
+      <short value="Reference to a vkp-sone-Location" />
+      <definition value="Reference to another vkp-sone-Location this location is a part of e.g a District is a part of a Municipality" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-sone-Location" />
+        <aggregation value="referenced" />
+        <aggregation value="bundled" />
       </type>
     </element>
     <element id="Location.endpoint">

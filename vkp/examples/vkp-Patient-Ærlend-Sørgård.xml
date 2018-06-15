@@ -24,7 +24,7 @@
 	<!-- Tjenestested/sone -->
 		<valueReference>
 		<!-- En logisk referanse til Toppnivå sonen til pasienten. En logisk referanse henviser alltid til den Identifier som er satt på ressursen, i dette til fellet en UUID. 
-				Peker på Municipality: Oslo i Location ressursen lenger nede i Bundle -->
+		Peker på Municipality: Oslo i Location ressursen lenger nede i Bundle -->
 			<identifier>
 				<system value="urn:ietf:rfc:3986"/>
 				<value value="urn:uuid:6a1cf8db-caa9-4b81-9c28-85f3e068c116"/>
@@ -36,6 +36,7 @@
 		<valueBoolean value="true"/>
 	</extension>
 	<identifier> <!-- Fødselnummeret til brukeren -->
+	<!-- VKP expects a Norwegian "fødselsnummer" as the primary patient identification. -->
 		<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
 		<value value="05073500186"/>
 	</identifier>
@@ -52,20 +53,33 @@
 		<value value="+4733445566"/>
 		<use value="home"/>
 	</telecom>
+	<!-- Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes. -->
 	<gender value="male"/>
 	<address>
-		<extension url="http://ehelse.no/fhir/StructureDefinition/no-propertyinformation-v05">
+	<!-- Norwegian address: http://ehelse.no/fhir/StructureDefinition/no-basis-Address -->
+	<!-- Norwegian basisprofil for Address resource adding Norwegian specific property information, official use of address and further explanation of the use for the data-elements in a Norwegian address. -->
+		<extension url="http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation">
+		<!-- Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer. -->
+		<!-- I dette eksempelet er bare kommunenavn angitt, men vanligvis vil man benytte address.distreict hvis man bare ønsker kommunenavnet -->
 			<extension url="kommune">
-				<valueString value="Drammen"/>
+				<valueCoding>
+					<display value="Oslo"/>
+				</valueCoding>
 			</extension>
+		</extension>
+		<extension url="http://ehelse.no/fhir/StructureDefinition/no-basis-address-official">
+		<!-- Defines the concept of an officially registered address in Norway. Usually this will be the adress registered in "Folkeregisteret" for persons or "Enhetsregisteret" for organizations. -->
+			<valueBoolean value="true"/>
 		</extension>
 		<use value="home"/>
 		<line value="Åssiden 32"/>
-		<city value="Drammen"/>
-		<postalCode value="3008"/>
-		<country value="NO"/>
+		<city value="Oslo"/> <!-- Poststed -->
+		<district value="Oslo"/> <!-- Kommunenavn -->
+		<postalCode value="3008"/> <!-- postnummer -->
+		<country value="NO"/> <!-- land (er overflødig i norge -->
 	</address>
 	<maritalStatus>
+	<!-- This field contains a patient's most recent marital (civil) status. -->
 		<coding>
 			<system value="http://hl7.org/fhir/v3/MaritalStatus"/>
 			<code value="U"/>
@@ -73,15 +87,24 @@
 		</coding>
 	</maritalStatus>
 	<contact>
+	<!-- VKP can use both coded and text value for relationship. Coded values are given according to HL7 CodeSystem http://hl7.org/fhir/ValueSet/v2-0131
+		Text values can be free text description of the relationship. Both a textdescription and a coded value can be present.
+		The main contact of the patient should be coded as "C" - "Emergency Contact" -->
 		<relationship>
+		<!-- Coded value for the relationship
+		A coded value should be used for the main contact person. -->
 			<coding>
 				<system value="http://hl7.org/fhir/v2/0131"/>
 				<code value="CP"/>
 				<display value="Contact person"/>
 			</coding>
 		</relationship>
-		<name> <!-- Navnet til kontaktpersonen, legg merke til mellomnavn som ikke er en del av HumanName i FHIR -->
-			<extension url="http://ehelse.no/fhir/StructureDefinition/no-middlename">
+		<relationship>
+		<!-- Plain text representation -->
+			<text value="Bror"/>
+		</relationship>
+		<name> <!-- Norwegian human name. Defines the format of norwegian human name according to norwegian regulation (lov om personnavn). -->
+			<extension url="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename">
 				<valueString value="Pårørende"/>
 			</extension>
 			<text value="Pål Pårørende Olsen"/>
@@ -89,11 +112,18 @@
 			<given value="Pål"/>
 		</name>
 	</contact>
+	<communication>
+		<language>
+		<!-- Languages which may be used to communicate with the patient about his or her health. -->
+		<!-- Should we prefer coded values? -->
+			<text value="Norsk"/>
+		</language>
+	</communication>
 	<generalPractitioner>
-		<!-- HER-id til fastlegetjenesten som representerer fastlegen til pasienten -->
+		<!-- VKP expects the HER id of the "tjeneste" responsible for providing the patient with "fastlege" services. -->
 		<identifier>
-			<system value="urn:oid:2.16.578.1.12.4.1.2"/>
-			<value value="720"/>
+			<system value="urn:oid:2.16.578.1.12.4.1.2"/> <!-- OID for HER-id -->
+			<value value="720"/> <!-- The actual HER-id -->
 		</identifier>
 		<display value="SIDSEL AASE JAVERY"/>
 	</generalPractitioner>
@@ -104,15 +134,19 @@
 	<fullUrl value="urn:uuid:85b12e39-44f1-4940-8e32-eca62e50d252"/>
 	<resource>
 		<Location xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
+		<!-- vkp-sone-Location: Information about juristictional sone/subsone of the Person. Could be nested. The information about each sone must be included in a Bundle.  -->
 			<meta>
 				<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-sone-Location"/>
 			</meta>
 			<identifier>
+			<!-- VKP expects an UUID, but any uniqe identifier could be applied. -->
 				<system value="urn:ietf:rfc:3986"/>
 				<value value="urn:uuid:6a1cf8db-caa9-4b81-9c28-85f3e068c116"/>
 			</identifier>
+			<!-- Name of the sone/tjenestested -->
 			<name value="Oslo"/>
 			<type>
+			<!-- Type of juristictionaly sone denoted. There will always be a set of predefined types for each system or municipality. e.g. Municipality, District, Sone and subsone. Because no standardized way of denoting the sone/subsone exists only the text value denoting sone.type are used for VKP. -->
 				<text value="Municipality"/>
 			</type>
 		</Location>
@@ -135,6 +169,7 @@
 			</type>
 			<!-- Bydel St. Hanshaugen er en bydel som er en del av Oslo kommune -->
 			<partOf>
+			<!-- Reference to another vkp-sone-Location this location is a part of e.g a District is a part of a Municipality -->
 				<identifier>
 					<system value="urn:ietf:rfc:3986"/>
 					<value value="urn:uuid:6a1cf8db-caa9-4b81-9c28-85f3e068c116"/>

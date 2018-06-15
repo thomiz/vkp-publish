@@ -2,16 +2,16 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="no-basis-Address" />
   <meta>
-    <versionId value="2" />
-    <lastUpdated value="2018-06-14T08:04:12.68+00:00" />
+    <versionId value="3" />
+    <lastUpdated value="2018-06-15T13:38:12.872+00:00" />
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
   <version value="0.6" />
   <name value="no-basis-Address" />
   <title value="no-basis-Address" />
   <status value="draft" />
-  <date value="2018-06-14T08:04:12.233Z" />
-  <description value="Norwegian basisprofil for Address resource adding Norwegian specific property information." />
+  <date value="2018-06-15T13:38:12.696Z" />
+  <description value="Norwegian basisprofil for Address resource adding Norwegian specific property information, official use of address and further explanation of the use for the data-elements in a Norwegian address." />
   <purpose value="Norwegian basisprofil for Address resource adding Norwegian specific property information, official use of address and further explanation of the use for the data-elements in a Norwegian address." />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
@@ -43,10 +43,7 @@
     <element id="Address.extension:official">
       <path value="Address.extension" />
       <sliceName value="official" />
-      <short value="The concept of an officially registered address" />
-      <definition value="Defines the concept of an officially registered address in Norway. Usually this will be the adress registered in &quot;Folkeregisteret&quot; for persons or &quot;Enhetsregisteret&quot; for organizations." />
-      <min value="0" />
-      <max value="1" />
+      <definition value="Defines the concept of an officially registered address in Norway. Usually this will be the adress registered in &quot;Folkeregisteret&quot; for persons or &quot;Enhetsregisteret&quot; for organizations. " />
       <type>
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-address-official" />

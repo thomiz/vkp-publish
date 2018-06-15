@@ -2,14 +2,14 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="no-basis-Patient" />
   <meta>
-    <versionId value="1" />
-    <lastUpdated value="2018-06-13T12:22:34.519+00:00" />
+    <versionId value="2" />
+    <lastUpdated value="2018-06-15T13:37:44.222+00:00" />
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/no-basis-Patient" />
   <version value="0.2" />
   <name value="no-basis-Patient" />
   <status value="draft" />
-  <date value="2018-06-13T12:22:33.715Z" />
+  <date value="2018-06-15T13:37:43.987Z" />
   <description value="Basisprofil for Norwegian Patient information. Defined by The Norwegian Directorate of eHealth. Should be used as a basis for further profiling in use-cases where specific identity information is needed. The basis profile is open, but derived profiles should close down the information elements according to specification relevant to the use-case." />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
@@ -200,6 +200,20 @@
       <path value="Patient.address.extension" />
       <sliceName value="eiendomsinformasjon" />
       <definition value="Additional information identifying norwegian real property." />
+    </element>
+    <element id="Patient.contact.name">
+      <path value="Patient.contact.name" />
+      <type>
+        <code value="HumanName" />
+        <profile value="ttp://ehelse.no/fhir/StructureDefinition/no-basis-HumanName" />
+      </type>
+    </element>
+    <element id="Patient.contact.address">
+      <path value="Patient.contact.address" />
+      <type>
+        <code value="Address" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>
