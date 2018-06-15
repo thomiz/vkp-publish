@@ -15,6 +15,20 @@
 	<extension url="http://ehelse.no/fhir/StructureDefinition/no-bydel">
 		<valueString value="Bydel Alna"/>
 	</extension>
+	<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-sone">
+	<!-- Tjenestested/sone -->
+		<valueReference>
+		<!-- En logisk referanse til Toppnivå sonen til pasienten. En logisk referanse henviser alltid til den Identifier som er satt på ressursen, i dette til fellet en UUID. -->
+			<identifier>
+				<system value="urn:ietf:rfc:3986"/>
+				<value value="urn:uuid:6a1cf8db-caa9-4b81-9c28-85f3e068c116"/>
+			</identifier>
+		</valueReference>
+	</extension>
+	<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-elock">
+	<!-- Angir at pasienten har installert elås på hjemmeadressen -->
+		<valueBoolean value="true"/>
+	</extension>
 	<identifier> <!-- Fødselnummeret til brukeren -->
 		<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
 		<value value="05073500186"/>

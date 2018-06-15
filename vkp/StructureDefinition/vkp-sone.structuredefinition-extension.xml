@@ -22,7 +22,7 @@
     <element id="Extension">
       <path value="Extension" />
       <short value="Reference to the top level in the Sone hierarcy" />
-      <definition value="Information about juristictional sone/subsone of the Person. Could be nested. The information about each sone must be included in a Bundle." />
+      <definition value="Information about juristictional sone/subsone of the Person. Could be nested. The information about each sone must be included in a Bundle where the vkp-Patient is present as well as a vkp-sone-Location resource for each sone." />
     </element>
     <element id="Extension.value[x]:valueReference">
       <path value="Extension.valueReference" />

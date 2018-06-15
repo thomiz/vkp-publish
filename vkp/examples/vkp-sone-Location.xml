@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Location xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
+	<meta>
+		<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-sone-Location"/>
+	</meta>
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:uuid:6a1cf8db-caa9-4b81-9c28-85f3e068c116"/>
+	</identifier>
+	<name value="Oslo"/>
+	<type>
+		<text value="Municipality"/>
+	</type>
+</Location>

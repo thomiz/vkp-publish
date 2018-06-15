@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="vkp-elock" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/vkp-elock" />
+  <version value="0.1" />
+  <name value="vkp-elock" />
+  <title value="vkp-elock" />
+  <status value="draft" />
+  <date value="2018-06-15" />
+  <description value="Information about elock present in the patients home (true/false)" />
+  <purpose value="Information about elock present in the patients home (true/false)" />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="datatype" />
+  <context value="Patient" />
+  <context value="Person" />
+  <context value="Location" />
+  <context value="Address" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Information about elock present" />
+      <definition value="Information about elock present in the patients home (true/false)&#xD;&#xA;- true means the location/patient/address has installed elock&#xD;&#xA;- false means there is no installed elock at the location" />
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/vkp-elock" />
+    </element>
+    <element id="Extension.value[x]:valueBoolean">
+      <path value="Extension.valueBoolean" />
+      <sliceName value="valueBoolean" />
+      <short value="Boolean value for elock present at the location" />
+      <definition value="Information about elock present in the patients home (true/false)&#xD;&#xA;- true means the location/patient/address has installed elock&#xD;&#xA;- false means there is no installed elock at the location" />
+      <min value="1" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <fixedBoolean value="false" />
+    </element>
+  </differential>
+</StructureDefinition>
