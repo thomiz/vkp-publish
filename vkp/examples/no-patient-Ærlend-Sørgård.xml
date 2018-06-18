@@ -12,12 +12,19 @@
 			</valueCodeableConcept>
 		</extension>
 	</extension>
-	<extension url="http://ehelse.no/fhir/StructureDefinition/no-bydel">
-		<valueString value="Bydel Alna"/>
+	<extension url="http://ehelse.no/fhir/StructureDefinition/no-basis-bydel">
+		<valueCoding>
+			<system value="urn:uri:2.16.578.1.12.4.1.1.3403"/>
+			<code value="030101"/>
+			<display value="Gamle Oslo"/>
+		</valueCoding>
 	</extension>
 	<identifier> <!-- Fødselnummeret til brukeren -->
 		<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
 		<value value="05073500186"/>
+		<assigner>
+			<display value="Skatt"/>
+		</assigner>
 	</identifier>
 	<identifier>
 		<type>
@@ -27,10 +34,16 @@
 			</coding>
 		</type>
 		<value value="12345"/>
+		<assigner>
+			<display value="Skatt"/>
+		</assigner>
 	</identifier>
 	<identifier> <!-- en annen identifikator, for eksempel løpenummer i EPJ -->
 		<system value="http://profil.visma.no/lopenummer"/>
 		<value value="123"/>
+		<assigner>
+			<display value="Skatt"/>
+		</assigner>
 	</identifier>
 	<name> <!-- Navnet til brukeren -->
 		<family value="Sørgård"/>
@@ -43,9 +56,13 @@
 	</telecom>
 	<gender value="male"/>
 	<address>
-		<extension url="http://ehelse.no/fhir/StructureDefinition/no-propertyinformation-v05">
+		<extension url="http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation">
 			<extension url="kommune">
-				<valueString value="Drammen"/>
+				<valueCoding>
+					<system value="urn:uri:2.16.578.1.12.4.1.1.3402"/>
+					<code value="030101"/>
+					<display value="Gamle Oslo"/>
+				</valueCoding>
 			</extension>
 		</extension>
 		<use value="home"/>
@@ -70,7 +87,7 @@
 			</coding>
 		</relationship>
 		<name> <!-- Navnet til kontaktpersonen, legg merke til mellomnavn som ikke er en del av HumanName i FHIR -->
-			<extension url="http://ehelse.no/fhir/StructureDefinition/no-middlename">
+			<extension url="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename">
 				<valueString value="Pårørende"/>
 			</extension>
 			<text value="Pål Pårørende Olsen"/>

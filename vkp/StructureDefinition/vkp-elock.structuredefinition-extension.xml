@@ -16,7 +16,7 @@
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
-  <contextType value="datatype" />
+  <contextType value="resource" />
   <context value="Patient" />
   <context value="Person" />
   <context value="Location" />
