@@ -36,7 +36,6 @@
     <element id="Contract.extension:commonBaseType">
       <path value="Contract.extension" />
       <sliceName value="commonBaseType" />
-      <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />
