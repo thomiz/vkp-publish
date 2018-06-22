@@ -1,4 +1,4 @@
-<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd">
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
   <id value="10bb101f-a121-4264-a920-67be9cb82c74" />
   <type value="message" />
   <entry>
@@ -54,6 +54,7 @@
             <code value="2"/>
 			<display value="medisin_ikke_utlevert" />
           </coding>
+          <text value="Medisin ikke utlevert"/>
         </category>
         <medicationCodeableConcept>
           <text value="Ukjent medisin" />
