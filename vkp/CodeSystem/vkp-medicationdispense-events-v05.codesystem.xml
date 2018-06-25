@@ -1,15 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
-<CodeSystem xmlns="http://hl7.org/fhir"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
-  <id value="vkp-medicationdispense-events-v05" />
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="vkp-medicationdispense-events-v05.codesystem" />
   <meta>
-    <lastUpdated value="2017-09-12T15:00:50.532+02:00" />
+    <versionId value="1" />
+    <lastUpdated value="2018-06-25T10:48:34.405+00:00" />
   </meta>
   <url value="http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v05" />
-  <version value="0.5" />
-  <name value="vkp-medicationdispense-events" />
+  <version value="0.52" />
+  <name value="vkp-medicationdispense-events-05.codesystem" />
   <status value="draft" />
+  <date value="2018-06-25T10:48:33.551+00:00" />
   <publisher value="Direktoratet for e-helse" />
   <content value="complete" />
+  <concept>
+    <code value="0" />
+    <display value="medisin_melding_test" />
+    <definition value="TEST: Journalføring av medisindispenserhendelser" />
+  </concept>
   <concept>
     <code value="1" />
     <display value="medisin_utlevert" />
@@ -59,5 +66,10 @@
     <code value="10" />
     <display value="medisin_ingen_kontakt" />
     <definition value="Teknisk varsel, ingen kontakt med medisindispenseren" />
+  </concept>
+  <concept>
+    <code value="11" />
+    <display value="medisin_dispenser_aapen" />
+    <definition value="Teknisk varsel, Medisindispenseren er åpen" />
   </concept>
 </CodeSystem>

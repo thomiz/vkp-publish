@@ -1,30 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="no-bydel" />
+  <id value="vkp-sone" />
   <meta>
-    <lastUpdated value="2018-03-01T18:21:40.962+01:00" />
+    <versionId value="1" />
+    <lastUpdated value="2018-06-15T13:39:05.662+00:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/StructureDefinition/no-bydel" />
-  <name value="no-bydel" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/vkp-sone" />
+  <version value="0.1" />
+  <name value="vkp-sone" />
   <status value="draft" />
-  <date value="2018-03-01T18:17:21.475+01:00" />
-  <description value="Simple extension containing information about what part of a norwegian city the patient is a resident. Administrative purpose." />
+  <date value="2018-06-15T13:39:05.545Z" />
+  <description value="Information about juristictional sone/subsone of the Person. Could be nested. The information about each sone must be included in a Bundle." />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <contextType value="resource" />
+  <context value="Location" />
   <context value="Patient" />
-  <context value="Address" />
-  <context value="Person" />
   <context value="Practitioner" />
+  <context value="Organization" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <snapshot>
     <element id="Extension">
       <path value="Extension" />
-      <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources." />
+      <short value="Reference to the top level in the Sone hierarcy" />
+      <definition value="Information about juristictional sone/subsone of the Person. Could be nested. The information about each sone must be included in a Bundle where the vkp-Patient is present as well as a vkp-sone-Location resource for each sone." />
       <min value="0" />
       <max value="*" />
       <base>
@@ -150,7 +152,6 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/no-bydel" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -168,11 +169,11 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.value[x]:valueString">
-      <path value="Extension.valueString" />
-      <sliceName value="valueString" />
-      <short value="The name of the bydel" />
-      <definition value="The name of the bydel (part of the city)" />
+    <element id="Extension.value[x]:valueReference">
+      <path value="Extension.valueReference" />
+      <sliceName value="valueReference" />
+      <short value="Reference to the top level in the Sone hierarcy" />
+      <definition value="Reference to the top level Sone in the Sone hierarcy. Provides information about juristictional sone/subsone of the Person. The Sone system can be nested. The information about each sone in the hierarcy must be included in a Bundle to provide information about each sone/Subsone/district e.a." />
       <comment value="A stream of bytes, base64 encoded" />
       <min value="0" />
       <max value="1" />
@@ -182,7 +183,8 @@
         <max value="1" />
       </base>
       <type>
-        <code value="string" />
+        <code value="Reference" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-sone-Location" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -203,17 +205,19 @@
     </element>
   </snapshot>
   <differential>
-    <element id="Extension.url">
-      <path value="Extension.url" />
-      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/no-bydel" />
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Reference to the top level in the Sone hierarcy" />
+      <definition value="Information about juristictional sone/subsone of the Person. Could be nested. The information about each sone must be included in a Bundle where the vkp-Patient is present as well as a vkp-sone-Location resource for each sone." />
     </element>
-    <element id="Extension.value[x]:valueString">
-      <path value="Extension.valueString" />
-      <sliceName value="valueString" />
-      <short value="The name of the bydel" />
-      <definition value="The name of the bydel (part of the city)" />
+    <element id="Extension.value[x]:valueReference">
+      <path value="Extension.valueReference" />
+      <sliceName value="valueReference" />
+      <short value="Reference to the top level in the Sone hierarcy" />
+      <definition value="Reference to the top level Sone in the Sone hierarcy. Provides information about juristictional sone/subsone of the Person. The Sone system can be nested. The information about each sone in the hierarcy must be included in a Bundle to provide information about each sone/Subsone/district e.a." />
       <type>
-        <code value="string" />
+        <code value="Reference" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-sone-Location" />
       </type>
     </element>
   </differential>

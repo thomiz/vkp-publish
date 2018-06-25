@@ -13,30 +13,30 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
   <derivation value="constraint" />
   <differential>
-    <element id="Resource.meta.tag">
-      <path value="Resource.meta.tag" />
-      <definition value="VKP-norway uses tags to distinguish different rules that applies to the different kinds of careplan:&#xD;&#xA;- tjenesteoversikt&#xD;&#xA;- tiltaksplan&#xD;&#xA;- besøksplan&#xD;&#xA;&#xD;&#xA;Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource." />
-      <min value="1" />
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="Tags" />
-        </extension>
-        <strength value="extensible" />
-        <description value="vkp-careplan-category" />
-        <valueSetReference>
-          <reference value="http://ehelse.no/fhir/ValueSet/vkp-careplan-category" />
-        </valueSetReference>
-      </binding>
+    <element id="CarePlan.identifier">
+      <path value="CarePlan.identifier" />
+      <definition value="VKP project uses UUID. &#xD;&#xA;&#xD;&#xA;Example: urn:uuid:2e82976a-35d6-4870-a4d5-d79abf772a8f&#xD;&#xA;&#xD;&#xA;This records identifiers associated with this care plan that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation)." />
+      <mustSupport value="true" />
     </element>
-    <element id="Resource.category">
-      <path value="Resource.category" />
-      <min value="1" />
-      <max value="1" />
+    <element id="CarePlan.status">
+      <path value="CarePlan.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CarePlan.intent">
+      <path value="CarePlan.intent" />
+      <definition value="The code &quot;plan&quot; is used for defining the &quot;tiltaksplan&quot; that the user receives. &#xD;&#xA;The Code &quot;order&quot; is used for &quot;tjenester&quot; that the user has formal decision to receive.&#xD;&#xA;&#xD;&#xA;Indicates the level of authority/intentionality associated with the care plan and where the care plan fits into the workflow chain." />
+      <mustSupport value="true" />
+    </element>
+    <element id="CarePlan.category">
+      <path value="CarePlan.category" />
+      <definition value="VKP-Norway uses vkp-careplan-category to identify the different kinds of care plans. &#xD;&#xA;&#xD;&#xA;Identifies what &quot;kind&quot; of plan this is to support differentiation between multiple co-existing plans; e.g. &quot;Home health&quot;, &quot;psychiatric&quot;, &quot;asthma&quot;, &quot;disease management&quot;, &quot;wellness plan&quot;, etc." />
+      <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="CarePlanCategory" />
         </extension>
         <strength value="required" />
+        <description value="VKP-Norway uses vkp-careplan-category to identify the different kinds of care plans. Identifies what &quot;kind&quot; of plan this is to support differentiation between multiple co-existing plans; e.g. &quot;Home health&quot;, &quot;psychiatric&quot;, &quot;asthma&quot;, &quot;disease management&quot;, etc." />
         <valueSetReference>
           <reference value="http://ehelse.no/fhir/ValueSet/vkp-careplan-category" />
         </valueSetReference>
