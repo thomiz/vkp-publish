@@ -1,0 +1,80 @@
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
+  <id value="70339f7d-4846-4edf-86a3-130c2f72dde8" />
+  <type value="message" />
+  <entry>
+    <fullUrl value="urn:uuid:edf4b3f0-4ee8-4656-b80e-e8813c953835" />
+    <resource>
+      <MessageHeader>
+        <id value="edf4b3f0-4ee8-4656-b80e-e8813c953835" />
+        <event>
+          <system value="http://ehelse.no/fhir/CodeSystem/vkp-message-event-v05" />
+          <code value="CameraObservation" />
+        </event>
+        <receiver>
+          <identifier>
+            <system value="http://ehelse.no/fhir/identifiertypes/HERID" />
+            <value value="102287" />
+          </identifier>
+          <display value="Sykepleietjeneste, pleie- og omsorg" />
+        </receiver>
+        <sender>
+          <identifier>
+            <system value="http://ehelse.no/fhir/identifiertypes/HERID" />
+            <value value="95341" />
+          </identifier>
+          <display value="Velferdpoclev1" />
+        </sender>
+        <timestamp value="2012-01-04T09:10:14+00:00" />
+        <source>
+          <endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341" />
+        </source>
+        <focus>
+          <reference value="urn:uuid:7dc07bbf-e690-435a-99b6-11e867697ea2" />
+          <display value="Encounter" />
+        </focus>
+      </MessageHeader>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:7dc07bbf-e690-435a-99b6-11e867697ea2" />
+    <resource>
+    <Encounter>
+		 <id value="7dc07bbf-e690-435a-99b6-11e867697ea2" />
+        <!--<meta>
+			<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v05"/>
+		</meta> -->
+        <identifier>
+          <system value="http://acme.no/cameraobservation-identifier" />
+          <value value="urn:uuid:4d300421-beb7-4e25-b25b-194534064391" />
+        </identifier>
+		<status value="finished"/>
+		<!-- Foreløpig finnes ikke noe godt kodeverk for Encounter type, fritekst intill videre -->
+		<type>
+			<text value="Kameraobservasjon"/>
+		</type>
+        <subject>
+          <identifier>
+            <system value="urn:oid:2.16.578.1.12.4.1.4.1" />
+            <value value="05073500186" />
+          </identifier>
+          <display value="Ærlend Sørgård" />
+        </subject>
+        <participant>
+			<individual>
+				<identifier>
+					<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
+					<value value="04056600324"/>
+				</identifier>
+				<display value="Magnar Koman"/>
+			  </individual>
+		  </participant>
+		  <period>
+			  <end value="2018-06-25T10:00:00.936+02:00"/>
+		  </period>
+		  <reason>
+			<text value="Forskjellige typer fra Roommate systemet, kan opprettes som kodeverk"/>
+		  </reason>
+      </Encounter>
+    </resource>
+  </entry>
+</Bundle>

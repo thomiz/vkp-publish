@@ -2,10 +2,10 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="vkp-message-event-v05.codesystem" />
   <meta>
-    <lastUpdated value="2017-09-12T15:00:50.532+02:00" />
+    <lastUpdated value="2018-06-25T15:00:50.532+02:00" />
   </meta>
   <url value="http://ehelse.no/fhir/CodeSystem/vkp-message-event-v05" />
-  <version value="0.5" />
+  <version value="0.52" />
   <name value="vkp-message-event" />
   <status value="draft" />
   <publisher value="Direktoratet for e-helse" />
@@ -14,5 +14,15 @@
     <code value="MedicationDispense" />
     <display value="MedicationDispense" />
     <definition value="MedicationDispense message event" />
+  </concept>
+  <concept>
+	  <code value="LocationMeasurement" />
+	  <display value="LocationMeasurement" />
+	  <definition value="Location measurement from geopositioning device" />
+  </concept>
+  <concept>
+	  <code value="CameraObservation"/>
+	  <display value="CameraObservation"/>
+	  <definition value="Observation of the location using camera device"/>
   </concept>
 </CodeSystem>
