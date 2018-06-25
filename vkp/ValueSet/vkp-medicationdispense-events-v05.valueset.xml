@@ -1,16 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="vkp-medicationdispense-events-v05" />
-    <url value="http://ehelse.no/fhir/ValueSet/vkp-medicationdispense-events-v05" />
-    <version value="0.5" />
-    <name value="vkp-medicationdispense-events-v05" />
-    <status value="draft" />
-    <experimental value="true" />
-    <publisher value="Direktoratet for e-helse" />
-    <immutable value="false" />
-    <compose>
-        <include>
-            <system value="http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v05" />
-        </include>
-    </compose>
+  <id value="vkp-medicationdispense-events-v05.valueset" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2018-06-25T10:48:46.366+00:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/ValueSet/vkp-medicationdispense-events-v05" />
+  <version value="0.52" />
+  <name value="vkp-medicationdispense-events-v05.valueset" />
+  <status value="draft" />
+  <experimental value="true" />
+  <date value="2018-06-25T10:48:45.936+00:00" />
+  <publisher value="Direktoratet for e-helse" />
+  <immutable value="false" />
+  <compose>
+    <include>
+      <system value="http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v05" />
+    </include>
+  </compose>
 </ValueSet>

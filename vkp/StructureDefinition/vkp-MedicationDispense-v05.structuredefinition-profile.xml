@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="vkp-MedicationDispense-v07" />
+  <id value="vkp-MedicationDispense-v05" />
   <meta>
-    <lastUpdated value="2018-01-23T10:23:40.585+01:00" />
+    <versionId value="1" />
+    <lastUpdated value="2018-06-25T08:46:31.718+00:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v07" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v05" />
   <name value="vkp-MedicationDispense" />
   <status value="draft" />
-  <date value="2017-10-31T13:47:23.347+01:00" />
+  <date value="2018-06-25T08:46:30.435+00:00" />
   <description value="Profile of the MedicationDispense resource. Used in the Norwegian Personal Connected Health project to document MedicationDispense events from devices dispensing medication to the user at the patients home." />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
@@ -539,7 +540,7 @@
     <element id="MedicationDispense.category">
       <path value="MedicationDispense.category" />
       <short value="Event types when medication dispencer performs the medication dispense" />
-      <definition value="Event types when medication dispencer performs the medication dispense. Values from http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v07 is required&#xD;&#xA;" />
+      <definition value="Event types when medication dispencer performs the medication dispense. Values from http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v05 is required&#xD;&#xA;" />
       <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
       <min value="0" />
       <max value="1" />
@@ -565,7 +566,7 @@
         </extension>
         <strength value="required" />
         <description value="A code describing where the dispensed medication is expected to be consumed or administered" />
-        <valueSetUri value="http://ehelse.no/fhir/ValueSet/vkp-medicationdispense-events-v07" />
+        <valueSetUri value="http://ehelse.no/fhir/ValueSet/vkp-medicationdispense-events-v05" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -2102,13 +2103,13 @@
     <element id="MedicationDispense.category">
       <path value="MedicationDispense.category" />
       <short value="Event types when medication dispencer performs the medication dispense" />
-      <definition value="Event types when medication dispencer performs the medication dispense. Values from http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v07 is required&#xD;&#xA;" />
+      <definition value="Event types when medication dispencer performs the medication dispense. Values from http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v05 is required&#xD;&#xA;" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="MedicationDispenseCategory" />
         </extension>
         <strength value="required" />
-        <valueSetUri value="http://ehelse.no/fhir/ValueSet/vkp-medicationdispense-events-v07" />
+        <valueSetUri value="http://ehelse.no/fhir/ValueSet/vkp-medicationdispense-events-v05" />
       </binding>
     </element>
     <element id="MedicationDispense.medication[x]:medicationCodeableConcept">
