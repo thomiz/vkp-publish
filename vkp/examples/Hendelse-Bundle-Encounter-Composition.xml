@@ -1,12 +1,12 @@
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
 <!-- The use case is for making the encounter involving a CameraObservation available to the Electronic Health Record after an incedent has occurred and the incident is handled.-->
-  <id value="70339f7d-4846-4edf-86a3-130c2f72dde8" />
+  <id value="3a015759-a3cd-4112-b6b7-61a0bcd55303" />
   <type value="message" />
   <entry>
-    <fullUrl value="urn:uuid:edf4b3f0-4ee8-4656-b80e-e8813c953835" />
+    <fullUrl value="urn:uuid:54b44b2e-855a-4f75-904f-9ec865e88020" />
     <resource>
       <MessageHeader>
-        <id value="edf4b3f0-4ee8-4656-b80e-e8813c953835" />
+        <id value="54b44b2e-855a-4f75-904f-9ec865e88020" />
         <event>
           <system value="http://ehelse.no/fhir/CodeSystem/vkp-message-event-v05" />
           <code value="CameraObservation" />
@@ -30,24 +30,82 @@
           <endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341" />
         </source>
         <focus>
-          <reference value="urn:uuid:7dc07bbf-e690-435a-99b6-11e867697ea2" />
+        <!-- Reference to the Bundle entry containing the Composition -->
+          <reference value="urn:uuid:1f214b1f-ca8c-43fc-9a0f-341fad53e32b" />
+          <display value="Composition" />
+        </focus>
+        <focus>
+        <!-- Reference to the Bundle entry containing the Encounter -->
+          <reference value="urn:uuid:41d3d995-3afe-421e-bbb7-7b2126ce455b" />
           <display value="Encounter" />
         </focus>
       </MessageHeader>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:7dc07bbf-e690-435a-99b6-11e867697ea2" />
+	<fullUrl value="urn:uuid:1f214b1f-ca8c-43fc-9a0f-341fad53e32b"/>
+		<resource>
+			<!-- Have to define when Composition is to be used in this use-case -->
+			<Composition>
+				<id value="1f214b1f-ca8c-43fc-9a0f-341fad53e32b"/>
+				<status value="final"/>
+				<!-- Status er alltid final når Composition sendes første gang, kan ha andre statuser hvis man ønsker å endre på avsendt Composition (amended og entered in error) -->
+				<type>
+					<coding>
+						<code value="11488-4"/>
+						<!-- LOINC kode, mer enn tusen koder å velge mellom, her er det mulig å benytte eget kodeverk som er gjenkjennbart for norske EPJ -->
+						<display value="Consult note"/>
+					</coding>
+				</type>
+				<subject>
+					<!-- Referanse til pasient obligatorisk i Composition-->
+					 <identifier>
+						<system value="urn:oid:2.16.578.1.12.4.1.4.1" />
+						<value value="05073500186" />
+					</identifier>
+					  <display value="Ærlend Sørgård" />
+				</subject>
+				<date value="2017-05-09T10:30:00.936+02:00"/>
+				<!-- Timestamp for journalnotatet, må være senere enn hendelsen-->
+				<author>
+					<!-- Behandleren som har skrevet notatet -->
+					<identifier>
+						<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
+						<value value="04056600324"/>
+					</identifier>
+					<display value="Magnar Koman"/>
+				</author>
+				<title value="Journalnotat for Kameraobservasjon"/>
+				<section>
+					<text>
+						<!-- Selve notatet-->
+						<status value="additional"/>
+						<!-- Will always be additional as this is notes written by humans in addition to the structured information referenced below -->
+						<div xmlns="http://www.w3.org/1999/xhtml">
+							XHTML strukturert tekstinformasjon
+						</div>
+					</text>
+					<entry>
+						<!-- A reference to the identifier of the data that supports this section. In this case the encounter -->
+						<reference value="urn:uuid:9c1ce08f-9ac7-4b4d-9d08-281c9f54ddfb"/>
+						<display value="Encounter"/>
+					</entry>
+				</section>
+			</Composition>
+		</resource>
+	</entry>
+  <entry>
+    <fullUrl value="urn:uuid:41d3d995-3afe-421e-bbb7-7b2126ce455b" />
     <resource>
     <Encounter>
-		 <id value="7dc07bbf-e690-435a-99b6-11e867697ea2" />
+		 <id value="41d3d995-3afe-421e-bbb7-7b2126ce455b" />
         <!--<meta>
 			<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v05"/>
 		</meta> -->
         <identifier>
         <!--  Unique identification of the encounter as desided by the system --> 
           <system value="http://acme.no/cameraobservation-identifier" />
-          <value value="urn:uuid:4d300421-beb7-4e25-b25b-194534064391" />
+          <value value="urn:uuid:9c1ce08f-9ac7-4b4d-9d08-281c9f54ddfb" />
         </identifier>
         <!-- The status of the encounter. Reported encounter should be finished. -->
 		<status value="finished"/>

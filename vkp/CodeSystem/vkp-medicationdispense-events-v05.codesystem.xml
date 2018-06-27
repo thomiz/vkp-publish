@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="vkp-medicationdispense-events-v05.codesystem" />
   <meta>
@@ -6,7 +6,7 @@
     <lastUpdated value="2018-06-25T10:48:34.405+00:00" />
   </meta>
   <url value="http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v05" />
-  <version value="0.52" />
+  <version value="0.53" />
   <name value="vkp-medicationdispense-events-05.codesystem" />
   <status value="draft" />
   <date value="2018-06-25T10:48:33.551+00:00" />
@@ -71,5 +71,45 @@
     <code value="11" />
     <display value="medisin_dispenser_aapen" />
     <definition value="Teknisk varsel, Medisindispenseren er åpen" />
+  </concept>
+  <concept>
+    <code value="12" />
+    <display value="medisin_innbrudd" />
+    <definition value="Medisinsdispenseren detekterte et forsøk på innbrudd i dispenseren" />
+  </concept>
+  <concept>
+    <code value="13" />
+    <display value="medisin_utelatt_full" />
+    <definition value="" />
+  </concept>
+  <concept>
+    <code value="14" />
+    <display value="medisin_rull_stoppet" />
+    <definition value="" />
+  </concept>
+  <concept>
+    <code value="15" />
+    <display value="medisin_mangler_reise" />
+    <definition value="" />
+  </concept>
+  <concept>
+    <code value="16" />
+    <display value="medisin_ikke_lest" />
+    <definition value="" />
+  </concept>
+  <concept>
+    <code value="17" />
+    <display value="medisin_batteri_tomt" />
+    <definition value="" />
+  </concept>
+  <concept>
+    <code value="18" />
+    <display value="medisin_assistert_utlevering" />
+    <definition value="" />
+  </concept>
+  <concept>
+    <code value="19" />
+    <display value="medisin_melding_til_bruker" />
+    <definition value="" />
   </concept>
 </CodeSystem>
