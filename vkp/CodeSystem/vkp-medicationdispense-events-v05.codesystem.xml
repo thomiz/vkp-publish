@@ -75,41 +75,41 @@
   <concept>
     <code value="12" />
     <display value="medisin_innbrudd" />
-    <definition value="Medisinsdispenseren detekterte et forsøk på innbrudd i dispenseren" />
+    <definition value="Medisindispenseren har registrert ulovlig forsøk på åpning" />
   </concept>
   <concept>
     <code value="13" />
     <display value="medisin_utelatt_full" />
-    <definition value="" />
+    <definition value="Skuffen for utelatte medisiner er full, utmating er stanset" />
   </concept>
   <concept>
     <code value="14" />
     <display value="medisin_rull_stoppet" />
-    <definition value="" />
+    <definition value="Medisinrullen sitter fast i medisindispenseren, utmating er stanset " />
   </concept>
   <concept>
     <code value="15" />
     <display value="medisin_mangler_reise" />
-    <definition value="" />
+    <definition value="Medisindispenseren har ikke nok medisiner til planlagt reise" />
   </concept>
   <concept>
     <code value="16" />
     <display value="medisin_ikke_lest" />
-    <definition value="" />
+    <definition value="Medisindispenseren har ikke klart å lese medisinposen, utmating er stanset" />
   </concept>
   <concept>
     <code value="17" />
     <display value="medisin_batteri_tomt" />
-    <definition value="" />
+    <definition value="Teknisk varsel, tomt for batteri, systemet har slått av medisindispenseren" />
   </concept>
   <concept>
     <code value="18" />
     <display value="medisin_assistert_utlevering" />
-    <definition value="" />
+    <definition value="Assistert utlevering av medisin" />
   </concept>
   <concept>
     <code value="19" />
     <display value="medisin_melding_til_bruker" />
-    <definition value="" />
+    <definition value="Melding ble sendt til bruker" />
   </concept>
 </CodeSystem>

@@ -6,7 +6,7 @@
     <lastUpdated value="2018-06-25T10:48:46.366+00:00" />
   </meta>
   <url value="http://ehelse.no/fhir/ValueSet/vkp-medicationdispense-events-v05" />
-  <version value="0.52" />
+  <version value="0.53" />
   <name value="vkp-medicationdispense-events-v05.valueset" />
   <status value="draft" />
   <experimental value="true" />
