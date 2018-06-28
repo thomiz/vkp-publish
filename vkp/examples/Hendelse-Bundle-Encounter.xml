@@ -51,9 +51,13 @@
         </identifier>
         <!-- The status of the encounter. Reported encounter should be finished. -->
 		<status value="finished"/>
-		<!-- The encounter type, there is no CodeSystem defined for encounter-type, text until appropriate CodeSystem is assigned -->
+		<!-- The encounter type, we suggest using predefined codes from http://ehelse.no/fhir/CodeSystem/vkp-encounter-camera-reason-v05 -->
 		<type>
-			<text value="Kameraobservasjon"/>
+			<coding>
+				<system value="http://ehelse.no/fhir/CodeSystem/vkp-encounter-camera-events-v05"/>
+				<code value="2"/>
+				<display value="visuelt_tilsyn"/>
+			</coding>
 		</type>
         <subject>
         <!-- Reference to the patient that is subject to the encounter, identified by Norwegian Fødselsnummer-->
@@ -78,8 +82,12 @@
 			  <end value="2018-06-25T10:00:00.936+02:00"/>
 		  </period>
 		  <reason>
-		  <!-- Reason the encounter takes place, could be coded if we decide on predefined values for reason -->
-			<text value="Forskjellige typer fra Roommate systemet, kan opprettes som kodeverk"/>
+		  <!-- Reason the encounter takes place, coded according to http://ehelse.no/fhir/CodeSystem/vkp-encounter-camera-reason-v05 -->
+				<coding>
+					<system value="http://ehelse.no/fhir/CodeSystem/vkp-encounter-camera-reason-v05"/>
+					<code value="4"/>
+					<display value="reist_seg_fra_stol"/>
+				</coding>
 		  </reason>
       </Encounter>
     </resource>
