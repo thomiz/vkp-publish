@@ -25,8 +25,8 @@
   <snapshot>
     <element id="Extension">
       <path value="Extension" />
-      <short value="Reference to the top level in the Sone hierarcy" />
-      <definition value="Information about juristictional sone/subsone of the Person. Could be nested. The information about each sone must be included in a Bundle where the vkp-Patient is present as well as a vkp-sone-Location resource for each sone." />
+      <short value="Information about juristictional sone/subsone " />
+      <definition value="Information about juristictional sone/subsone of the Person. The sone and subsone is given as a list of string values " />
       <min value="0" />
       <max value="*" />
       <base>
@@ -169,11 +169,11 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.value[x]:valueReference">
-      <path value="Extension.valueReference" />
-      <sliceName value="valueReference" />
-      <short value="Reference to the top level in the Sone hierarcy" />
-      <definition value="Reference to the top level Sone in the Sone hierarcy. Provides information about juristictional sone/subsone of the Person. The Sone system can be nested. The information about each sone in the hierarcy must be included in a Bundle to provide information about each sone/Subsone/district e.a." />
+    <element id="Extension.value[x]:valueString">
+      <path value="Extension.valueString" />
+      <sliceName value="valueString" />
+      <short value="String representation of the Sone hierarcy" />
+      <definition value="A string representation of the Sone Hierarcy. Usually four levels. Usually four levels: Municipality, District, Sone and SubSone. Each category is delimited with a |&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~~&#xD;&#xA;&quot;Oslo|Gamle Oslo|Øst|Kampen&quot;&#xD;&#xA;~~~~" />
       <comment value="A stream of bytes, base64 encoded" />
       <min value="0" />
       <max value="1" />
@@ -183,8 +183,7 @@
         <max value="1" />
       </base>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-sone-Location" />
+        <code value="string" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -207,17 +206,16 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <short value="Reference to the top level in the Sone hierarcy" />
-      <definition value="Information about juristictional sone/subsone of the Person. Could be nested. The information about each sone must be included in a Bundle where the vkp-Patient is present as well as a vkp-sone-Location resource for each sone." />
+      <short value="Information about juristictional sone/subsone " />
+      <definition value="Information about juristictional sone/subsone of the Person. The sone and subsone is given as a list of string values " />
     </element>
-    <element id="Extension.value[x]:valueReference">
-      <path value="Extension.valueReference" />
-      <sliceName value="valueReference" />
-      <short value="Reference to the top level in the Sone hierarcy" />
-      <definition value="Reference to the top level Sone in the Sone hierarcy. Provides information about juristictional sone/subsone of the Person. The Sone system can be nested. The information about each sone in the hierarcy must be included in a Bundle to provide information about each sone/Subsone/district e.a." />
+    <element id="Extension.value[x]:valueString">
+      <path value="Extension.valueString" />
+      <sliceName value="valueString" />
+      <short value="String representation of the Sone hierarcy" />
+      <definition value="A string representation of the Sone Hierarcy. Usually four levels. Usually four levels: Municipality, District, Sone and SubSone. Each category is delimited with a |&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~~&#xD;&#xA;&quot;Oslo|Gamle Oslo|Øst|Kampen&quot;&#xD;&#xA;~~~~" />
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-sone-Location" />
+        <code value="string" />
       </type>
     </element>
   </differential>

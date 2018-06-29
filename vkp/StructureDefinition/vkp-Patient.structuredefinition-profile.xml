@@ -2,14 +2,14 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="vkp-Patient" />
   <meta>
-    <versionId value="6" />
-    <lastUpdated value="2018-06-18T08:42:35.19+00:00" />
+    <versionId value="7" />
+    <lastUpdated value="2018-06-29T10:32:14.139+00:00" />
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/vkp-Patient" />
   <version value="0.1" />
   <name value="vkp-Patient" />
   <status value="draft" />
-  <date value="2018-06-18T08:42:34.358Z" />
+  <date value="2018-06-29T10:32:13.358+00:00" />
   <description value="Profile of the no-basis-Patient profile resource. Used in the Norwegian Personal Connected Health project to document Patient information. " />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
@@ -1049,11 +1049,11 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Patient.extension:sone">
+    <element id="Patient.extension:elock">
       <path value="Patient.extension" />
-      <sliceName value="sone" />
-      <short value="The concept of an officially registered address" />
-      <definition value="Defines the concept of an officially registered address in Norway. Usually this will be the adress registered in &quot;Folkeregisteret&quot; for persons or &quot;Enhetsregisteret&quot; for organizations." />
+      <sliceName value="elock" />
+      <short value="Information about elock present" />
+      <definition value="Information about elock present in the patients home (true/false)&#xD;&#xA;- true means the location/patient/address has installed elock&#xD;&#xA;- false means there is no installed elock at the location" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -1066,7 +1066,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-sone" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-elock" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1092,11 +1092,11 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Patient.extension:elock">
+    <element id="Patient.extension:sone">
       <path value="Patient.extension" />
-      <sliceName value="elock" />
-      <short value="Information about elock present" />
-      <definition value="Information about elock present in the patients home (true/false)&#xD;&#xA;- true means the location/patient/address has installed elock&#xD;&#xA;- false means there is no installed elock at the location" />
+      <sliceName value="sone" />
+      <short value="Information about juristictional sone/subsone " />
+      <definition value="Information about juristictional sone/subsone of the Person. The sone and subsone is given as a list of string values " />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -1109,7 +1109,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-elock" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-sone" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -7051,17 +7051,6 @@
       <short value="Optional Extensions Element" />
       <definition value="Optional Extension Element - found in all resources." />
     </element>
-    <element id="Patient.extension:sone">
-      <path value="Patient.extension" />
-      <sliceName value="sone" />
-      <short value="The concept of an officially registered address" />
-      <definition value="Defines the concept of an officially registered address in Norway. Usually this will be the adress registered in &quot;Folkeregisteret&quot; for persons or &quot;Enhetsregisteret&quot; for organizations." />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-sone" />
-      </type>
-    </element>
     <element id="Patient.extension:elock">
       <path value="Patient.extension" />
       <sliceName value="elock" />
@@ -7069,6 +7058,15 @@
       <type>
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-elock" />
+      </type>
+    </element>
+    <element id="Patient.extension:sone">
+      <path value="Patient.extension" />
+      <sliceName value="sone" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-sone" />
       </type>
     </element>
     <element id="Patient.identifier">

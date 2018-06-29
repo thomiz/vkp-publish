@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="vkp-medicationdispense-message-status-v05" />
   <meta>
-    <lastUpdated value="2017-09-12T14:56:08.812+02:00" />
+    <versionId value="1" />
+    <lastUpdated value="2018-06-29T08:24:56.891+00:00" />
   </meta>
   <url value="http://ehelse.no/fhir/ValueSet/vkp-medicationdispense-message-status-v05" />
   <version value="0.5" />
   <name value="vkp-medicationdispense-message-status-v05" />
   <status value="draft" />
+  <date value="2018-06-29T08:24:56.133+00:00" />
   <publisher value="Direktoratet for e-helse" />
   <compose>
     <include>
