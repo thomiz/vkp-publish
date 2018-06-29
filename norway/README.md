@@ -1,9 +1,8 @@
 # Norway
 
-Dette prosjektet skal utvikle norske basisprofiler. 
+Dette prosjektet skal utvikle norske basisprofiler. Prosjektet videreføres på GitHub.
+![HL7 Norway GitHub Repository](https://github.com/HL7Norway/) 
 
 Kontaktperson: 
-
-Espen Stranger Seland<br/>
+Thomas Tveit Rosenlund<br/>
 Direktoratet for e-helse<br/>
-HL7 Norge
