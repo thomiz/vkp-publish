@@ -65,6 +65,12 @@
         <expression value="whenHandedOver.empty() or whenPrepared.empty() or whenHandedOver &gt;= whenPrepared" />
         <xpath value="not(exists(f:whenHandedOver/@value)) or not(exists(f:whenPrepared/@value)) or ( f:whenHandedOver/@value &gt;= f:whenPrepared/@value)" />
       </constraint>
+      <constraint>
+        <key value="category-1" />
+        <severity value="error" />
+        <human value="When category code is 19 dosageInstruction.text should be filled out" />
+        <expression value="MedicationDispense.category.coding.code = '19'|'20' implies MedicationDispense.dosageInstruction.text.exists()" />
+      </constraint>
       <mapping>
         <identity value="rim" />
         <map value="Entity. Role, or Act" />
@@ -3229,6 +3235,12 @@
     <element id="MedicationDispense">
       <path value="MedicationDispense" />
       <definition value="Profile of the MedicationDispense resource. Used in the Norwegian Personal Connected Health project to document MedicationDispense events from devices dispensing medication to the user at the patients home. The Resource is also used to report that a planned dispense event did not occur according to plan.&#xD;&#xA;&#xD;&#xA;Indicates that a medication product is to be or has been dispensed for a named person/patient.  This includes a description of the medication product (supply) provided and the instructions for administering the medication.  The medication dispense is the result of a pharmacy system responding to a medication order.&#xD;&#xA;&#xD;&#xA;" />
+      <constraint>
+        <key value="category-1" />
+        <severity value="error" />
+        <human value="When category code is 19 dosageInstruction.text should be filled out" />
+        <expression value="MedicationDispense.category.coding.code = '19'|'20' implies MedicationDispense.dosageInstruction.text.exists()" />
+      </constraint>
     </element>
     <element id="MedicationDispense.identifier">
       <path value="MedicationDispense.identifier" />
