@@ -70,7 +70,7 @@
 	<concept>
 		<code value="11"/>
 		<display value="medisin_dispenser_aapen"/>
-		<definition value="Teknisk varsel, Medisindispenseren er åpen"/>
+		<definition value="Medisindispenseren er åpen"/>
 	</concept>
 	<concept>
 		<code value="12"/>
