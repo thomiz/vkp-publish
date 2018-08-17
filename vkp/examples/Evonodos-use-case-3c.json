@@ -1,29 +1,29 @@
 {
   "resourceType": "Bundle",
   "type": "message",
-  "id": "c4044e93-5602-560c-9f25-6e68a1cecde1",
+  "id": "c4044e93-5602-560c-9f25-6e68a1ceeea8",
   "entry": [
     {
-        "fullUrl": "urn:uuid:7774c18e-a603-5ce7-9b06-481be56cb3f5",
+        "fullUrl": "urn:uuid:7774c18e-a603-5ce7-9b06-481be56cb3e5",
       "resource": {
         "resourceType": "MessageHeader",
-        "id": "7774c18e-a603-5ce7-9b06-481be56cb3f5",
+        "id": "7774c18e-a603-5ce7-9b06-481be56cb3e5",
         "sender": {
           "identifier": {
             "system": "http://ehelse.no/fhir/identifiertypes/HERID",
-            "value": " 8134527"
+            "value": "8134527"
           },
           "display": "Evondos medication service"
         },
-        "timestamp": "2018-07-31T08:00:46Z",
+        "timestamp": "2018-07-31T10:29:46Z",
         "focus": [
           {
-            "reference": "urn:uuid:285357b8-1ec8-429b-827e-3bcd92366126",
+            "reference": "urn:uuid:285357b8-1ec8-429b-827e-3bcd92366897",
             "display": "Composition"
           },
           {
             "display": "MedicationDispense",
-            "reference": "urn:uuid:ba6747fd-11dc-5e21-b3b8-87ac1849abc3"
+            "reference": "urn:uuid:ba6747fd-11dc-5e21-b3b8-87ac1849fef2"
           }
         ],
         "event": {
@@ -31,7 +31,7 @@
           "system": "http://ehelse.no/fhir/ValueSet/vkp-message-event-v05"
         },
         "source": {
-          "endpoint": "http://ehelse.no/fhir/identifiertypes/HERID: 8134527"
+          "endpoint": "http://ehelse.no/fhir/identifiertypes/HERID:8134527"
         },
         "receiver": {
           "identifier": {
@@ -43,10 +43,10 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:285357b8-1ec8-429b-827e-3bcd92366126",
+      "fullUrl": "urn:uuid:285357b8-1ec8-429b-827e-3bcd92366897",
       "resource": {
         "resourceType": "Composition",
-        "id": "285357b8-1ec8-429b-827e-3bcd92366126",
+        "id": "285357b8-1ec8-429b-827e-3bcd92366897",
         "status": "final",
         "type": {
           "coding": [
@@ -59,23 +59,23 @@
         "subject": {
           "identifier": {
             "system": "http://ehelse.no/fhir/identifiertypes/FNR",
-            "value": " 29098300000"
+            "value": "29098300000"
           },
           "display": "Testbruker EVON"
         },
-        "date": "2018-07-31T08:00:00Z ",
+        "date": "2018-07-31T16:29:00Z ",
         "author": [
           {
             "identifier": {
-              "system": "http://ehelse.no/fhir/identifiertypes/FNR",
-              "value": "04056600324"
+                "system": "https://fhir.evondos.com/e300-codes/serialnumber",
+                "value": "PP000533"
             },
-            "display": "Magnar Koman"
+            "display": "Evondos E300 multidosedispenser "
           }
         ],
         "entry": [
           {
-            "reference": "urn:uuid: ba6747fd-11dc-5e21-b3b8-87ac1849abc3",
+            "reference": "urn:uuid: ba6747fd-11dc-5e21-b3b8-87ac1849fef2",
             "display": "MedicationDispense"
           }
         ],
@@ -85,24 +85,24 @@
             "title": "Response summary",
             "text": {
               "status": "additional",
-              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Utført av</div>"
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Avvikssituasjon er rettet opp. 2 varsler for denne brukeren ble lukket.</div>"
             }
           },
           {
             "title": "Signature",
             "text": {
               "status": "additional",
-              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Magnar Koman (123456)</div>"
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Evondos E300 multidosedispenser (serienummer PP000533)</div>"
             }
           }
         ]
       }
     },
     {
-      "fullUrl": "urn:uuid:ba6747fd-11dc-5e21-b3b8-87ac1849abc3",
+      "fullUrl": "urn:uuid:ba6747fd-11dc-5e21-b3b8-87ac1849fef2",
       "resource": {
         "resourceType": "MedicationDispense",
-        "id": "ba6747fd-11dc-5e21-b3b8-87ac1849abc3",
+        "id": "ba6747fd-11dc-5e21-b3b8-87ac1849fef2",
         "meta": {
           "profile": [
             "http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v05"
@@ -111,8 +111,8 @@
         "category": {
           "coding": [
             {
-              "code": "18",
-              "display": "medisin_assistert_utlevering",
+              "code": "2",
+              "display": "medisin_ikke_utlevert",
               "system": "http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v05"
             }
           ]
@@ -120,7 +120,7 @@
         "identifier": [
           {
             "system": "https://fhir.evondos.com/e300-codes/event-id",
-            "value": "2199660"
+            "value": "2199669"
           }
         ],
         "status": "completed",
@@ -142,9 +142,9 @@
         "subject": {
           "identifier": {
             "system": "http://ehelse.no/fhir/identifiertypes/FNR",
-            "value": " 29098300000"
+            "value": "29098300000"
           },
-          "display": " Testbruker EVON"
+          "display": "Testbruker EVON"
         }
       }
     }
