@@ -1,0 +1,155 @@
+{
+  "resourceType": "Bundle",
+  "type": "message",
+  "id": "c4044e93-5602-560c-9f25-6e68a1cecde1",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:7774c18e-a603-5ce7-9b06-481be56cb3f5",
+      "resource": {
+        "resourceType": "MessageHeader",
+        "id": "7774c18e-a603-5ce7-9b06-481be56cb3f5",
+        "sender": {
+          "identifier": {
+            "system": "http://ehelse.no/fhir/identifiertypes/HERID",
+            "value": "8134527"
+          },
+          "display": "Evondos medication service"
+        },
+        "timestamp": "2018-07-31T08:00:46Z",
+        "focus": [
+          {
+            "reference": "urn:uuid:285357b8-1ec8-429b-827e-3bcd92366126",
+            "display": "Composition"
+          },
+          {
+            "display": "MedicationDispense",
+            "reference": "urn:uuid:ba6747fd-11dc-5e21-b3b8-87ac1849abc3"
+          }
+        ],
+        "event": {
+          "code": "MedicationDispense",
+          "system": "http://ehelse.no/fhir/ValueSet/vkp-message-event-v05"
+        },
+        "source": {
+          "endpoint": "http://ehelse.no/fhir/identifiertypes/HERID:8134527"
+        },
+        "receiver": {
+          "identifier": {
+            "system": "http://ehelse.no/fhir/identifiertypes/HERID",
+            "value": "95938"
+          },
+          "display": "Sykepleietjeneste, pleie- og omsorg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:285357b8-1ec8-429b-827e-3bcd92366126",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "285357b8-1ec8-429b-827e-3bcd92366126",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "code": "11488-4",
+              "display": "Consult note"
+            }
+          ]
+        },
+        "subject": {
+          "identifier": {
+            "system": "http://ehelse.no/fhir/identifiertypes/FNR",
+            "value": "29098300000"
+          },
+          "display": "Testbruker EVON"
+        },
+        "date": "2018-07-31T08:00:00Z",
+        "author": [
+          {
+            "identifier": {
+              "system": "http://ehelse.no/fhir/identifiertypes/FNR",
+              "value": "04056600324"
+            },
+            "display": "Magnar Koman"
+          }
+        ],
+        "entry": [
+              {
+                "reference": "urn:uuid: ba6747fd-11dc-5e21-b3b8-87ac1849abc3",
+                "display": "MedicationDispense"
+              }
+        ],
+        "title": "Journalnotat for Medisinutleveringen",
+        "section": [
+          {
+            "title": "Response summary",
+            "text": {
+              "status": "additional",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Forhåndsutmating utført av</div>"
+            }
+          },
+          {
+            "title": "Signature",
+            "text": {
+              "status": "additional",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Magnar Koman (123456)</div>"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ba6747fd-11dc-5e21-b3b8-87ac1849abc3",
+      "resource": {
+        "resourceType": "MedicationDispense",
+        "id": "ba6747fd-11dc-5e21-b3b8-87ac1849abc3",
+        "meta": {
+          "profile": [
+            "http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v05"
+          ]
+        },
+        "category": {
+          "coding": [
+            {
+              "code": "20",
+              "display": "medisin_utlevert_reise",
+              "system": "http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v05"
+            }
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://fhir.evondos.com/e300-codes/event-id",
+            "value": "2199661"
+          }
+        ],
+        "status": "completed",
+        "performer": [
+          {
+            "actor": {
+              "identifier": {
+                "system": "https://fhir.evondos.com/e300-codes/serialnumber",
+                "value": "PP000533"
+              },
+              "display": "Evondos E300 multidosedispenser"
+            }
+          }
+        ],
+        "whenHandedOver": "2018-07-31T08:00:00Z",
+        "medicationCodeableConcept": {
+          "text": "Ukjent medisin"
+        },
+        "dosageInstruction": {
+          "text": "Et antall doser medisin ble matet ut for bruk på reise. Angitt reiseperiode er fra 31/7-2018 kl. 10:00 til 2/8-2018 kl. 15:00."
+        },
+        "subject": {
+          "identifier": {
+            "system": "http://ehelse.no/fhir/identifiertypes/FNR",
+            "value": "29098300000"
+          },
+          "display": "Testbruker EVON"
+        }
+      }
+    }
+  ]
+}
