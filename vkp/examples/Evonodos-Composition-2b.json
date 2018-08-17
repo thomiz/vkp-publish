@@ -1,0 +1,55 @@
+{
+      "resource": {
+        "resourceType": "Composition",
+        "id": "285357b8-1ec8-429b-827e-3bcd92366126",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "code": "11488-4",
+              "display": "Consult note"
+            }
+          ]
+        },
+        "subject": {
+          "identifier": {
+            "system": "http://ehelse.no/fhir/identifiertypes/FNR",
+            "value": "29098300000"
+          },
+          "display": "Testbruker EVON"
+        },
+        "date": "2018-07-31T08:00:00Z",
+        "author": [
+          {
+            "identifier": {
+              "system": "http://ehelse.no/fhir/identifiertypes/FNR",
+              "value": "04056600324"
+            },
+            "display": "Magnar Koman"
+          }
+        ],
+        "title": "Journalnotat for Medisinutleveringen",
+        "section": [
+          {
+            "title": "Response summary",
+            "text": {
+              "status": "additional",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Forhåndsutmating utført av</div>"
+            },
+             "entry": [
+              {
+                "reference": "urn:uuid: ba6747fd-11dc-5e21-b3b8-87ac1849abc3",
+                "display": "MedicationDispense"
+              }
+			]
+          },
+          {
+            "title": "Signature",
+            "text": {
+              "status": "additional",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Magnar Koman (123456)</div>"
+            }
+          }
+        ]
+      }
+    }

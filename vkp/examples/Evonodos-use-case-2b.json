@@ -43,7 +43,6 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:285357b8-1ec8-429b-827e-3bcd92366126",
       "resource": {
         "resourceType": "Composition",
         "id": "285357b8-1ec8-429b-827e-3bcd92366126",
@@ -73,12 +72,6 @@
             "display": "Magnar Koman"
           }
         ],
-        "entry": [
-              {
-                "reference": "urn:uuid: ba6747fd-11dc-5e21-b3b8-87ac1849abc3",
-                "display": "MedicationDispense"
-              }
-        ],
         "title": "Journalnotat for Medisinutleveringen",
         "section": [
           {
@@ -86,7 +79,13 @@
             "text": {
               "status": "additional",
               "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Forhåndsutmating utført av</div>"
-            }
+            },
+             "entry": [
+              {
+                "reference": "urn:uuid: ba6747fd-11dc-5e21-b3b8-87ac1849abc3",
+                "display": "MedicationDispense"
+              }
+			]
           },
           {
             "title": "Signature",
