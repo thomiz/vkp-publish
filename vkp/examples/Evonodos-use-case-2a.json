@@ -15,7 +15,7 @@
           },
           "display": "Evondos medication service"
         },
-        "timestamp": "2018-07-31T08:00:46Z",
+        "timestamp": "2018-31-07T08:00:46Z ",
         "focus": [
           {
             "reference": "urn:uuid:285357b8-1ec8-429b-827e-3bcd92366126",
@@ -63,7 +63,7 @@
           },
           "display": "Testbruker EVON"
         },
-        "date": "2018-07-31T08:00:00Z ",
+        "date": "2018-31-07T08:00:00Z ",
         "author": [
           {
             "identifier": {
