@@ -73,12 +73,6 @@
             "display": "Magnar Koman"
           }
         ],
-        "entry": [
-          {
-            "reference": "urn:uuid: ba6747fd-11dc-5e21-b3b8-87ac1849acc5",
-            "display": "MedicationDispense"
-          }
-        ],
         "title": "Journalnotat for Medisinutleveringen",
         "section": [
           {
@@ -86,7 +80,13 @@
             "text": {
               "status": "additional",
               "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Avvikssituasjon er rettet opp.</div>"
-            }
+            },
+             "entry": [
+          {
+            "reference": "urn:uuid: ba6747fd-11dc-5e21-b3b8-87ac1849acc5",
+            "display": "MedicationDispense"
+          }
+        ]
           },
           {
             "title": "Signature",
