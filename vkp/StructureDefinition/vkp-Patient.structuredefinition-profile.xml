@@ -4586,13 +4586,13 @@
     <element id="Patient.address.extension:elock">
       <path value="Patient.address.extension" />
       <sliceName value="elock" />
-      <short value="Information about elock present" />
-      <definition value="Information about elock present in the patients home (true/false)&#xD;&#xA;- true means the location/patient/address has installed elock&#xD;&#xA;- false means there is no installed elock at the location" />
+      <short value="Information about elock at the location" />
+      <definition value="Name of the e-lock system installed at the location, if no name is present there is no e-lock installed at the location." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -8335,10 +8335,10 @@
     <element id="Patient.address.extension:elock">
       <path value="Patient.address.extension" />
       <sliceName value="elock" />
-      <short value="Information about elock present" />
-      <definition value="Information about elock present in the patients home (true/false)&#xD;&#xA;- true means the location/patient/address has installed elock&#xD;&#xA;- false means there is no installed elock at the location" />
+      <short value="Information about elock at the location" />
+      <definition value="Name of the e-lock system installed at the location, if no name is present there is no e-lock installed at the location." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-elock" />
