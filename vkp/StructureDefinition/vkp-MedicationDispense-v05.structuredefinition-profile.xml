@@ -68,7 +68,7 @@
       <constraint>
         <key value="category-1" />
         <severity value="error" />
-        <human value="When category code is 19 dosageInstruction.text should be filled out" />
+        <human value="When category code is 19 | 20 dosageInstruction.text should be filled out" />
         <expression value="MedicationDispense.category.coding.code = '19'|'20' implies MedicationDispense.dosageInstruction.text.exists()" />
       </constraint>
       <mapping>
@@ -3238,7 +3238,7 @@
       <constraint>
         <key value="category-1" />
         <severity value="error" />
-        <human value="When category code is 19 dosageInstruction.text should be filled out" />
+        <human value="When category code is 19 | 20 dosageInstruction.text should be filled out" />
         <expression value="MedicationDispense.category.coding.code = '19'|'20' implies MedicationDispense.dosageInstruction.text.exists()" />
       </constraint>
     </element>

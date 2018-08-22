@@ -10,7 +10,7 @@
   <name value="vkp-sone" />
   <status value="draft" />
   <date value="2018-06-15T13:39:05.545Z" />
-  <description value="Information about juristictional sone/subsone of the Person. Could be nested. The information about each sone must be included in a Bundle." />
+  <description value="Information about juristictional sone/subsone the Person belongs to (home address)." />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
@@ -173,7 +173,7 @@
       <path value="Extension.valueString" />
       <sliceName value="valueString" />
       <short value="String representation of the Sone hierarcy" />
-      <definition value="A string representation of the Sone Hierarcy. Usually four levels. Usually four levels: Municipality, District, Sone and SubSone. Each category is delimited with a |&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~~&#xD;&#xA;&quot;Oslo|Gamle Oslo|Øst|Kampen&quot;&#xD;&#xA;~~~~" />
+      <definition value="A string representation of the Sone Hierarcy. Usually four levels: Municipality, District, Sone and SubSone. Each category is given in a separate String element, starting with the top sone.&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~~&#xD;&#xA;&quot;Oslo|Gamle Oslo|Øst|Kampen&quot;&#xD;&#xA;~~~~" />
       <comment value="A stream of bytes, base64 encoded" />
       <min value="0" />
       <max value="1" />
@@ -213,7 +213,7 @@
       <path value="Extension.valueString" />
       <sliceName value="valueString" />
       <short value="String representation of the Sone hierarcy" />
-      <definition value="A string representation of the Sone Hierarcy. Usually four levels. Usually four levels: Municipality, District, Sone and SubSone. Each category is delimited with a |&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~~&#xD;&#xA;&quot;Oslo|Gamle Oslo|Øst|Kampen&quot;&#xD;&#xA;~~~~" />
+      <definition value="A string representation of the Sone Hierarcy. Usually four levels: Municipality, District, Sone and SubSone. Each category is given in a separate String element, starting with the top sone.&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~~&#xD;&#xA;&quot;Oslo|Gamle Oslo|Øst|Kampen&quot;&#xD;&#xA;~~~~" />
       <type>
         <code value="string" />
       </type>
