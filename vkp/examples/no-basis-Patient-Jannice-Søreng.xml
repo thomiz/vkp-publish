@@ -48,6 +48,8 @@
 		<!-- I dette eksempelet er bare kommunenavn angitt, men vanligvis vil man benytte address.distreict hvis man bare ønsker kommunenavnet -->
 			<extension url="kommune">
 				<valueCoding>
+					<system value="urn:uri:2.16.578.1.12.4.1.1.3403"/>
+					<code value="13"/>
 					<display value="Oslo"/>
 				</valueCoding>
 			</extension>
