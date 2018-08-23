@@ -67,7 +67,7 @@
 			<!-- Angir at pasienten har installert elås på hjemmeadressen -->
 			<valueString value="BEKEY"/>
 		</extension>
-		<use value="home"/>
+		<use value="home"/> 
 		<line value="Karisvingen 44"/>
 		<city value="Oslo"/> <!-- Poststed -->
 		<district value="Oslo"/> <!-- Kommunenavn -->

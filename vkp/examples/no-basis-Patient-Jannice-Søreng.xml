@@ -17,7 +17,7 @@
 	<!-- The name and number of the bydel (part of the city). If coded this information should be coded according to CodeSystem urn:uri:2.16.578.1.12.4.1.1.3403 -->
 	<extension url="http://ehelse.no/fhir/StructureDefinition/no-basis-bydel">
 		<valueCoding>
-			<system value="urn:uri:2.16.578.1.12.4.1.1.3403"/>
+			<system value="http://data.ssb.no/api/klass/v1/versions/919"/>
 			<code value="030101"/>
 			<display value="Gamle Oslo"/>
 		</valueCoding>
