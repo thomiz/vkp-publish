@@ -6,6 +6,8 @@
 	<!-- The name and number of the bydel (part of the city). If coded this information should be coded according to CodeSystem urn:uri:2.16.578.1.12.4.1.1.3403 -->
 	<extension url="http://ehelse.no/fhir/StructureDefinition/no-basis-bydel">
 		<valueCoding>
+			<system value="urn:uri:2.16.578.1.12.4.1.1.3403"/>
+			<code value="030101"/>
 			<display value="Gamle Oslo"/>
 		</valueCoding>
 	</extension>
@@ -48,8 +50,8 @@
 		<!-- I dette eksempelet er bare kommunenavn angitt, men vanligvis vil man benytte address.distreict hvis man bare ønsker kommunenavnet -->
 			<extension url="kommune">
 				<valueCoding>
-					<system value="urn:uri:2.16.578.1.12.4.1.1.3403"/>
-					<code value="13"/>
+					<system value="urn:uri:2.16.578.1.12.4.1.1.3402"/>
+					<code value="0301"/>
 					<display value="Oslo"/>
 				</valueCoding>
 			</extension>
