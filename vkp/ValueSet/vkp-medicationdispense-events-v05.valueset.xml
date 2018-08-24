@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="vkp-medicationdispense-events-v05.valueset" />
   <meta>
@@ -12,6 +12,7 @@
   <experimental value="true" />
   <date value="2018-06-25T10:48:45.936+00:00" />
   <publisher value="Direktoratet for e-helse" />
+  <description value="ValueSet containtig codes reported by a medicationdispense device to vkp."/>
   <immutable value="false" />
   <compose>
     <include>
