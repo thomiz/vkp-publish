@@ -3,7 +3,7 @@
     <id value="vkp-careplan-category-v05.valueset" />
     <url value="http://ehelse.no/fhir/ValueSet/vkp-careplan-category-v05" />
     <version value="0.6" />
-    <name value="vkp-careplan-category-v05" />
+    <name value="vkp-careplan-category-v05.valueset" />
     <status value="draft" />
     <experimental value="true" />
     <publisher value="Direktoratet for e-helse" />
