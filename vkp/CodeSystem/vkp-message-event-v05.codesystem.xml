@@ -6,7 +6,7 @@
   </meta>
   <url value="http://ehelse.no/fhir/CodeSystem/vkp-message-event-v05" />
   <version value="0.52" />
-  <name value="vkp-message-event" />
+  <name value="vkp-message-event-v05.codesystem" />
   <status value="draft" />
   <publisher value="Direktoratet for e-helse" />
   <content value="complete" />
