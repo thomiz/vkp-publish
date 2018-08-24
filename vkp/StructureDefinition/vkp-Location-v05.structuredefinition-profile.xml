@@ -6,7 +6,7 @@
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/vkp-Location-v05" />
   <version value="0.1" />
-  <name value="vkp-Location" />
+  <name value="vkp-Location-v05" />
   <status value="draft" />
   <date value="2017-10-11T18:31:51.45+02:00" />
   <description value="Profile of the location resource to include more accurate location measurement from geopositioning devices." />

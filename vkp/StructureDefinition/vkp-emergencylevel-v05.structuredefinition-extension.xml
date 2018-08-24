@@ -5,7 +5,7 @@
     <lastUpdated value="2017-12-21T09:06:07.055+01:00" />
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/vkp-emergency-level-v05" />
-  <name value="vkp-emergency-level" />
+  <name value="vkp-emergency-level-v05" />
   <status value="draft" />
   <date value="2017-10-10T09:58:08.81+02:00" />
   <description value="Describes the severity of the Flagged event." />

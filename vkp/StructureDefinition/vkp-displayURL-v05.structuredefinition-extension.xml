@@ -5,7 +5,7 @@
     <lastUpdated value="2017-12-14T16:06:37.334+01:00" />
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/vkp-displayURL-v05" />
-  <name value="vkp-displayURL" />
+  <name value="vkp-displayURL-v05" />
   <status value="draft" />
   <date value="2017-06-02T16:08:09.7914111+02:00" />
   <description value="URL to show the event data to user in some web interface" />
@@ -166,9 +166,9 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.value[x]:vft-URL">
+    <element id="Extension.value[x]:valueUri">
       <path value="Extension.valueUri" />
-      <sliceName value="vft-URL" />
+      <sliceName value="valueUri" />
       <short value="Value of extension" />
       <definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." />
       <comment value="A stream of bytes, base64 encoded" />
@@ -205,9 +205,9 @@
       <path value="Extension.url" />
       <fixedUri value="http://ehelse.no/fhir/StructureDefinition/vkp-displayURL-v05" />
     </element>
-    <element id="Extension.value[x]:vft-URL">
+    <element id="Extension.value[x]:valueUri">
       <path value="Extension.valueUri" />
-      <sliceName value="vft-URL" />
+      <sliceName value="valueUri" />
       <type>
         <code value="uri" />
       </type>
