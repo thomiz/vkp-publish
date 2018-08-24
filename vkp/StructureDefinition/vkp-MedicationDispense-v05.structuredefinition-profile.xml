@@ -69,7 +69,7 @@
         <key value="category-1" />
         <severity value="error" />
         <human value="When category code is 19 | 20 dosageInstruction.text should be filled out" />
-        <expression value="MedicationDispense.category.coding.code = '19'|'20' implies MedicationDispense.dosageInstruction.text.exists()" />
+        <expression value="category.coding.code = '19'|'20' implies dosageInstruction.text.exists()" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -3239,7 +3239,7 @@
         <key value="category-1" />
         <severity value="error" />
         <human value="When category code is 19 | 20 dosageInstruction.text should be filled out" />
-        <expression value="MedicationDispense.category.coding.code = '19'|'20' implies MedicationDispense.dosageInstruction.text.exists()" />
+        <expression value="category.coding.code = '19'|'20' implies dosageInstruction.text.exists()" />
       </constraint>
     </element>
     <element id="MedicationDispense.identifier">
