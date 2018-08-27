@@ -24,8 +24,13 @@
 	</extension>
 	<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-sone">	
 	<!-- Tjenestested/sone -->	
-	<!-- A string representation of the Sone Hierarcy. Usually four levels. Usually four levels: Municipality, District, Sone and SubSone. Each category is delimited with a "|" -->		
+	<!-- A string representation of the Sone Hierarcy. Usually four levels: Municipality, District, Sone and SubSone. Each category is delimited with a "|" -->		
 		<valueString value="Oslo|Gamle Oslo|Øst|Kampen"/>	
+	</extension>
+	<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-household-v05">	
+	<!-- Husholdning -->	
+	<!-- Important information about the household of the persons home address. Wether the person lives alone or not, pets etc. -->
+		<valueString value="Bor alene"/>	
 	</extension>
 	<identifier> <!-- Fødselnummeret til brukeren -->
 	<!-- VKP expects a Norwegian "fødselsnummer" as the primary patient identification. -->
