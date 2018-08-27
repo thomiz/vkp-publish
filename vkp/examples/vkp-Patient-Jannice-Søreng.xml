@@ -69,6 +69,10 @@
 			<!-- Angir at pasienten har installert elås på hjemmeadressen -->
 			<valueString value="BEKEY"/>
 		</extension>
+		<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-addresshint-v05">
+			<!-- A hint of how to reach the address -->
+			<valueString value="Vi går inn gjennom det ovale vinduet"/>
+		</extension>
 		<use value="home"/> 
 		<line value="Karisvingen 44"/>
 		<city value="Oslo"/> <!-- Poststed -->
