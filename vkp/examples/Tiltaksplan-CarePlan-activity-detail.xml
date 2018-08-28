@@ -1,105 +1,99 @@
-<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
-	<id value="15730f7c-d693-41b9-a969-7450eb22c219"/>
-	<type value="collection"/>
-	<entry>
-		<fullUrl value="urn:uuid:960432b3-bb0d-4053-8cbf-120cd17b62d6"/>
-		<resource>
-			<CarePlan>
-				<identifier>
-					<system value="urn:ietf:rfc:3986"/>
-					<value value="urn:uuid:a76d9bbf-f293-4fb7-ad4c-2851cac77162"/>
-				</identifier>
-				<basedOn>
-					<!-- This CarePlan describes a "Tiltaksplan" that fullfills the "vedtak om tjeneste" described in the CarePlan order -->
-					<identifier>
-						<system value="urn:ietf:rfc:3986"/>
-						<value value="urn:uuid:97aa40ab-732a-4c14-9915-a5bc595b9fa3"/>
-					</identifier>
-				</basedOn>
-				<status value="active"/>
-				<!-- draft | active | suspended | completed | entered-in-error | cancelled | unknown -->
-				<intent value="plan"/>
-				<!-- proposal | plan | order | option -->
-				<category>
-					<coding>
-						<system value="http://ehelse.no/fhir/ValueSet/vkp-careplan-category-v05"/>
-						<code value="1"/>
-						<display value="tiltaksplan"/>
-					</coding>
-				</category>
-				<title value="Tiltaksplan for Ærlend Sørgård"/>
-				<subject>
-					<!-- Who care plan is for, should be an uniqe identifier of the patient -->
-					<identifier>
-						<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
-						<value value="05073500186"/>
-					</identifier>
-					<display value="Ærlend Sørgård"/>
-				</subject>
-				<period>
-					<!-- Period when the plan is active, missing end date means the plan is ongoing -->
-					<start value="2018-04-24T10:00:00.936+02:00"/>
-				</period>
-				<author>
-					<!-- Defines who is responsible for the content of the plan, should be an organization/tjeneste -->
-					<identifier>
-						<system value="http://ehelse.no/fhir/identifiertypes/HERID"/>
-						<value value="102287"/>
-					</identifier>
-					<display value="Sykepleietjeneste, pleie- og omsorg"/>
-				</author>
-				<activity>
-					<!-- Aktivitetene i Tiltaksplanen, ved flere seksjoner i teksten flere activities med forskjellig detail.detailheader-->
-					<detail>
-						<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-detailheader-v05">	
-							<!-- Overskriften til denne seksjonen -->	
-							<!-- The header of an activity.detail, usually one of the following: "Problem/Ressurs", "Mål", "Tiltak" or "Evaluering" -->		
-							<valueString value="Problem/Ressurs"/>	
-						</extension>
-						<!-- Statuskode fra http://hl7.org/fhir/ValueSet/care-plan-activity-status: not-started | scheduled | in-progress | on-hold | completed | cancelled | unknown -->
-						<status value="in-progress"/>
-						<description value="Problem ressurs tekst"/>
-					</detail>
-				</activity>
-				<activity>
-					<!-- Aktivitetene i Tiltaksplanen, ved flere seksjoner i teksten flere activities med forskjellig detail.detailheader-->
-					<detail>
-						<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-detailheader-v05">	
-							<!-- Overskriften til denne seksjonen -->	
-							<!-- The header of an activity.detail, usually one of the following: "Problem/Ressurs", "Mål", "Tiltak" or "Evaluering" -->		
-							<valueString value="Mål"/>	
-						</extension>
-						<!-- Statuskode fra http://hl7.org/fhir/ValueSet/care-plan-activity-status: not-started | scheduled | in-progress | on-hold | completed | cancelled | unknown -->
-						<status value="in-progress"/>
-						<description value="27.02.2018: Trygghet ved utendørs aktivitet Reg: 27.02.2018 Aaltvedt, Vigdis (AALV) Ikke godkjent"/>
-					</detail>
-				</activity>
-				<activity>
-					<!-- Aktivitetene i Tiltaksplanen, ved flere seksjoner i teksten flere activities med forskjellig detail.detailheader-->
-					<detail>
-						<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-detailheader-v05">	
-							<!-- Overskriften til denne seksjonen -->	
-							<!-- The header of an activity.detail, usually one of the following: "Problem/Ressurs", "Mål", "Tiltak" or "Evaluering" -->		
-							<valueString value="Tiltak"/>	
-						</extension>
-						<!-- Statuskode fra http://hl7.org/fhir/ValueSet/care-plan-activity-status: not-started | scheduled | in-progress | on-hold | completed | cancelled | unknown -->
-						<status value="in-progress"/>
-						<description value="27.02.2018: lokaliseringsteknologi - GPS Reg: 27.02.2018 Aaltvedt, Vigdis (AALV) Ikke godkjent"/>
-					</detail>
-				</activity>
-				<activity>
-					<!-- Aktivitetene i Tiltaksplanen, ved flere seksjoner i teksten flere activities med forskjellig detail.detailheader-->
-					<detail>
-						<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-detailheader-v05">	
-							<!-- Overskriften til denne seksjonen -->	
-							<!-- The header of an activity.detail, usually one of the following: "Problem/Ressurs", "Mål", "Tiltak" or "Evaluering" -->		
-							<valueString value="Evaluering"/>	
-						</extension>
-						<!-- Statuskode fra http://hl7.org/fhir/ValueSet/care-plan-activity-status: not-started | scheduled | in-progress | on-hold | completed | cancelled | unknown -->
-						<status value="in-progress"/>
-					</detail>
-				</activity>
-			</CarePlan>
-		</resource>
-	</entry>
-</Bundle>
+<CarePlan xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
+	<meta>
+		<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-CarePlan-v05"/>
+	</meta>
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:uuid:a76d9bbf-f293-4fb7-ad4c-2851cac77162"/>
+	</identifier>
+	<basedOn>
+		<!-- This CarePlan describes a "Tiltaksplan" that fullfills the "vedtak om tjeneste" described in the CarePlan order -->
+		<identifier>
+			<system value="urn:ietf:rfc:3986"/>
+			<value value="urn:uuid:97aa40ab-732a-4c14-9915-a5bc595b9fa3"/>
+		</identifier>
+	</basedOn>
+	<status value="active"/>
+	<!-- draft | active | suspended | completed | entered-in-error | cancelled | unknown -->
+	<intent value="plan"/>
+	<!-- proposal | plan | order | option -->
+	<category>
+		<coding>
+			<system value="http://ehelse.no/fhir/ValueSet/vkp-careplan-category-v05"/>
+			<code value="1"/>
+			<display value="tiltaksplan"/>
+		</coding>
+	</category>
+	<title value="Tiltaksplan for Ærlend Sørgård"/>
+	<subject>
+		<!-- Who care plan is for, should be an uniqe identifier of the patient -->
+		<identifier>
+			<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+			<value value="05073500186"/>
+		</identifier>
+		<display value="Ærlend Sørgård"/>
+	</subject>
+	<period>
+		<!-- Period when the plan is active, missing end date means the plan is ongoing -->
+		<start value="2018-04-24T10:00:00.936+02:00"/>
+	</period>
+	<author>
+		<!-- Defines who is responsible for the content of the plan, should be an organization/tjeneste -->
+		<identifier>
+			<system value="http://ehelse.no/fhir/identifiertypes/HERID"/>
+			<value value="102287"/>
+		</identifier>
+		<display value="Sykepleietjeneste, pleie- og omsorg"/>
+	</author>
+	<activity>
+		<!-- Aktivitetene i Tiltaksplanen, ved flere seksjoner i teksten flere activities med forskjellig detail.detailheader-->
+		<detail>
+			<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-detailheader-v05">
+				<!-- Overskriften til denne seksjonen -->
+				<!-- The header of an activity.detail, usually one of the following: "Problem/Ressurs", "Mål", "Tiltak" or "Evaluering" -->
+				<valueString value="Problem/Ressurs"/>
+			</extension>
+			<!-- Statuskode fra http://hl7.org/fhir/ValueSet/care-plan-activity-status: not-started | scheduled | in-progress | on-hold | completed | cancelled | unknown -->
+			<status value="in-progress"/>
+			<description value="Problem ressurs tekst"/>
+		</detail>
+	</activity>
+	<activity>
+		<!-- Aktivitetene i Tiltaksplanen, ved flere seksjoner i teksten flere activities med forskjellig detail.detailheader-->
+		<detail>
+			<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-detailheader-v05">
+				<!-- Overskriften til denne seksjonen -->
+				<!-- The header of an activity.detail, usually one of the following: "Problem/Ressurs", "Mål", "Tiltak" or "Evaluering" -->
+				<valueString value="Mål"/>
+			</extension>
+			<!-- Statuskode fra http://hl7.org/fhir/ValueSet/care-plan-activity-status: not-started | scheduled | in-progress | on-hold | completed | cancelled | unknown -->
+			<status value="in-progress"/>
+			<description value="27.02.2018: Trygghet ved utendørs aktivitet Reg: 27.02.2018 Aaltvedt, Vigdis (AALV) Ikke godkjent"/>
+		</detail>
+	</activity>
+	<activity>
+		<!-- Aktivitetene i Tiltaksplanen, ved flere seksjoner i teksten flere activities med forskjellig detail.detailheader-->
+		<detail>
+			<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-detailheader-v05">
+				<!-- Overskriften til denne seksjonen -->
+				<!-- The header of an activity.detail, usually one of the following: "Problem/Ressurs", "Mål", "Tiltak" or "Evaluering" -->
+				<valueString value="Tiltak"/>
+			</extension>
+			<!-- Statuskode fra http://hl7.org/fhir/ValueSet/care-plan-activity-status: not-started | scheduled | in-progress | on-hold | completed | cancelled | unknown -->
+			<status value="in-progress"/>
+			<description value="27.02.2018: lokaliseringsteknologi - GPS Reg: 27.02.2018 Aaltvedt, Vigdis (AALV) Ikke godkjent"/>
+		</detail>
+	</activity>
+	<activity>
+		<!-- Aktivitetene i Tiltaksplanen, ved flere seksjoner i teksten flere activities med forskjellig detail.detailheader-->
+		<detail>
+			<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-detailheader-v05">
+				<!-- Overskriften til denne seksjonen -->
+				<!-- The header of an activity.detail, usually one of the following: "Problem/Ressurs", "Mål", "Tiltak" or "Evaluering" -->
+				<valueString value="Evaluering"/>
+			</extension>
+			<!-- Statuskode fra http://hl7.org/fhir/ValueSet/care-plan-activity-status: not-started | scheduled | in-progress | on-hold | completed | cancelled | unknown -->
+			<status value="in-progress"/>
+		</detail>
+	</activity>
+</CarePlan>
