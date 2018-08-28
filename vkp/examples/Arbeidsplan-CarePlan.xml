@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
-<id value="0148af6b-4ef4-416a-aca4-dcb47fda5515"/>
-	<type value="collection"/>
-	<entry>
-		<fullUrl value="urn:uuid:a53026df-cf5a-4779-b1ca-b97cf1ce9c43"/>
-		<resource>
-			<CarePlan>
+
+			<CarePlan xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
 				<identifier>
 					<system value="urn:ietf:rfc:3986" />
 					<value value="urn:uuid:f1d85976-a9eb-49b5-a07c-8423081976fe" />
@@ -84,6 +79,3 @@
 					</detail>
 				</activity>
 			</CarePlan>
-		</resource>
-	</entry>
-</Bundle>
