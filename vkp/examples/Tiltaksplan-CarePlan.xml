@@ -20,11 +20,14 @@
 				<!-- draft | active | suspended | completed | entered-in-error | cancelled | unknown -->
 				<intent value="plan"/>
 				<!-- proposal | plan | order | option -->
-				<!-- The code plan is used for defining the "tiltaksplan" that the user receives. 
-			The Code order is used for "tjenester" that the user has formal decision to receive -->
+				<category>
+					<coding>
+						<system value="http://ehelse.no/fhir/ValueSet/vkp-careplan-category-v05"/>
+						<code value="1"/>
+						<display value="tiltaksplan"/>
+					</coding>
+				</category>
 				<title value="Tiltaksplan for Ærlend Sørgård"/>
-				<description value="Beskrivelse av planen"/>
-				<!-- The actual "tiltaksplan" -->
 				<subject>
 					<!-- Who care plan is for, should be an uniqe identifier of the patient -->
 					<identifier>

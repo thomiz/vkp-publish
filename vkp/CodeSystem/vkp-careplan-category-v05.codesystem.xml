@@ -5,7 +5,7 @@
     <lastUpdated value="2018-06-04T08:00:50.532+02:00" />
   </meta>
   <url value="http://ehelse.no/fhir/CodeSystem/vkp-careplan-category-v05" />
-  <version value="0.1" />
+  <version value="0.5" />
   <name value="vkp-careplan-category-v05.codesystem" />
   <status value="draft" />
   <publisher value="Direktoratet for e-helse" />
@@ -22,12 +22,12 @@
   </concept>
   <concept>
     <code value="2" />
-    <display value="tjenesteoversikt" />
+    <display value="tjeneste" />
     <definition value="Oversikt over tjenestene brukeren er tildelt" />
   </concept>
   <concept>
     <code value="3" />
-    <display value="besøksplan" />
-    <definition value="Besøksplanen definert for en bruker" />
+    <display value="arbeidsplan" />
+    <definition value="Arbeidsplanen definert for en bruker" />
   </concept>
 </CodeSystem>
