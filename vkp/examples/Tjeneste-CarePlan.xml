@@ -13,7 +13,7 @@
 	<!-- proposal | plan | order | option -->
 	<category>
 		<coding>
-			<system value="http://ehelse.no/fhir/ValueSet/vkp-careplan-category-v05"/>
+			<system value="http://ehelse.no/fhir/CodeSystem/vkp-careplan-category-v05"/>
 			<code value="2"/>
 			<display value="tjeneste"/>
 		</coding>
