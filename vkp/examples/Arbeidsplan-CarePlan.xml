@@ -41,7 +41,7 @@
 				<activity> <!-- Contents of besøksplan When more than one activity is added there should be more activity elements added  -->
 					<!-- Tekstlig beskrivlese av hvordan aktiviteten er gjennomført -->
 					<progress>
-						<text></text>
+						<text value="Pågående aktivitet"/>
 					</progress>
 					<!-- Details describing the work package/visit -->
 					<detail>
@@ -65,7 +65,7 @@
 				<activity> <!-- Contents of besøksplan When more than one activity is added there should be more activity elements added  -->
 					<!-- Tekstlig beskrivlese av hvordan aktiviteten er gjennomført -->
 					<progress>
-						<text></text>
+						<text value="Pågående aktivitet"/>
 					</progress>
 					<!-- Details describing the work package/visit -->
 					<detail>
