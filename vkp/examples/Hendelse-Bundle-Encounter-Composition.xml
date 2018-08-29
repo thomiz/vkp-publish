@@ -88,7 +88,7 @@
 					</text>
 					<entry>
 						<!-- A reference to the identifier of the data that supports this section. In this case the digital-Encounter -->
-						<reference value="urn:uuid:9c1ce08f-9ac7-4b4d-9d08-281c9f54ddfb"/>
+						<reference value="urn:uuid:41d3d995-3afe-421e-bbb7-7b2126ce455b"/>
 						<display value="Encounter"/>
 					</entry>
 				</section>
