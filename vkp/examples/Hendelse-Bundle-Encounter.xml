@@ -42,12 +42,12 @@
     <resource>
     <Encounter>
 		 <id value="7dc07bbf-e690-435a-99b6-11e867697ea2" />
-        <!--<meta>
-			<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v05"/>
-		</meta> -->
+        <meta>
+			<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-digital-Encounter-v05"/>
+		</meta>
         <identifier>
         <!--  Unique identification of the encounter as desided by the system --> 
-          <system value="http://acme.no/cameraobservation-identifier" />
+          <system value="http://roommate.no/cameraobservation-identifier" />
           <value value="urn:uuid:4d300421-beb7-4e25-b25b-194534064391" />
         </identifier>
         <!-- The status of the encounter. Reported encounter should be finished. -->
@@ -78,8 +78,8 @@
 				<display value="Magnar Koman"/>
 			  </individual>
 		  </participant>
-		  <period>
 		  <!-- Timestamp of when the encounter was finished, the system could provide both start and end times -->
+		  <period>
 			  <end value="2018-06-25T10:00:00.936+02:00"/>
 		  </period>
 		  <reason>

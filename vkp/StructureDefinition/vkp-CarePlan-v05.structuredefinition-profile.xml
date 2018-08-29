@@ -1316,7 +1316,7 @@
     <element id="CarePlan.subject">
       <path value="CarePlan.subject" />
       <short value="Who care plan is for" />
-      <definition value="Identifies the patient or group whose intended care is described by the plan." />
+      <definition value="vkp-Patient is expected&#xD;&#xA;&#xD;&#xA;Identifies the patient or group whose intended care is described by the plan." />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <alias value="patient" />
       <min value="1" />
@@ -3298,6 +3298,7 @@
     </element>
     <element id="CarePlan.subject">
       <path value="CarePlan.subject" />
+      <definition value="vkp-Patient is expected&#xD;&#xA;&#xD;&#xA;Identifies the patient or group whose intended care is described by the plan." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
@@ -3336,9 +3337,7 @@
     <element id="CarePlan.activity.detail.extension:header">
       <path value="CarePlan.activity.detail.extension" />
       <sliceName value="header" />
-      <short value="The header of an activity.detail" />
       <definition value="The header of an activity.detail, usually one of the following: &quot;Problem/Ressurs&quot;, &quot;Mål&quot;, &quot;Tiltak&quot; or &quot;Evaluering&quot;" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />

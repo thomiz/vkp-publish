@@ -862,6 +862,10 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-Patient" />
+      </type>
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -3306,6 +3310,10 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-Patient" />
       </type>
     </element>
     <element id="MedicationDispense.subject.reference">
