@@ -1,6 +1,6 @@
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
 <!-- The use case is for making the encounter involving a CameraObservation available to the Electronic Health Record after an incedent has occurred and the incident is handled.-->
-<!-- Digitalt Tilsyn Scenario 1 -->
+<!-- Digitalt Tilsyn Scenario 2 -->
   <id value="3a015759-a3cd-4112-b6b7-61a0bcd55303" />
   <type value="message" />
   <entry>
@@ -46,11 +46,11 @@
   <entry>
 	<fullUrl value="urn:uuid:1f214b1f-ca8c-43fc-9a0f-341fad53e32b"/>
 		<resource>
-			<!-- Have to define when Composition is to be used in this use-case -->
+			<!-- Compsition is used when Health care personel have entered some consult note to summarize the digital-Encounter  -->
 			<Composition>
 				<id value="1f214b1f-ca8c-43fc-9a0f-341fad53e32b"/>
+				<!-- Status is always final when the Composition is first sent. Can have other status for Compositions that needs to be amended or are entered in error e.g. -->
 				<status value="final"/>
-				<!-- Status er alltid final når Composition sendes første gang, kan ha andre statuser hvis man ønsker å endre på avsendt Composition (amended og entered in error) -->
 				<type>
 					<coding>
 						<code value="11488-4"/>
@@ -66,10 +66,10 @@
 					</identifier>
 					  <display value="Ærlend Sørgård" />
 				</subject>
-				<date value="2017-05-09T10:30:00.936+02:00"/>
-				<!-- Timestamp for journalnotatet, må være senere enn hendelsen-->
+				<!-- Timestam for the Consult note. Must be equal to end-time of the digital-Encounter-->
+				<date value="2018-06-25T10:00:00.936+02:00"/>
 				<author>
-					<!-- Behandleren som har skrevet notatet -->
+					<!-- The identity of the Practitioner that entered the consult note -->
 					<identifier>
 						<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
 						<value value="04056600324"/>
@@ -79,7 +79,7 @@
 				<title value="Journalnotat for Kameraobservasjon"/>
 				<section>
 					<text>
-						<!-- Selve notatet-->
+						<!-- The actual consult note as entered by the practitioner-->
 						<status value="additional"/>
 						<!-- Will always be additional as this is notes written by humans in addition to the structured information referenced below -->
 						<div xmlns="http://www.w3.org/1999/xhtml">
@@ -87,7 +87,7 @@
 						</div>
 					</text>
 					<entry>
-						<!-- A reference to the identifier of the data that supports this section. In this case the encounter -->
+						<!-- A reference to the identifier of the data that supports this section. In this case the digital-Encounter -->
 						<reference value="urn:uuid:9c1ce08f-9ac7-4b4d-9d08-281c9f54ddfb"/>
 						<display value="Encounter"/>
 					</entry>
@@ -100,12 +100,12 @@
     <resource>
     <Encounter>
 		 <id value="41d3d995-3afe-421e-bbb7-7b2126ce455b" />
-        <!--<meta>
-			<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v05"/>
-		</meta> -->
+        <meta>
+			<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-digital-Encounter-v05"/>
+		</meta>
         <identifier>
         <!--  Unique identification of the encounter as desided by the system --> 
-          <system value="http://acme.no/cameraobservation-identifier" />
+          <system value="http://roommate.no/cameraobservation-identifier" />
           <value value="urn:uuid:9c1ce08f-9ac7-4b4d-9d08-281c9f54ddfb" />
         </identifier>
         <!-- The status of the encounter. Reported encounter should be finished. -->
