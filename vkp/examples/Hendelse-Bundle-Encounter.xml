@@ -52,10 +52,10 @@
         </identifier>
         <!-- The status of the encounter. Reported encounter should be finished. -->
 		<status value="finished"/>
-		<!-- The encounter type, we suggest using predefined codes from http://ehelse.no/fhir/CodeSystem/vkp-encounter-camera-reason-v05 -->
+		<!-- The encounter type, we suggest using predefined codes from http://ehelse.no/fhir/CodeSystem/vkp-camera-reason-v05 -->
 		<type>
 			<coding>
-				<system value="http://ehelse.no/fhir/CodeSystem/vkp-encounter-camera-events-v05"/>
+				<system value="http://ehelse.no/fhir/CodeSystem/vkp-camera-events-v05"/>
 				<code value="2"/>
 				<display value="visuelt_tilsyn"/>
 			</coding>
@@ -83,9 +83,9 @@
 			  <end value="2018-06-25T10:00:00.936+02:00"/>
 		  </period>
 		  <reason>
-		  <!-- Reason the encounter takes place, coded according to http://ehelse.no/fhir/CodeSystem/vkp-encounter-camera-reason-v05 -->
+		  <!-- Reason the encounter takes place, coded according to http://ehelse.no/fhir/CodeSystem/vkp-camera-reason-v05 -->
 				<coding>
-					<system value="http://ehelse.no/fhir/CodeSystem/vkp-encounter-camera-reason-v05"/>
+					<system value="http://ehelse.no/fhir/CodeSystem/vkp-camera-reason-v05"/>
 					<code value="4"/>
 					<display value="reist_seg_fra_stol"/>
 				</coding>

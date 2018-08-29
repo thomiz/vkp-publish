@@ -1052,7 +1052,7 @@
         <strength value="extensible" />
         <description value="The type of encounter" />
         <valueSetReference>
-          <reference value="http://ehelse.no/fhir/ValueSet/vkp-encounter-camera-events-v05" />
+          <reference value="http://ehelse.no/fhir/ValueSet/vkp-camera-events-v05" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -2343,7 +2343,7 @@
     <element id="Encounter.reason">
       <path value="Encounter.reason" />
       <short value="Reason the encounter takes place (code)" />
-      <definition value="Reason the encounter takes place, coded according to http://ehelse.no/fhir/CodeSystem/vkp-encounter-camera-reason-v05" />
+      <definition value="Reason the encounter takes place, coded according to http://ehelse.no/fhir/CodeSystem/vkp-camera-reason-v05" />
       <comment value="For systems that need to know which was the primary diagnosis, these will be marked with the standard extension primaryDiagnosis (which is a sequence value rather than a flag, 1 = primary diagnosis)." />
       <alias value="Indication" />
       <alias value="Admission diagnosis" />
@@ -2372,9 +2372,9 @@
           <valueString value="EncounterReason" />
         </extension>
         <strength value="extensible" />
-        <description value="vkp-encounter-camera-reason-v05" />
+        <description value="vkp-camera-reason-v05" />
         <valueSetReference>
-          <reference value="http://ehelse.no/fhir/CodeSystem/vkp-encounter-camera-reason-v05" />
+          <reference value="http://ehelse.no/fhir/CodeSystem/vkp-camera-reason-v05" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -3801,7 +3801,7 @@
         </extension>
         <strength value="extensible" />
         <valueSetReference>
-          <reference value="http://ehelse.no/fhir/ValueSet/vkp-encounter-camera-events-v05" />
+          <reference value="http://ehelse.no/fhir/ValueSet/vkp-camera-events-v05" />
         </valueSetReference>
       </binding>
     </element>
@@ -3852,16 +3852,16 @@
     </element>
     <element id="Encounter.reason">
       <path value="Encounter.reason" />
-      <definition value="Reason the encounter takes place, coded according to http://ehelse.no/fhir/CodeSystem/vkp-encounter-camera-reason-v05" />
+      <definition value="Reason the encounter takes place, coded according to http://ehelse.no/fhir/CodeSystem/vkp-camera-reason-v05" />
       <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="EncounterReason" />
         </extension>
         <strength value="extensible" />
-        <description value="vkp-encounter-camera-reason-v05" />
+        <description value="vkp-camera-reason-v05" />
         <valueSetReference>
-          <reference value="http://ehelse.no/fhir/CodeSystem/vkp-encounter-camera-reason-v05" />
+          <reference value="http://ehelse.no/fhir/CodeSystem/vkp-camera-reason-v05" />
         </valueSetReference>
       </binding>
     </element>
