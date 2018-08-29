@@ -1,5 +1,6 @@
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
 <!-- The use case is for making the encounter involving a CameraObservation available to the Electronic Health Record after an incedent has occurred and the incident is handled.-->
+<!-- Digitalt Tilsyn Scenario 1 -->
   <id value="70339f7d-4846-4edf-86a3-130c2f72dde8" />
   <type value="message" />
   <entry>
