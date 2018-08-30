@@ -60,6 +60,13 @@
 				<display value="visuelt_tilsyn"/>
 			</coding>
 		</type>
+		<type>
+			<coding>
+				<system value="http://ehelse.no/fhir/CodeSystem/vkp-camera-events-v05"/>
+				<code value="4"/>
+				<display value="innlytt"/>
+			</coding>
+		</type>
         <subject>
         <!-- Reference to the patient that is subject to the encounter, identified by Norwegian Fødselsnummer-->
           <identifier>
