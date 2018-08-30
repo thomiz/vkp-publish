@@ -6,10 +6,10 @@
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/vkp-MessageHeader-v05" />
   <version value="0.5" />
-  <name value="vkp-MessageHeader" />
+  <name value="vkp-MessageHeader-v05" />
   <status value="draft" />
   <date value="2017-09-14T07:27:52.114+02:00" />
-  <description value="Profile of the MessageHeader resource. Used in the Norwegian Personal Connected Health project to document events from devices user at the patients home. Messages can contain Resources like: &#xD;&#xA;- vkp-MedicationDispense - to document MedicationDispense events&#xD;&#xA;- vkp-Location - to document changes of the Patients geoposition&#xD;&#xA;- vkp-Flag - to document events that need attention&#xD;&#xA;- Composition - additional information about handling of a reported event documented  by the person handling that event" />
+  <description value="Profile of the MessageHeader resource. Used in the Norwegian Personal Connected Health project to document events from devices user at the patients home. The vkp-MessageHead is also used for transmitting information from the VKP to the response center system. vkp-Messages can contain Resources like:&#xD;&#xA;&#xD;&#xA;- vkp-MedicationDispense - to document MedicationDispense events&#xD;&#xA;- vkp-Location - to document changes of the Patients geoposition&#xD;&#xA;- vkp-Flag - to document events that need attention&#xD;&#xA;- Composition - additional information about handling of a reported event documented by the person handling that event&#xD;&#xA;- vkp-CarePlan - to document what is called &quot;tjeneste&quot;, &quot;tiltaksplan&quot; and &quot;arbeidsplan&quot;&#xD;&#xA;- vkp-digital-Encounter - to document a digital (virtual) encounter" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -380,7 +380,7 @@
     <element id="MessageHeader.event">
       <path value="MessageHeader.event" />
       <short value="Code for the event this message represents" />
-      <definition value="Code that identifies the event this message represents.&#xD;&#xA;&#xD;&#xA;VKP-norway uses the vkp-message-event ValueSet Containing the vkp-message-event CodeSystem:&#xD;&#xA;&#xD;&#xA;http://ehelse.no/fhir/CodeSystem/vkp-message-event-v05&#xD;&#xA;&#xD;&#xA;Example: &#xD;&#xA;~~~&#xD;&#xA;&quot;event&quot;:{&#xD;&#xA;   &quot;system&quot;:&quot;http://ehelse.no/fhir/CodeSystem/vkp-message-event-v06&quot;,&#xD;&#xA;   &quot;code&quot;:&quot;MedicationDispense&quot;&#xD;&#xA;}&#xD;&#xA;~~~&#xD;&#xA;&#xD;&#xA;" />
+      <definition value="Code that identifies the event this message represents.&#xD;&#xA;&#xD;&#xA;VKP-norway uses the vkp-message-event ValueSet Containing the vkp-message-event CodeSystem:&#xD;&#xA;&#xD;&#xA;http://ehelse.no/fhir/CodeSystem/vkp-message-event-v05&#xD;&#xA;&#xD;&#xA;Example: &#xD;&#xA;~~~&#xD;&#xA;&quot;event&quot;:{&#xD;&#xA;   &quot;system&quot;:&quot;http://ehelse.no/fhir/CodeSystem/vkp-message-event-v05&quot;,&#xD;&#xA;   &quot;code&quot;:&quot;MedicationDispense&quot;&#xD;&#xA;}&#xD;&#xA;~~~&#xD;&#xA;&#xD;&#xA;" />
       <comment value="Codes may be defined very casually in enumerations or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information." />
       <requirements value="Drives the behavior associated with this message." />
       <min value="1" />
@@ -3477,7 +3477,7 @@
   <differential>
     <element id="MessageHeader.event">
       <path value="MessageHeader.event" />
-      <definition value="Code that identifies the event this message represents.&#xD;&#xA;&#xD;&#xA;VKP-norway uses the vkp-message-event ValueSet Containing the vkp-message-event CodeSystem:&#xD;&#xA;&#xD;&#xA;http://ehelse.no/fhir/CodeSystem/vkp-message-event-v05&#xD;&#xA;&#xD;&#xA;Example: &#xD;&#xA;~~~&#xD;&#xA;&quot;event&quot;:{&#xD;&#xA;   &quot;system&quot;:&quot;http://ehelse.no/fhir/CodeSystem/vkp-message-event-v06&quot;,&#xD;&#xA;   &quot;code&quot;:&quot;MedicationDispense&quot;&#xD;&#xA;}&#xD;&#xA;~~~&#xD;&#xA;&#xD;&#xA;" />
+      <definition value="Code that identifies the event this message represents.&#xD;&#xA;&#xD;&#xA;VKP-norway uses the vkp-message-event ValueSet Containing the vkp-message-event CodeSystem:&#xD;&#xA;&#xD;&#xA;http://ehelse.no/fhir/CodeSystem/vkp-message-event-v05&#xD;&#xA;&#xD;&#xA;Example: &#xD;&#xA;~~~&#xD;&#xA;&quot;event&quot;:{&#xD;&#xA;   &quot;system&quot;:&quot;http://ehelse.no/fhir/CodeSystem/vkp-message-event-v05&quot;,&#xD;&#xA;   &quot;code&quot;:&quot;MedicationDispense&quot;&#xD;&#xA;}&#xD;&#xA;~~~&#xD;&#xA;&#xD;&#xA;" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="MessageEvent" />
