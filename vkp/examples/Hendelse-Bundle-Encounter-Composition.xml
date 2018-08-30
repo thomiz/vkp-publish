@@ -105,7 +105,7 @@
 		</meta>
         <identifier>
         <!--  Unique identification of the encounter as desided by the system --> 
-          <system value="http://roommate.no/cameraobservation-identifier" />
+          <system value="http://roommate.no/virtual-encounter-identifier" />
           <value value="urn:uuid:9c1ce08f-9ac7-4b4d-9d08-281c9f54ddfb" />
         </identifier>
         <!-- The status of the encounter. Reported encounter should be finished. -->
@@ -113,9 +113,9 @@
 		<!-- The encounter type, we suggest using predefined codes from http://ehelse.no/fhir/CodeSystem/vkp-camera-reason-v05 -->
 		<type>
 			<coding>
-				<system value="http://ehelse.no/fhir/CodeSystem/vkp-camera-events-v05"/>
-				<code value="2"/>
-				<display value="visuelt_tilsyn"/>
+				<system value="http://ehelse.no/fhir/CodeSystem/vkp-encounter-type-v05"/>
+				<code value="1"/>
+				<display value="tilsyn"/>
 			</coding>
 		</type>
         <subject>
@@ -143,7 +143,7 @@
 		  <reason>
 		  <!-- Reason the encounter takes place, coded according to http://ehelse.no/fhir/CodeSystem/vkp-camera-reason-v05 -->
 				<coding>
-					<system value="http://ehelse.no/fhir/CodeSystem/vkp-camera-reason-v05"/>
+					<system value="http://ehelse.no/fhir/CodeSystem/vkp-encounter-reason-v05"/>
 					<code value="4"/>
 					<display value="reist_seg_fra_stol"/>
 				</coding>
