@@ -1050,6 +1050,10 @@
         <code value="Reference" />
         <targetProfile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Organization" />
       </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
+      </type>
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1306,6 +1310,10 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Organization" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -3552,6 +3560,10 @@
         <code value="Reference" />
         <targetProfile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Organization" />
       </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="MessageHeader.receiver.reference">
@@ -3584,6 +3596,10 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Organization" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
       </type>
       <mustSupport value="true" />
     </element>
