@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="vkp-Flag-v05" />
+  <id value="vkp-Flag-v06" />
   <meta>
     <lastUpdated value="2017-12-21T09:07:03.955+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pc" />
   </extension>
-  <url value="http://ehelse.no/fhir/StructureDefinition/vkp-Flag-v05" />
-  <name value="vkp-Flag-v05" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/vkp-Flag-v06" />
+  <version value="0.6" />
+  <name value="vkp-Flag-v06" />
   <status value="draft" />
-  <date value="2017-06-02T15:06:12.7177486+02:00" />
+  <date value="2018-09-07" />
   <description value="Profile of the Flag Resource to be used in Personal Connected Health in Norway. Adds Severity, category, timestamp, URL and Geoposition to the base http://hl7.org/fhir/StructureDefinition/Flag resource.&#xD;&#xA;" />
   <fhirVersion value="3.0.0" />
   <kind value="resource" />
@@ -345,7 +346,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-emergency-level-v05" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-emergency-level-v06" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1194,7 +1195,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-emergency-level-v05" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-emergency-level-v06" />
       </type>
     </element>
     <element id="Flag.extension:timestamp">

@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="vkp-emergency-level-v05" />
+  <id value="vkp-emergency-level-v06" />
   <meta>
     <lastUpdated value="2017-12-21T09:06:07.055+01:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/StructureDefinition/vkp-emergency-level-v05" />
-  <name value="vkp-emergency-level-v05" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/vkp-emergency-level-v06" />
+  <version value="0.6" />
+  <name value="vkp-emergency-level-v06" />
   <status value="draft" />
-  <date value="2017-10-10T09:58:08.81+02:00" />
+  <date value="2018-09-07" />
   <description value="Describes the severity of the Flagged event." />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
@@ -147,7 +148,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/vkp-emergency-level-v05" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/vkp-emergency-level-v06" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -189,6 +190,10 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <binding>
+        <strength value="required" />
+        <valueSetUri value="http://ehelse.no/fhir/ValueSet/vkp-emergency-level-v05" />
+      </binding>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -207,7 +212,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/vkp-emergency-level-v05" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/vkp-emergency-level-v06" />
     </element>
     <element id="Extension.value[x]:valueCodeableConcept">
       <path value="Extension.valueCodeableConcept" />
@@ -215,6 +220,10 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <binding>
+        <strength value="required" />
+        <valueSetUri value="http://ehelse.no/fhir/ValueSet/vkp-emergency-level-v05" />
+      </binding>
     </element>
   </differential>
 </StructureDefinition>

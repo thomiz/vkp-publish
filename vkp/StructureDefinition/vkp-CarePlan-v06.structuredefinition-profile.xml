@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="vkp-CarePlan-v05" />
-  <url value="http://ehelse.no/fhir/StructureDefinition/vkp-CarePlan-v05" />
-  <version value="0.5" />
-  <name value="vkp-CarePlan-v05" />
+  <id value="vkp-CarePlan-v06" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/vkp-CarePlan-v06" />
+  <version value="0.6" />
+  <name value="vkp-CarePlan-v06" />
   <status value="draft" />
-  <date value="2018-08-28" />
+  <date value="2018-09-07" />
   <description value="VKP norway uses the CarePlan to describe.&#xD;&#xA;- tjenesteoversikt&#xD;&#xA;- tiltaksplan&#xD;&#xA;- besøksplan" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
@@ -500,6 +500,10 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
       </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-CarePlan-v06" />
+      </type>
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -547,6 +551,10 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
       </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-CarePlan-v06" />
+      </type>
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -591,6 +599,10 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-CarePlan-v06" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1316,7 +1328,7 @@
     <element id="CarePlan.subject">
       <path value="CarePlan.subject" />
       <short value="Who care plan is for" />
-      <definition value="vkp-Patient is expected&#xD;&#xA;&#xD;&#xA;Identifies the patient or group whose intended care is described by the plan." />
+      <definition value="vkp-Patient is expected. Identifier should be nathional id number of the patient.&#xD;&#xA;&#xD;&#xA;Identifies the patient or group whose intended care is described by the plan.&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~&#xD;&#xA; &quot;subject&quot;:{&#xD;&#xA;        &quot;identifier&quot;:{&#xD;&#xA;            &quot;system&quot;:&quot;urn:oid:2.16.578.1.12.4.1.4.1&quot;,&#xD;&#xA;            &quot;value&quot;:&quot;05073500186&quot;&#xD;&#xA;        },&#xD;&#xA;        &quot;display&quot;:&quot;Ærlend Sørgård&quot;&#xD;&#xA;    },&#xD;&#xA;~~~" />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <alias value="patient" />
       <min value="1" />
@@ -1337,6 +1349,10 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-Patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Patient" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -2286,7 +2302,7 @@
       <path value="CarePlan.activity.detail.extension" />
       <sliceName value="header" />
       <short value="The header of an activity.detail" />
-      <definition value="The header of an activity.detail, usually one of the following: &quot;Problem/Ressurs&quot;, &quot;Mål&quot;, &quot;Tiltak&quot; or &quot;Evaluering&quot;" />
+      <definition value="The header of an activity.detail, usually one of the following: &quot;Problem/Ressurs&quot;, &quot;Mål&quot;, &quot;Tiltak&quot; or &quot;Evaluering&quot;&#xD;&#xA;" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -3268,6 +3284,39 @@
       <definition value="VKP project uses UUID. &#xD;&#xA;&#xD;&#xA;Example: urn:uuid:2e82976a-35d6-4870-a4d5-d79abf772a8f&#xD;&#xA;&#xD;&#xA;This records identifiers associated with this care plan that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation)." />
       <mustSupport value="true" />
     </element>
+    <element id="CarePlan.basedOn">
+      <path value="CarePlan.basedOn" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-CarePlan-v06" />
+      </type>
+    </element>
+    <element id="CarePlan.replaces">
+      <path value="CarePlan.replaces" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-CarePlan-v06" />
+      </type>
+    </element>
+    <element id="CarePlan.partOf">
+      <path value="CarePlan.partOf" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-CarePlan-v06" />
+      </type>
+    </element>
     <element id="CarePlan.status">
       <path value="CarePlan.status" />
       <mustSupport value="true" />
@@ -3298,7 +3347,7 @@
     </element>
     <element id="CarePlan.subject">
       <path value="CarePlan.subject" />
-      <definition value="vkp-Patient is expected&#xD;&#xA;&#xD;&#xA;Identifies the patient or group whose intended care is described by the plan." />
+      <definition value="vkp-Patient is expected. Identifier should be nathional id number of the patient.&#xD;&#xA;&#xD;&#xA;Identifies the patient or group whose intended care is described by the plan.&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~&#xD;&#xA; &quot;subject&quot;:{&#xD;&#xA;        &quot;identifier&quot;:{&#xD;&#xA;            &quot;system&quot;:&quot;urn:oid:2.16.578.1.12.4.1.4.1&quot;,&#xD;&#xA;            &quot;value&quot;:&quot;05073500186&quot;&#xD;&#xA;        },&#xD;&#xA;        &quot;display&quot;:&quot;Ærlend Sørgård&quot;&#xD;&#xA;    },&#xD;&#xA;~~~" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
@@ -3310,6 +3359,10 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-Patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Patient" />
       </type>
     </element>
     <element id="CarePlan.period">
@@ -3337,7 +3390,7 @@
     <element id="CarePlan.activity.detail.extension:header">
       <path value="CarePlan.activity.detail.extension" />
       <sliceName value="header" />
-      <definition value="The header of an activity.detail, usually one of the following: &quot;Problem/Ressurs&quot;, &quot;Mål&quot;, &quot;Tiltak&quot; or &quot;Evaluering&quot;" />
+      <definition value="The header of an activity.detail, usually one of the following: &quot;Problem/Ressurs&quot;, &quot;Mål&quot;, &quot;Tiltak&quot; or &quot;Evaluering&quot;&#xD;&#xA;" />
       <max value="1" />
       <type>
         <code value="Extension" />
