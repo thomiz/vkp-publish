@@ -21,8 +21,8 @@
   <snapshot>
     <element id="Extension">
       <path value="Extension" />
-      <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources." />
+      <short value="URL to show the event data to a user" />
+      <definition value="URL to show the event data to user in some web interface" />
       <min value="0" />
       <max value="*" />
       <base>
@@ -201,6 +201,11 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="URL to show the event data to a user" />
+      <definition value="URL to show the event data to user in some web interface" />
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="http://ehelse.no/fhir/StructureDefinition/vkp-displayURL-v05" />

@@ -372,49 +372,6 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Flag.extension:timestamp">
-      <path value="Flag.extension" />
-      <sliceName value="timestamp" />
-      <short value="timestamp" />
-      <definition value="Simple timestamp for the generation time of the Flag" />
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
-      <alias value="extensions" />
-      <alias value="user content" />
-      <min value="1" />
-      <max value="1" />
-      <base>
-        <path value="DomainResource.extension" />
-        <min value="0" />
-        <max value="*" />
-      </base>
-      <type>
-        <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-timestamp-v05" />
-      </type>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() | (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-      </constraint>
-      <constraint>
-        <key value="ext-1" />
-        <severity value="error" />
-        <human value="Must have either extensions or value[x], not both" />
-        <expression value="extension.exists() != value.exists()" />
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
-      </constraint>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
-    </element>
     <element id="Flag.extension:displayURL">
       <path value="Flag.extension" />
       <sliceName value="displayURL" />
@@ -1023,9 +980,9 @@
     <element id="Flag.period">
       <path value="Flag.period" />
       <short value="Time period when flag is active" />
-      <definition value="The period of time from the activation of the flag to inactivation of the flag. If the flag is active, the end of the period should be unspecified." />
+      <definition value="VKP-Norway uses this element as timestamp. The start time of the period shold be the time the flag was created. The end time (if present) is the time the event was handled/closed.&#xD;&#xA;&#xD;&#xA;The period of time from the activation of the flag to inactivation of the flag. If the flag is active, the end of the period should be unspecified.&#xD;&#xA;&#xD;&#xA;Exmple:&#xD;&#xA;~~~&#xD;&#xA; &quot;period&quot;:{&#xD;&#xA;    &quot;start&quot;:&quot;2018-04-24T10:00:00.936+02:00&quot;&#xD;&#xA;}&#xD;&#xA;~~~" />
       <comment value="This is not a duration - that's a measure of time (a separate type), but a duration that occurs at a fixed value of time. A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. &quot;the patient was an inpatient of the hospital for this time range&quot;) or one value from the range applies (e.g. &quot;give to the patient between these two times&quot;). If duration is required, specify the type as Interval|Duration." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Flag.period" />
@@ -1198,18 +1155,6 @@
         <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-emergency-level-v06" />
       </type>
     </element>
-    <element id="Flag.extension:timestamp">
-      <path value="Flag.extension" />
-      <sliceName value="timestamp" />
-      <short value="timestamp" />
-      <definition value="Simple timestamp for the generation time of the Flag" />
-      <min value="1" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-timestamp-v05" />
-      </type>
-    </element>
     <element id="Flag.extension:displayURL">
       <path value="Flag.extension" />
       <sliceName value="displayURL" />
@@ -1249,6 +1194,11 @@
       <path value="Flag.code.text" />
       <short value="Used in the PCH Norway project to enter text to be displayed to the user describing the Flagged event. in Code.text attribute" />
       <definition value="Used in the PCH Norway project to enter text to be displayed to the user describing the Flagged event. in Code.text attribute" />
+    </element>
+    <element id="Flag.period">
+      <path value="Flag.period" />
+      <definition value="VKP-Norway uses this element as timestamp. The start time of the period shold be the time the flag was created. The end time (if present) is the time the event was handled/closed.&#xD;&#xA;&#xD;&#xA;The period of time from the activation of the flag to inactivation of the flag. If the flag is active, the end of the period should be unspecified.&#xD;&#xA;&#xD;&#xA;Exmple:&#xD;&#xA;~~~&#xD;&#xA; &quot;period&quot;:{&#xD;&#xA;    &quot;start&quot;:&quot;2018-04-24T10:00:00.936+02:00&quot;&#xD;&#xA;}&#xD;&#xA;~~~" />
+      <min value="1" />
     </element>
   </differential>
 </StructureDefinition>

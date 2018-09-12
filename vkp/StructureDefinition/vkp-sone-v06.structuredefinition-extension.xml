@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="vkp-sone" />
+  <id value="vkp-sone-v06" />
   <meta>
     <versionId value="1" />
     <lastUpdated value="2018-06-15T13:39:05.662+00:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/StructureDefinition/vkp-sone" />
-  <version value="0.1" />
-  <name value="vkp-sone" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/vkp-sone-v06" />
+  <version value="0.6" />
+  <name value="vkp-sone-v06" />
   <status value="draft" />
-  <date value="2018-06-15T13:39:05.545Z" />
+  <date value="2018-09-12" />
   <description value="Information about juristictional sone/subsone the Person belongs to (home address)." />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
@@ -26,7 +26,8 @@
     <element id="Extension">
       <path value="Extension" />
       <short value="Information about juristictional sone/subsone " />
-      <definition value="Information about juristictional sone/subsone of the Person. The sone and subsone is given as a list of string values " />
+      <definition value="Information about juristictional sone/subsone of the Person. The sone and subsone is given as a list of string values delimited by &quot;|&quot;.&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~&#xD;&#xA;{&#xD;&#xA;     &quot;url&quot;:&quot;http://ehelse.no/fhir/StructureDefinition/vkp-sone-v06&quot;,&#xD;&#xA;     &quot;valueString&quot;:&quot;Oslo|Gamle Oslo|Øst|Kampen&quot;&#xD;&#xA;}&#xD;&#xA;~~~" />
+      <comment value="This information is typically recorden in the municipality ERP and they have not defined any standard way of representing this data across different municipalities in Norway. The number of sones and subsones can as a result of this vary from one municipality to another." />
       <min value="0" />
       <max value="*" />
       <base>
@@ -152,6 +153,7 @@
       <type>
         <code value="uri" />
       </type>
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/vkp-sone-v06" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -207,7 +209,12 @@
     <element id="Extension">
       <path value="Extension" />
       <short value="Information about juristictional sone/subsone " />
-      <definition value="Information about juristictional sone/subsone of the Person. The sone and subsone is given as a list of string values " />
+      <definition value="Information about juristictional sone/subsone of the Person. The sone and subsone is given as a list of string values delimited by &quot;|&quot;.&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~&#xD;&#xA;{&#xD;&#xA;     &quot;url&quot;:&quot;http://ehelse.no/fhir/StructureDefinition/vkp-sone-v06&quot;,&#xD;&#xA;     &quot;valueString&quot;:&quot;Oslo|Gamle Oslo|Øst|Kampen&quot;&#xD;&#xA;}&#xD;&#xA;~~~" />
+      <comment value="This information is typically recorden in the municipality ERP and they have not defined any standard way of representing this data across different municipalities in Norway. The number of sones and subsones can as a result of this vary from one municipality to another." />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/vkp-sone-v06" />
     </element>
     <element id="Extension.value[x]:valueString">
       <path value="Extension.valueString" />

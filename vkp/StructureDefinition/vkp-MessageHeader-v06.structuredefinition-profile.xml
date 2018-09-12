@@ -1443,7 +1443,7 @@
     <element id="MessageHeader.receiver.identifier.system">
       <path value="MessageHeader.receiver.identifier.system" />
       <short value="The official name of the HERid namespace" />
-      <definition value="The official name of the HERid namespace" />
+      <definition value="The official name of the HERid namespace, identified by its oid value" />
       <comment value="see http://en.wikipedia.org/wiki/Uniform_resource_identifier" />
       <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers." />
       <min value="0" />
@@ -1469,6 +1469,7 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1490,7 +1491,7 @@
     <element id="MessageHeader.receiver.identifier.value">
       <path value="MessageHeader.receiver.identifier.value" />
       <short value="The value that is unique" />
-      <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
+      <definition value="The HERid value identifying the receiver&#xD;&#xA;The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
       <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html)." />
       <min value="0" />
       <max value="1" />
@@ -1514,6 +1515,7 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1667,6 +1669,7 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -2121,6 +2124,7 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -2141,8 +2145,8 @@
     </element>
     <element id="MessageHeader.sender.identifier.value">
       <path value="MessageHeader.sender.identifier.value" />
-      <short value="The value that is unique" />
-      <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
+      <short value="The HERid" />
+      <definition value="The HERid value identifying the sender&#xD;&#xA;The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
       <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html)." />
       <min value="0" />
       <max value="1" />
@@ -2166,6 +2170,7 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -2319,6 +2324,7 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -3575,7 +3581,7 @@
     <element id="MessageHeader.source.endpoint">
       <path value="MessageHeader.source.endpoint" />
       <short value="Actual message source address or id" />
-      <definition value="Identifies the routing target to send acknowledgements to.&#xD;&#xA;&#xD;&#xA;VKP Norway identifies the endpoint identifier for the actual source application of the message. This logical identifier MUST be identical to the information found in the Address register for the HER-id in the sender.identifier element.&#xD;&#xA;&#xD;&#xA;Example: &#xD;&#xA;~~~&#xD;&#xA;&quot;source&quot;:{&#xD;&#xA;   &quot;endpoint&quot;:&quot;amqp://sb.nhn.no/NHNProdServiceBus/135164&quot;&#xD;&#xA;}&#xD;&#xA;~~~" />
+      <definition value="Identifies the routing target to send acknowledgements to.&#xD;&#xA;&#xD;&#xA;In VKP Norway this element identifies the endpoint to reach the actual source application of the message. This logical identifier MUST be identical to the information found in the Address register for the HER-id in the sender.identifier element. The value should be an actual endpoint acknowledgments can be sent to. &#xD;&#xA;&#xD;&#xA;Example: &#xD;&#xA;~~~&#xD;&#xA;&quot;source&quot;:{&#xD;&#xA;   &quot;endpoint&quot;:&quot;amqp://sb.nhn.no/NHNProdServiceBus/135164&quot;&#xD;&#xA;}&#xD;&#xA;~~~" />
       <comment value="The id may be a non-resolvable URI for systems that do not use standard network-based addresses." />
       <requirements value="Identifies where to send responses, may influence security permissions." />
       <min value="1" />
@@ -3757,6 +3763,7 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4061,6 +4068,7 @@
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4360,8 +4368,14 @@
     <element id="MessageHeader.receiver.identifier.system">
       <path value="MessageHeader.receiver.identifier.system" />
       <short value="The official name of the HERid namespace" />
-      <definition value="The official name of the HERid namespace" />
+      <definition value="The official name of the HERid namespace, identified by its oid value" />
       <fixedUri value="urn:oid:2.16.578.1.12.4.1.2" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MessageHeader.receiver.identifier.value">
+      <path value="MessageHeader.receiver.identifier.value" />
+      <definition value="The HERid value identifying the receiver&#xD;&#xA;The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
+      <mustSupport value="true" />
     </element>
     <element id="MessageHeader.receiver.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -4369,6 +4383,7 @@
       </extension>
       <path value="MessageHeader.receiver.display" />
       <definition value="Display name of the organization service (tjeneste) receiving the message. MUST be taken from the NHN Address Register. The identifier and display name MUST be taken from the same service entity in AR.&#xD;&#xA;" />
+      <mustSupport value="true" />
     </element>
     <element id="MessageHeader.sender">
       <path value="MessageHeader.sender" />
@@ -4406,6 +4421,13 @@
       <short value="The official name of the HERid namespace" />
       <definition value="The official name of the HERid namespace, identified by its oid value" />
       <fixedUri value="urn:oid:2.16.578.1.12.4.1.2" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MessageHeader.sender.identifier.value">
+      <path value="MessageHeader.sender.identifier.value" />
+      <short value="The HERid" />
+      <definition value="The HERid value identifying the sender&#xD;&#xA;The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
+      <mustSupport value="true" />
     </element>
     <element id="MessageHeader.sender.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -4414,6 +4436,7 @@
       <path value="MessageHeader.sender.display" />
       <short value="Display name of the organization service (tjeneste) sending the message" />
       <definition value="Display name of the organization service (tjeneste) sending the message. MUST be taken from the NHN Address Register. The identifier and display name MUST be taken from the same service entity in AR." />
+      <mustSupport value="true" />
     </element>
     <element id="MessageHeader.timestamp">
       <path value="MessageHeader.timestamp" />
@@ -4476,7 +4499,7 @@
     </element>
     <element id="MessageHeader.source.endpoint">
       <path value="MessageHeader.source.endpoint" />
-      <definition value="Identifies the routing target to send acknowledgements to.&#xD;&#xA;&#xD;&#xA;VKP Norway identifies the endpoint identifier for the actual source application of the message. This logical identifier MUST be identical to the information found in the Address register for the HER-id in the sender.identifier element.&#xD;&#xA;&#xD;&#xA;Example: &#xD;&#xA;~~~&#xD;&#xA;&quot;source&quot;:{&#xD;&#xA;   &quot;endpoint&quot;:&quot;amqp://sb.nhn.no/NHNProdServiceBus/135164&quot;&#xD;&#xA;}&#xD;&#xA;~~~" />
+      <definition value="Identifies the routing target to send acknowledgements to.&#xD;&#xA;&#xD;&#xA;In VKP Norway this element identifies the endpoint to reach the actual source application of the message. This logical identifier MUST be identical to the information found in the Address register for the HER-id in the sender.identifier element. The value should be an actual endpoint acknowledgments can be sent to. &#xD;&#xA;&#xD;&#xA;Example: &#xD;&#xA;~~~&#xD;&#xA;&quot;source&quot;:{&#xD;&#xA;   &quot;endpoint&quot;:&quot;amqp://sb.nhn.no/NHNProdServiceBus/135164&quot;&#xD;&#xA;}&#xD;&#xA;~~~" />
       <mustSupport value="true" />
     </element>
     <element id="MessageHeader.responsible">
@@ -4492,10 +4515,12 @@
     <element id="MessageHeader.response">
       <path value="MessageHeader.response" />
       <definition value="Information about the message that this message is a response to.  Only present if this message is a response.&#xD;&#xA;The actual response (error description) is a separate OperationOutcome resource in the Bundle, referenced in detail.reference &#xD;&#xA;&#xD;&#xA;~~~&#xD;&#xA;&quot;response&quot; : {&#xD;&#xA;     &quot;identifier&quot; : &quot;93d56570-ebb9-4cdb-b49d-d1bcbf06a296&quot;,&#xD;&#xA;     &quot;code&quot; : &quot;ok&quot;,&#xD;&#xA;     &quot;details&quot; : {&#xD;&#xA;      &quot;reference&quot; : &quot;urn:uuid:116bb667-5506-4c2a-8ea7-7b40c170d539&quot;&#xD;&#xA;     }&#xD;&#xA;}&#xD;&#xA;~~~" />
+      <mustSupport value="true" />
     </element>
     <element id="MessageHeader.focus">
       <path value="MessageHeader.focus" />
       <definition value="The actual data of the message - a reference to the root/focus class of the event.&#xD;&#xA;&#xD;&#xA;VKP uses literal references to the actual data elements contained in the Bundle.&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~&#xD;&#xA;&quot;focus&quot;: [&#xD;&#xA;   {&#xD;&#xA;      &quot;reference&quot;:&quot;urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34&quot;,&#xD;&#xA;      &quot;display&quot;:&quot;MedicationDispense&quot;&#xD;&#xA;   }&#xD;&#xA;]&#xD;&#xA;~~~" />
+      <mustSupport value="true" />
     </element>
     <element id="MessageHeader.focus.reference">
       <path value="MessageHeader.focus.reference" />

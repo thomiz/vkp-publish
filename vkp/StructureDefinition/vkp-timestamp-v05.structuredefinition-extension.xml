@@ -6,7 +6,7 @@
   </meta>
   <url value="http://ehelse.no/fhir/StructureDefinition/vkp-timestamp-v05" />
   <name value="vkp-timestamp-v05" />
-  <status value="draft" />
+  <status value="retired" />
   <date value="2017-06-02T15:54:32.348998+02:00" />
   <description value="Basic timestamp with UTC offset" />
   <fhirVersion value="3.0.0" />
@@ -20,8 +20,8 @@
   <snapshot>
     <element id="Extension">
       <path value="Extension" />
-      <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources" />
+      <short value="Basic timestamp with UTC offset" />
+      <definition value="Basic timestamp with UTC offset&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~&#xD;&#xA;&quot;timestamp&quot;:&quot;2018-07-18T07:01:46+00:00&quot;&#xD;&#xA;~~~" />
       <min value="0" />
       <max value="*" />
       <base>
@@ -202,7 +202,8 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <definition value="Optional Extension Element - found in all resources" />
+      <short value="Basic timestamp with UTC offset" />
+      <definition value="Basic timestamp with UTC offset&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~&#xD;&#xA;&quot;timestamp&quot;:&quot;2018-07-18T07:01:46+00:00&quot;&#xD;&#xA;~~~" />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
