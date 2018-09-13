@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="vkp-Address-v06" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/vkp-Address-v06" />
+  <version value="0.6" />
+  <name value="vkp-Address-v06" />
+  <status value="draft" />
+  <date value="2018-09-13" />
+  <description value="Profile of the no-Address profile for use in Norwegian VKP project" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Address" />
+  <baseDefinition value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Address.extension">
+      <path value="Address.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Address.extension:elock">
+      <path value="Address.extension" />
+      <sliceName value="elock" />
+      <short value="Information about elock at the location" />
+      <definition value="Name of the e-lock system installed at the location, if no name is present there is no e-lock installed at the location." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-elock-v06" />
+      </type>
+    </element>
+    <element id="Address.line.extension">
+      <path value="Address.line.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Address.line.extension:hint">
+      <path value="Address.line.extension" />
+      <sliceName value="hint" />
+      <short value="additionalLocator - hint" />
+      <definition value="In VKP this extension is used to give additional information of how to locate the address when visiting the location.&#xD;&#xA;&#xD;&#xA;This can be a unit designator, such as apartment number, suite number, or floor. There may be several unit designators in an address (e.g., &quot;3rd floor, Appt. 342&quot;). This can also be a designator pointing away from the location, rather than specifying a smaller location within some larger one (e.g., Dutch &quot;t.o.&quot; means &quot;opposite to&quot; for house boats located across the street facing houses)." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
