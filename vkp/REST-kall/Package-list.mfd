@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2016sp1 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="vkp-ImplementationGuide-v06" library="xml" uid="7" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="64" lty="59" rbx="370" rby="451"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="2" expanded="1">
+								<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="ImplementationGuide" ns="1" expanded="1">
+										<entry name="package" ns="1" expanded="1">
+											<entry name="resource" ns="1" expanded="1">
+												<entry name="sourceUri" ns="1" outkey="12" expanded="1">
+													<entry name="value" type="attribute" outkey="13"/>
+												</entry>
+												<entry name="sourceReference" ns="1" outkey="4" expanded="1">
+													<entry name="reference" ns="1" expanded="1">
+														<entry name="value" type="attribute" outkey="5"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\StructureDefinition\vkp-ImplementationGuide-v06.xsd" inputinstance="..\StructureDefinition\vkp-ImplementationGuide-v06.xml" outputinstance="..\StructureDefinition\vkp-ImplementationGuide-v06.xml" instanceroot="{http://hl7.org/fhir}ImplementationGuide"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="PackageList" library="text" uid="8" kind="16">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="580" lty="355" rbx="809" rby="543"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="FileInstance" expanded="1">
+								<entry name="document" expanded="1">
+									<entry name="Rows" inpkey="6" expanded="1">
+										<entry name="Field1" inpkey="7"/>
+									</entry>
+									<entry name="Rows" inpkey="10" expanded="1" clone="1">
+										<entry name="Field1" inpkey="11"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text type="csv" outputinstance="Packagelist.txt" encoding="1000" byteorder="1" byteordermark="0">
+							<settings separator="," quote="&quot;" firstrownames="false" removeempty="true">
+								<names root="Text file" block="Rows">
+									<field0 name="Field1" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="6" edgekey="8"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="7" edgekey="18"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="10" edgekey="14"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="11" edgekey="19"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

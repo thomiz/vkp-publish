@@ -133,72 +133,72 @@
     <resource>
       <example value="false" />
       <name value="CodeSystem : vkp-careplan-category-v05.codesystem" />
-      <sourceUri value="../CodeSystem/vkp-careplan-category-v05.codesystem.xml" />
+	  <sourceUri value="http://ehelse.no/fhir/CodeSystem/vkp-careplan-category-v05" />
     </resource>
     <resource>
       <example value="false" />
       <name value="CodeSystem : vkp-emergency-level-v05.codesystem" />
-      <sourceUri value="../CodeSystem/vkp-emergency-level-v05.codesystem.xml" />
+      <sourceUri value="http://ehelse.no/fhir/CodeSystem/vkp-emergency-level-v05" />
     </resource>
     <resource>
       <example value="false" />
       <name value="CodeSystem : vkp-encounter-reason-v05.codesystem" />
-      <sourceUri value="../CodeSystem/vkp-encounter-reason-v05.codesystem.xml" />
+      <sourceUri value="http://ehelse.no/fhir/CodeSystem/vkp-encounter-reason-v05" />
     </resource>
     <resource>
       <example value="false" />
       <name value="CodeSystem : vkp-encounter-type-v05.codesystem" />
-      <sourceUri value="../CodeSystem/vkp-encounter-type-v05.codesystem.xml" />
+      <sourceUri value="http://ehelse.no/fhir/CodeSystem/vkp-encounter-type-v05" />
     </resource>
     <resource>
       <example value="false" />
       <name value="CodeSystem : vkp-medicationdispense-events-v06.codesystem" />
-      <sourceUri value="../CodeSystem/vkp-medicationdispense-events-v06.codesystem.xml" />
+      <sourceUri value="http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v06" />
     </resource>
      <resource>
       <example value="false" />
       <name value="CodeSystem : vkp-message-event-v05.codesystem" />
-      <sourceUri value="../CodeSystem/vkp-message-event-v05.codesystem.xml" />
+      <sourceUri value="http://ehelse.no/fhir/CodeSystem/vkp-message-event-v05" />
     </resource>
     <resource>
       <example value="false" />
       <name value="CodeSystem : vkp-triage-v05.codesystem" />
-      <sourceUri value="../CodeSystem/vkp-triage-v05.codesystem.xml" />
+      <sourceUri value="http://ehelse.no/fhir/CodeSystem/vkp-triage-v05" />
     </resource>
     <resource>
       <example value="false" />
       <name value="ValueSet : vkp-careplan-category-v05.valueset" />
-      <sourceUri value="../ValueSet/vkp-careplan-category-v05.valueset.xml" />
+      <sourceUri value="http://ehelse.no/fhir/ValueSet/vkp-careplan-category-v05" />
     </resource>
     <resource>
       <example value="false" />
       <name value="ValueSet : vkp-emergency-level-v05.valueset" />
-      <sourceUri value="../ValueSet/vkp-emergency-level-v05.valueset.xml" />
+      <sourceUri value="http://ehelse.no/fhir/ValueSet/vkp-emergency-level-v05l" />
     </resource>
     <resource>
       <example value="false" />
       <name value="ValueSet : vkp-encounter-reason-v05.valueset" />
-      <sourceUri value="../ValueSet/vkp-encounter-reason-v05.valueset.xml" />
+      <sourceUri value="http://ehelse.no/fhir/ValueSet/vkp-encounter-reason-v05" />
     </resource>
     <resource>
       <example value="false" />
       <name value="ValueSet : vkp-encounter-type-v05.valueset" />
-      <sourceUri value="../ValueSet/vkp-encounter-type-v05.valueset.xml" />
+      <sourceUri value="http://ehelse.no/fhir/ValueSet/vkp-encounter-type-v05" />
     </resource>
     <resource>
       <example value="false" />
       <name value="ValueSet : vkp-medicationdispense-events-v06.valueset" />
-      <sourceUri value="../ValueSet/vkp-medicationdispense-events-v06.valueset.xml" />
+      <sourceUri value="http://ehelse.no/fhir/ValueSet/vkp-medicationdispense-events-v06" />
     </resource>
     <resource>
       <example value="false" />
       <name value="ValuSet : vkp-medicationdispense-message-status-v05.valueset" />
-      <sourceUri value="../ValueSet/vkp-medicationdispense-message-status-v05.valueset.xml" />
+      <sourceUri value="http://ehelse.no/fhir/ValueSet/vkp-medicationdispense-message-status-v05" />
     </resource>
     <resource>
       <example value="false" />
       <name value="ValueSet : vkp-message-event-v05.valueset" />
-      <sourceUri value="../ValueSet/vkp-message-event-v05.valueset.xml" />
+      <sourceUri value="http://ehelse.no/fhir/ValueSet/vkp-message-event-v05" />
     </resource>
   </package>
 </ImplementationGuide>
