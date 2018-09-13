@@ -9,12 +9,12 @@
   <version value="0.5" />
   <name value="vkp-medicationdispense-message-status-v05.valueset" />
   <status value="draft" />
-  <date value="2018-06-29T08:24:56.133+00:00" />
+  <date value="2018-09-13T08:24:56.133+00:00" />
   <publisher value="Direktoratet for e-helse" />
   <description value="ValueSet containting codes describing the message status relevant for the vkp."/>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/ValueSet/medication-admin-status" />
+      <system value="http://hl7.org/fhir/medication-dispense-status" />
       <concept>
         <code value="in-progress" />
       </concept>
