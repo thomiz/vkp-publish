@@ -8,27 +8,30 @@
     <resource>
       <MessageHeader>
         <id value="54b44b2e-855a-4f75-904f-9ec865e88020" />
+		<meta>
+			<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-MessageHeader-v06"/>
+		</meta>
         <event>
           <system value="http://ehelse.no/fhir/CodeSystem/vkp-message-event-v05" />
           <code value="CameraObservation" />
         </event>
         <receiver>
           <identifier>
-            <system value="http://ehelse.no/fhir/identifiertypes/HERID" />
+            <system value="urn:oid:2.16.578.1.12.4.1.2" />
             <value value="102287" />
           </identifier>
           <display value="Sykepleietjeneste, pleie- og omsorg" />
         </receiver>
         <sender>
           <identifier>
-            <system value="http://ehelse.no/fhir/identifiertypes/HERID" />
+            <system value="urn:oid:2.16.578.1.12.4.1.2" />
             <value value="95341" />
           </identifier>
           <display value="Velferdpoclev1" />
         </sender>
         <timestamp value="2012-01-04T09:10:14+00:00" />
         <source>
-          <endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341" />
+          <endpoint value="amqp://sb.nhn.no/NHNProdServiceBus/95341" />
         </source>
         <focus>
         <!-- Reference to the Bundle entry containing the Composition -->
@@ -101,11 +104,11 @@
     <Encounter>
 		 <id value="41d3d995-3afe-421e-bbb7-7b2126ce455b" />
         <meta>
-			<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-digital-Encounter-v05"/>
+			<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-digital-Encounter-v06"/>
 		</meta>
         <identifier>
-        <!--  Unique identification of the encounter as desided by the system --> 
-          <system value="http://roommate.no/virtual-encounter-identifier" />
+        <!--  Unique code or number identifying the Encounter, VKP project uses UUID. --> 
+          <system value="urn:ietf:rfc:3986" />
           <value value="urn:uuid:9c1ce08f-9ac7-4b4d-9d08-281c9f54ddfb" />
         </identifier>
         <!-- The status of the encounter. Reported encounter should be finished. -->
