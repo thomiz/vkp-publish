@@ -6,27 +6,30 @@
     <resource>
       <MessageHeader>
         <id value="1cbdfb97-5859-48a4-8301-d54eab818d68" />
+		<meta>
+			<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-MessageHeader-v06"/>
+		</meta>
         <event>
           <system value="http://ehelse.no/fhir/CodeSystem/vkp-message-event-v05" />
           <code value="MedicationDispense" />
         </event>
         <receiver>
           <identifier>
-            <system value="http://ehelse.no/fhir/identifiertypes/HERID" />
+            <system value="urn:oid:2.16.578.1.12.4.1.2" />
             <value value="102287" />
           </identifier>
           <display value="Sykepleietjeneste, pleie- og omsorg" />
         </receiver>
         <sender>
           <identifier>
-            <system value="http://ehelse.no/fhir/identifiertypes/HERID" />
+            <system value="urn:oid:2.16.578.1.12.4.1.2" />
             <value value="95341" />
           </identifier>
           <display value="Velferdpoclev1" />
         </sender>
         <timestamp value="2012-01-04T09:10:14+00:00" />
         <source>
-          <endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341" />
+          <endpoint value="amqp://sb.nhn.no/NHNProdServiceBus/95341" />
         </source>
         <focus>
           <reference value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" />
@@ -41,16 +44,16 @@
       <MedicationDispense>
         <id value="ef91399e-8993-11e7-bb31-be2e44b06b34" />
         <meta>
-			<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v05"/>
+			<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v06"/>
 		</meta>
         <identifier>
-          <system value="http://dignio.no/medisindispenser-event-id" />
+          <system value="urn:ietf:rfc:3986" />
           <value value="urn:uuid:c42984fc-8ca8-48d7-8bbf-7fe5503c49a9" />
         </identifier>
         <status value="completed" />
         <category>
           <coding>
-            <system value="http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v05" />
+            <system value="http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v06" />
             <code value="2"/>
 			<display value="medisin_ikke_utlevert" />
           </coding>
@@ -61,7 +64,7 @@
         </medicationCodeableConcept>
         <subject>
           <identifier>
-            <system value="http://ehelse.no/fhir/identifiertypes/FNR" />
+            <system value="urn:oid:2.16.578.1.12.4.1.4.1" />
             <value value="05073500186" />
           </identifier>
           <display value="Ærlend Sørgård" />

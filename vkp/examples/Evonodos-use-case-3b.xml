@@ -78,7 +78,7 @@
 						<div xmlns="http://www.w3.org/1999/xhtml">Avvikssituasjon er rettet opp.</div>
 					</text>
 					<entry>
-						<reference value="urn:uuid: ba6747fd-11dc-5e21-b3b8-87ac1849acc5"/>
+						<reference value="urn:uuid:ba6747fd-11dc-5e21-b3b8-87ac1849acc5"/>
 						<display value="MedicationDispense"/>
 					</entry>
 				</section>
