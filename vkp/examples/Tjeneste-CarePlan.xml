@@ -22,7 +22,7 @@
 	<subject>
 		<!-- Who care Tjenesteoversikt is for, should be an uniqe identifier of the patient -->
 		<identifier>
-			<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+		<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
 			<value value="05073500186"/>
 		</identifier>
 		<display value="Ærlend Sørgård"/>
@@ -34,7 +34,7 @@
 	<author>
 		<!-- Defines who is responsible for the content of the tjeneste, should be an organization/tjeneste -->
 		<identifier>
-			<system value="http://ehelse.no/fhir/identifiertypes/HERID"/>
+			<system value="urn:oid:2.16.578.1.12.4.1.2"/> <!-- OID for HER-id -->
 			<value value="102287"/>
 		</identifier>
 		<display value="Sykepleietjeneste, pleie- og omsorg"/>
