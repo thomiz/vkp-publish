@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CarePlan xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
 	<meta>
-		<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-CarePlan-v05"/>
+		<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-CarePlan-v06"/>
 	</meta>
 	<identifier>
 		<system value="urn:ietf:rfc:3986"/>
