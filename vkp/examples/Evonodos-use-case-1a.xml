@@ -48,13 +48,13 @@
           <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v06"/>
         </meta>
         <identifier>
-          <system value="https://fhir.evondos.com/e300-codes/event-id"/>
-          <value value="2199658"/>
+          <system value="urn:ietf:rfc:3986"/>
+          <value value="b4c294bd-2983-499d-a49f-f406471ffa06"/>
         </identifier>
         <status value="completed"/>
         <category>
           <coding>
-            <system value="http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v05"/>
+            <system value="http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v06"/>
             <code value="1"/>
             <display value="medisin_utlevert"/>
           </coding>
