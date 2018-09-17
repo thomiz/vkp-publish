@@ -78,7 +78,7 @@
                         </div>
                     </text>
                     <entry>
-                        <reference value="urn:uuid: ba6747fd-11dc-5e21-b3b8-87ac1849abc3" />
+                        <reference value="urn:uuid:ba6747fd-11dc-5e21-b3b8-87ac1849abc3" />
                         <display value="MedicationDispense" />
                     </entry>
                 </section>
