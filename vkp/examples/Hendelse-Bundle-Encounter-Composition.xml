@@ -95,6 +95,15 @@
 						<display value="Encounter"/>
 					</entry>
 				</section>
+				<section>
+					<title value="Signature"/>
+					<text>
+						<status value="additional"/>
+						<div xmlns="http://www.w3.org/1999/xhtml">
+                            Magnar Koman (123456)
+						</div>
+					</text>
+				</section>
 			</Composition>
 		</resource>
 	</entry>

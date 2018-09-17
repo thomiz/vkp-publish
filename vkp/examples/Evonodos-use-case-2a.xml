@@ -6,27 +6,30 @@
 		<resource>
 			<MessageHeader>
 				<id value="7774c18e-a603-5ce7-9b06-481be56cb3f5"/>
+				<meta>
+					<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-MessageHeader-v06"/>
+				</meta>
 				<event>
 					<system value="http://ehelse.no/fhir/ValueSet/vkp-message-event-v05"/>
 					<code value="MedicationDispense"/>
 				</event>
 				<receiver>
 					<identifier>
-						<system value="http://ehelse.no/fhir/identifiertypes/HERID"/>
+						<system value="urn:oid:2.16.578.1.12.4.1.2"/>
 						<value value="95938"/>
 					</identifier>
 					<display value="Sykepleietjeneste, pleie- og omsorg"/>
 				</receiver>
 				<sender>
 					<identifier>
-						<system value="http://ehelse.no/fhir/identifiertypes/HERID"/>
+						<system value="urn:oid:2.16.578.1.12.4.1.2"/>
 						<value value=" 8134527"/>
 					</identifier>
 					<display value="Evondos medication service"/>
 				</sender>
 				<timestamp value="2018-07-31T08:00:46+00:00"/>
 				<source>
-					<endpoint value="http://ehelse.no/fhir/identifiertypes/HERID: 8134527"/>
+					<endpoint value="amqp://sb.nhn.no/NHNProdServiceBus/8134527"/>
 				</source>
 				<focus>
 					<reference value="urn:uuid:285357b8-1ec8-429b-827e-3bcd92366126"/>
@@ -53,7 +56,7 @@
 				</type>
 				<subject>
 					<identifier>
-						<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+						<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
 						<value value=" 29098300000"/>
 					</identifier>
 					<display value="Testbruker EVON"/>
@@ -61,7 +64,7 @@
 				<date value="2018-07-31T08:00:00Z"/>
 				<author>
 					<identifier>
-						<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+						<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
 						<value value="04056600324"/>
 					</identifier>
 					<display value="Magnar Koman"/>
@@ -86,7 +89,7 @@
 						<status value="additional"/>
 						<div xmlns="http://www.w3.org/1999/xhtml">
                             Magnar Koman (123456)
-                        </div>
+						</div>
 					</text>
 				</section>
 			</Composition>
@@ -98,16 +101,16 @@
 			<MedicationDispense>
 				<id value="ba6747fd-11dc-5e21-b3b8-87ac1849abc3"/>
 				<meta>
-					<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v05"/>
+					<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v06"/>
 				</meta>
 				<identifier>
-					<system value="https://fhir.evondos.com/e300-codes/event-id"/>
-					<value value="2199660"/>
+					<system value="urn:ietf:rfc:3986"/>
+					<value value="89ba4378-098d-4be6-bdc3-903d1ffbd88a"/>
 				</identifier>
 				<status value="completed"/>
 				<category>
 					<coding>
-						<system value="http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v05"/>
+						<system value="http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v06"/>
 						<code value="18"/>
 						<display value="medisin_assistert_utlevering"/>
 					</coding>
@@ -117,7 +120,7 @@
 				</medicationCodeableConcept>
 				<subject>
 					<identifier>
-						<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+						<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
 						<value value=" 29098300000"/>
 					</identifier>
 					<display value=" Testbruker EVON"/>
