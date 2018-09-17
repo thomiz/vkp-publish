@@ -52,7 +52,7 @@
 	<!-- Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes. -->
 	<gender value="female"/>
 	<address>
-	<!-- Norwegian address: http://ehelse.no/fhir/StructureDefinition/no-basis-Address -->
+	<!-- uses profile of no-basis-Address: http://ehelse.no/fhir/StructureDefinition/vkp-Address-v06 -->
 	<!-- Norwegian basisprofil for Address resource adding Norwegian specific property information, official use of address and further explanation of the use for the data-elements in a Norwegian address. -->
 		<extension url="http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation">
 		<!-- Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer. -->
