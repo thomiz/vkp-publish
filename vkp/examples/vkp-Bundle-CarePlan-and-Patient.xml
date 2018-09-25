@@ -5,7 +5,7 @@
 	<entry>
 		<fullUrl value="urn:uuid:c7b410a6-6894-4cdf-93ba-31d7ee32f507"/>
 		<resource>
-			<Patient xmlns="http://hl7.org/fhir">
+			<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
 				<meta>
 					<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-Patient-v06"/>
 				</meta>
@@ -77,6 +77,67 @@
 						<display value="unmarried"/>
 					</coding>
 				</maritalStatus>
+				<contact>
+					<!-- VKP can use both coded and text value for relationship. Coded values are given according to HL7 CodeSystem http://hl7.org/fhir/ValueSet/v2-0131
+		Text values can be free text description of the relationship. Both a textdescription and a coded value can be present.
+		The main contact of the patient should be coded as "C" - "Emergency Contact" -->
+					<relationship>
+						<!-- Coded value for the relationship
+		A coded value should be used for the main contact person. -->
+						<coding>
+							<system value="http://hl7.org/fhir/v2/0131"/>
+							<code value="CP"/>
+							<display value="Contact person"/>
+						</coding>
+					</relationship>
+					<relationship>
+						<!-- Plain text representation -->
+						<text value="Datter"/>
+					</relationship>
+					<name>
+						<!-- Norwegian human name. Defines the format of norwegian human name according to norwegian regulation (lov om personnavn). -->
+						<extension url="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename">
+							<valueString value="Ida"/>
+						</extension>
+						<text value="Ann Ida Hageby"/>
+						<family value="Hageby"/>
+						<given value="Ann"/>
+					</name>
+				</contact>
+				<contact>
+					<!-- VKP can use both coded and text value for relationship. Coded values are given according to HL7 CodeSystem http://hl7.org/fhir/ValueSet/v2-0131
+		Text values can be free text description of the relationship. Both a textdescription and a coded value can be present.
+		The main contact of the patient should be coded as "C" - "Emergency Contact" -->
+					<relationship>
+						<!-- Coded value for the relationship
+		A coded value should be used for the main contact person. -->
+						<coding>
+							<system value="http://hl7.org/fhir/v2/0131"/>
+							<code value="CP"/>
+							<display value="Contact person"/>
+						</coding>
+					</relationship>
+					<relationship>
+						<!-- Plain text representation -->
+						<text value="Bestefar"/>
+					</relationship>
+					<name>
+						<!-- Norwegian human name. Defines the format of norwegian human name according to norwegian regulation (lov om personnavn). -->
+						<text value="Arne Lutu"/>
+						<family value="Lutu"/>
+						<given value="Arne"/>
+					</name>
+					<telecom>
+						<system value="phone"/>
+						<value value="22667790"/>
+						<use value="home"/>
+					</telecom>
+					<telecom>
+						<system value="phone"/>
+						<value value="9703"/>
+						<use value="mobile"/>
+					</telecom>
+				</contact>
 				<communication>
 					<language>
 						<!-- Languages which may be used to communicate with the patient about his or her health. -->
@@ -84,6 +145,17 @@
 						<text value="norsk"/>
 					</language>
 				</communication>
+				<generalPractitioner>
+					<!-- VKP expects the HER id of the "tjeneste" responsible for providing the patient with "fastlege" services. -->
+					<!-- The screenshot shows Fastlege information using HCPNo. HPR? FNR? HERid reference to the HealthcareService of the GP instead? -->
+					<identifier>
+						<system value="urn:oid:2.16.578.1.12.4.1.2"/>
+						<!-- OID for HER-id -->
+						<value value="720"/>
+						<!-- The actual HER-id -->
+					</identifier>
+					<display value="Sakkeus Hansen"/>
+				</generalPractitioner>
 			</Patient>
 		</resource>
 	</entry>
