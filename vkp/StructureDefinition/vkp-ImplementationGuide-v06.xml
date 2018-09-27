@@ -4,7 +4,7 @@
 	<text>
 		<status value="generated"/>
 		<div xmlns="http://www.w3.org/1999/xhtml">
-			<div> http://ehelse.no/fhir/StructureDefinition/vkp-Address-v06 </div>
+			<p> http://ehelse.no/fhir/StructureDefinition/vkp-Address-v06 </p>
 			<div> http://ehelse.no/fhir/StructureDefinition/vkp-CarePlan-v06 </div>
 			<div> http://ehelse.no/fhir/StructureDefinition/vkp-customdisplaydata-v05 </div>
 			<div> http://ehelse.no/fhir/StructureDefinition/vkp-detailheader-v05 </div>
