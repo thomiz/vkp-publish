@@ -227,7 +227,7 @@
 							</entry>
 						</root>
 						<wsdl/>
-						<text type="csv" outputinstance="Packagelist.xhtml" encoding="1000" byteorder="1" byteordermark="0">
+						<text type="csv" outputinstance="Packagelist.xml" encoding="1000" byteorder="1" byteordermark="0">
 							<settings separator=" " quote="" firstrownames="false" removeempty="true">
 								<names root="Text file" block="Rows">
 									<field0 name="Field13" type="string"/>
