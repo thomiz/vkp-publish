@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
 	<id value="75dfe4f1-a42c-4801-aad1-d37a76ac6467"/>
-	<type value="message"/>
+	<type value="searchset"/>
 	<entry>
 		<fullUrl value="urn:uuid:c7b410a6-6894-4cdf-93ba-31d7ee32f507"/>
 		<resource>
