@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="vkp-digital-Encounter-v06" />
   <url value="http://ehelse.no/fhir/StructureDefinition/vkp-digital-Encounter-v06" />
@@ -16,7 +16,7 @@
   <snapshot>
     <element id="Encounter">
       <path value="Encounter" />
-      <short value="An digital/virtual interaction during which services are provided to the patient " />
+      <short value="An digital/virtual interaction during which services are provided to the patient" />
       <definition value="The digital (virtual) Encounter is caracterized as an encounter that uses some technological mean to perform the encounter instead of a face-to-face meeting.&#xD;&#xA;&#xD;&#xA;An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient." />
       <comment value="The use-case in question is performing a virtual encounter using a camera device to perform the encounter." />
       <alias value="Visit" />
@@ -298,6 +298,49 @@
       </base>
       <type>
         <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Encounter.extension:note">
+      <path value="Encounter.extension" />
+      <sliceName value="note" />
+      <short value="Journal note" />
+      <definition value="A journal note to document the digital encounter." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="DomainResource.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-Annotation-v06" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1413,8 +1456,8 @@
     </element>
     <element id="Encounter.type">
       <path value="Encounter.type" />
-      <short value="Event type " />
-      <definition value="Encounter type &#xD;&#xA;tilsyn|hendelse&#xD;&#xA;&#xD;&#xA;" />
+      <short value="Event type" />
+      <definition value="Encounter type &#xD;&#xA;tilsyn|hendelse" />
       <comment value="Since there are many ways to further classify encounters, this element is 0..*." />
       <min value="0" />
       <max value="*" />
@@ -4965,10 +5008,30 @@
   <differential>
     <element id="Encounter">
       <path value="Encounter" />
-      <short value="An digital/virtual interaction during which services are provided to the patient " />
+      <short value="An digital/virtual interaction during which services are provided to the patient" />
       <definition value="The digital (virtual) Encounter is caracterized as an encounter that uses some technological mean to perform the encounter instead of a face-to-face meeting.&#xD;&#xA;&#xD;&#xA;An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient." />
       <comment value="The use-case in question is performing a virtual encounter using a camera device to perform the encounter." />
       <alias value="digitalt tilsyn" />
+    </element>
+    <element id="Encounter.extension">
+      <path value="Encounter.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Encounter.extension:note">
+      <path value="Encounter.extension" />
+      <sliceName value="note" />
+      <short value="Journal note" />
+      <definition value="A journal note to document the digital encounter." />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-Annotation-v06" />
+      </type>
     </element>
     <element id="Encounter.identifier">
       <path value="Encounter.identifier" />
@@ -4985,8 +5048,8 @@
     </element>
     <element id="Encounter.type">
       <path value="Encounter.type" />
-      <short value="Event type " />
-      <definition value="Encounter type &#xD;&#xA;tilsyn|hendelse&#xD;&#xA;&#xD;&#xA;" />
+      <short value="Event type" />
+      <definition value="Encounter type &#xD;&#xA;tilsyn|hendelse" />
       <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
