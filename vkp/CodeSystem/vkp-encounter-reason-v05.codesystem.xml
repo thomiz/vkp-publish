@@ -67,4 +67,9 @@
     <display value="brannalarm" />
     <definition value="Brannalarm" />
   </concept>
+  <concept>
+    <code value="12" />
+    <display value="fravær" />
+    <definition value="Det er ikke registrer person i rommet på et tidspunkt hvor det skal være person i rommet" />
+  </concept>
 </CodeSystem>
