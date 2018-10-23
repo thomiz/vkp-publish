@@ -3,13 +3,13 @@
   <id value="vkp-encounter-reason-v05.codesystem" />
   <meta>
     <versionId value="1" />
-    <lastUpdated value="2018-06-27T10:48:34.405+00:00" />
+    <lastUpdated value="2018-10-23T07:45:34.405+00:00" />
   </meta>
   <url value="http://ehelse.no/fhir/CodeSystem/vkp-encounter-reason-v05" />
-  <version value="0.50" />
+  <version value="0.51" />
   <name value="vkp-encounter-reason-v05.codesystem" />
   <status value="draft" />
-  <date value="2018-06-27T10:48:33.551+00:00" />
+  <date value="2018-10-23T07:45:34.405+00:00" />
   <publisher value="Direktoratet for e-helse" />
   <content value="complete" />
    <concept>
