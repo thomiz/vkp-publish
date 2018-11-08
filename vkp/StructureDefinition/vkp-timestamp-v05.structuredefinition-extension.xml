@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="vkp-timestamp-v05" />
   <meta>
@@ -9,7 +9,7 @@
   <status value="retired" />
   <date value="2017-06-02T15:54:32.348998+02:00" />
   <description value="Basic timestamp with UTC offset" />
-  <fhirVersion value="3.0.0" />
+  <fhirVersion value="3.0.1" />
   <kind value="primitive-type" />
   <abstract value="false" />
   <contextType value="datatype" />

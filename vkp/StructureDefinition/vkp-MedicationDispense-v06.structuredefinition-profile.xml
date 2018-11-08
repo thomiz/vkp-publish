@@ -1260,7 +1260,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Patient" />
+        <targetProfile value="http://hl7.no/fhir/StructureDefinition/no-basis-Patient" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -4706,7 +4706,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Patient" />
+        <targetProfile value="http://hl7.no/fhir/StructureDefinition/no-basis-Patient" />
       </type>
     </element>
     <element id="MedicationDispense.subject.reference">

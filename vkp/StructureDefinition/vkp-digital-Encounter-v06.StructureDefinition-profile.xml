@@ -83,7 +83,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Patient" />
+        <targetProfile value="http://hl7.no/fhir/StructureDefinition/no-basis-Patient" />
       </type>
       <type>
         <code value="Reference" />
@@ -127,7 +127,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Practitioner" />
+        <targetProfile value="http://hl7.no/fhir/StructureDefinition/no-basis-Practitioner" />
       </type>
       <mustSupport value="true" />
     </element>

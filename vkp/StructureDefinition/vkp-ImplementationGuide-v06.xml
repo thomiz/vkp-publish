@@ -8,6 +8,10 @@
 	<date value="2018-09-13T11:17:44.4112568+02:00"/>
 	<description value="ImplementationGuide for VKP Norway defining the version 0.6 of the VKP FHIR profiles, extensions, valuesets and codesystems"/>
 	<fhirVersion value="3.0.1"/>
+	<dependency>
+		<type value="reference"/>
+		<uri value="http://hl7.no/fhir/ImplementationGuide/no-basis-Entities-Individuals-ImplementationGuide-v10"/>
+	</dependency>
 	<package>
 		<name value="vkp-Package-v06"/>
 		<resource>

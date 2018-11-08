@@ -1048,7 +1048,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Organization" />
+        <targetProfile value="http://hl7.no/fhir/StructureDefinition/no-basis-Organization" />
       </type>
       <type>
         <code value="Reference" />
@@ -1703,7 +1703,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Organization" />
+        <targetProfile value="http://hl7.no/fhir/StructureDefinition/no-basis-Organization" />
       </type>
       <type>
         <code value="Reference" />
@@ -4348,7 +4348,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Organization" />
+        <targetProfile value="http://hl7.no/fhir/StructureDefinition/no-basis-Organization" />
       </type>
       <type>
         <code value="Reference" />
@@ -4398,7 +4398,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Organization" />
+        <targetProfile value="http://hl7.no/fhir/StructureDefinition/no-basis-Organization" />
       </type>
       <type>
         <code value="Reference" />

@@ -120,6 +120,11 @@
 	<concept>
 		<code value="21"/>
 		<display value="medisin_rull_behandlet"/>
-		<definition value="Medinsinposer fjernet, ny rull satt inn eller medinsinering endret manuelt i dispenseren."/>
+		<definition value="Medinsinposer fjernet, ny rull satt inn eller medinsinering endret manuelt i dispenseren"/>
+	</concept>
+	<concept>
+		<code value="22"/>
+		<display value="medisin_plan_endret"/>
+		<definition value="Kontroll av medisinplan etter endring fra apoteket"/>
 	</concept>
 </CodeSystem>
