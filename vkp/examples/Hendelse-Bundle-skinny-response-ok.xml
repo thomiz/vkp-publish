@@ -1,4 +1,4 @@
-﻿<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd">
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
   <id value="2503ab0c-4c7d-4f2b-b527-33e6616738f6" />
   <type value="message" />
   <entry>
@@ -27,7 +27,7 @@
           </identifier>
           <display value="Sykepleietjeneste, pleie- og omsorg" />
         </sender>
-        <timestamp value="2012-01-04T09:10:15+00:00" />
+        <timestamp value="2012-01-04T07:10:15Z" />
         <source>
           <endpoint value="amqp://sb.nhn.no/NHNProdServiceBus/102287" />
         </source>

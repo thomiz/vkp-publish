@@ -24,7 +24,7 @@
           </identifier>
           <display value="Velferdpoclev1" />
         </sender>
-        <timestamp value="2012-01-04T09:10:14+00:00" />
+        <timestamp value="2012-01-04T07:10:14Z" />
         <source>
           <endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341" />
         </source>
@@ -75,7 +75,7 @@
           <display value="Evondo medisineringsrobot"/>
         </actor>
       </performer>
-		<whenHandedOver value="2017-05-09T10:00:00.936+02:00"/>
+		<whenHandedOver value="2017-05-09T08:00:00.936Z"/>
 		<!-- The dosage text for the 1b use case ends up here in the dosage instruction -->
 		<dosageInstruction>
 			<text value="10 doser medisin ble matet ut for bruk på reise.

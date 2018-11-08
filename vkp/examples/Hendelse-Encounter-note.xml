@@ -16,7 +16,7 @@
 					</identifier>
 					<display value="Magnar Koman"/>
 				</authorReference>
-				<time value="2018-06-25T10:00:00.936+02:00"/>
+				<time value="2018-06-25T08:00:00.936Z"/>
 				<text value="Selve teksten til journalnotatet. MERK, det er ikke noe eget sted å legge en signatur."/>
 			</valueAnnotation>
 		</extension>
@@ -28,6 +28,18 @@
 	</identifier>
 	<!-- The status of the encounter. Reported encounter should be finished. -->
 	<status value="finished"/>
+	<!-- classHistory of the Encounter. For the digital-encounter this gives the different modes of sensor-observation chosen by the operator to observe the patient -->
+	<classHistory>
+		<class>
+			<system value="http://ehelse.no/fhir/CodeSystem/vkp-roommate-modes-v06"/>
+			<code value="0"/>
+			<display value="Normal operation"/>
+		</class>
+		<period>
+			<start value="2018-06-25T08:00:00.936Z"/>
+			<end value="2018-06-25T08:00:22.678Z"/>
+		</period>
+	</classHistory>
 	<!-- The encounter type, we suggest using predefined codes from http://ehelse.no/fhir/CodeSystem/vkp-camera-reason-v05 -->
 	<type>
 		<coding>
@@ -56,7 +68,7 @@
 	</participant>
 	<period>
 		<!-- Timestamp of when the encounter was finished, the system could provide both start and end times -->
-		<end value="2018-06-25T10:00:00.936+02:00"/>
+		<end value="2018-06-25T08:00:00.936Z"/>
 	</period>
 	<reason>
 		<!-- Reason the encounter takes place, coded according to http://ehelse.no/fhir/CodeSystem/vkp-camera-reason-v05 -->

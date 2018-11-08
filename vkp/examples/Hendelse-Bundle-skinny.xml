@@ -27,7 +27,7 @@
           </identifier>
           <display value="Velferdpoclev1" />
         </sender>
-        <timestamp value="2012-01-04T09:10:14+00:00" />
+        <timestamp value="2012-01-04T07:10:14Z" />
         <source>
           <endpoint value="amqp://sb.nhn.no/NHNProdServiceBus/95341" />
         </source>
@@ -78,7 +78,7 @@
           <display value="Medido multidosesdispenser"/>
         </actor>
       </performer>
-			<whenHandedOver value="2017-05-09T10:00:00.936+02:00"/>
+			<whenHandedOver value="2017-05-09T08:00:00.936Z"/>
       </MedicationDispense>
     </resource>
   </entry>

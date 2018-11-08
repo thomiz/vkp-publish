@@ -29,7 +29,7 @@
 	</subject>
 	<period>
 		<!-- Period when the tjeneste is active, missing end date means the tjeneste is ongoing -->
-		<start value="1931-11-02T10:00:00.936+02:00"/>
+		<start value="1931-11-02T08:00:00.936Z"/>
 		<end value="2020-01-28"/>
 	</period>
 </CarePlan>

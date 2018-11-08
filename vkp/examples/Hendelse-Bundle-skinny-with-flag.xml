@@ -1,4 +1,4 @@
-<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd">
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
   <id value="033056cb-f7b5-450f-a2bd-67bf2c6d5a4f" />
   <type value="message" />
   <entry>
@@ -78,7 +78,7 @@
           <display value="Medido multidosesdispenser"/>
         </actor>
       </performer>
-			<whenHandedOver value="2017-05-09T10:00:00.936+02:00"/>
+			<whenHandedOver value="2017-05-09T08:00:00.936Z"/>
       </MedicationDispense>
     </resource>
   </entry>
@@ -101,7 +101,7 @@
 					</extension>
 				</extension>
 				<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-timestamp-v05"> <!-- Tidspunkt for når flagget ble generert -->
-					<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>
+					<valueDateTime value="2017-05-09T08:00:00.936Z"/>
 				</extension>
 				<extension url="http://hl7.org/fhir/StructureDefinition/flag-detail"> <!-- Offisiell FHIR utvidelse for å legge inn referanse til ressurs som inneholder ytterligere informasjon i dette tilfellet MedicationDispense -->
 					<valueReference>

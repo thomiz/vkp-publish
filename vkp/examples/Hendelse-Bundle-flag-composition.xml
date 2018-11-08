@@ -1,4 +1,4 @@
-<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd">
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
   <id value="6c45f293-7c7e-40b3-b794-780e6f2f191e" />
   <type value="message" />
   <entry>
@@ -24,7 +24,7 @@
           </identifier>
           <display value="Velferdpoclev1" />
         </sender>
-        <timestamp value="2012-01-04T09:10:14+00:00" />
+        <timestamp value="2012-01-04T09:10:14Z" />
         <source>
           <endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341" />
         </source>
@@ -61,7 +61,7 @@
 						<value value="05073500186"/>
 					</identifier>
 				</subject>
-				<date value="2017-05-09T10:30:00.936+02:00"/> <!-- Timestamp for journalnotatet, må være senere enn hendelsen-->
+				<date value="2017-05-09T08:30:00.936Z"/> <!-- Timestamp for journalnotatet, må være senere enn hendelsen-->
 				<author> <!-- Behandleren som har skrevet notatet -->
 					<identifier>
 					  <system value="http://ehelse.no/fhir/identifiertypes/FNR" />
@@ -115,7 +115,7 @@
           </identifier>
           <display value="Ærlend Sørgård" />
         </subject>
-        <effectiveDateTime value="2017-05-09T10:00:00.936+02:00" />
+        <effectiveDateTime value="2017-05-09T08:00:00.936Z" />
         <device>
           <identifier>
             <system value="http://dignio.no/IMEInummer" />

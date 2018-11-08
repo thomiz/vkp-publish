@@ -62,7 +62,7 @@
 						<value value="05073500186"/>
 					</identifier>
 				</subject>
-				<date value="2017-05-09T10:30:00.936+02:00"/>
+				<date value="2017-05-09T08:30:00.936Z"/>
 				<!-- Timestamp for journalnotatet, må være senere enn hendelsen-->
 				<author> <!-- Behandleren som har skrevet notatet, ingen begrensninger på type og antall i dagens "profil" -->
 					<identifier>
@@ -138,7 +138,7 @@
 						<display value="Medido multidosesdispenser"/>
 					</actor>
 				</performer>
-				<whenHandedOver value="2017-05-09T10:00:00.936+02:00"/>
+				<whenHandedOver value="2017-05-09T08:00:00.936Z"/>
 			</MedicationDispense>
 		</resource>
 	</entry>

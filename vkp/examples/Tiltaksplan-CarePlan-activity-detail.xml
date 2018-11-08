@@ -35,7 +35,7 @@
 	</subject>
 	<period>
 		<!-- Period when the plan is active, missing end date means the plan is ongoing -->
-		<start value="2018-04-24T10:00:00.936+02:00"/>
+		<start value="2018-04-24T08:00:00.936Z"/>
 	</period>
 	<author>
 		<!-- Defines who is responsible for the content of the plan, should be an organization/tjeneste -->
