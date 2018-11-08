@@ -12,10 +12,26 @@
 		<name value="vkp-Package-v06"/>
 		<resource>
 			<example value="false"/>
+			<name value="vkp-additionalpositiondata-v05"/>
+			<description value="Additional information about the geoposition measurement for the PCH in Norway. Contains timestamp, altitudeMeters, horizontal accuracy, vertical accuracy, velocity and direction of travel"/>
+			<sourceReference>
+				<reference value="http://ehelse.no/fhir/StructureDefinition/vkp-additionalpositiondata-v05"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
 			<name value="vkp-Address-v06"/>
 			<description value="Profile of the no-Address profile for use in Norwegian VKP project"/>
 			<sourceReference>
 				<reference value="http://ehelse.no/fhir/StructureDefinition/vkp-Address-v06"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<name value="vkp-annotation-v06"/>
+			<description value="Annotation resource to add Annotation to any resource profile."/>
+			<sourceReference>
+				<reference value="http://ehelse.no/fhir/StructureDefinition/vkp-annotation-v06"/>
 			</sourceReference>
 		</resource>
 		<resource>
