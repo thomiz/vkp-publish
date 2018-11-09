@@ -32,8 +32,8 @@
 	<classHistory>
 		<class>
 			<system value="http://ehelse.no/fhir/CodeSystem/vkp-roommate-modes-v06"/>
-			<code value="0"/>
-			<display value="Normal operation"/>
+			<code value="1"/>
+			<display value="anonymisert_kamera"/>
 		</class>
 		<period>
 			<start value="2018-06-25T08:00:00.936Z"/>
