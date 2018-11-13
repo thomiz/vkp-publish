@@ -12,21 +12,21 @@
         </event>
         <receiver>
           <identifier>
-            <system value="http://ehelse.no/fhir/identifiertypes/HERID" />
+            <system value="urn:oid:2.16.578.1.12.4.1.2" />
             <value value="102287" />
           </identifier>
           <display value="Sykepleietjeneste, pleie- og omsorg" />
         </receiver>
         <sender>
           <identifier>
-            <system value="http://ehelse.no/fhir/identifiertypes/HERID" />
+            <system value="urn:oid:2.16.578.1.12.4.1.2" />
             <value value="95341" />
           </identifier>
           <display value="Velferdpoclev1" />
         </sender>
         <timestamp value="2012-01-04T07:10:14Z" />
         <source>
-          <endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341" />
+          <endpoint value="amqp://sb.nhn.no/NHNProdServiceBus/95341" />
         </source>
         <focus>
           <reference value="urn:uuid:18b6082b-4aec-408c-b06b-5d84ea9c60fd" />
@@ -41,10 +41,10 @@
       <MedicationDispense>
         <id value="18b6082b-4aec-408c-b06b-5d84ea9c60fd" />
         <meta>
-			<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v05"/>
+			<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v06"/>
 		</meta>
         <identifier>
-          <system value="http://evondos.fi/medisindispenser-event-id" />
+          <system value="urn:ietf:rfc:3986" />
           <value value="urn:uuid:38b2ab96-84ab-4567-9004-0f0df4518b2d" />
         </identifier>
         <status value="completed" />
@@ -61,7 +61,7 @@
         </medicationCodeableConcept>
         <subject>
           <identifier>
-            <system value="http://ehelse.no/fhir/identifiertypes/FNR" />
+            <system value="urn:oid:2.16.578.1.12.4.1.4.1" />
             <value value="05073500186" />
           </identifier>
           <display value="Ærlend Sørgård" />

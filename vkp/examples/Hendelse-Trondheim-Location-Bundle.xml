@@ -7,30 +7,32 @@
 			<MessageHeader>
 				<id value="1cbdfb97-5859-48a4-8301-d54eab818d68"/>
 				<meta>
-					<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-MessageHeader-v05"/>
+					<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-MessageHeader-v06"/>
 				</meta>
-				<event> <!-- Event er obligatorisk i FHIR MessageHeader, men kodeverket kan vi bruke hva vi vil, her er det kanskje lurt å lage eget kodeverk for vft hendelser-->
-					<system value="http://hl7.org/fhir/message-events"/>
-					<code value="observation-provide"/>
+				<event>
+					<!-- Event er obligatorisk i FHIR MessageHeader-->
+					<system value="http://ehelse.no/fhir/CodeSystem/vkp-message-event-v05"/>
+					<code value="LocationMeasurement"/>
 				</event>
 				<receiver>
 					<identifier>
-						<system value="http://ehelse.no/fhir/identifiertypes/HERID"/>
+						<system value="urn:oid:2.16.578.1.12.4.1.2"/>
 						<value value="85441"/>
 					</identifier>
 					<display value="Rehabilitering"/>
 				</receiver>
 				<sender>
 					<identifier>
-						<system value="http://ehelse.no/fhir/identifiertypes/HERID"/>
+						<system value="urn:oid:2.16.578.1.12.4.1.2"/>
 						<value value="12345"/>
 					</identifier>
 					<display value="Transmed forsystem"/>
 				</sender>
-				<timestamp value="2012-01-04T09:10:14+00:00"/> 	<!-- obligatorisk i FHIR MessageHeader -->
+				<timestamp value="2012-01-04T09:10:14+00:00"/>
+				<!-- obligatorisk i FHIR MessageHeader -->
 				<source>
 					<name value="Visi/Transmed8/Safemate"/>
-					<endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341"/>
+					<endpoint value="amqp://sb.nhn.no/NHNProdServiceBus/95341"/>
 					<!-- obligatorisk i FHIR MessageHeader.source -->
 				</source>
 				<focus>
@@ -60,11 +62,13 @@
 		<fullUrl value="urn:uuid:cd892e8a-7139-42fd-9f79-5c4a04e40296"/>
 		<resource>
 			<Device>
-				<identifier> <!-- Forretnings identifikator, vi foretrekker en unik persistent id her som identifiserer enheten, kan være MAC-adresse/IMEI nummer etc.-->
-					<system value="urn:ietf:rfc:3986" />
+				<identifier>
+					<!-- Forretnings identifikator, vi foretrekker en unik persistent id her som identifiserer enheten, kan være MAC-adresse/IMEI nummer etc.-->
+					<system value="urn:ietf:rfc:3986"/>
 					<value value="urn:uuid:a74b6bee-0eb4-4d60-bb05-71e27146d9d2"/>
 				</identifier>
-				<contact> <!-- Connectedphone number og url for kontakt ved utløsning av trygghetsalarm -->
+				<contact>
+					<!-- Connectedphone number og url for kontakt ved utløsning av trygghetsalarm -->
 					<system value="phone"/>
 					<value value="+4712345678"/>
 					<use value="home"/>
@@ -76,7 +80,8 @@
 					<use value="home"/>
 					<rank value="2"/>
 				</contact>
-				<location> <!-- Referanse til adresseinformasjon for hvor enheten befinner seg -->
+				<location>
+					<!-- Referanse til adresseinformasjon for hvor enheten befinner seg -->
 					<identifier>
 						<value value="urn:uuid:d19b0be2-c9d3-4e44-bec1-d6eb446d3bcb"/>
 					</identifier>
@@ -88,8 +93,11 @@
 		<fullUrl value="urn:uuid:58c41c82-761e-4948-a07f-c97bc69d3dee"/>
 		<resource>
 			<Patient>
+				<meta>
+					<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-Patient-v06"/>
+				</meta>
 				<identifier>
-					<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+					<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
 					<value value="11079500412"/>
 				</identifier>
 				<name>
@@ -97,18 +105,29 @@
 					<family value="Leistad"/>
 					<given value="Ann Kristin"/>
 				</name>
-				<telecom> <!-- Pasientens telefonnummer -->
+				<telecom>
+					<!-- Pasientens telefonnummer -->
 					<system value="phone"/>
 					<value value="+4712345678"/>
 					<use value="mobile"/>
 					<rank value="1"/>
 				</telecom>
-				<address> <!-- Adresseinformasjon, inklusert norsk eiendomsinformasjon siden mange stede i Norge ikke har detaljert nok stedsangivelse i adresse -->
-					<extension url="http://ehelse.no/fhir/StructureDefinition/no-propertyinformation-v05">
-						<extension url="gardsnummer">
+				<address>
+					<!-- Adresseinformasjon, inklusert norsk eiendomsinformasjon siden mange stede i Norge ikke har detaljert nok stedsangivelse i adresse -->
+					<extension url="http://hl7.no/fhir/StructureDefinition/no-basis-propertyinformation">
+						<!-- Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer. -->
+						<!-- I dette eksempelet er bare kommunenavn angitt, men vanligvis vil man benytte address.district hvis man bare ønsker kommunenavnet -->
+						<extension url="kommune">
+							<valueCoding>
+								<system value="urn:uri:2.16.578.1.12.4.1.1.3402"/>
+								<code value="0301"/>
+								<display value="Oslo"/>
+							</valueCoding>
+						</extension>
+						<extension url="cadastralUnitNumber">
 							<valueInteger value="105"/>
 						</extension>
-						<extension url="bruksnummer">
+						<extension url="propertyUnitNumber">
 							<valueInteger value="3"/>
 						</extension>
 					</extension>
@@ -117,7 +136,8 @@
 					<city value="Etterstad"/>
 					<postalCode value="0603"/>
 				</address>
-				<contact> <!-- Informasjon om pårørende eller andre som kan kontaktes ved hendelser -->
+				<contact>
+					<!-- Informasjon om pårørende eller andre som kan kontaktes ved hendelser -->
 					<relationship>
 						<coding>
 							<code value="N"/>
@@ -138,11 +158,12 @@
 	<entry>
 		<fullUrl value="urn:uuid:4183309e-bb0b-477d-80d9-46728ef85409"/>
 		<resource>
-			<Location xmlns="http://hl7.org/fhir"> 
+			<Location xmlns="http://hl7.org/fhir">
 				<meta>
-					<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-Location-v05"/>
+					<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-Location-v06"/>
 				</meta>
-				<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-additionalpositiondata-v05"> <!-- Målt Geoposisjon, inkludet hastighet, retning og usikkerhet, støttes ikke native av observation -->
+				<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-additionalpositiondata-v05">
+					<!-- Målt Geoposisjon, inkludet hastighet, retning og usikkerhet, støttes ikke native av observation -->
 					<extension url="timestamp">
 						<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>
 					</extension>
@@ -170,7 +191,8 @@
 						<valueDecimal value="10"/>
 					</extension>
 				</extension>
-				<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-customdisplaydata-v05"> 	<!-- CustomDisplayData for å vise annen informasjon til bruker -->
+				<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-customdisplaydata-v05">
+					<!-- CustomDisplayData for å vise annen informasjon til bruker -->
 					<extension url="name">
 						<valueString value="Ubetydelig avvik"/>
 					</extension>
@@ -178,12 +200,14 @@
 						<valueString value="Bruker utenfor geofence, men innenfor usikkerhetsintervall på målingen"/>
 					</extension>
 				</extension>
-				<identifier> <!-- Forretnings identifikator for Observasjonen(Business identifier), vi foretrekker en unik persistent id UUID -->
-					<system value="urn:ietf:rfc:3986" />
+				<identifier>
+					<!-- Forretnings identifikator for Observasjonen(Business identifier), vi foretrekker en unik persistent id UUID -->
+					<system value="urn:ietf:rfc:3986"/>
 					<value value="urn:uuid:2e82976a-35d6-4870-a4d5-d79abf772a8f"/>
 				</identifier>
 				<description value="User outside goefence"/>
-				<telecom> <!-- URL for å vise hendelsen i webleser-->
+				<telecom>
+					<!-- URL for å vise hendelsen i webleser-->
 					<system value="url"/>
 					<value value="http://display.event.data"/>
 				</telecom>
@@ -191,38 +215,37 @@
 					<longitude value="10.6861143"/>
 					<latitude value="59.9216712"/>
 				</position>
-					<!-- Referanse til pasient, dette er obligatorisk både i Flag ikke i Observation, men det betyr ikke at det er lurt å ikke har subject med i Observation, ulempen er at da kommer referansen til pasient to ganger i en melding som inneholder Flag -->
+				<!-- Referanse til pasient, dette er obligatorisk både i Flag ikke i Observation, men det betyr ikke at det er lurt å ikke har subject med i Observation, ulempen er at da kommer referansen til pasient to ganger i en melding som inneholder Flag -->
 			</Location>
 		</resource>
 	</entry>
 	<entry>
 		<fullUrl value="urn:uuid:c6e68cd8-3dc5-4c06-bbd0-7984f9ed6637"/>
 		<resource>
-			<Flag xmlns="http://hl7.org/fhir"> 
+			<Flag xmlns="http://hl7.org/fhir">
 				<meta>
-					<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-flag-v05"/>
+					<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-flag-v06"/>
 				</meta>
-				<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-emergency-level-v05">
+				<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-emergency-level-v06">
 					<extension url="emergency-level">
 						<valueCodeableConcept>
 							<coding>
-								<system value="http://ehelse.no/fhir/CodeSystem/vkp-emergency-level-v05"/>
+								<system value="http://ehelse.no/fhir/CodeSystem/vkp-emergency-level-v06"/>
 								<code value="V"/>
 								<display value="Vanlig (grønn)"/>
 							</coding>
 						</valueCodeableConcept>
 					</extension>
 				</extension>
-				<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-timestamp-v05"> <!-- Tidspunkt for når flagget ble generert -->
-					<valueDateTime value="2017-05-09T10:00:00.936+02:00"/>
-				</extension>
-				<extension url="http://hl7.org/fhir/StructureDefinition/flag-detail"> <!-- Offisiell FHIR utvidelse for å legge inn referanse til ressurs som inneholder ytterligere informasjon i dette tilfellet Location -->
+				<extension url="http://hl7.org/fhir/StructureDefinition/flag-detail">
+					<!-- Offisiell FHIR utvidelse for å legge inn referanse til ressurs som inneholder ytterligere informasjon i dette tilfellet Location -->
 					<valueReference>
 						<reference value="urn:uuid:4183309e-bb0b-477d-80d9-46728ef85409"/>
 					</valueReference>
 				</extension>
-				<identifier> <!-- Forretnings identifikator for Flagget (Business identifier), vi foretrekker en unik persistent id UUID -->
-					<system value="urn:ietf:rfc:3986" />
+				<identifier>
+					<!-- Forretnings identifikator for Flagget (Business identifier), vi foretrekker en unik persistent id UUID -->
+					<system value="urn:ietf:rfc:3986"/>
 					<value value="urn:uuid:b5581a12-a963-40dc-9e89-c8ed877911e1"/>
 				</identifier>
 				<status value="active"/>
@@ -234,10 +257,13 @@
 				<subject>
 					<!-- Referanse til pasient to ganger, antakelig ikke nødvendig -->
 					<identifier>
-						<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+						<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
 						<value value="05073500186"/>
 					</identifier>
 				</subject>
+				<period>
+					<start value="2017-05-09T10:00:00.936+02:00"/>
+				</period>
 			</Flag>
 		</resource>
 	</entry>
@@ -245,16 +271,26 @@
 		<fullUrl value="urn:uuid:d924e388-d39e-4126-b357-6a74d2b62f64"/>
 		<resource>
 			<Location>
-				<identifier><!-- Forretnings identifikator for adressen (Business identifier), vi foretrekker en unik persistent id UUID -->
-					<system value="urn:ietf:rfc:3986" />
+				<identifier>
+					<!-- Forretnings identifikator for adressen (Business identifier), vi foretrekker en unik persistent id UUID -->
+					<system value="urn:ietf:rfc:3986"/>
 					<value value="urn:uuid:d19b0be2-c9d3-4e44-bec1-d6eb446d3bcb"/>
 				</identifier>
 				<address>
-					<extension url="http://ehelse.no/fhir/StructureDefinition/no-propertyinformation-v05">
-						<extension url="gardsnummer">
+				<extension url="http://hl7.no/fhir/StructureDefinition/no-basis-propertyinformation">
+						<!-- Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer. -->
+						<!-- I dette eksempelet er bare kommunenavn angitt, men vanligvis vil man benytte address.district hvis man bare ønsker kommunenavnet -->
+						<extension url="kommune">
+							<valueCoding>
+								<system value="urn:uri:2.16.578.1.12.4.1.1.3402"/>
+								<code value="0301"/>
+								<display value="Oslo"/>
+							</valueCoding>
+						</extension>
+						<extension url="cadastralUnitNumber">
 							<valueInteger value="105"/>
 						</extension>
-						<extension url="bruksnummer">
+						<extension url="propertyUnitNumber">
 							<valueInteger value="3"/>
 						</extension>
 					</extension>

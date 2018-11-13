@@ -13,7 +13,7 @@
 				<subject>
 					<!-- Referanse til pasient obligatorisk i Composition-->
 					<identifier>
-						<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+						<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
 						<value value="05073500186"/>
 					</identifier>
 				</subject>
@@ -21,7 +21,7 @@
 				<!-- Timestamp for journalnotatet, må være senere enn hendelsen-->
 				<author> <!-- Behandleren som har skrevet notatet, ingen begrensninger på type og antall i dagens "profil" -->
 					<identifier>
-						<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+						<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
 						<value value="04056600324"/>
 					</identifier>
 					<display value="Magnar Koman"/>

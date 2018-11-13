@@ -1,6 +1,6 @@
 <Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
 	<meta>
-		<profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Patient"/>
+		<profile value="http://hl7.no/fhir/StructureDefinition/no-basis-Patient"/>
 	</meta>
 	<extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
 		<extension url="code">
@@ -12,7 +12,7 @@
 			</valueCodeableConcept>
 		</extension>
 	</extension>
-	<extension url="http://ehelse.no/fhir/StructureDefinition/no-basis-bydel">
+	<extension url="http://hl7.no/fhir/StructureDefinition/no-basis-bydel">
 		<valueCoding>
 			<system value="urn:uri:2.16.578.1.12.4.1.1.3403"/>
 			<code value="030101"/>
@@ -56,7 +56,7 @@
 	</telecom>
 	<gender value="male"/>
 	<address>
-		<extension url="http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation">
+		<extension url="http://hl7.no/fhir/StructureDefinition/no-basis-propertyinformation">
 			<extension url="kommune">
 				<valueCoding>
 					<system value="urn:uri:2.16.578.1.12.4.1.1.3402"/>
@@ -87,7 +87,7 @@
 			</coding>
 		</relationship>
 		<name> <!-- Navnet til kontaktpersonen, legg merke til mellomnavn som ikke er en del av HumanName i FHIR -->
-			<extension url="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename">
+			<extension url="http://hl7.no/fhir/StructureDefinition/no-basis-middlename">
 				<valueString value="Pårørende"/>
 			</extension>
 			<text value="Pål Pårørende Olsen"/>
