@@ -1,6 +1,6 @@
 <Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
 	<meta>
-		<profile value="http://ehelse.no/fhir/StructureDefinition/no-Patient"/>
+		<profile value="http://hl7.no/fhir/StructureDefinition/no-Patient"/>
 	</meta>
 	<extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
 		<extension url="code">
@@ -12,7 +12,7 @@
 			</valueCodeableConcept>
 		</extension>
 	</extension>
-	<extension url="http://ehelse.no/fhir/StructureDefinition/no-bydel">
+	<extension url="http://hl7.no/fhir/StructureDefinition/no-bydel">
 		<valueString value="Testbruker-bydel"/>
 	</extension>
 	<identifier>
@@ -24,7 +24,7 @@
 		<value value="123"/>
 	</identifier>
 	<name>
-		<extension url="http://ehelse.no/fhir/StructureDefinition/no-middlename">
+		<extension url="http://hl7.no/fhir/StructureDefinition/no-middlename">
 			<valueString value="Alida"/>
 		</extension>
 		<family value="Testbruker"/>
@@ -37,7 +37,7 @@
 	</telecom>
 	<gender value="female"/>
 	<address>
-		<extension url="http://ehelse.no/fhir/StructureDefinition/no-propertyinformation-v05">
+		<extension url="http://hl7.no/fhir/StructureDefinition/no-propertyinformation-v05">
 			<extension url="kommune">
 				<valueString value="Oslo"/>
 			</extension>
@@ -64,7 +64,7 @@
 			</coding>
 		</relationship>
 		<name>
-			<extension url="http://ehelse.no/fhir/StructureDefinition/no-middlename">
+			<extension url="http://hl7.no/fhir/StructureDefinition/no-middlename">
 				<valueString value="Pårørende"/>
 			</extension>
 			<text value="Pål Pårørende Olsen"/>

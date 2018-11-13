@@ -7,26 +7,26 @@
       <MessageHeader>
         <id value="1cbdfb97-5859-48a4-8301-d54eab818d68" />
         <event>
-          <system value="http://hl7.org/fhir/message-events" />
-          <code value="MedicationAdministration-Update" />
+			<system value="http://ehelse.no/fhir/CodeSystem/vkp-message-event-v05" />
+			<code value="MedicationDispense" />
         </event>
         <receiver>
           <identifier>
-            <system value="http://ehelse.no/fhir/identifiertypes/HERID" />
+            <system value="urn:oid:2.16.578.1.12.4.1.2" />
             <value value="102287" />
           </identifier>
           <display value="Sykepleietjeneste, pleie- og omsorg" />
         </receiver>
         <sender>
           <identifier>
-            <system value="http://ehelse.no/fhir/identifiertypes/HERID" />
+            <system value="urn:oid:2.16.578.1.12.4.1.2" />
             <value value="95341" />
           </identifier>
           <display value="Velferdpoclev1" />
         </sender>
         <timestamp value="2012-01-04T09:10:14Z" />
         <source>
-          <endpoint value="http://ehelse.no/fhir/identifiertypes/HERID:95341" />
+          <endpoint value="amqp://sb.nhn.no/NHNProdServiceBus/95341" />
         </source>
         <focus>
           <reference value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" />
@@ -57,14 +57,14 @@
 				<subject>
 					<!-- Referanse til pasient obligatorisk i Composition-->
 					<identifier>
-						<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+						<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
 						<value value="05073500186"/>
 					</identifier>
 				</subject>
 				<date value="2017-05-09T08:30:00.936Z"/> <!-- Timestamp for journalnotatet, må være senere enn hendelsen-->
 				<author> <!-- Behandleren som har skrevet notatet -->
 					<identifier>
-					  <system value="http://ehelse.no/fhir/identifiertypes/FNR" />
+					  <system value="urn:oid:2.16.578.1.12.4.1.4.1" />
 					  <value value="04056600324" />
 					</identifier>
 					<display value="Magnar Koman" />
@@ -110,7 +110,7 @@
         </medicationCodeableConcept>
         <subject>
           <identifier>
-            <system value="http://ehelse.no/fhir/identifiertypes/FNR" />
+            <system value="urn:oid:2.16.578.1.12.4.1.4.1" />
             <value value="05073500186" />
           </identifier>
           <display value="Ærlend Sørgård" />
@@ -165,7 +165,7 @@
 				<subject>
 					<!-- Referanse til pasient tre ganger i denne Bundle'en -->
 					<identifier>
-						<system value="http://ehelse.no/fhir/identifiertypes/FNR"/>
+						<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
 						<value value="05073500186"/>
 					</identifier>
 				</subject>

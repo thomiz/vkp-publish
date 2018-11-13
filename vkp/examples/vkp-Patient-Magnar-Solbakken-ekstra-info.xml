@@ -45,7 +45,7 @@
 	<!-- Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes. -->
 	<gender value="female"/>
 	<address>
-		<extension url="http://ehelse.no/fhir/StructureDefinition/no-basis-address-official">
+		<extension url="http://hl7.no/fhir/StructureDefinition/no-basis-address-official">
 		<!-- Defines the concept of an officially registered address in Norway. Usually this will be the adress registered in "Folkeregisteret" for persons or "Enhetsregisteret" for organizations. -->
 			<valueBoolean value="true"/>
 		</extension>
@@ -84,7 +84,7 @@
 			<text value="Datter"/>
 		</relationship>
 		<name> <!-- Norwegian human name. Defines the format of norwegian human name according to norwegian regulation (lov om personnavn). -->
-			<extension url="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename">
+			<extension url="http://hl7.no/fhir/StructureDefinition/no-basis-middlename">
 				<valueString value="Ida"/>
 			</extension>
 			<text value="Ann Ida Hageby"/>
