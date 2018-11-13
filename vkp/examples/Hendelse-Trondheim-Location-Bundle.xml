@@ -32,7 +32,7 @@
 				<!-- obligatorisk i FHIR MessageHeader -->
 				<source>
 					<name value="Visi/Transmed8/Safemate"/>
-					<endpoint value="amqp://sb.nhn.no/NHNProdServiceBus/95341"/>
+					<endpoint value="https://vkp.azure-devices.net/devices/95341"/>
 					<!-- obligatorisk i FHIR MessageHeader.source -->
 				</source>
 				<focus>

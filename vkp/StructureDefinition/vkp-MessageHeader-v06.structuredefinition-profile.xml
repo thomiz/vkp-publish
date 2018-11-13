@@ -3581,7 +3581,7 @@
     <element id="MessageHeader.source.endpoint">
       <path value="MessageHeader.source.endpoint" />
       <short value="Actual message source address or id" />
-      <definition value="Identifies the routing target to send acknowledgements to.&#xD;&#xA;&#xD;&#xA;In VKP Norway this element identifies the endpoint to reach the actual source application of the message. This logical identifier MUST be identical to the information found in the Address register for the HER-id in the sender.identifier element. The value should be an actual endpoint acknowledgments can be sent to. &#xD;&#xA;&#xD;&#xA;Example: &#xD;&#xA;~~~&#xD;&#xA;&quot;source&quot;:{&#xD;&#xA;   &quot;endpoint&quot;:&quot;amqp://sb.nhn.no/NHNProdServiceBus/135164&quot;&#xD;&#xA;}&#xD;&#xA;~~~" />
+      <definition value="Identifies the routing target to send acknowledgements to.&#xD;&#xA;&#xD;&#xA;In VKP Norway this element identifies the endpoint to reach the actual source application of the message. This logical identifier MUST be identical to the information found in the Address register for the HER-id in the sender.identifier element. The value should be an actual endpoint acknowledgments can be sent to. &#xD;&#xA;&#xD;&#xA;Example: &#xD;&#xA;~~~&#xD;&#xA;&quot;source&quot;:{&#xD;&#xA;   &quot;endpoint&quot;:&quot;https://vkp.azure-devices.net/devices/135164&quot;&#xD;&#xA;}&#xD;&#xA;~~~" />
       <comment value="The id may be a non-resolvable URI for systems that do not use standard network-based addresses." />
       <requirements value="Identifies where to send responses, may influence security permissions." />
       <min value="1" />
@@ -4499,7 +4499,7 @@
     </element>
     <element id="MessageHeader.source.endpoint">
       <path value="MessageHeader.source.endpoint" />
-      <definition value="Identifies the routing target to send acknowledgements to.&#xD;&#xA;&#xD;&#xA;In VKP Norway this element identifies the endpoint to reach the actual source application of the message. This logical identifier MUST be identical to the information found in the Address register for the HER-id in the sender.identifier element. The value should be an actual endpoint acknowledgments can be sent to. &#xD;&#xA;&#xD;&#xA;Example: &#xD;&#xA;~~~&#xD;&#xA;&quot;source&quot;:{&#xD;&#xA;   &quot;endpoint&quot;:&quot;amqp://sb.nhn.no/NHNProdServiceBus/135164&quot;&#xD;&#xA;}&#xD;&#xA;~~~" />
+      <definition value="Identifies the routing target to send acknowledgements to.&#xD;&#xA;&#xD;&#xA;In VKP Norway this element identifies the endpoint to reach the actual source application of the message. This logical identifier MUST be identical to the information found in the Address register for the HER-id in the sender.identifier element. The value should be an actual endpoint acknowledgments can be sent to. &#xD;&#xA;&#xD;&#xA;Example: &#xD;&#xA;~~~&#xD;&#xA;&quot;source&quot;:{&#xD;&#xA;   &quot;endpoint&quot;:&quot;https://vkp.azure-devices.net/devices/135164&quot;&#xD;&#xA;}&#xD;&#xA;~~~" />
       <mustSupport value="true" />
     </element>
     <element id="MessageHeader.responsible">

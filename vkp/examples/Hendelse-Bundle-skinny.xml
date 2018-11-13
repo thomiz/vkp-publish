@@ -29,7 +29,7 @@
         </sender>
         <timestamp value="2012-01-04T07:10:14Z" />
         <source>
-          <endpoint value="amqp://sb.nhn.no/NHNProdServiceBus/95341" />
+          <endpoint value="https://vkp.azure-devices.net/devices/95341" />
         </source>
         <focus>
           <reference value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" />
