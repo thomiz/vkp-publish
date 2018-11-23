@@ -327,7 +327,7 @@
       <path value="Encounter.extension" />
       <sliceName value="note" />
       <short value="A journal note" />
-      <definition value="A journal note to document the digital encounter." />
+      <definition value="A journal note to document the digital encounter.&#xD;&#xA;Can be XHTML formatted text.&#xD;&#xA;In the VKP project in Norway the note is used for: &#xD;&#xA;Response summary: A text describing the resolution of the digital-Encounter event&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~&#xD;&#xA;{&#xD;&#xA;      &quot;url&quot;:&quot;http://ehelse.no/fhir/StructureDefinition/vkp-annotation-v06&quot;,&#xD;&#xA;      &quot;extension&quot;: [&#xD;&#xA;          {&#xD;&#xA;              &quot;url&quot;:&quot;note&quot;,&#xD;&#xA;             &quot;valueAnnotation&quot;:{&#xD;&#xA;                  &quot;authorReference&quot;:{&#xD;&#xA;                      &quot;identifier&quot;:{&#xD;&#xA;                          &quot;system&quot;:&quot;urn:oid:2.16.578.1.12.4.1.4.1&quot;,&#xD;&#xA;                          &quot;value&quot;:&quot;04056600324&quot;&#xD;&#xA;                     },&#xD;&#xA;                      &quot;display&quot;:&quot;Magnar Koman&quot;&#xD;&#xA;                  },&#xD;&#xA;                  &quot;time&quot;:&quot;2018-06-25T08:00:00.936Z&quot;,&#xD;&#xA;                  &quot;text&quot;:&quot;Selve teksten til journalnotatet.&quot;&#xD;&#xA;              }&#xD;&#xA;          }&#xD;&#xA;      ]&#xD;&#xA;}&#xD;&#xA;~~~" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -370,7 +370,7 @@
       <path value="Encounter.extension" />
       <sliceName value="signature" />
       <short value="Signature for the journal note" />
-      <definition value="A journal note to document the digital encounter, needs a string identifying who registered the note. This value is for the journal note only. " />
+      <definition value="A journal note to document the digital encounter, needs a string identifying who registered the note. This value is for the journal note only. &#xD;&#xA;&#xD;&#xA;Can be XHTML formatted text.&#xD;&#xA;In the VKP project in Norway the signature is used for: &#xD;&#xA;Signature: Name of author plus a system specific signature identifying the user who submitted the Composition (user name in the system).&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~&#xD;&#xA;{&#xD;&#xA;   &quot;url&quot;:&quot;http://ehelse.no/fhir/StructureDefinition/vkp-annotation-v06&quot;,&#xD;&#xA;      &quot;extension&quot;: [&#xD;&#xA;          {&#xD;&#xA;              &quot;url&quot;:&quot;signature&quot;,&#xD;&#xA;              &quot;valueAnnotation&quot;:{&#xD;&#xA;                 &quot;time&quot;:&quot;2018-06-25T08:00:00.936Z&quot;,&#xD;&#xA;                 &quot;text&quot;:&quot;Magnar Koman (signatur)&quot;&#xD;&#xA;             }&#xD;&#xA;          }&#xD;&#xA;      ]&#xD;&#xA;}&#xD;&#xA;~~~" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -5815,7 +5815,7 @@
       <path value="Encounter.extension" />
       <sliceName value="note" />
       <short value="A journal note" />
-      <definition value="A journal note to document the digital encounter." />
+      <definition value="A journal note to document the digital encounter.&#xD;&#xA;Can be XHTML formatted text.&#xD;&#xA;In the VKP project in Norway the note is used for: &#xD;&#xA;Response summary: A text describing the resolution of the digital-Encounter event&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~&#xD;&#xA;{&#xD;&#xA;      &quot;url&quot;:&quot;http://ehelse.no/fhir/StructureDefinition/vkp-annotation-v06&quot;,&#xD;&#xA;      &quot;extension&quot;: [&#xD;&#xA;          {&#xD;&#xA;              &quot;url&quot;:&quot;note&quot;,&#xD;&#xA;             &quot;valueAnnotation&quot;:{&#xD;&#xA;                  &quot;authorReference&quot;:{&#xD;&#xA;                      &quot;identifier&quot;:{&#xD;&#xA;                          &quot;system&quot;:&quot;urn:oid:2.16.578.1.12.4.1.4.1&quot;,&#xD;&#xA;                          &quot;value&quot;:&quot;04056600324&quot;&#xD;&#xA;                     },&#xD;&#xA;                      &quot;display&quot;:&quot;Magnar Koman&quot;&#xD;&#xA;                  },&#xD;&#xA;                  &quot;time&quot;:&quot;2018-06-25T08:00:00.936Z&quot;,&#xD;&#xA;                  &quot;text&quot;:&quot;Selve teksten til journalnotatet.&quot;&#xD;&#xA;              }&#xD;&#xA;          }&#xD;&#xA;      ]&#xD;&#xA;}&#xD;&#xA;~~~" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -5826,7 +5826,7 @@
       <path value="Encounter.extension" />
       <sliceName value="signature" />
       <short value="Signature for the journal note" />
-      <definition value="A journal note to document the digital encounter, needs a string identifying who registered the note. This value is for the journal note only. " />
+      <definition value="A journal note to document the digital encounter, needs a string identifying who registered the note. This value is for the journal note only. &#xD;&#xA;&#xD;&#xA;Can be XHTML formatted text.&#xD;&#xA;In the VKP project in Norway the signature is used for: &#xD;&#xA;Signature: Name of author plus a system specific signature identifying the user who submitted the Composition (user name in the system).&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~&#xD;&#xA;{&#xD;&#xA;   &quot;url&quot;:&quot;http://ehelse.no/fhir/StructureDefinition/vkp-annotation-v06&quot;,&#xD;&#xA;      &quot;extension&quot;: [&#xD;&#xA;          {&#xD;&#xA;              &quot;url&quot;:&quot;signature&quot;,&#xD;&#xA;              &quot;valueAnnotation&quot;:{&#xD;&#xA;                 &quot;time&quot;:&quot;2018-06-25T08:00:00.936Z&quot;,&#xD;&#xA;                 &quot;text&quot;:&quot;Magnar Koman (signatur)&quot;&#xD;&#xA;             }&#xD;&#xA;          }&#xD;&#xA;      ]&#xD;&#xA;}&#xD;&#xA;~~~" />
       <min value="0" />
       <max value="1" />
       <type>
