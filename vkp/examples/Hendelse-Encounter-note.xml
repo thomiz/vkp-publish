@@ -21,6 +21,14 @@
 			</valueAnnotation>
 		</extension>
 	</extension>
+	<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-annotation-v06">
+		<extension url="signature">
+			<valueAnnotation>
+				<time value="2018-06-25T08:00:00.936Z"/>
+				<text value="Magnar Koman (signatur)"/>
+			</valueAnnotation>
+		</extension>
+	</extension>
 	<identifier>
 		<!--  Unique code or number identifying the Encounter, VKP project uses UUID. -->
 		<system value="urn:ietf:rfc:3986"/>
@@ -31,7 +39,7 @@
 	<!-- classHistory of the Encounter. For the digital-encounter this gives the different modes of sensor-observation chosen by the operator to observe the patient -->
 	<classHistory>
 		<class>
-			<system value="http://ehelse.no/fhir/CodeSystem/vkp-roommate-modes-v06"/>
+			<system value="http://ehelse.no/fhir/CodeSystem/vkp-encounter-class-v06"/>
 			<code value="1"/>
 			<display value="anonymisert_kamera"/>
 		</class>
@@ -68,7 +76,8 @@
 	</participant>
 	<period>
 		<!-- Timestamp of when the encounter was finished, the system could provide both start and end times -->
-		<end value="2018-06-25T08:00:00.936Z"/>
+		<start value="2018-06-25T08:00:00.936Z"/>
+		<end value="2018-06-25T08:00:22.678Z"/>
 	</period>
 	<reason>
 		<!-- Reason the encounter takes place, coded according to http://ehelse.no/fhir/CodeSystem/vkp-camera-reason-v05 -->
