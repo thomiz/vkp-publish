@@ -40,8 +40,8 @@
 	<classHistory>
 		<class>
 			<system value="http://ehelse.no/fhir/CodeSystem/vkp-encounter-class-v06"/>
-			<code value="1"/>
-			<display value="anonymisert_kamera"/>
+			<code value="0"/>
+			<display value="bildettilsyn_anonymisert"/>
 		</class>
 		<period>
 			<start value="2018-06-25T08:00:00.936Z"/>
