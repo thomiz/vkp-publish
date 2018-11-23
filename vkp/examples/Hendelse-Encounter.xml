@@ -41,7 +41,7 @@
 	<!-- Timestamp of when the encounter was finished, the system could provide both start and end times -->
 	<period>
 		<start value="2018-06-25T10:02:03.463Z"/>
-		<end value="2018-06-25T10:00:00.936Z"/>
+		<end value="2018-06-25T10:05:12.936Z"/>
 	</period>
 	<reason>
 		<!-- Reason the encounter takes place, coded according to http://ehelse.no/fhir/CodeSystem/vkp-camera-reason-v05 -->
