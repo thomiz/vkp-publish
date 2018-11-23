@@ -4,7 +4,7 @@
   <meta>
     <lastUpdated value="2018-11-23T08:00:50.532+02:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/CodeSystem/vkp-vkp-encounter-class-v06" />
+  <url value="http://ehelse.no/fhir/CodeSystem/vkp-encounter-class-v06" />
   <version value="0.6" />
   <name value="vkp-encounter-class-v06.codesystem" />
   <status value="draft" />
