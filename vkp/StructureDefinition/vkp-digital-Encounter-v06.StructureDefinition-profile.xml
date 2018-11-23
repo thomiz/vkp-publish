@@ -1568,6 +1568,7 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -5864,6 +5865,13 @@
       <path value="Encounter.class.system" />
       <definition value="VKP uses http://ehelse.no/fhir/CodeSystem/vkp-encounter-class-v06&#xD;&#xA;The identification of the code system that defines the meaning of the symbol in the code." />
       <fixedUri value="http://ehelse.no/fhir/CodeSystem/vkp-encounter-class-v06" />
+    </element>
+    <element id="Encounter.classHistory">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="ClassHistory" />
+      </extension>
+      <path value="Encounter.classHistory" />
+      <mustSupport value="true" />
     </element>
     <element id="Encounter.classHistory.class">
       <path value="Encounter.classHistory.class" />
