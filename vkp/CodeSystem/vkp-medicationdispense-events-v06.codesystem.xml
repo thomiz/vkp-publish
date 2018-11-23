@@ -85,7 +85,7 @@
 	<concept>
 		<code value="14"/>
 		<display value="medisin_rull_stoppet"/>
-		<definition value="Medisinrullen sitter fast i medisindispenseren, utmating er stanset "/>
+		<definition value="Medisinrullen sitter fast i medisindispenseren, utmating er stanset"/>
 	</concept>
 	<concept>
 		<code value="15"/>
