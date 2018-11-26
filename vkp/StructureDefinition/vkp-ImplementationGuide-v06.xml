@@ -2,7 +2,7 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
 	<id value="vkp-ImplementationGuide-v06"/>
 	<url value="http://ehelse.no/fhir/ImplementationGuide/vkp-ImplementationGuide-v06"/>
-	<version value="0.6"/>
+	<version value="0.61"/>
 	<name value="vkp-ImplementationGuide-v06"/>
 	<status value="draft"/>
 	<date value="2018-09-13T11:17:44.4112568+02:00"/>
@@ -187,6 +187,11 @@
 		</resource>
 		<resource>
 			<example value="false"/>
+			<name value="CodeSystem : vkp-encounter-class-v06.codesystem"/>
+			<sourceUri value="http://ehelse.no/fhir/CodeSystem/vkp-encounter-class-v06"/>
+		</resource>
+		<resource>
+			<example value="false"/>
 			<name value="ValueSet : vkp-careplan-category-v05.valueset"/>
 			<sourceUri value="http://ehelse.no/fhir/ValueSet/vkp-careplan-category-v05"/>
 		</resource>
@@ -219,6 +224,11 @@
 			<example value="false"/>
 			<name value="ValueSet : vkp-message-event-v05.valueset"/>
 			<sourceUri value="http://ehelse.no/fhir/ValueSet/vkp-message-event-v05"/>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<name value="ValueSet : vkp-encounter-class-v06.valueset"/>
+			<sourceUri value="http://ehelse.no/fhir/ValueSet/vkp-encounter-class-v06"/>
 		</resource>
 	</package>
 </ImplementationGuide>
