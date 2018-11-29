@@ -370,11 +370,11 @@
       <path value="Encounter.extension" />
       <sliceName value="signature" />
       <short value="Signature for the journal note" />
-      <definition value="A journal note to document the digital encounter, needs a string identifying who registered the note. This value is for the journal note only. &#xD;&#xA;&#xD;&#xA;Can be XHTML formatted text.&#xD;&#xA;In the VKP project in Norway the signature is used for: &#xD;&#xA;Signature: Name of author plus a system specific signature identifying the user who submitted the Composition (user name in the system).&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~&#xD;&#xA;{&#xD;&#xA;   &quot;url&quot;:&quot;http://ehelse.no/fhir/StructureDefinition/vkp-annotation-v06&quot;,&#xD;&#xA;      &quot;extension&quot;: [&#xD;&#xA;          {&#xD;&#xA;              &quot;url&quot;:&quot;signature&quot;,&#xD;&#xA;              &quot;valueAnnotation&quot;:{&#xD;&#xA;                 &quot;time&quot;:&quot;2018-06-25T08:00:00.936Z&quot;,&#xD;&#xA;                 &quot;text&quot;:&quot;Magnar Koman (signatur)&quot;&#xD;&#xA;             }&#xD;&#xA;          }&#xD;&#xA;      ]&#xD;&#xA;}&#xD;&#xA;~~~" />
+      <definition value="When a journal note is to document the digital encounter in the EHR it needs a string identifying who registered the note. A signature of who registered the information should be present in all events, even when there is no text in the journal note.&#xD;&#xA;&#xD;&#xA;Can be XHTML formatted text.&#xD;&#xA;In the VKP project in Norway the signature is used for: &#xD;&#xA;Signature: Name of author plus a system specific signature identifying the user who submitted the Composition (user name in the system).&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~&#xD;&#xA;{&#xD;&#xA;   &quot;url&quot;:&quot;http://ehelse.no/fhir/StructureDefinition/vkp-annotation-v06&quot;,&#xD;&#xA;      &quot;extension&quot;: [&#xD;&#xA;          {&#xD;&#xA;              &quot;url&quot;:&quot;signature&quot;,&#xD;&#xA;              &quot;valueAnnotation&quot;:{&#xD;&#xA;                 &quot;time&quot;:&quot;2018-06-25T08:00:00.936Z&quot;,&#xD;&#xA;                 &quot;text&quot;:&quot;Magnar Koman (signatur)&quot;&#xD;&#xA;             }&#xD;&#xA;          }&#xD;&#xA;      ]&#xD;&#xA;}&#xD;&#xA;~~~" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="DomainResource.extension" />
@@ -2370,7 +2370,7 @@
     <element id="Encounter.subject">
       <path value="Encounter.subject" />
       <short value="The patient or group present at the encounter" />
-      <definition value="Reference to the patient that is subject to the encounter, identified by Norwegian national id number (Fødselsnummer).&#xD;&#xA;&#xD;&#xA;A link to a resource representing the person or the group to whom the medication will be given.&#xD;&#xA;&#xD;&#xA;VKP always references a Patient Resource using a norwegian national id number (Fødslesnummer) in a logical identifier in the subject.identifier element.&#xD;&#xA;The Name of the patient should be given in the subject.display element.&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~~&#xD;&#xA;&quot;subject&quot;:{&#xD;&#xA;   &quot;identifier&quot;:{&#xD;&#xA;      &quot;system&quot;:&quot;urn:oid:2.16.578.1.12.4.1.4.1&quot;,&#xD;&#xA;      &quot;value&quot;:&quot;05073500186&quot;&#xD;&#xA;     },&#xD;&#xA;     &quot;display&quot;:&quot;Ærlend Sørgård&quot;&#xD;&#xA;}&#xD;&#xA;~~~~" />
+      <definition value="Reference to the patient that is subject to the encounter, identified by Norwegian national id number (Fødselsnummer or DNR).&#xD;&#xA;&#xD;&#xA;A link to a resource representing the person or the group to whom the medication will be given.&#xD;&#xA;&#xD;&#xA;VKP always references a Patient Resource using a norwegian national id number (Fødslesnummer or DNR) in a logical identifier in the subject.identifier element.&#xD;&#xA;The Name of the patient should be given in the subject.display element.&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~~&#xD;&#xA;&quot;subject&quot;:{&#xD;&#xA;   &quot;identifier&quot;:{&#xD;&#xA;      &quot;system&quot;:&quot;urn:oid:2.16.578.1.12.4.1.4.1&quot;,&#xD;&#xA;      &quot;value&quot;:&quot;05073500186&quot;&#xD;&#xA;     },&#xD;&#xA;     &quot;display&quot;:&quot;Ærlend Sørgård&quot;&#xD;&#xA;}&#xD;&#xA;~~~~" />
       <comment value="While the encounter is always about the patient, the patient may not actually be known in all contexts of use, and there may be a group of patients that could be anonymous (such as in a group therapy for Alcoholics Anonymous - where the recording of the encounter could be used for billing on the number of people/staff and not important to the context of the specific patients) or alternately in veterinary care a herd of sheep receiving treatment (where the animals are not individually tracked)." />
       <alias value="patient" />
       <min value="0" />
@@ -2394,7 +2394,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-Patient-v05" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-Patient-v06" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -3385,8 +3385,8 @@
     </element>
     <element id="Encounter.participant.individual">
       <path value="Encounter.participant.individual" />
-      <short value="Persons involved in the encounter other than the patient" />
-      <definition value="Persons involved in the encounter other than the patient." />
+      <short value="Refernce to the individual that participated in the encounter" />
+      <definition value="Refernce to the individual that participated in the encounter, usually health care provider. Identified using Norwegian national id number (fødselsnummer).&#xD;&#xA;The Name of the participant should be given in the subject.display element." />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <min value="0" />
       <max value="1" />
@@ -3560,7 +3560,7 @@
     <element id="Encounter.participant.individual.identifier">
       <path value="Encounter.participant.individual.identifier" />
       <short value="Logical reference, when literal reference is not known" />
-      <definition value="An identifier for the other resource. This is used when there is no way to reference the other resource directly, either because the entity is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." />
+      <definition value="Logical refernce to the individual that participated in the encounter, usually health care provider. Identified using Norwegian national id number (fødselsnummer).&#xD;&#xA;The Name of the participant should be given in the subject.display element.&#xD;&#xA;&#xD;&#xA;An identifier for the other resource. This is used when there is no way to reference the other resource directly, either because the entity is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." />
       <comment value="When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. &#xA;&#xA;When both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference&#xA;&#xA;Applications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it." />
       <min value="0" />
       <max value="1" />
@@ -3795,8 +3795,8 @@
     </element>
     <element id="Encounter.participant.individual.identifier.system">
       <path value="Encounter.participant.individual.identifier.system" />
-      <short value="The official name of the HERid namespace" />
-      <definition value="The official name of the HERid namespace, identified by its oid value&#xD;&#xA;&#xD;&#xA;Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
+      <short value="The official name of the FNR namespace" />
+      <definition value="The official name of the FNR namespace, identified by its oid value&#xD;&#xA;&#xD;&#xA;Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
       <comment value="see http://en.wikipedia.org/wiki/Uniform_resource_identifier" />
       <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers." />
       <min value="0" />
@@ -3809,6 +3809,7 @@
       <type>
         <code value="uri" />
       </type>
+      <fixedUri value="urn:oid:2.16.578.1.12.4.1.4.1" />
       <example>
         <label value="General" />
         <valueUri value="http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full uri" />
@@ -3842,8 +3843,8 @@
     </element>
     <element id="Encounter.participant.individual.identifier.value">
       <path value="Encounter.participant.individual.identifier.value" />
-      <short value="The value that is unique" />
-      <definition value="The HERid value identifying the participant&#xD;&#xA;&#xD;&#xA;The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
+      <short value="The FNR of the individual" />
+      <definition value="The FNR value identifying the participant&#xD;&#xA;&#xD;&#xA;The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
       <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html)." />
       <min value="0" />
       <max value="1" />
@@ -4000,7 +4001,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Encounter.participant.individual.display" />
-      <short value="Text alternative for the resource" />
+      <short value="Tha name of the individual" />
       <definition value="Tha name of the individual&#xD;&#xA;&#xD;&#xA;Plain text narrative that identifies the resource in addition to the resource reference." />
       <comment value="This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it." />
       <min value="0" />
@@ -5826,8 +5827,8 @@
       <path value="Encounter.extension" />
       <sliceName value="signature" />
       <short value="Signature for the journal note" />
-      <definition value="A journal note to document the digital encounter, needs a string identifying who registered the note. This value is for the journal note only. &#xD;&#xA;&#xD;&#xA;Can be XHTML formatted text.&#xD;&#xA;In the VKP project in Norway the signature is used for: &#xD;&#xA;Signature: Name of author plus a system specific signature identifying the user who submitted the Composition (user name in the system).&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~&#xD;&#xA;{&#xD;&#xA;   &quot;url&quot;:&quot;http://ehelse.no/fhir/StructureDefinition/vkp-annotation-v06&quot;,&#xD;&#xA;      &quot;extension&quot;: [&#xD;&#xA;          {&#xD;&#xA;              &quot;url&quot;:&quot;signature&quot;,&#xD;&#xA;              &quot;valueAnnotation&quot;:{&#xD;&#xA;                 &quot;time&quot;:&quot;2018-06-25T08:00:00.936Z&quot;,&#xD;&#xA;                 &quot;text&quot;:&quot;Magnar Koman (signatur)&quot;&#xD;&#xA;             }&#xD;&#xA;          }&#xD;&#xA;      ]&#xD;&#xA;}&#xD;&#xA;~~~" />
-      <min value="0" />
+      <definition value="When a journal note is to document the digital encounter in the EHR it needs a string identifying who registered the note. A signature of who registered the information should be present in all events, even when there is no text in the journal note.&#xD;&#xA;&#xD;&#xA;Can be XHTML formatted text.&#xD;&#xA;In the VKP project in Norway the signature is used for: &#xD;&#xA;Signature: Name of author plus a system specific signature identifying the user who submitted the Composition (user name in the system).&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~&#xD;&#xA;{&#xD;&#xA;   &quot;url&quot;:&quot;http://ehelse.no/fhir/StructureDefinition/vkp-annotation-v06&quot;,&#xD;&#xA;      &quot;extension&quot;: [&#xD;&#xA;          {&#xD;&#xA;              &quot;url&quot;:&quot;signature&quot;,&#xD;&#xA;              &quot;valueAnnotation&quot;:{&#xD;&#xA;                 &quot;time&quot;:&quot;2018-06-25T08:00:00.936Z&quot;,&#xD;&#xA;                 &quot;text&quot;:&quot;Magnar Koman (signatur)&quot;&#xD;&#xA;             }&#xD;&#xA;          }&#xD;&#xA;      ]&#xD;&#xA;}&#xD;&#xA;~~~" />
+      <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -5928,7 +5929,7 @@
     <element id="Encounter.subject">
       <path value="Encounter.subject" />
       <short value="The patient or group present at the encounter" />
-      <definition value="Reference to the patient that is subject to the encounter, identified by Norwegian national id number (Fødselsnummer).&#xD;&#xA;&#xD;&#xA;A link to a resource representing the person or the group to whom the medication will be given.&#xD;&#xA;&#xD;&#xA;VKP always references a Patient Resource using a norwegian national id number (Fødslesnummer) in a logical identifier in the subject.identifier element.&#xD;&#xA;The Name of the patient should be given in the subject.display element.&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~~&#xD;&#xA;&quot;subject&quot;:{&#xD;&#xA;   &quot;identifier&quot;:{&#xD;&#xA;      &quot;system&quot;:&quot;urn:oid:2.16.578.1.12.4.1.4.1&quot;,&#xD;&#xA;      &quot;value&quot;:&quot;05073500186&quot;&#xD;&#xA;     },&#xD;&#xA;     &quot;display&quot;:&quot;Ærlend Sørgård&quot;&#xD;&#xA;}&#xD;&#xA;~~~~" />
+      <definition value="Reference to the patient that is subject to the encounter, identified by Norwegian national id number (Fødselsnummer or DNR).&#xD;&#xA;&#xD;&#xA;A link to a resource representing the person or the group to whom the medication will be given.&#xD;&#xA;&#xD;&#xA;VKP always references a Patient Resource using a norwegian national id number (Fødslesnummer or DNR) in a logical identifier in the subject.identifier element.&#xD;&#xA;The Name of the patient should be given in the subject.display element.&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~~&#xD;&#xA;&quot;subject&quot;:{&#xD;&#xA;   &quot;identifier&quot;:{&#xD;&#xA;      &quot;system&quot;:&quot;urn:oid:2.16.578.1.12.4.1.4.1&quot;,&#xD;&#xA;      &quot;value&quot;:&quot;05073500186&quot;&#xD;&#xA;     },&#xD;&#xA;     &quot;display&quot;:&quot;Ærlend Sørgård&quot;&#xD;&#xA;}&#xD;&#xA;~~~~" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
@@ -5943,7 +5944,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-Patient-v05" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/vkp-Patient-v06" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -5973,6 +5974,8 @@
     </element>
     <element id="Encounter.participant.individual">
       <path value="Encounter.participant.individual" />
+      <short value="Refernce to the individual that participated in the encounter" />
+      <definition value="Refernce to the individual that participated in the encounter, usually health care provider. Identified using Norwegian national id number (fødselsnummer).&#xD;&#xA;The Name of the participant should be given in the subject.display element." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
@@ -5989,17 +5992,20 @@
     </element>
     <element id="Encounter.participant.individual.identifier">
       <path value="Encounter.participant.individual.identifier" />
+      <definition value="Logical refernce to the individual that participated in the encounter, usually health care provider. Identified using Norwegian national id number (fødselsnummer).&#xD;&#xA;The Name of the participant should be given in the subject.display element.&#xD;&#xA;&#xD;&#xA;An identifier for the other resource. This is used when there is no way to reference the other resource directly, either because the entity is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.participant.individual.identifier.system">
       <path value="Encounter.participant.individual.identifier.system" />
-      <short value="The official name of the HERid namespace" />
-      <definition value="The official name of the HERid namespace, identified by its oid value&#xD;&#xA;&#xD;&#xA;Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
+      <short value="The official name of the FNR namespace" />
+      <definition value="The official name of the FNR namespace, identified by its oid value&#xD;&#xA;&#xD;&#xA;Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
+      <fixedUri value="urn:oid:2.16.578.1.12.4.1.4.1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.participant.individual.identifier.value">
       <path value="Encounter.participant.individual.identifier.value" />
-      <definition value="The HERid value identifying the participant&#xD;&#xA;&#xD;&#xA;The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
+      <short value="The FNR of the individual" />
+      <definition value="The FNR value identifying the participant&#xD;&#xA;&#xD;&#xA;The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.participant.individual.display">
@@ -6007,6 +6013,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Encounter.participant.individual.display" />
+      <short value="Tha name of the individual" />
       <definition value="Tha name of the individual&#xD;&#xA;&#xD;&#xA;Plain text narrative that identifies the resource in addition to the resource reference." />
       <mustSupport value="true" />
     </element>

@@ -5,6 +5,14 @@
 	<meta>
 		<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-digital-Encounter-v06"/>
 	</meta>
+	<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-annotation-v06">
+		<extension url="signature">
+			<valueAnnotation>
+				<time value="2018-06-25T08:00:00.936Z"/>
+				<text value="Magnar Komann (magnark)"/>
+			</valueAnnotation>
+		</extension>
+	</extension>
 	<identifier>
 		<!--  Unique identification of the encounter as desided by the system -->
 		<system value="urn:ietf:rfc:3986"/>
