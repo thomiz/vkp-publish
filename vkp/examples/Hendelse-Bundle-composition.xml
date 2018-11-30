@@ -117,7 +117,7 @@
 				<status value="completed"/>
 				<category>
 					<coding>
-						<system value="http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v05"/>
+						<system value="http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v06"/>
 						<code value="2"/>
 						<display value="medisin_ikke_utlevert"/>
 					</coding>
