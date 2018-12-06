@@ -20,8 +20,6 @@
 				<text value="Selve teksten til journalnotatet."/>
 			</valueAnnotation>
 		</extension>
-	</extension>
-	<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-annotation-v06">
 		<extension url="signature">
 			<valueAnnotation>
 				<time value="2018-06-25T08:00:00.936Z"/>
