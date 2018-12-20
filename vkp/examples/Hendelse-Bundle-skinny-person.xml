@@ -70,6 +70,14 @@
 					<display value="Ærlend Sørgård"/>
 				</subject>
 				<performer>
+				         <extension url="http://ehelse.no/fhir/StructureDefinition/vkp-function-v06">
+              <valueCodeableConcept>
+                <coding>
+                  <code value="device" />
+                </coding>
+              </valueCodeableConcept>
+          </extension>
+
 					<actor>
 						<identifier>
 							<system value="http://dignio.no/IMEInummer"/>
@@ -79,6 +87,14 @@
 					</actor>
 				</performer>
 				<performer>
+				         <extension url="http://ehelse.no/fhir/StructureDefinition/vkp-function-v06">
+              <valueCodeableConcept>
+                <coding>
+                  <code value="person" />
+                </coding>
+              </valueCodeableConcept>
+          </extension>
+
 					<actor>
 						<identifier>
 							<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
