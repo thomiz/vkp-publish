@@ -2,10 +2,10 @@
   <id value="10bb101f-a121-4264-a920-67be9cb82c74" />
   <type value="message" />
   <entry>
-    <fullUrl value="urn:uuid:1cbdfb97-5859-48a4-8301-d54eab818d68" />
+    <fullUrl value="urn:uuid:1cbdfb97-5859-48a4-8301-d54eab818d69" />
     <resource>
       <MessageHeader>
-        <id value="1cbdfb97-5859-48a4-8301-d54eab818d68" />
+        <id value="1cbdfb97-5859-48a4-8301-d54eab818d69" />
 		<meta>
 			<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-MessageHeader-v06"/>
 		</meta>
@@ -32,23 +32,23 @@
           <endpoint value="https://vkp.azure-devices.net/devices/95341" />
         </source>
         <focus>
-          <reference value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" />
+          <reference value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b35" />
           <display value="MedicationDispense" />
         </focus>
       </MessageHeader>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b34" />
+    <fullUrl value="urn:uuid:ef91399e-8993-11e7-bb31-be2e44b06b35" />
     <resource>
       <MedicationDispense>
-        <id value="ef91399e-8993-11e7-bb31-be2e44b06b34" />
+        <id value="ef91399e-8993-11e7-bb31-be2e44b06b35" />
         <meta>
 			<profile value="http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v06"/>
 		</meta>
         <identifier>
           <system value="urn:ietf:rfc:3986" />
-          <value value="urn:uuid:c42984fc-8ca8-48d7-8bbf-7fe5503c49a9" />
+          <value value="urn:uuid:c42984fc-8ca8-48d7-8bbf-7fe5503c49aa" />
         </identifier>
         <status value="completed" />
         <category>
