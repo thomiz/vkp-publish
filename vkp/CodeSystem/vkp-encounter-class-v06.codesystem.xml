@@ -2,10 +2,10 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="vkp-encounter-class-v06.codesystem" />
   <meta>
-    <lastUpdated value="2018-11-23T08:00:50.532+02:00" />
+    <lastUpdated value="2019-01-10T09:18:50.532+02:00" />
   </meta>
   <url value="http://ehelse.no/fhir/CodeSystem/vkp-encounter-class-v06" />
-  <version value="0.6" />
+  <version value="0.61" />
   <name value="vkp-encounter-class-v06.codesystem" />
   <status value="draft" />
   <publisher value="Direktoratet for e-helse" />
@@ -13,12 +13,12 @@
     <concept>
     <code value="0" />
     <display value="bildetilsyn_anonymisert" />
-    <definition value="Dette er standardmodus for enheten. Du kan se hva som er / skjer i rommet, men kan ikke identifisere ansikter etc." />
+    <definition value="Anonymisert bildebasert tilsyn" />
   </concept>
   <concept>
 	  <code value="1"/>
 	  <display value="bildetilsyn"/>
-	  <definition value="Modus uten begrensing på detaljeringen i bildet. Avhengig av kameraoppløsning og kameratype(farge/svart-hvitt, dag/natt-kamera) kan det være mulig å identifisere personer."/>
+	  <definition value="Bildebasert tilsyn"/>
   </concept>
   <concept>
     <code value="2" />
@@ -28,7 +28,7 @@
   <concept>
     <code value="3" />
     <display value="innlytt_anonymisert" />
-    <definition value="Innlytt som er anonymisert. Man kan høre at personer snakker, men det er ikke mulig å forstå hva de sier." />
+    <definition value="Anonymisert innlytt" />
   </concept>
   <concept>
     <code value="4" />
