@@ -45,7 +45,7 @@
   <concept>
     <code value="7" />
     <display value="uventet_langt_opphold" />
-    <definition value="Person har vært for lenge på bad eller kjøkken" />
+    <definition value="Har vært lenge borte fra rommet" />
   </concept>
   <concept>
     <code value="8" />
