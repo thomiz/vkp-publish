@@ -6,10 +6,10 @@
 		<lastUpdated value="2018-08-07T10:48:34.405+00:00"/>
 	</meta>
 	<url value="http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v06"/>
-	<version value="0.6"/>
+	<version value="0.61"/>
 	<name value="vkp-medicationdispense-events-06.codesystem"/>
 	<status value="draft"/>
-	<date value="2018-09-12T10:48:33.551+00:00"/>
+	<date value="2019-01-24T10:48:33.551+00:00"/>
 	<publisher value="Direktoratet for e-helse"/>
 	<content value="complete"/>
 	<concept>
@@ -100,7 +100,7 @@
 	<concept>
 		<code value="17"/>
 		<display value="medisin_batteri_tomt"/>
-		<definition value="Teknisk varsel, tomt for batteri, systemet har slått av medisindispenseren"/>
+		<definition value="Tomt for batteri, systemet har slått av medisindispenseren"/>
 	</concept>
 	<concept>
 		<code value="18"/>
@@ -120,11 +120,16 @@
 	<concept>
 		<code value="21"/>
 		<display value="medisin_rull_behandlet"/>
-		<definition value="Medinsinposer fjernet, ny rull satt inn eller medinsinering endret manuelt i dispenseren"/>
+		<definition value="Medinsinposer fjernet, ny rull satt inn eller medisinering endret manuelt i dispenseren"/>
 	</concept>
 	<concept>
 		<code value="22"/>
 		<display value="medisin_plan_endret"/>
 		<definition value="Kontroll av medisinplan etter endring fra apoteket"/>
+	</concept>
+		<concept>
+		<code value="23"/>
+		<display value="medisin_melding_ikke_lest"/>
+		<definition value="Melding på medisindispenser ble ikke kvittert ut av bruker"/>
 	</concept>
 </CodeSystem>
