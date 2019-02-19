@@ -99,4 +99,9 @@
 			<display value="reist_seg_fra_stol"/>
 		</coding>
 	</reason>
+	<location>
+		<location>
+			<display value="rom24 @ sykehjem"/>
+		</location>
+	</location>
 </Encounter>
