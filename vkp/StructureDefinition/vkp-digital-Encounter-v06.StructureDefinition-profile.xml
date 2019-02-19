@@ -276,7 +276,8 @@
     </element>
     <element id="Encounter.location">
       <path value="Encounter.location" />
-      <definition value="VKP uses this refererence to name location where the digital-Encounter takes place. Typically includes only location.location.display element with a textual description of the location.&#xD;&#xA;&#xD;&#xA;List of locations where  the patient has been during this encounter." />
+      <definition value="VKP uses this refererence to name location where the digital-Encounter takes place. Typically includes only location.location.display element with a textual description of the location.&#xD;&#xA;&#xD;&#xA;List of locations where  the patient has been during this encounter.&#xD;&#xA;" />
+      <comment value="Virtual encounters can be recorded in the Encounter by specifying a location reference to a location of type &quot;kind&quot; such as &quot;client's home&quot; and an encounter.class = &quot;virtual&quot;.&#xD;&#xA;&#xD;&#xA;VKP Example:&#xD;&#xA;~~~&#xD;&#xA; &quot;location&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;location&quot;:{&#xD;&#xA;                &quot;display&quot;:&quot;rom24 @ sykehjem&quot;&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;~~~" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.location.location">
