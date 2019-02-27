@@ -6,10 +6,10 @@
 		<lastUpdated value="2018-08-07T10:48:34.405+00:00"/>
 	</meta>
 	<url value="http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v06"/>
-	<version value="0.61"/>
+	<version value="0.62"/>
 	<name value="vkp-medicationdispense-events-06.codesystem"/>
 	<status value="draft"/>
-	<date value="2019-01-24T10:48:33.551+00:00"/>
+	<date value="2019-02-27T10:48:33.551+00:00"/>
 	<publisher value="Direktoratet for e-helse"/>
 	<content value="complete"/>
 	<concept>
@@ -25,7 +25,7 @@
 	<concept>
 		<code value="2"/>
 		<display value="medisin_ikke_utlevert"/>
-		<definition value="Medisin ble ikke utlevert til planlagt tid"/>
+		<definition value="Medisin ikke tatt"/>
 	</concept>
 	<concept>
 		<code value="3"/>
@@ -34,7 +34,7 @@
 	</concept>
 	<concept>
 		<code value="4"/>
-		<display value="medisin_teknisk_feil"/>
+		<display value="teknisk_feil"/>
 		<definition value="Teknisk feil på medisindispenser, utmating stanset"/>
 	</concept>
 	<concept>
@@ -131,5 +131,25 @@
 		<code value="23"/>
 		<display value="medisin_melding_ikke_lest"/>
 		<definition value="Melding på medisindispenser ble ikke kvittert ut av bruker"/>
+	</concept>
+	<concept>
+		<code value="24"/>
+		<display value="medisin_venter"/>
+		<definition value="Medisin venter"/>
+	</concept>
+	<concept>
+		<code value="25"/>
+		<display value="medisin_behov_pafyll"/>
+		<definition value="Det er få doser igjen i dosetten"/>
+	</concept>
+	<concept>
+		<code value="26"/>
+		<display value="medisin_dosett_plassering"/>
+		<definition value="Dosetten ligger på skrå eller opp-ned"/>
+	</concept>
+	<concept>
+		<code value="27"/>
+		<display value="medisin_batteri_lavt"/>
+		<definition value="Batteriet i dosetten er i ferd med å gå tomt"/>
 	</concept>
 </CodeSystem>
