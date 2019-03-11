@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="vkp-composition-class-v06.codesystem" />
+  <meta>
+    <lastUpdated value="2019-03-11T18:31:50.532+02:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/CodeSystem/vkp-composition-class-v06" />
+  <version value="0.6" />
+  <name value="vkp-composition-class-v06.codesystem" />
+  <status value="draft" />
+  <publisher value="Direktoratet for e-helse" />
+  <content value="complete" />
+  <concept>
+    <code value="0" />
+    <display value="pasient_oppfolging" />
+    <definition value="Notat om tjenestens pasientoppfølging" />
+  </concept>
+  <concept>
+	  <code value="1" />
+	  <display value="respons_notat" />
+	  <definition value="Saksoppsummering fra responstjenesten" />
+  </concept>
+  <concept>
+	  <code value="2"/>
+	  <display value="ikke_respons"/>
+	  <definition value="Hendelse som ikke skal journalføres"/>
+  </concept>
+</CodeSystem>
