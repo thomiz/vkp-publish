@@ -6,10 +6,10 @@
 		<lastUpdated value="2018-08-07T10:48:34.405+00:00"/>
 	</meta>
 	<url value="http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v06"/>
-	<version value="0.62"/>
+	<version value="0.63"/>
 	<name value="vkp-medicationdispense-events-06.codesystem"/>
 	<status value="draft"/>
-	<date value="2019-02-27T10:48:33.551+00:00"/>
+	<date value="2019-03-13T10:48:33.551+00:00"/>
 	<publisher value="Direktoratet for e-helse"/>
 	<content value="complete"/>
 	<concept>
@@ -34,7 +34,7 @@
 	</concept>
 	<concept>
 		<code value="4"/>
-		<display value="teknisk_feil"/>
+		<display value="medisin_teknisk_feil"/>
 		<definition value="Teknisk feil på medisindispenser, utmating stanset"/>
 	</concept>
 	<concept>
