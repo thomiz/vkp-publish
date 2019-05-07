@@ -13,12 +13,12 @@
 	<!-- proposal | plan | order | option -->
 	<category>
 		<coding>
-			<system value="http://ehelse.no/fhir/CodeSystem/vkp-careplan-category-v05"/>
+			<system value="http://ehelse.no/fhir/CodeSystem/vkp-careplan-category-v06"/>
 			<code value="2"/>
-			<display value="tjeneste"/>
+			<display value="egenbehandlingsplan"/>
 		</coding>
 	</category>
-	<title value="Direkte hjelp i huset"/>
+	<title value="Selvhjelp"/>
 	<subject>
 		<!-- Who care Tjenesteoversikt is for, should be an uniqe identifier of the patient -->
 		<identifier>

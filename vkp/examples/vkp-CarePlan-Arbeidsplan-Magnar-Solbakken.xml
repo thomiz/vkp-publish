@@ -13,9 +13,9 @@
 	<!-- proposal | plan | order | option -->
 	<category>
 		<coding>
-			<system value="http://ehelse.no/fhir/CodeSystem/vkp-careplan-category-v05"/>
+			<system value="http://ehelse.no/fhir/CodeSystem/vkp-careplan-category-v06"/>
 			<code value="3"/>
-			<display value="arbeidsplan"/>
+			<display value="besoksplan"/>
 		</coding>
 	</category>
 	<title value="Besøk"/>
