@@ -95,7 +95,7 @@
 			<searchParam>
 				<name value="date"/>
 				<type value="date"/>
-				<documentation value="Search on Composition.date : GET [base]/Composisition?date=[date] Example: GET [base]/Composition?date="/>
+				<documentation value="Search on Composition.date : GET [base]/Composisition?date=[date] Example: GET [base]/Composition?date=2015-01-14"/>
 			</searchParam>
 		</resource>
 	</rest>
