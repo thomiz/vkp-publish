@@ -59,7 +59,7 @@
 			<searchParam>
 				<name value="type.text"/>
 				<type value="string"/>
-				<documentation value="Search on EpisodeOfCare.type.text string: GET [base]/EpisodeOfCare?type=[string]  Example: GET [base]/EpisodeOfCare?type=urn:oid:2.16.578.1.12.4.1.4.1|13116900216"/>
+				<documentation value="Search on EpisodeOfCare.type.text string: GET [base]/EpisodeOfCare?type=[string]  Example: GET [base]/EpisodeOfCare?type=GPS"/>
 			</searchParam>
 			<searchParam>
 				<name value="patient"/>
