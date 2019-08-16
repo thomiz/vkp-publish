@@ -27,6 +27,20 @@
 			</valueAnnotation>
 		</extension>
 	</extension>
+	<extension url="http://ehelse.no/fhir/StructureDefinition/vkp-encounterDevice-v06">
+		<extension url="device">
+			<extension url="deviceIdentifier">
+				<valueIdentifier>
+					<!-- The identity of the Device -->
+					<system value="http://roommate.no/serial"/>
+					<value value="987456789101112"/>
+				</valueIdentifier>
+			</extension>
+			<extension url="display">
+				<valueString value="Roommate sensor"/>
+			</extension>
+		</extension>
+	</extension>
 	<identifier>
 		<!--  Unique code or number identifying the Encounter, VKP project uses UUID. -->
 		<system value="urn:ietf:rfc:3986"/>
