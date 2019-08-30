@@ -5,7 +5,7 @@
     <lastUpdated value="2019-05-07T18:31:50.532+02:00" />
   </meta>
   <url value="http://ehelse.no/fhir/CodeSystem/vkp-composition-class-v06" />
-  <version value="0.61" />
+  <version value="0.6.2" />
   <name value="vkp-composition-class-v06.codesystem" />
   <status value="draft" />
   <publisher value="Direktoratet for e-helse" />
@@ -18,7 +18,7 @@
   <concept>
 	  <code value="1" />
 	  <display value="respons_notat" />
-	  <definition value="Saksoppsummering fra responstjenesten" />
+	  <definition value="Responstjenestenotat" />
   </concept>
   <concept>
 	  <code value="2"/>
