@@ -2,10 +2,10 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="vkp-composition-event-v06.codesystem" />
   <meta>
-    <lastUpdated value="2019-03-11T18:31:50.532+02:00" />
+    <lastUpdated value="2019-08-30T08:00:00.532+02:00" />
   </meta>
   <url value="http://ehelse.no/fhir/CodeSystem/vkp-composition-event-v06" />
-  <version value="0.6" />
+  <version value="0.6.1" />
   <name value="vkp-composition-event-v06.codesystem" />
   <status value="draft" />
   <publisher value="Direktoratet for e-helse" />
@@ -16,18 +16,23 @@
     <definition value="Hendelsen ble registrert hos responstjenesten" />
   </concept>
   <concept>
-	  <code value="1" />
-	  <display value="hendelse_til_utrykning" />
-	  <definition value="Ansvar for hendelsen ble overført til utrykningsenhet" />
-  </concept>
-  <concept>
-	  <code value="2"/>
-	  <display value="hendelse_ok_utrykning"/>
-	  <definition value="Utrykningsenhet aksepterte ansvar for hendelsen"/>
+    <code value="1" />
+    <display value="hendelse_behandles" />
+    <definition value="Behandling påbegynt hos responstjenesten" />
   </concept>
   <concept>
 	  <code value="3"/>
 	  <display value="hendelse_kvittert"/>
 	  <definition value="Hendelsen ble kvittert ut av responstjenesten"/>
+  </concept>
+  <concept>
+	  <code value="4"/>
+	  <display value="hendelse_til_utrykning"/>
+	  <definition value="Ansvar for hendelsen ble overført til utrykningsenhet"/>
+  </concept>
+  <concept>
+	  <code value="5"/>
+	  <display value="hendelse_ok_utrykning"/>
+	  <definition value="Utrykningsenhet aksepterte ansvar for hendelsen"/>
   </concept>
 </CodeSystem>
