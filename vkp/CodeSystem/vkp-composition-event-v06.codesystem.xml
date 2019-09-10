@@ -2,10 +2,10 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="vkp-composition-event-v06.codesystem" />
   <meta>
-    <lastUpdated value="2019-08-30T08:00:00.532+02:00" />
+    <lastUpdated value="2019-09-10T08:00:00.532+02:00" />
   </meta>
   <url value="http://ehelse.no/fhir/CodeSystem/vkp-composition-event-v06" />
-  <version value="0.6.1" />
+  <version value="0.6.2" />
   <name value="vkp-composition-event-v06.codesystem" />
   <status value="draft" />
   <publisher value="Direktoratet for e-helse" />
@@ -13,17 +13,17 @@
   <concept>
     <code value="0" />
     <display value="hendelse_meldt" />
-    <definition value="Hendelsen ble registrert hos responstjenesten" />
+    <definition value="Hendelsen ble registrert" />
   </concept>
   <concept>
     <code value="1" />
     <display value="hendelse_behandles" />
-    <definition value="Behandling påbegynt hos responstjenesten" />
+    <definition value="Behandling påbegynt" />
   </concept>
   <concept>
 	  <code value="3"/>
 	  <display value="hendelse_kvittert"/>
-	  <definition value="Hendelsen ble kvittert ut av responstjenesten"/>
+	  <definition value="Hendelsen ble kvittert ut"/>
   </concept>
   <concept>
 	  <code value="4"/>
