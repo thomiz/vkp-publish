@@ -38,9 +38,7 @@
 					"reference": "urn:uuid:7dc07bbf-e690-435a-99b6-11e867697ea2",
 					"type": "Encounter",
 					"identifier": "7dc07bbf-e690-435a-99b6-11e867697ea2"				
-				}
-				
-				
+				},
 				"date":"2019-10-31T10:29:00Z",
 				"author": [
 					{
