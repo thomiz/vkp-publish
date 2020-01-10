@@ -1,0 +1,236 @@
+{
+    "resourceType":"Bundle",
+    "id":"c4044e93-5602-560c-9f25-6e68a1ceecd2",
+    "type":"transaction",
+    "entry": [
+        {
+            "fullUrl":"urn:uuid:285357b8-1ec8-429b-827e-3bcd92366621",
+            "resource":{
+                "resourceType":"Composition",
+                "id":"285357b8-1ec8-429b-827e-3bcd92366621",
+                "status":"final",
+                "type":{
+                    "coding": [
+                        {					
+							"system": "http://loinc.org",
+							"code": "34133-9",
+							"display": "Summarization of episode note"
+                        }
+                    ]
+                },
+				 "class": {
+					"coding": [
+						{
+						"system": "http://ehelse.no/fhir/CodeSystem/vkp-composition-class-v06",
+						"code": "1",
+						"display": "respons_notat"
+						}
+					]
+				},		
+                "subject":{
+                    "identifier":{
+                        "system":"urn:oid:2.16.578.1.12.4.1.4.1",
+                        "value":"29098300000"
+                    },
+                    "display":"Testbruker EVON"
+                },
+                "encounter":{
+					"reference": "urn:uuid:7dc07bbf-e690-435a-99b6-11e867697ea2",
+					"type": "Encounter",
+					"identifier": "7dc07bbf-e690-435a-99b6-11e867697ea2"				
+				}
+				
+				
+				"date":"2019-10-31T10:29:00Z",
+				"author": [
+					{
+						"identifier": {
+								"system": "https://fhir.telenor.no/e-signature",
+								"value": "unik id/e-signatur for responsløsningsbrukeren"
+						},
+						"display": "Magnar Koman"
+					}
+				],		
+                "title":"Journalnotat for planlagt tilsyn",
+				"event": [
+					{
+						"code": [
+							{
+								"coding": [
+									{
+										"system": "http://ehelse.no/fhir/CodeSystem/vkp-composition-event-v06",
+										"code": "6",
+										"display": "tilsyn_planlagt" 
+									}
+								]
+							}
+						],
+						"period": {
+							"start": "2019-10-31T20:22:22Z"
+						}
+					},
+					{
+						"code": [
+							{
+								"coding": [
+									{
+										"system": "http://ehelse.no/fhir/CodeSystem/vkp-composition-event-v06",
+										"code": "1",
+										"display": "respons_hendelse_behandles"
+									}
+								]
+							}
+						],
+						"period": {
+							"start": "2019-10-31T20:22:44Z"
+						}
+					},
+					{
+						"code": [
+							{
+								"coding": [
+									{
+										"system": "http://ehelse.no/fhir/CodeSystem/vkp-composition-event-v06",
+										"code": "3",
+										"display": "respons_hendelse_kvittert"
+									}
+								]
+							}
+						],
+						"period": {
+							"start": "2019-10-31T21:32:21Z"
+						}
+					}
+				],
+				"section": [
+					{
+						"title": "Alarm information",
+						"text": {
+							"status": "additional",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Planlagt kameratilsyn – alarmid/øktnr: 12345678</div>"
+						}
+					},
+					{
+						"title": "Reason",
+						"text": {
+							"status": "additional",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Fall</div>"
+						}
+					},
+					{
+						"title": "Response service calls",
+						"text": {
+							"status": "additional",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Nattpatruljen, Hjemmesykepleie, 99887766 | 2019-05-03T20:28:01Z, Nattpatruljen, Hjemmesykepleie, 99887766, 2019-05-03T21:30:44Z</div>"
+						}
+					},
+					{
+						"title": "Contacts",
+						"text": {
+							"status": "additional",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Samtale tjenestemottaker, Kontakt med hjemmesykepleien</div>"
+						}
+					},
+					{
+						"title": "Emergency action",
+						"text": {
+							"status": "additional",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Utrykning hjemmetjeneste</div>"
+						}
+					},
+					{
+						"title": "Response summary",
+						"text": {
+							"status": "additional",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Fall med mulig skade, nattjenesten varslet</div>"
+						}
+					},
+					{
+						"title": "Response elaboration",
+						"text": {
+							"status": "additional",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sjekket ut med nattjenesten, ingen alvorlig skade – behandlet på stedet, 2019-05-03T21:31:33Z</div>"
+						}
+					},
+					{
+						"title": "Signature",
+						"text": {
+							"status": "additional",		
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Magnar Koman (e-signatur)</div>"
+						}
+					}
+				]				
+            }
+        },	
+        {
+            "fullUrl":"urn:uuid:7dc07bbf-e690-435a-99b6-11e867697ea2",
+            "resource":{
+                "resourceType":"Encounter",
+                "id":"7dc07bbf-e690-435a-99b6-11e867697ea2",
+                "meta":{
+                    "profile": [
+                        "http://ehelse.no/fhir/StructureDefinition/vkp-digital-Encounter-v06"
+                    ]
+                },
+				"extension": [
+					{
+						"url":"http://ehelse.no/fhir/StructureDefinition/vkp-encounterDevice-v06",
+						"extension": [
+							{
+								"url":"device",
+								"extension": [
+									{
+										"url":"deviceIdentifier",
+										"valueIdentifier":{
+											"system":"<for identification of devices, for example http://telenor.no/serialnumber>",
+											"value":"12345678"
+										}
+									},
+									{
+										"url":"display",
+										"valueString":"<Sensor type>"
+									}
+								]
+							}
+						]
+					}
+				],
+                "identifier": [
+                    {
+                        "system":"urn:ietf:rfc:3986",
+                        "value":"urn:uuid:4d300421-beb7-4e25-b25b-194534064391"
+                    }
+                ],
+                "status":"finished",
+				"classHistory": [
+					{
+						"class":{
+							"system":"http://ehelse.no/fhir/CodeSystem/vkp-encounter-class-v06",
+							"code":"0",
+							"display":"bildetilsyn_anonymisert"
+						},
+						"period":{
+							"start":"2019-10-31T20:20:44Z",
+							"end":"2019-10-31T22:22:44Z"
+						}
+					}
+				],
+				"type": [
+					{
+						"coding": [
+							{
+								"system":"http://ehelse.no/fhir/CodeSystem/vkp-encounter-type-v05",
+								"code":"1",
+								"display":"tilsyn"
+							}
+						]
+					}
+				],
+				"period":{
+					"start":"2019-10-31T20:20:44Z",
+					"end":"2019-10-31T22:22:44Z"
+				}
+			}
+        }
+    ]
+}
