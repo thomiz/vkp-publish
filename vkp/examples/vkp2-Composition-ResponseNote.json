@@ -1,0 +1,156 @@
+{
+    "resourceType": "Composition",
+    "id": "285357b8-1ec8-429b-827e-3bcd92366126",
+    "status": "final",
+    "type": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "34133-9",
+                "display": "Summarization of episode note"
+            }
+        ]
+    },
+    "class": {
+        "coding": [
+            {
+                "system": "http://ehelse.no/fhir/CodeSystem/vkp-composition-class-v06",
+                "code": "1",
+                "display": "respons_notat"
+            }
+        ]
+    },
+    "subject": {
+        "identifier": {
+            "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+            "value": "05073500186"
+        },
+        "display": "Ærlend Sørgård"
+    },
+    "date": "2019-05-03T21:32:21Z",
+    "author": [
+        {
+            "identifier": {
+                "system": "https://fhir.test.no/e-signature",
+                "value": "unik id/e-signatur for responsløsningsbrukeren"
+            },
+            "display": "Test Testesen"
+        },
+        {
+            "identifier": {
+                "system": "https://fhir.test.no/MSISDN",
+                "value": "MSISDN-nummeret til alarmenheten"
+            },
+            "display": "Neat NOVO"
+        }
+    ],
+    "title": "Journalnotat for respons på hendelse",
+    "event": [
+        {
+            "code": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://ehelse.no/fhir/CodeSystem/vkp-composition-event-v06",
+                            "code": "0",
+                            "display": "respons_hendelse_meldt"
+                        }
+                    ]
+                }
+            ],
+            "period": {
+                "start": "2019-05-03T20:22:22Z"
+            }
+        },
+        {
+            "code": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://ehelse.no/fhir/CodeSystem/vkp-composition-event-v06",
+                            "code": "1",
+                            "display": "respons_hendelse_behandles"
+                        }
+                    ]
+                }
+            ],
+            "period": {
+                "start": "2019-05-03T20:22:44Z"
+            }
+        },
+        {
+            "code": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://ehelse.no/fhir/CodeSystem/vkp-composition-event-v06",
+                            "code": "3",
+                            "display": "respons_hendelse_kvittert"
+                        }
+                    ]
+                }
+            ],
+            "period": {
+                "start": "2019-05-03T21:32:21Z"
+            }
+        }
+    ],
+    "section": [
+        {
+            "title": "Alarm information",
+            "text": {
+                "status": "additional",
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Trygghetsalarm hovedenhet – soverom, alarm id 999</div>"
+            }
+        },
+        {
+            "title": "Reason",
+            "text": {
+                "status": "additional",
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Fall</div>"
+            }
+        },
+        {
+            "title": "Response service calls",
+            "text": {
+                "status": "additional",
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Nattpatruljen, Hjemmesykepleie, 00000000 | 2019-05-03T20:28:01Z, Nattpatruljen, Hjemmesykepleie, 00000000, 2019-05-03T21:30:44Z</div>"
+            }
+        },
+        {
+            "title": "Contacts",
+            "text": {
+                "status": "additional",
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Samtale tjenestemottaker, Kontakt med hjemmesykepleien</div>"
+            }
+        },
+        {
+            "title": "Emergency action",
+            "text": {
+                "status": "additional",
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Utrykning hjemmetjeneste</div>"
+            }
+        },
+        {
+            "title": "Response summary",
+            "text": {
+                "status": "additional",
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Fall med mulig skade, nattjenesten varslet</div>"
+            }
+        },
+        {
+            "title": "Response elaboration",
+            "text": {
+                "status": "additional",
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sjekket ut med nattjenesten, ingen alvorlig skade – behandlet på stedet, 2019-05-03T21:31:33Z</div>"
+            }
+        },
+        {
+            "title": "Signature",
+            "text": {
+                "status": "additional",
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Test Testesen (e-signatur)</div>"
+            }
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "resourceType": "Bundle",
+    "id": "cc201f1b-98ce-460c-83e0-e5793fa2ef5a",
+    "type": "searchset",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:ed3e5168-3416-4794-82e0-c9002f9aec0c",
+            "resource": {
+                "resourceType": "EpisodeOfCare",
+                "id": "ed3e5168-3416-4794-82e0-c9002f9aec0c",
+                "status": "active",
+                "type": [
+                    {
+                        "text": "GPS"
+                    }
+                ],
+                "patient": {
+                    "identifier": {
+                        "system": "urn:oid: 2.16.578.1.12.4.1.4.1",
+                        "value": "13116900216"
+                    }
+                },
+                "period": {
+                    "start": "2019-03-12T12:00:00+00:00"
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        }
+    ]
+}

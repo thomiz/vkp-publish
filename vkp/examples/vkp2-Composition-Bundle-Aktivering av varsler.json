@@ -1,0 +1,106 @@
+{
+    "resourceType": "Bundle",
+    "entry": [
+        {
+            "resource": {
+                "sender": {
+                    "identifier": {
+                        "system": "urn:oid:2.16.578.1.12.4.1.2",
+                        "value": "12345"
+                    },
+                    "display": "Testi Medisineringsstøtte"
+                },
+                "resourceType": "MessageHeader",
+                "timestamp": "2019-03-12T15:36:29Z",
+                "focus": [
+                    {
+                        "display": "Composition",
+                        "reference": "urn:uuid:7fdcbd20-d0ce-52a2-ad34-5e3332277676"
+                    }
+                ],
+                "event": {
+                    "code": "PatientComposition",
+                    "system": "http://ehelse.no/fhir/ValueSet/vkp-message-event-v06"
+                },
+                "source": {
+                    "endpoint": "https://vkp.azure-devices.net/devices/12345"
+                },
+                "meta": {
+                    "profile": [
+                        "http://ehelse.no/fhir/StructureDefinition/vkp-MessageHeader-v06"
+                    ]
+                },
+                "receiver": {
+                    "identifier": {
+                        "system": "urn:oid:2.16.578.1.12.4.1.2",
+                        "value": "95937"
+                    },
+                    "display": "Sykepleietjeneste, pleie- og omsorg"
+                },
+                "id": "fecde0ca-f2d3-54c6-85a2-118bdcd42c5b"
+            },
+            "fullUrl": "urn:uuid:fecde0ca-f2d3-54c6-85a2-118bdcd42c5b"
+        },
+        {
+            "resource": {
+                "status": "final",
+                "author": [
+                    {
+                        "identifier": {
+                            "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+                            "value": "10075737802"
+                        },
+                        "display": "Test Testesen"
+                    }
+                ],
+                "resourceType": "Composition",
+                "section": [
+                    {
+                        "text": {
+                            "status": "additional",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\nNotat:<br/>\nPasienten ble aktivert mens Testutstyr fortsatt hadde status aktiv.\n</div>"
+                        },
+                        "title": "Careservice note"
+                    },
+                    {
+                        "text": {
+                            "status": "additional",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Test Testesen (sverrestaging)</div>"
+                        },
+                        "title": "Signature"
+                    }
+                ],
+                "title": "Journalnotat for endring av brukerstatus",
+                "id": "7fdcbd20-d0ce-52a2-ad34-5e3332277676",
+                "date": "2019-03-12T15:36:29Z",
+                "type": {
+                    "coding": [
+                        {
+                            "code": "11488-4",
+                            "display": "Consult note"
+                        }
+                    ]
+                },
+                "class": {
+                    "coding": [
+                        {
+                            "code": "0",
+                            "display": "pasient_oppfolging",
+                            "system": "http://ehelse.no/fhir/CodeSystem/vkp-composition-class-v06"
+                        }
+                    ]
+                },
+                "subject": {
+                    "identifier": {
+                        "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+                        "value": "12121244444"
+                    },
+                    "display": "Kaller Krank"
+                }
+            },
+            "fullUrl": "urn:uuid:7fdcbd20-d0ce-52a2-ad34-5e3332277676"
+        }
+    ],
+    "type": "message",
+    "id": "474f9708-4c06-5d48-925c-c5c811f2c4a2"
+}

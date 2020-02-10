@@ -1,0 +1,152 @@
+{
+    "resourceType": "Bundle",
+    "id": "bff6a646-6152-47ce-856b-4938f86255a3",
+    "type": "message",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:7f0ce900-23ee-4f30-a7a1-0c51171cd118",
+            "resource": {
+                "resourceType": "MedicationDispense",
+                "id": "7f0ce900-23ee-4f30-a7a1-0c51171cd118",
+                "meta": {
+                    "profile": [
+                        "http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v06"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "system": "urn:ietf:rfc:3986",
+                        "value": "999"
+                    }
+                ],
+                "status": "completed",
+                "category": {
+                    "coding": [
+                        {
+                            "system": "http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v06",
+                            "code": "5",
+                            "display": "medisin_feil_rull"
+                        }
+                    ]
+                },
+                "medicationCodeableConcept": {
+                    "text": "Ukjent medisin"
+                },
+                "subject": {
+                    "identifier": {
+                        "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+                        "value": "25083731608"
+                    },
+                    "display": "Test testesen"
+                },
+                "performer": [
+                    {
+                        "actor": {
+                            "identifier": {
+                                "system": "ehelseids",
+                                "value": "999999"
+                            },
+                            "display": "Testdispenser"
+                        }
+                    }
+                ],
+                "whenHandedOver": "2020-01-27T09:17:00Z"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:6c9bc8be-ebef-4bcd-9858-a09e9a2b2940",
+            "resource": {
+                "resourceType": "Composition",
+                "id": "6c9bc8be-ebef-4bcd-9858-a09e9a2b2940",
+                "status": "final",
+                "type": {
+                    "coding": [
+                        {
+                            "code": "11488-4",
+                            "display": "Consult note"
+                        }
+                    ]
+                },
+                "subject": {
+                    "identifier": {
+                        "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+                        "value": "25083731608"
+                    },
+                    "display": "Test testesen"
+                },
+                "date": "2020-01-27T08:17:00Z",
+                "author": [
+                    {
+                        "identifier": {
+                            "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+                            "value": "12312"
+                        },
+                        "display": "Testiline testesen"
+                    }
+                ],
+                "title": "Journalnotat for Medisinutleveringen",
+                "section": [
+                    {
+                        "title": "Response summary",
+                        "text": {
+                            "status": "additional",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Fikset medisinrull</div>"
+                        },
+                        "entry": [
+                            {
+                                "reference": "urn:uuid:7f0ce900-23ee-4f30-a7a1-0c51171cd118",
+                                "display": "MedicationDispense"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Signature",
+                        "text": {
+                            "status": "additional",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Testiline testesen(12312)</div>"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:00a49ce6-6dac-4618-a8eb-2d3ace58cb2a",
+            "resource": {
+                "resourceType": "MessageHeader",
+                "id": "00a49ce6-6dac-4618-a8eb-2d3ace58cb2a",
+                "event": {
+                    "system": "http://ehelse.no/fhir/ValueSet/vkp-message-event-v06",
+                    "code": "MedicationDispense"
+                },
+                "receiver": {
+                    "identifier": {
+                        "system": "urn:oid:2.16.578.1.12.4.1.2",
+                        "value": "8134576"
+                    },
+                    "display": "Velferdsteknologisk knutepunkt"
+                },
+                "sender": {
+                    "identifier": {
+                        "system": "urn:oid:2.16.578.1.12.4.1.2",
+                        "value": "8134573"
+                    },
+                    "display": "Velferdsteknologisk knutepunkt 1"
+                },
+                "timestamp": "2020-01-27T08:19:06.2410634+00:00",
+                "source": {
+                    "endpoint": "sb.test.nhn.no/NHNTESTServiceBus/8134573"
+                },
+                "focus": [
+                    {
+                        "reference": "urn:uuid:7f0ce900-23ee-4f30-a7a1-0c51171cd118",
+                        "display": "MedicationDispense"
+                    },
+                    {
+                        "reference": "urn:uuid:6c9bc8be-ebef-4bcd-9858-a09e9a2b2940",
+                        "display": "Composition"
+                    }
+                ]
+            }
+        }
+    ]
+}

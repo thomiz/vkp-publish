@@ -1,0 +1,141 @@
+{
+    "resourceType": "Bundle",
+    "id": "6ef95cef-f8ff-4928-a9e0-2d4e0f7f83b5",
+    "type": "searchset",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:e273a48a-6944-4c84-ba27-bbfcf8e3a4e9",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "e273a48a-6944-4c84-ba27-bbfcf8e3a4e9",
+                "meta": {
+                    "profile": [
+                        "http://ehelse.no/fhir/StructureDefinition/vkp-Patient-v06"
+                    ]
+                },
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "code",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "urn:iso:std:iso:3166",
+                                            "code": "NO"
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/patient-nationality"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+                        "value": "13116900216"
+                    }
+                ],
+                "name": [
+                    {
+                        "family": "Danser",
+                        "given": [
+                            "Line (testbruker)"
+                        ]
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "33 33 33 33",
+                        "use": "home"
+                    },
+                    {
+                        "system": "phone",
+                        "value": "44 44 44 44",
+                        "use": "mobile"
+                    },
+                    {
+                        "system": "email",
+                        "value": "line.danser@online.com",
+                        "use": "home"
+                    }
+                ],
+                "gender": "female",
+                "birthDate": "1969-11-13",
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://ehelse.no/fhir/StructureDefinition/vkp-elock-v06",
+                                "valueString": "Nøkkelboks"
+                            }
+                        ],
+                        "use": "home",
+                        "line": [
+                            "Numedalsveien 52"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
+                                        "valueString": "Inngang til leiligheten på forsiden av huset."
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "Kongsberg",
+                        "postalCode": "3602"
+                    }
+                ],
+                "maritalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/MaritalStatus",
+                            "code": "M"
+                        }
+                    ]
+                },
+                "contact": [
+                    {
+                        "relationship": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/v2/0131",
+                                        "code": "N"
+                                    }
+                                ]
+                            }
+                        ],
+                        "name": {
+                            "family": "Danser",
+                            "given": [
+                                "Tango"
+                            ]
+                        },
+                        "telecom": [
+                            {
+                                "system": "phone",
+                                "value": "33 33 33 33",
+                                "use": "work"
+                            }
+                        ],
+                        "address": {
+                            "use": "home",
+                            "line": [
+                                "Numedalsveien 52"
+                            ],
+                            "postalCode": "3602"
+                        }
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        }
+    ]
+}

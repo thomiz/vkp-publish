@@ -1,0 +1,245 @@
+{
+    "resourceType": "Bundle",
+    "id": "2f365ea5-c93f-451a-b132-b7ea9b3bf6d6",
+    "type": "searchset",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid: 094ec374-4e4b-45cb-b826-62de45ff088d",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "094ec374-4e4b-45cb-b826-62de45ff088d",
+                "meta": {
+                    "profile": [
+                        "http: //ehelse.no/fhir/StructureDefinition/vkp-Patient-v06"
+                    ]
+                },
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "code",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "urn:iso:std:iso:3166",
+                                            "code": "NO"
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/patient-nationality"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+                        "value": "13116900216"
+                    }
+                ],
+                "name": [
+                    {
+                        "family": "Danser",
+                        "given": [
+                            "Line (testbruker)"
+                        ]
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "33 33 33 33",
+                        "use": "home"
+                    },
+                    {
+                        "system": "phone",
+                        "value": "44 44 44 44",
+                        "use": "mobile"
+                    },
+                    {
+                        "system": "email",
+                        "value": "line.danser@online.com",
+                        "use": "home"
+                    }
+                ],
+                "gender": "female",
+                "birthDate": "1969-11-13",
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://ehelse.no/fhir/StructureDefinition/vkp-elock-v06",
+                                "valueString": "Nøkkelboks"
+                            }
+                        ],
+                        "use": "home",
+                        "line": [
+                            "Numedalsveien 52"
+                        ],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
+                                        "valueString": "Inngang til leiligheten på baksiden av huset."
+                                    }
+                                ]
+                            }
+                        ],
+                        "city": "",
+                        "postalCode": "3602"
+                    }
+                ],
+                "maritalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/MaritalStatus",
+                            "code": "M"
+                        }
+                    ]
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:f5951cb7-8fee-4e1a-926e-a1e2b855cae3",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "f5951cb7-8fee-4e1a-926e-a1e2b855cae3",
+                "meta": {
+                    "profile": [
+                        "http://ehelse.no/fhir/StructureDefinition/vkp-Patient-v06"
+                    ]
+                },
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "code",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "urn:iso:std:iso:3166",
+                                            "code": "NO"
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/patient-nationality"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+                        "value": "12057900499"
+                    }
+                ],
+                "name": [
+                    {
+                        "family": "Telokk",
+                        "given": [
+                            "Gry"
+                        ]
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "41252159",
+                        "use": "mobile"
+                    }
+                ],
+                "gender": "female",
+                "birthDate": "1979-05-12",
+                "address": [
+                    {
+                        "use": "home",
+                        "line": [
+                            "Verkstedveien 1"
+                        ],
+                        "city": "",
+                        "postalCode": "0277"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:b3a75b48-ede5-4a0a-8209-45b4c3bd630e",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "b3a75b48-ede5-4a0a-8209-45b4c3bd630e",
+                "meta": {
+                    "profile": [
+                        "http://ehelse.no/fhir/StructureDefinition/vkp-Patient-v06"
+                    ]
+                },
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "code",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "urn:iso:std:iso:3166",
+                                            "code": "NO"
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/patient-nationality"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+                        "value": "14019800513"
+                    }
+                ],
+                "name": [
+                    {
+                        "family": "Danser",
+                        "given": [
+                            "Folke (testbruker)"
+                        ]
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "97 54 75 50",
+                        "use": "mobile"
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1998-01-14",
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://ehelse.no/fhir/StructureDefinition/vkp-elock-v06",
+                                "valueString": "Nøkkelboks"
+                            }
+                        ],
+                        "use": "home",
+                        "line": [
+                            "Numedalsveien 52"
+                        ],
+                        "city": "",
+                        "postalCode": "3602"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        }
+    ]
+}

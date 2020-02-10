@@ -1,0 +1,92 @@
+{
+    "resourceType": "Bundle",
+    "id": "2a557fe0-5abf-49ad-9cbe-5e4fb8b9b6b3",
+    "type": "message",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:260f9c7f-b4e0-4684-80b1-f9359478e0d5",
+            "resource": {
+                "resourceType": "MedicationDispense",
+                "id": "260f9c7f-b4e0-4684-80b1-f9359478e0d5",
+                "meta": {
+                    "profile": [
+                        "http://ehelse.no/fhir/StructureDefinition/vkp-MedicationDispense-v06"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "system": "urn:ietf:rfc:3986",
+                        "value": "999"
+                    }
+                ],
+                "status": "completed",
+                "category": {
+                    "coding": [
+                        {
+                            "system": "http://ehelse.no/fhir/CodeSystem/vkp-medicationdispense-events-v06",
+                            "code": "1",
+                            "display": "medisin_utlevert"
+                        }
+                    ]
+                },
+                "medicationCodeableConcept": {
+                    "text": "Ukjent medisin"
+                },
+                "subject": {
+                    "identifier": {
+                        "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+                        "value": "27124638084"
+                    },
+                    "display": "Test testesen"
+                },
+                "performer": [
+                    {
+                        "actor": {
+                            "identifier": {
+                                "system": "ehelseids",
+                                "value": "999999"
+                            },
+                            "display": "Testdispenser"
+                        }
+                    }
+                ],
+                "whenHandedOver": "2020-01-27T09:16:00Z"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:813b3153-4ec4-40e4-a8ea-14466a10602e",
+            "resource": {
+                "resourceType": "MessageHeader",
+                "id": "813b3153-4ec4-40e4-a8ea-14466a10602e",
+                "event": {
+                    "system": "http://ehelse.no/fhir/ValueSet/vkp-message-event-v06",
+                    "code": "MedicationDispense"
+                },
+                "receiver": {
+                    "identifier": {
+                        "system": "urn:oid:2.16.578.1.12.4.1.2",
+                        "value": "8134576"
+                    },
+                    "display": "Velferdsteknologisk knutepunkt"
+                },
+                "sender": {
+                    "identifier": {
+                        "system": "urn:oid:2.16.578.1.12.4.1.2",
+                        "value": "8134573"
+                    },
+                    "display": "Velferdsteknologisk knutepunkt 1"
+                },
+                "timestamp": "2020-01-27T08:17:03.4184915+00:00",
+                "source": {
+                    "endpoint": "sb.test.nhn.no/NHNTESTServiceBus/8134573"
+                },
+                "focus": [
+                    {
+                        "reference": "urn:uuid:260f9c7f-b4e0-4684-80b1-f9359478e0d5",
+                        "display": "MedicationDispense"
+                    }
+                ]
+            }
+        }
+    ]
+}

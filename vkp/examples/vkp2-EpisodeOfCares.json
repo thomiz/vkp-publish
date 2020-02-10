@@ -1,0 +1,88 @@
+{
+    "resourceType": "Bundle",
+    "id": "6d405de1-c431-43cc-b136-c2b30cb7b2fb",
+    "type": "searchset",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:3204d609-7b22-4a4d-990d-d3a101e6b0de",
+            "resource": {
+                "resourceType": "EpisodeOfCare",
+                "id": "3204d609-7b22-4a4d-990d-d3a101e6b0de",
+                "status": "active",
+                "type": [
+                    {
+                        "text": "GPS"
+                    }
+                ],
+                "patient": {
+                    "identifier": {
+                        "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+                        "value": "13116900216"
+                    }
+                },
+                "period": {
+                    "start": "2019-03-12T12:00:00+00:00"
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:42242b43-7a9c-4234-9795-ebab2e6aa18f",
+            "resource": {
+                "resourceType": "EpisodeOfCare",
+                "id": "42242b43-7a9c-4234-9795-ebab2e6aa18f",
+                "status": "active",
+                "type": [
+                    {
+                        "text": "GPS"
+                    }
+                ],
+                "patient": {
+                    "identifier": {
+                        "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+                        "value": "12057900499"
+                    }
+                },
+                "managingOrganization": {
+                    "display": "Teststaden kommune|Helse og omsorg|Hjemmetjenesten|Hjemmetjenesten Nord"
+                },
+                "period": {
+                    "start": "2019-03-12T00:00:00+00:00"
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:7de02f4a-e933-4923-a634-b04e9e518e3a",
+            "resource": {
+                "resourceType": "EpisodeOfCare",
+                "id": "7de02f4a-e933-4923-a634-b04e9e518e3a",
+                "status": "active",
+                "type": [
+                    {
+                        "text": "GPS"
+                    }
+                ],
+                "patient": {
+                    "identifier": {
+                        "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+                        "value": "14019800513"
+                    }
+                },
+                "managingOrganization": {
+                    "display": "Teststaden kommune|Helse og omsorg|Hjemmetjenesten|Hjemmetjenesten Øst"
+                },
+                "period": {
+                    "start": "2019-03-12T00:00:00+00:00"
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        }
+    ]
+}

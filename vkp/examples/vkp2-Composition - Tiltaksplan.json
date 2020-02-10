@@ -1,0 +1,74 @@
+{
+    "resourceType": "Bundle",
+    "id": "81c12400-1c2d-4d67-8b2c-a972313720cc",
+    "type": "searchset",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:a3f8f25d-c2e6-4664-9ca8-109bf967ba6f",
+            "resource": {
+                "resourceType": "Composition",
+                "id": "a3f8f25d-c2e6-4664-9ca8-109bf967ba6f",
+                "class": {
+                    "coding": [
+                        {
+                            "system": "http://ehelse.no/fhir/CodeSystem/vkp-composition-class-v06",
+                            "code": "3",
+                            "display": "tiltaksplan"
+                        }
+                    ]
+                },
+                "date": "2019-03-27T08:54:00+00:00",
+                "author": [
+                    {
+                        "display": "Testesen, Test"
+                    }
+                ],
+                "section": [
+                    {
+                        "title": "Problem/Ressurs/Behov",
+                        "text": {
+                            "div": "GPS Sporing,"
+                        },
+                        "section": [
+                            {
+                                "title": "Mål",
+                                "text": {
+                                    "div": "Øke bevegelse"
+                                },
+                                "section": [
+                                    {
+                                        "title": "Tiltak",
+                                        "text": {
+                                            "div": "Bruke av sporing ved forsvinning,"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Rapport",
+                                "text": {
+                                    "div": "Utført sporing. 04.04.19 kl. 13:37. Gjennomførte en sporing"
+                                }
+                            },
+                            {
+                                "title": "Rapport",
+                                "text": {
+                                    "div": "Utført sporing. 01.04.19 kl. 13:37. Gjennomførte nok en sporing"
+                                }
+                            },
+                            {
+                                "title": "Rapport",
+                                "text": {
+                                    "div": "Bestilt sporing av bruker fra alarmsentralen. 27.03.19 kl. 13:43."
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        }
+    ]
+}

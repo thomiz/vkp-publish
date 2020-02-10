@@ -1,0 +1,103 @@
+{
+    "resourceType": "Encounter",
+    "id": "253972fb-8fbd-45a3-8df7-70d001127b13",
+    "meta": {
+        "profile": [
+            "http://ehelse.no/fhir/StructureDefinition/vkp-digital-Encounter-v06"
+        ]
+    },
+    "extension": [
+        {
+            "extension": [
+                {
+                    "url": "signature",
+                    "valueAnnotation": {
+                        "time": "2020-01-27T08:22:52.4717127Z",
+                        "text": "Testi (testi)"
+                    }
+                }
+            ],
+            "url": "http://ehelse.no/fhir/StructureDefinition/vkp-annotation-v06"
+        },
+        {
+            "extension": [
+                {
+                    "url": "note",
+                    "valueAnnotation": {
+                        "authorReference": {
+                            "identifier": {
+                                "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+                                "value": "123456"
+                            },
+                            "display": "Testi (testi)"
+                        },
+                        "time": "2020-01-27T08:22:52.4717241Z",
+                        "text": "Testnotat"
+                    }
+                }
+            ],
+            "url": "http://ehelse.no/fhir/StructureDefinition/vkp-annotation-v06"
+        },
+        {
+            "extension": [
+                {
+                    "extension": [
+                        {
+                            "url": "deviceIdentifier",
+                            "valueIdentifier": {
+                                "system": "http://testmate.no/testserial",
+                                "value": "888"
+                            }
+                        },
+                        {
+                            "url": "display",
+                            "valueString": "TestMatesensor"
+                        }
+                    ],
+                    "url": "device"
+                }
+            ],
+            "url": "http://ehelse.no/fhir/StructureDefinition/vkp-encounterDevice-v06"
+        }
+    ],
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:085ee41e-24c5-4883-ab4c-feb0217d1862"
+        }
+    ],
+    "status": "finished",
+    "type": [
+        {
+            "coding": [
+                {
+                    "system": "http://ehelse.no/fhir/CodeSystem/vkp-encounter-type-v05",
+                    "code": "1",
+                    "display": "Tilsyn gjennomført"
+                }
+            ]
+        }
+    ],
+    "subject": {
+        "identifier": {
+            "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+            "value": "22110387869"
+        },
+        "display": "Test testesen"
+    },
+    "participant": [
+        {
+            "individual": {
+                "identifier": {
+                    "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+                    "value": "123456"
+                },
+                "display": "Testulf"
+            }
+        }
+    ],
+    "period": {
+        "start": "2020-01-27T08:21:00Z",
+        "end": "2020-01-27T08:27:00Z"
+    }
+}
