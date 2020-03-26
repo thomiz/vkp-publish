@@ -35,4 +35,9 @@
 	  <display value="hendelse_ok_utrykning"/>
 	  <definition value="Utrykningsenhet aksepterte ansvar for hendelsen"/>
   </concept>
+  <concept>
+	  <code value="6"/>
+	  <display value="tilsyn_planlagt"/>
+	  <definition value="Planlagt tilsyn"/>
+  </concept>
 </CodeSystem>

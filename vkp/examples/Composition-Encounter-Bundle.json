@@ -1,7 +1,7 @@
 {
     "resourceType":"Bundle",
     "id":"c4044e93-5602-560c-9f25-6e68a1ceecd2",
-    "type":"transaction",
+    "type":"document",
     "entry": [
         {
             "fullUrl":"urn:uuid:285357b8-1ec8-429b-827e-3bcd92366621",
@@ -30,13 +30,12 @@
                 "subject":{
                     "identifier":{
                         "system":"urn:oid:2.16.578.1.12.4.1.4.1",
-                        "value":"29098300000"
+                        "value":"05073500186"
                     },
-                    "display":"Testbruker EVON"
+                    "display":"Ærlend Sørgård"
                 },
                 "encounter":{
 					"reference": "urn:uuid:7dc07bbf-e690-435a-99b6-11e867697ea2",
-					"type": "Encounter",
 					"identifier": "7dc07bbf-e690-435a-99b6-11e867697ea2"				
 				},
 				"date":"2019-10-31T10:29:00Z",
@@ -73,8 +72,8 @@
 								"coding": [
 									{
 										"system": "http://ehelse.no/fhir/CodeSystem/vkp-composition-event-v06",
-										"code": "1",
-										"display": "respons_hendelse_behandles"
+										"code": "0",
+										"display": "hendelse_meldt"
 									}
 								]
 							}
@@ -90,7 +89,7 @@
 									{
 										"system": "http://ehelse.no/fhir/CodeSystem/vkp-composition-event-v06",
 										"code": "3",
-										"display": "respons_hendelse_kvittert"
+										"display": "hendelse_kvittert"
 									}
 								]
 							}
