@@ -2,6 +2,10 @@
     "resourceType":"Bundle",
     "id":"c4044e93-5602-560c-9f25-6e68a1ceecd2",
     "type":"document",
+    "identifier":{
+        "system":"urn:ietf:rfc:3986",
+        "value":"c4044e93-5602-560c-9f25-6e68a1ceecd2"
+    },
     "entry": [
         {
             "fullUrl":"urn:uuid:285357b8-1ec8-429b-827e-3bcd92366621",
@@ -35,8 +39,7 @@
                     "display":"Ærlend Sørgård"
                 },
                 "encounter":{
-					"reference": "urn:uuid:7dc07bbf-e690-435a-99b6-11e867697ea2",
-					"identifier": "7dc07bbf-e690-435a-99b6-11e867697ea2"				
+					"reference": "urn:uuid:7dc07bbf-e690-435a-99b6-11e867697ea2"		
 				},
 				"date":"2019-10-31T10:29:00Z",
 				"author": [
@@ -190,7 +193,19 @@
 								]
 							}
 						]
-					}
+					},
+                    {
+                        "url":"http://ehelse.no/fhir/StructureDefinition/vkp-annotation-v06",
+                        "extension": [
+                            {
+                                "url":"signature",
+                                "valueAnnotation":{
+                                    "time":"2018-06-25T08:00:00.936Z",
+                                    "text":"Magnar Komann (magnark)"
+                                }
+                            }
+                        ]
+                    }
 				],
                 "identifier": [
                     {
