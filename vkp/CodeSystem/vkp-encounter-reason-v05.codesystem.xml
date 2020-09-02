@@ -106,5 +106,5 @@
 		<code value="19"/>
 		<display value="manglende_bevegelse"/>
 		<definition value="Ingen bevegelse registrert når bevegelse var forventet"/>
-	</concept>
+	</concept> 
 </CodeSystem>
