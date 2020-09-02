@@ -72,4 +72,39 @@
     <display value="fravær" />
     <definition value="Det er ikke registrert person i rommet på et tidspunkt hvor det skal være person i rommet" />
   </concept>
+  	<concept>
+		<code value="13"/>
+		<display value="knappetrykk"/>
+		<definition value="Person har trykket på knappen"/>
+	</concept>
+	<concept>
+		<code value="14"/>
+		<display value="snortrekk"/>
+		<definition value="Person har trukket i snoren"/>
+	</concept>
+	<concept>
+		<code value="15"/>
+		<display value="dør_åpnet"/>
+		<definition value="Døren har blitt åpnet"/>
+	</concept>
+	<concept>
+		<code value="16"/>
+		<display value="dør_lukket"/>
+		<definition value="Døren har blitt lukket"/>
+	</concept>
+	<concept>
+		<code value="17"/>
+		<display value="vannalarm"/>
+		<definition value="Vann er detektert, mulig lekkasje"/>
+	</concept>
+	<concept>
+		<code value="18"/>
+		<display value="bevegelse"/>
+		<definition value="Uventet bevegelse registrert"/>
+	</concept>
+	<concept>
+		<code value="19"/>
+		<display value="manglende_bevegelse"/>
+		<definition value="Ingen bevegelse registrert når bevegelse var forventet"/>
+	</concept>
 </CodeSystem>
