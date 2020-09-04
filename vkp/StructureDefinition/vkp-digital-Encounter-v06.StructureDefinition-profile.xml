@@ -81,9 +81,6 @@
       <short value="Encounter class for digital Encounter" />
       <definition value="VKP uses a valueset for encounter class for digital Encounter http://ehelse.no/fhir/ValueSet/vkp-encounter-class-v06" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="EncounterClass" />
-        </extension>
         <strength value="extensible" />
         <valueSetReference>
           <reference value="http://ehelse.no/fhir/ValueSet/vkp-encounter-class-v06" />
@@ -96,11 +93,42 @@
       <fixedUri value="http://ehelse.no/fhir/CodeSystem/vkp-encounter-class-v06" />
     </element>
     <element id="Encounter.classHistory">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="ClassHistory" />
-      </extension>
       <path value="Encounter.classHistory" />
       <mustSupport value="true" />
+    </element>
+    <element id="Encounter.classHistory.extension">
+      <path value="Encounter.classHistory.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Encounter.classHistory.extension:device">
+      <path value="Encounter.classHistory.extension" />
+      <sliceName value="device" />
+      <definition value="Devices used during the patient encounter. For example, a particular camera device.&#xD;&#xA;&#xD;&#xA;VKP-norway: Should contain a displaynames of the devices" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-encounterDevice-v06" />
+      </type>
+    </element>
+    <element id="Encounter.classHistory.extension:device.extension">
+      <path value="Encounter.classHistory.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Encounter.classHistory.extension:device.extension:deviceidentifier">
+      <path value="Encounter.classHistory.extension.extension" />
+      <sliceName value="deviceidentifier" />
+      <max value="0" />
     </element>
     <element id="Encounter.classHistory.class">
       <path value="Encounter.classHistory.class" />
@@ -108,9 +136,6 @@
       <definition value="VKP uses a valueset for encounter class for digital Encounter http://ehelse.no/fhir/ValueSet/vkp-encounter-class-v06" />
       <mustSupport value="true" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="EncounterClass" />
-        </extension>
         <strength value="extensible" />
         <valueSetReference>
           <reference value="http://ehelse.no/fhir/ValueSet/vkp-encounter-class-v06" />
@@ -145,9 +170,6 @@
       <definition value="Encounter type &#xD;&#xA;tilsyn|hendelse" />
       <mustSupport value="true" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="EncounterType" />
-        </extension>
         <strength value="extensible" />
         <valueSetReference>
           <reference value="http://ehelse.no/fhir/ValueSet/vkp-encounter-type-v05" />
@@ -189,9 +211,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Encounter.subject.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Encounter.subject.display" />
       <mustSupport value="true" />
     </element>
@@ -237,9 +256,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Encounter.participant.individual.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Encounter.participant.individual.display" />
       <short value="Tha name of the individual" />
       <definition value="Tha name of the individual&#xD;&#xA;&#xD;&#xA;Plain text narrative that identifies the resource in addition to the resource reference." />
@@ -264,9 +280,6 @@
       <definition value="Reason the encounter takes place, coded according to http://ehelse.no/fhir/ValueSet/vkp-encounter-reason-v05" />
       <mustSupport value="true" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="EncounterReason" />
-        </extension>
         <strength value="extensible" />
         <description value="vkp-encounter-reason-v05" />
         <valueSetReference>
@@ -276,7 +289,7 @@
     </element>
     <element id="Encounter.location">
       <path value="Encounter.location" />
-      <definition value="VKP uses this refererence to name location where the digital-Encounter takes place. Typically includes only location.location.display element with a textual description of the location.&#xD;&#xA;&#xD;&#xA;List of locations where  the patient has been during this encounter.&#xD;&#xA;" />
+      <definition value="VKP uses this refererence to name location where the digital-Encounter takes place. Typically includes only location.location.display element with a textual description of the location.&#xD;&#xA;&#xD;&#xA;List of locations where  the patient has been during this encounter." />
       <comment value="Virtual encounters can be recorded in the Encounter by specifying a location reference to a location of type &quot;kind&quot; such as &quot;client's home&quot; and an encounter.class = &quot;virtual&quot;.&#xD;&#xA;&#xD;&#xA;VKP Example:&#xD;&#xA;~~~&#xD;&#xA; &quot;location&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;location&quot;:{&#xD;&#xA;                &quot;display&quot;:&quot;rom24 @ sykehjem&quot;&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;~~~" />
       <mustSupport value="true" />
     </element>
@@ -286,9 +299,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Encounter.location.location.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Encounter.location.location.display" />
       <definition value="The Display value for the location. In vkp the format is usually &quot;[room or room-number] @ [location name]&quot;.&#xD;&#xA;&#xD;&#xA;Plain text narrative that identifies the resource in addition to the resource reference." />
       <example>
