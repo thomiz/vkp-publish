@@ -115,21 +115,6 @@
         <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-encounterDevice-v06" />
       </type>
     </element>
-    <element id="Encounter.classHistory.extension:device.extension">
-      <path value="Encounter.classHistory.extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Encounter.classHistory.extension:device.extension:deviceidentifier">
-      <path value="Encounter.classHistory.extension.extension" />
-      <sliceName value="deviceidentifier" />
-      <max value="0" />
-    </element>
     <element id="Encounter.classHistory.class">
       <path value="Encounter.classHistory.class" />
       <short value="Encounter class for digital Encounter" />
