@@ -47,7 +47,6 @@
       <sliceName value="signature" />
       <short value="Signature for the journal note" />
       <definition value="When a journal note is to document the digital encounter in the EHR it needs a string identifying who registered the note. A signature of who registered the information should be present in all events, even when there is no text in the journal note.&#xD;&#xA;&#xD;&#xA;Can be XHTML formatted text.&#xD;&#xA;In the VKP project in Norway the signature is used for: &#xD;&#xA;Signature: Name of author plus a system specific signature identifying the user who submitted the Composition (user name in the system).&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~&#xD;&#xA;{&#xD;&#xA;   &quot;url&quot;:&quot;http://ehelse.no/fhir/StructureDefinition/vkp-annotation-v06&quot;,&#xD;&#xA;      &quot;extension&quot;: [&#xD;&#xA;          {&#xD;&#xA;              &quot;url&quot;:&quot;signature&quot;,&#xD;&#xA;              &quot;valueAnnotation&quot;:{&#xD;&#xA;                 &quot;time&quot;:&quot;2018-06-25T08:00:00.936Z&quot;,&#xD;&#xA;                 &quot;text&quot;:&quot;Magnar Koman (signatur)&quot;&#xD;&#xA;             }&#xD;&#xA;          }&#xD;&#xA;      ]&#xD;&#xA;}&#xD;&#xA;~~~" />
-      <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -58,10 +57,33 @@
       <path value="Encounter.extension" />
       <sliceName value="device" />
       <definition value="The device used in the patient encounter. For example, a particular camera device&#xD;&#xA;&#xD;&#xA;VKP-norway: Should be a logical reference containing the IMEI/serial number of the device. display value should contain the name of the device type.&#xD;&#xA;Could also contain a display name of the device" />
+      <min value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-encounterDevice-v06" />
       </type>
+    </element>
+    <element id="Encounter.extension:device.extension">
+      <path value="Encounter.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Encounter.extension:device.extension:deviceidentifier">
+      <path value="Encounter.extension.extension" />
+      <sliceName value="deviceidentifier" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Encounter.extension:device.extension:display">
+      <path value="Encounter.extension.extension" />
+      <sliceName value="display" />
+      <min value="1" />
+      <max value="1" />
     </element>
     <element id="Encounter.identifier">
       <path value="Encounter.identifier" />
@@ -110,10 +132,33 @@
       <path value="Encounter.classHistory.extension" />
       <sliceName value="device" />
       <definition value="Devices used during the patient encounter. For example, a particular camera device.&#xD;&#xA;&#xD;&#xA;VKP-norway: Should contain a displaynames of the devices" />
+      <min value="1" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-encounterDevice-v06" />
       </type>
+    </element>
+    <element id="Encounter.classHistory.extension:device.extension">
+      <path value="Encounter.classHistory.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Encounter.classHistory.extension:device.extension:deviceidentifier">
+      <path value="Encounter.classHistory.extension.extension" />
+      <sliceName value="deviceidentifier" />
+      <max value="1" />
+    </element>
+    <element id="Encounter.classHistory.extension:device.extension:display">
+      <path value="Encounter.classHistory.extension.extension" />
+      <sliceName value="display" />
+      <min value="1" />
+      <max value="1" />
     </element>
     <element id="Encounter.classHistory.class">
       <path value="Encounter.classHistory.class" />
@@ -153,9 +198,11 @@
       <path value="Encounter.type" />
       <short value="Event type" />
       <definition value="Encounter type &#xD;&#xA;tilsyn|hendelse" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
       <binding>
-        <strength value="extensible" />
+        <strength value="required" />
         <valueSetReference>
           <reference value="http://ehelse.no/fhir/ValueSet/vkp-encounter-type-v05" />
         </valueSetReference>
@@ -165,6 +212,7 @@
       <path value="Encounter.subject" />
       <short value="The patient or group present at the encounter" />
       <definition value="Reference to the patient that is subject to the encounter, identified by Norwegian national id number (Fødselsnummer or DNR).&#xD;&#xA;&#xD;&#xA;A link to a resource representing the person or the group to whom the medication will be given.&#xD;&#xA;&#xD;&#xA;VKP always references a Patient Resource using a norwegian national id number (Fødslesnummer or DNR) in a logical identifier in the subject.identifier element.&#xD;&#xA;The Name of the patient should be given in the subject.display element.&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~~&#xD;&#xA;&quot;subject&quot;:{&#xD;&#xA;   &quot;identifier&quot;:{&#xD;&#xA;      &quot;system&quot;:&quot;urn:oid:2.16.578.1.12.4.1.4.1&quot;,&#xD;&#xA;      &quot;value&quot;:&quot;05073500186&quot;&#xD;&#xA;     },&#xD;&#xA;     &quot;display&quot;:&quot;Ærlend Sørgård&quot;&#xD;&#xA;}&#xD;&#xA;~~~~" />
+      <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
@@ -185,6 +233,7 @@
     </element>
     <element id="Encounter.subject.identifier">
       <path value="Encounter.subject.identifier" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.subject.identifier.system">
@@ -197,11 +246,13 @@
     </element>
     <element id="Encounter.subject.display">
       <path value="Encounter.subject.display" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.participant">
       <path value="Encounter.participant" />
       <definition value="Refernce to the individual that participated in the encounter, usually health care provider. Identified using Norwegian national id number (fødselsnummer).&#xD;&#xA;The Name of the participant should be given in the subject.display element.&#xD;&#xA;&#xD;&#xA;Example: &#xD;&#xA;~~~~&#xD;&#xA;&quot;participant&quot;: [&#xD;&#xA;   {&#xD;&#xA;      &quot;individual&quot;:{&#xD;&#xA;         &quot;identifier&quot;:{&#xD;&#xA;            &quot;system&quot;:&quot;urn:oid:2.16.578.1.12.4.1.4.1&quot;,&#xD;&#xA;            &quot;value&quot;:&quot;04056600324&quot;&#xD;&#xA;         },&#xD;&#xA;         &quot;display&quot;:&quot;Magnar Koman&quot;&#xD;&#xA;      }&#xD;&#xA;   }&#xD;&#xA;]&#xD;&#xA;~~~~" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.participant.individual">
@@ -250,6 +301,7 @@
       <path value="Encounter.period" />
       <short value="The start and end time of the digital encounter" />
       <definition value="Time period for the digital encounter, the system should provide both start and end times.&#xD;&#xA;If the start-time is not known a single end time can be provided as a timestamp for the Encounter.&#xD;&#xA;&#xD;&#xA;Example code: &#xD;&#xA;~~~&#xD;&#xA;&quot;period&quot;:{&#xD;&#xA;   &quot;start&quot;:&quot;2018-06-25T09:56:23.945+02:00&quot;,&#xD;&#xA;   &quot;end&quot;:&quot;2018-06-25T10:01:03.936+02:00&quot;&#xD;&#xA;}&#xD;&#xA;~~~" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.period.start">
@@ -263,9 +315,10 @@
     <element id="Encounter.reason">
       <path value="Encounter.reason" />
       <definition value="Reason the encounter takes place, coded according to http://ehelse.no/fhir/ValueSet/vkp-encounter-reason-v05" />
+      <max value="1" />
       <mustSupport value="true" />
       <binding>
-        <strength value="extensible" />
+        <strength value="required" />
         <description value="vkp-encounter-reason-v05" />
         <valueSetReference>
           <reference value="http://ehelse.no/fhir/ValueSet/vkp-encounter-reason-v05" />
