@@ -40,4 +40,19 @@
 	  <display value="tilsyn_planlagt"/>
 	  <definition value="Planlagt tilsyn"/>
   </concept>
+  <concept>
+	  <code value="7"/>
+	  <display value="hendelse_tilstedemarkering"/>
+	  <definition value="Tjenesteyter tilstede hos pasient"/>
+  </concept>
+    <concept>
+	  <code value="8"/>
+	  <display value="hendelse_bortemarkering"/>
+	  <definition value="Tjenesteyter forlater pasient"/>
+  </concept>
+      <concept>
+	  <code value="9"/>
+	  <display value="tilsyn_planlagt"/>
+	  <definition value="Reaktivering av utkvittert hendelse"/>
+  </concept>
 </CodeSystem>
