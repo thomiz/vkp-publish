@@ -52,7 +52,7 @@
   </concept>
       <concept>
 	  <code value="9"/>
-	  <display value="tilsyn_planlagt"/>
+	  <display value="hendelse_reaktivering"/>
 	  <definition value="Reaktivering av utkvittert hendelse"/>
   </concept>
 </CodeSystem>
