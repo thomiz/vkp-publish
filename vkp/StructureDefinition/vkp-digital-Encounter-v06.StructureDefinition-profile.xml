@@ -57,7 +57,6 @@
       <path value="Encounter.extension" />
       <sliceName value="device" />
       <definition value="The device used in the patient encounter. For example, a particular camera device&#xD;&#xA;&#xD;&#xA;VKP-norway: Should be a logical reference containing the IMEI/serial number of the device. display value should contain the name of the device type.&#xD;&#xA;Could also contain a display name of the device" />
-      <min value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/vkp-encounterDevice-v06" />
