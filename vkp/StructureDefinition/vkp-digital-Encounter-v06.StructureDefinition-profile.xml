@@ -73,9 +73,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Encounter.extension:device.extension:deviceidentifier">
+    <element id="Encounter.extension:device.extension:deviceIdentifier">
       <path value="Encounter.extension.extension" />
-      <sliceName value="deviceidentifier" />
+      <sliceName value="deviceIdentifier" />
       <min value="1" />
       <max value="1" />
     </element>
@@ -84,6 +84,16 @@
       <sliceName value="display" />
       <min value="1" />
       <max value="1" />
+    </element>
+    <element id="Encounter.extension:device.extension:type">
+      <path value="Encounter.extension.extension" />
+      <sliceName value="type" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.extension:device.extension:typeName">
+      <path value="Encounter.extension.extension" />
+      <sliceName value="typeName" />
+      <max value="0" />
     </element>
     <element id="Encounter.identifier">
       <path value="Encounter.identifier" />
@@ -132,7 +142,6 @@
       <path value="Encounter.classHistory.extension" />
       <sliceName value="device" />
       <definition value="Devices used during the patient encounter. For example, a particular camera device.&#xD;&#xA;&#xD;&#xA;VKP-norway: Should contain a displaynames of the devices" />
-      <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -148,11 +157,6 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-    </element>
-    <element id="Encounter.classHistory.extension:device.extension:deviceidentifier">
-      <path value="Encounter.classHistory.extension.extension" />
-      <sliceName value="deviceidentifier" />
-      <max value="1" />
     </element>
     <element id="Encounter.classHistory.extension:device.extension:display">
       <path value="Encounter.classHistory.extension.extension" />
@@ -212,7 +216,6 @@
       <path value="Encounter.subject" />
       <short value="The patient or group present at the encounter" />
       <definition value="Reference to the patient that is subject to the encounter, identified by Norwegian national id number (Fødselsnummer or DNR).&#xD;&#xA;&#xD;&#xA;A link to a resource representing the person or the group to whom the medication will be given.&#xD;&#xA;&#xD;&#xA;VKP always references a Patient Resource using a norwegian national id number (Fødslesnummer or DNR) in a logical identifier in the subject.identifier element.&#xD;&#xA;The Name of the patient should be given in the subject.display element.&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~~&#xD;&#xA;&quot;subject&quot;:{&#xD;&#xA;   &quot;identifier&quot;:{&#xD;&#xA;      &quot;system&quot;:&quot;urn:oid:2.16.578.1.12.4.1.4.1&quot;,&#xD;&#xA;      &quot;value&quot;:&quot;05073500186&quot;&#xD;&#xA;     },&#xD;&#xA;     &quot;display&quot;:&quot;Ærlend Sørgård&quot;&#xD;&#xA;}&#xD;&#xA;~~~~" />
-      <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
@@ -252,7 +255,6 @@
     <element id="Encounter.participant">
       <path value="Encounter.participant" />
       <definition value="Refernce to the individual that participated in the encounter, usually health care provider. Identified using Norwegian national id number (fødselsnummer).&#xD;&#xA;The Name of the participant should be given in the subject.display element.&#xD;&#xA;&#xD;&#xA;Example: &#xD;&#xA;~~~~&#xD;&#xA;&quot;participant&quot;: [&#xD;&#xA;   {&#xD;&#xA;      &quot;individual&quot;:{&#xD;&#xA;         &quot;identifier&quot;:{&#xD;&#xA;            &quot;system&quot;:&quot;urn:oid:2.16.578.1.12.4.1.4.1&quot;,&#xD;&#xA;            &quot;value&quot;:&quot;04056600324&quot;&#xD;&#xA;         },&#xD;&#xA;         &quot;display&quot;:&quot;Magnar Koman&quot;&#xD;&#xA;      }&#xD;&#xA;   }&#xD;&#xA;]&#xD;&#xA;~~~~" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.participant.individual">
