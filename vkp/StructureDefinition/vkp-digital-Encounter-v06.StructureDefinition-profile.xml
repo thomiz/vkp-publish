@@ -83,16 +83,6 @@
       <sliceName value="display" />
       <max value="1" />
     </element>
-    <element id="Encounter.extension:device.extension:type">
-      <path value="Encounter.extension.extension" />
-      <sliceName value="type" />
-      <max value="0" />
-    </element>
-    <element id="Encounter.extension:device.extension:typeName">
-      <path value="Encounter.extension.extension" />
-      <sliceName value="typeName" />
-      <max value="0" />
-    </element>
     <element id="Encounter.identifier">
       <path value="Encounter.identifier" />
       <definition value="Unique code or number identifying the Encounter&#xD;&#xA;&#xD;&#xA;VKP project uses UUID. &#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;~~~&#xD;&#xA;&quot;identifier&quot;: [&#xD;&#xA;     {&#xD;&#xA;         &quot;system&quot;:&quot;urn:ietf:rfc:3986&quot;,&#xD;&#xA;         &quot;value&quot;:&quot;urn:uuid:a76d9bbf-f293-4fb7-ad4c-2851cac77162&quot;&#xD;&#xA;     }&#xD;&#xA;]&#xD;&#xA;~~~" />
@@ -160,6 +150,16 @@
       <path value="Encounter.classHistory.extension.extension" />
       <sliceName value="display" />
       <max value="1" />
+    </element>
+    <element id="Encounter.classHistory.extension:device.extension:type">
+      <path value="Encounter.classHistory.extension.extension" />
+      <sliceName value="type" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.classHistory.extension:device.extension:typeName">
+      <path value="Encounter.classHistory.extension.extension" />
+      <sliceName value="typeName" />
+      <max value="0" />
     </element>
     <element id="Encounter.classHistory.class">
       <path value="Encounter.classHistory.class" />
