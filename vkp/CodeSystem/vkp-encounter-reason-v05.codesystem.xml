@@ -107,4 +107,19 @@
 		<display value="manglende_bevegelse"/>
 		<definition value="Ingen bevegelse registrert når bevegelse var forventet"/>
 	</concept> 
+	<concept>
+		<code value="20"/>
+		<display value="lagt_seg_seng"/>
+		<definition value="Person har lagt seg i seng"/>
+	</concept> 
+	<concept>
+		<code value="21" />
+		<display value="forlatt_rom" />
+		<definition value="Person har forlatt rommet" />
+	</concept>
+	<concept>
+		<code value="22" />
+		<display value="mislykket_brukeranrop" />
+		<definition value="Mislykket brukeranrop" />
+	</concept>
 </CodeSystem>
