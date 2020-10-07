@@ -35,9 +35,4 @@
     <display value="innlytt" />
     <definition value="Innlytt" />
   </concept>
-    <concept>
-    <code value="5" />
-    <display value="fysisk_tilsyn" />
-    <definition value="Fysisk tilsyn" />
-  </concept>
 </CodeSystem>
