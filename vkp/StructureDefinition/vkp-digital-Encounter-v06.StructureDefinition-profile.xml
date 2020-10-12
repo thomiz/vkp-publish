@@ -151,16 +151,6 @@
       <sliceName value="display" />
       <max value="1" />
     </element>
-    <element id="Encounter.classHistory.extension:device.extension:type">
-      <path value="Encounter.classHistory.extension.extension" />
-      <sliceName value="type" />
-      <max value="0" />
-    </element>
-    <element id="Encounter.classHistory.extension:device.extension:typeName">
-      <path value="Encounter.classHistory.extension.extension" />
-      <sliceName value="typeName" />
-      <max value="0" />
-    </element>
     <element id="Encounter.classHistory.class">
       <path value="Encounter.classHistory.class" />
       <short value="Encounter class for digital Encounter" />
